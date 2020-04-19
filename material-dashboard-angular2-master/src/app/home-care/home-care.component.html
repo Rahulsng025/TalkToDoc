@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+       
+                <table id = "customers">
+                    <tr>
+                      <th><b>Title</b></th>
+                      <th><b>Address</b></th>
+                      <th><b>State</b></th>
+                      <th><b>Country</b></th>
+                    </tr>
+                  
+                    <tr *ngFor = 'let obj of home_care'>
+                      <td>{{obj.title}}</td>
+                      <td>{{obj.address}}</td>
+                      <td>{{obj.state}}</td>
+                      <td>{{obj.country}}</td>
+                     
+                  
+                    </tr>
+                  </table>
+
+        </div>
+            </div>
+            </div>
+        </div>
+    
+
+  

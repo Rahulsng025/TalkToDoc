@@ -1,0 +1,84 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card" *ngFor="let eachDoctor of doctor_listing">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Edit Profile</h4>
+            <p class="card-category">Complete your profile</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-8">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Name" />{{ eachDoctor.name }}
+                  </mat-form-field>
+                </div>
+                <div class="col-md-8">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Speciality" />{{
+                      eachDoctor.speciality
+                    }}
+                  </mat-form-field>
+                </div>
+                <div class="col-md-8">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Experience" />{{
+                      eachDoctor.experience
+                    }}
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-8">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Trainig" />{{
+                      eachDoctor.training
+                    }}
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <button
+                mat-raised-button
+                type="submit"
+                class="btn btn-danger pull-right"
+              >
+                Book Appointment
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-avatar">
+            <a href="javascript:void(0)">
+              <img
+                class="img"
+                src="./assets/img/Doctor_img/34e65648-fab3-40cb-b30c-1cb479086dba.jpg"
+              />
+            </a>
+          </div>
+          <div class="card-body">
+            <h6 class="card-category text-gray">Dr. Akhil Agarwal</h6>
+            <h4 class="card-title">BDS, MDS - Orthodontics</h4>
+            <p class="card-description">
+              Dr.Akhil Agarwal completed his B.D.S. and M.D.S. from the world
+              renowned King George’s Medical College (KGMC),Lucknow in the year
+              2002 and 2006 respectively.He has been awarded Best Clinical
+              Excellence award in Lingual Residency program, 2016.He was awarded
+              "Best Scientific Paper Award" at a Lingual conference, AIIMS,
+              2017. He is the first certified Invisalign provider in Lucknow
+              region.
+            </p>
+            <a href="javascript:void(0)" class="btn btn-danger btn-round"
+              >Follow</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
