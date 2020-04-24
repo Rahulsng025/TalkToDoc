@@ -13,7 +13,8 @@
                         <mat-toolbar *ngIf="errorMsg" color="warn">{{errorMsg}}</mat-toolbar>
 
                         <div class="form-container">
-                            <form (submit)="addbookappointment()">
+                            <!-- <form (submit)="addbookappointment()"> -->
+                            <form>
                                 <mat-form-field>
                                     <input [(ngModel)]="dateofappointment" name="dateofappointment" matInput
                                         [matDatepicker]="picker" placeholder="Choose a date">
@@ -26,7 +27,8 @@
                                 </mat-from-field>
 
 
-                                <button mat-raised-button color="primary">Make Appointment</button>
+                                <button mat-raised-button color="primary" (click)="print()">Make
+                                    Appointment</button>
                             </form>
 
                         </div>

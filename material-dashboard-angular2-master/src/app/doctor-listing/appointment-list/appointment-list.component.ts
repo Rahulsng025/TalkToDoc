@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorListingService } from 'app/Services/doctorlisting.service';
 import { book_appointment } from 'app/model/book_appointment.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointment-list',
@@ -23,8 +24,12 @@ export class AppointmentListComponent implements OnInit {
   public timeofappointment: string;
   public injury: string;
 
+  print() {
+    console.log('Maadool working');
+    this.router.navigate(['/book-appointment']);
+  }
 
-  constructor(private doctorlistingService: DoctorListingService) { }
+  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -32,34 +37,34 @@ export class AppointmentListComponent implements OnInit {
   bookappointment() {
     this.successMsg = "";
     this.errorMsg = "";
-    this.doctorlistingService.addbookappointment(
-      this.name,
-      this.gender,
-      this.mobile,
-      this.address,
-      this.email,
-      this.dateofbirth,
-      this.consultingdoctor,
-      this.dateofappointment,
-      this.timeofappointment,
-      this.injury).subscribe((addbookappointment: AppointmentListComponent) => {
-        this.name = "";
-        this.gender = "";
-        this.mobile = "";
-        this.address = "";
-        this.email = "";
-        this.dateofbirth = "";
-        this.consultingdoctor = "";
-        this.dateofappointment = "";
-        const dateofappointment = new Date(addbookappointment.dateofappointment).toDateString();
-        this.timeofappointment = "";
-        this.injury = "";
-        this.successMsg = `Appointment book successfully for ${dateofappointment}`;
-      },
-        (error: ErrorEvent) => {
+    // this.doctorlistingService.addbookappointment(
+    //   this.name,
+    //   this.gender,
+    //   this.mobile,
+    //   this.address,
+    //   this.email,
+    //   this.dateofbirth,
+    //   this.consultingdoctor,
+    //   this.dateofappointment,
+    //   this.timeofappointment,
+    //   this.injury).subscribe((addbookappointment: AppointmentListComponent) => {
+    //     this.name = "";
+    //     this.gender = "";
+    //     this.mobile = "";
+    //     this.address = "";
+    //     this.email = "";
+    //     this.dateofbirth = "";
+    //     this.consultingdoctor = "";
+    //     this.dateofappointment = "";
+    //     const dateofappointment = new Date(addbookappointment.dateofappointment).toDateString();
+    //     this.timeofappointment = "";
+    //     this.injury = "";
+    //     this.successMsg = `Appointment book successfully for ${dateofappointment}`;
+    //   },
+    // (error: ErrorEvent) => {
 
-          this.errorMsg = error.error.message;
-        });
+    //   this.errorMsg = error.error.message;
+    // });
   }
 
 }
