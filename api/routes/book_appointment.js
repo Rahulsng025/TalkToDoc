@@ -53,8 +53,13 @@ router.post("/", (req, res, next) => {
     consultingdoctor: req.body.consultingdoctor,
     dateofappointment: req.body.dateofappointment,
     timeofappointment: req.body.timeofappointment,
-    injury: req.body.injury,
+    injury: req.body.injury
+
+
+
+
   });
+
   bookappointment
     .save()
     .then((result) => {

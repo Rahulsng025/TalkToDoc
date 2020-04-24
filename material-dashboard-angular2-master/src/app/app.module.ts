@@ -21,7 +21,9 @@ import { UpgradeComponent } from "./upgrade/upgrade.component";
 import { AgmCoreModule } from "@agm/core";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { DoctorListingService } from "./Services/doctorlisting.service";
-import { BookAppointmentComponent } from './doctor-listing/book-appointment/book-appointment.component';
+
+
+
 
 @NgModule({
   imports: [
@@ -34,8 +36,8 @@ import { BookAppointmentComponent } from './doctor-listing/book-appointment/book
     HttpClientModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, AdminLayoutComponent, BookAppointmentComponent],
+  declarations: [AppComponent, AdminLayoutComponent],
   providers: [DoctorListingService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

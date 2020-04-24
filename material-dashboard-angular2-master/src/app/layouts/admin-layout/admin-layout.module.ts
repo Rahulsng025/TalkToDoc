@@ -11,19 +11,28 @@ import { IconsComponent } from "../../icons/icons.component";
 
 import { NotificationsComponent } from "../../notifications/notifications.component";
 import { UpgradeComponent } from "../../upgrade/upgrade.component";
-import { MatButtonModule } from "@angular/material/button";
+
+
+
 import { MatInputModule } from "@angular/material/input";
 import {
   MatRippleModule,
   MatOptionModule,
   MatCommonModule,
+  MatNativeDateModule
+
 } from "@angular/material/core";
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from "@angular/material/card";
 import { MatTableModule } from "@angular/material/table";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatButtonModule } from '@angular/material/button'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
@@ -31,6 +40,8 @@ import { DiagnosticCenterComponent } from "app/diagnostic-center/diagnostic-cent
 import { HomeCareComponent } from "app/home-care/home-care.component";
 import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insurance.component";
 import { DoctorCardComponent } from "app/doctor-listing/doctor-card/doctor-card.component";
+import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/book-appointment.component";
+import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -49,6 +60,10 @@ import { DoctorCardComponent } from "app/doctor-listing/doctor-card/doctor-card.
     MatCardModule,
     MatDividerModule,
     MatTableModule,
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatPaginatorModule
   ],
   declarations: [
     DashboardComponent,
@@ -63,6 +78,8 @@ import { DoctorCardComponent } from "app/doctor-listing/doctor-card/doctor-card.
     HomeCareComponent,
     MedicalInsuranceComponent,
     DoctorCardComponent,
+    BookAppointmentComponent,
+    AppointmentListComponent
   ],
 })
-export class AdminLayoutModule {}
+export class AdminLayoutModule { }

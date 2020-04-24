@@ -10,8 +10,11 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { DiagnosticCenterComponent } from 'app/diagnostic-center/diagnostic-center.component';
 import { DoctorListingComponent } from 'app/doctor-listing/doctor-listing.component';
-import { HomeCareComponent} from 'app/home-care/home-care.component';
-import { MedicalInsuranceComponent} from 'app/medical-insurance/medical-insurance.component';
+import { HomeCareComponent } from 'app/home-care/home-care.component';
+import { MedicalInsuranceComponent } from 'app/medical-insurance/medical-insurance.component';
+import { BookAppointmentComponent } from 'app/doctor-listing/book-appointment/book-appointment.component';
+import { AppointmentListComponent } from 'app/doctor-listing/appointment-list/appointment-list.component';
+
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -56,15 +59,18 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    {path: 'diagnostic-center', component: DiagnosticCenterComponent},
-    {path: 'doctor-listing', component: DoctorListingComponent},
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'home-care', component: HomeCareComponent},
-    {path: 'medical-insurance', component: MedicalInsuranceComponent}
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'table-list', component: TableListComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'diagnostic-center', component: DiagnosticCenterComponent },
+    { path: 'doctor-listing', component: DoctorListingComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'upgrade', component: UpgradeComponent },
+    { path: 'home-care', component: HomeCareComponent },
+    { path: 'medical-insurance', component: MedicalInsuranceComponent },
+    { path: 'book-appointment', component: BookAppointmentComponent },
+    { path: 'appointment-list', component: AppointmentListComponent }
+
 ];
