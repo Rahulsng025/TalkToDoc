@@ -1,4 +1,4 @@
-export interface book_appointment {
+export interface appointment_list {
     name: string;
     gender: string;
     mobile: string;

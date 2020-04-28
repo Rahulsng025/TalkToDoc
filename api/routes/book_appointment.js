@@ -26,12 +26,15 @@ router.get("/", (req, res, next) => {
 
 router.get("/:bookappointmentId", (req, res, next) => {
   const id = req.params.bookappointmentId;
+
+  console.log('Request: ' + id);
+
   book_appointment
     .findById(id)
     .exec()
     .then((docs) => {
       console.log(docs);
-      res.status(200).json({ doc });
+      res.status(200).json({ docs });
     })
     .catch((err) => {
       console.log(err);
@@ -41,7 +44,7 @@ router.get("/:bookappointmentId", (req, res, next) => {
 
 //Handling POST request of Book_Appointment
 
-router.post("/", (req, res, next) => {
+router.post("/appointment", (req, res, next) => {
   const bookappointment = new book_appointment({
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,
@@ -75,10 +78,14 @@ router.post("/", (req, res, next) => {
 
 router.delete("/:bookappointmentId", (req, res, next) => {
   const id = req.params.bookappointmentId;
+
+  console.log('ID received from server: ' + id);
+
   book_appointment
     .remove({ _id: id })
     .exec()
     .then((result) => {
+      console.log(`Result(Server): ${result}`);
       res.status(200).json(result);
     })
     .catch(err => {

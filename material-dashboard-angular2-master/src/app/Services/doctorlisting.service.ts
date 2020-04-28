@@ -9,15 +9,7 @@ import { book_appointment } from 'app/model/book_appointment.model';
   providedIn: 'root'
 })
 export class DoctorListingService {
-  bookappointment(name: string, gender: string, mobile: string, address: string, email: string, dateofbirth: string, consultingdoctor: string, dateofappointment: string, timeofappointment: string, injury: string) {
-    throw new Error("Method not implemented.");
-  }
-  createAppointmentlist(name: string) {
-    throw new Error("Method not implemented.");
-  }
-  cancelbookappointment(id: String) {
-    throw new Error("Method not implemented.");
-  }
+
 
 
   uri = "http://localhost:3000";
@@ -140,7 +132,8 @@ export class DoctorListingService {
   getbookappointmentById(Id: any): Observable<book_appointment[]> {
     return this.http.get<book_appointment[]>(`${this.uri}/book_appointment/${Id}`);
   }
-  addbookappointment(name: string,
+  addbookappointment(
+    name: any,
     gender: any,
     mobile: any,
     address: any,
@@ -152,6 +145,7 @@ export class DoctorListingService {
     injury: any) {
 
     const bookappointment = {
+      name: name,
       gender: gender,
       mobile: mobile,
       address: address,
@@ -164,8 +158,9 @@ export class DoctorListingService {
     };
     return this.http.post(`${this.uri}/book_appointment/add`, bookappointment)
   }
-  deletebookappointment(_id: any): Observable<any> {
-    return this.http.delete('${this.uri}/book_appointment/delete/${id}');
+  deletebookappointment(_id: string): Observable<any> {
+    console.log('Passing ID (in Service): ' + _id);
+    return this.http.delete(`${this.uri}/book_appointment/${_id}`);
   }
 }
 

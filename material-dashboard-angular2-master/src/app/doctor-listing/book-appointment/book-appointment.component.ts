@@ -32,7 +32,8 @@ export class BookAppointmentComponent implements OnInit {
     "consultingdoctor",
     "dateofappointment",
     "timeofappointment",
-    "injury"
+    "injury",
+    "cancel"
 
   ];
 
@@ -58,19 +59,26 @@ export class BookAppointmentComponent implements OnInit {
 
   }
 
-  // deletebookappointment(id: string) {
-  //   this.doctorlistingService.deletebookappointment(id)
-  //     .pipe(
-  //       mergeMap(() => this.doctorlistingService.getbookappointment())
-  //     )
-  //     .subscribe((book_appointment: book_appointment[]) => {
-  //       this.book_appointment = book_appointment;
-  //       this.successMsg = "Successfully cancelled the appointmet"
-  //     },
-  //       (error: ErrorEvent) => {
-  //         this.errorMsg = error.error.message;
+  deletebookappointment(id: string) {
 
-  //       });
-  // }
+    console.log('ID: ' + id);
+
+    this.doctorlistingService.deletebookappointment(id)
+      .pipe(
+        mergeMap(() => this.doctorlistingService.getbookappointment())
+      )
+      .subscribe((book_appointment: book_appointment[]) => {
+
+        console.log(`Data received`);
+        console.log(book_appointment);
+
+        this.book_appointment = book_appointment;
+        this.successMsg = "Successfully cancelled the appointmet"
+      },
+        (error: ErrorEvent) => {
+          this.errorMsg = error.error.message;
+
+        });
+  }
 
 }

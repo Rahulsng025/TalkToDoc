@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./appointment-list.component.css']
 })
 export class AppointmentListComponent implements OnInit {
+  book_appointment: book_appointment[];
 
   public successMsg: String;
   public errorMsg: String;
@@ -25,7 +26,7 @@ export class AppointmentListComponent implements OnInit {
   public injury: string;
 
   print() {
-    console.log('Maadool working');
+
     this.router.navigate(['/book-appointment']);
   }
 
@@ -34,37 +35,36 @@ export class AppointmentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  bookappointment() {
+  addbookappointment() {
     this.successMsg = "";
     this.errorMsg = "";
-    // this.doctorlistingService.addbookappointment(
-    //   this.name,
-    //   this.gender,
-    //   this.mobile,
-    //   this.address,
-    //   this.email,
-    //   this.dateofbirth,
-    //   this.consultingdoctor,
-    //   this.dateofappointment,
-    //   this.timeofappointment,
-    //   this.injury).subscribe((addbookappointment: AppointmentListComponent) => {
-    //     this.name = "";
-    //     this.gender = "";
-    //     this.mobile = "";
-    //     this.address = "";
-    //     this.email = "";
-    //     this.dateofbirth = "";
-    //     this.consultingdoctor = "";
-    //     this.dateofappointment = "";
-    //     const dateofappointment = new Date(addbookappointment.dateofappointment).toDateString();
-    //     this.timeofappointment = "";
-    //     this.injury = "";
-    //     this.successMsg = `Appointment book successfully for ${dateofappointment}`;
-    //   },
-    // (error: ErrorEvent) => {
+    this.doctorlistingService.addbookappointment(
+      this.name,
+      this.gender,
+      this.mobile,
+      this.address,
+      this.email,
+      this.dateofbirth,
+      this.consultingdoctor,
+      this.dateofappointment,
+      this.timeofappointment,
+      this.injury).subscribe((addbookappointment: book_appointment[]) => {
+        this.name = "";
+        this.gender = "";
+        this.mobile = "";
+        this.address = "";
+        this.email = "";
+        this.dateofbirth = "";
+        this.consultingdoctor = "";
+        this.dateofappointment = "";
+        this.timeofappointment = "";
+        this.injury = "";
 
-    //   this.errorMsg = error.error.message;
-    // });
+      },
+        (error: ErrorEvent) => {
+
+          this.errorMsg = error.error.message;
+        });
   }
 
 }

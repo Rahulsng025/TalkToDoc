@@ -4,17 +4,21 @@ const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require('cors');
+
+app.use(cors());
 
 const doctorlistingRoutes = require("./api/routes/doctor_listing");
 const diagnosticcenterRoutes = require("./api/routes/diagnostic_center");
 const homecareRoutes = require("./api/routes/home_care");
 const medicalinsuranceRoutes = require("./api/routes/medical_insurance");
 const bookappointmentRoutes = require("./api/routes/book_appointment");
+const appointmentlistRoutes = require("./api/routes/appointment_list");
 
 mongoose.connect(
   "mongodb+srv://rahulsng25:" +
-    process.env.MONGO_ATLAS_PW +
-    "@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
+  process.env.MONGO_ATLAS_PW +
+  "@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
   }
@@ -44,5 +48,7 @@ app.use("/diagnostic_center", diagnosticcenterRoutes);
 app.use("/home_care", homecareRoutes);
 app.use("/medical_insurance", medicalinsuranceRoutes);
 app.use("/book_appointment", bookappointmentRoutes);
+app.use("/appointment_list", appointmentlistRoutes);
+
 
 module.exports = app;

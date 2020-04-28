@@ -1,4 +1,4 @@
-<div class="main-content">
+<!-- <div class="main-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -7,99 +7,96 @@
                         <h4 class="card-title ">Book Appointment</h4>
                         <p class="card-category"> Here is the detail of Appointment Booking</p>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body"> -->
 
-                        <mat-spinner *ngIf="loading"></mat-spinner>
-                        <mat-toolbar *ngIf="successMsg" color="accent">{{successMsg}}</mat-toolbar>
-                        <mat-toolbar *ngIf="errorMsg" color="warn">{{errorMsg }}</mat-toolbar>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<mat-toolbar *ngIf="successMsg" color="accent">{{successMsg}}</mat-toolbar>
+<mat-toolbar *ngIf="errorMsg" color="warn">{{errorMsg }}</mat-toolbar>
 
-                        <div *ngIf="!loading && !loading">
-                            <table mat-table [dataSource]="book_appointment" class="mat-elevation-z8">
-
-
-                                <ng-container matColumnDef="position">
-                                    <th mat-header-cell *matHeaderCellDef> No </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.position}} </td>
-                                </ng-container>
-
-
-                                <ng-container matColumnDef="name">
-                                    <th mat-header-cell *matHeaderCellDef> <b>Name</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{ book_appointment.name}} </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="gender">
-                                    <th mat-header-cell *matHeaderCellDef> <b> Gender</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.gender}} </td>
-                                </ng-container>
-
-                                <!-- Weight Column -->
-                                <ng-container matColumnDef="mobile">
-                                    <th mat-header-cell *matHeaderCellDef><b>Mobile</b></th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.mobile}} </td>
-                                </ng-container>
-
-                                <!-- Symbol Column -->
-                                <ng-container matColumnDef="address">
-                                    <th mat-header-cell *matHeaderCellDef><b> Address</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.address}} </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="email">
-                                    <th mat-header-cell *matHeaderCellDef><b> Email</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.email}} </td>
-                                </ng-container>
-
-
-                                <ng-container matColumnDef="dateofbirth">
-                                    <th mat-header-cell *matHeaderCellDef><b> DOB</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.dateofbirth}}
-                                    </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="consultingdoctor">
-                                    <th mat-header-cell *matHeaderCellDef><b>Consulting Doctor</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment">
-                                        {{book_appointment.consultingdoctor}} </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="dateofappointment">
-                                    <th mat-header-cell *matHeaderCellDef><b> Date of Appointment</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment">
-                                        {{book_appointment.dateofappointment}}
-                                    </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="timeofappointment">
-                                    <th mat-header-cell *matHeaderCellDef><b> Time of Appointment</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment">
-                                        {{book_appointment.timeofappointment}}
-                                    </td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="injury">
-                                    <th mat-header-cell *matHeaderCellDef><b> Injury</b> </th>
-                                    <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.injury}} </td>
-                                </ng-container>
+<div *ngIf="!loading && !loading">
+    <table mat-table [dataSource]="book_appointment" class="mat-elevation-z8">
 
 
 
-                                <!-- <ng-container matColumnDef="cancel">
-                                    <th mat-header-cell *matHeaderCellDef>Cancel</th>
-                                    <td mat-cell *matCellDef="let book_appointment"><button
-                                            (click)="deletebookappointment(book_appointment._id)" mat-raised-button
-                                            color="warn">Cancel</button></td>
-                                </ng-container> -->
 
 
-                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                            </table>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> <b>Name</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{ book_appointment.name}} </td>
+        </ng-container>
 
-                            <mat-paginator [pageSizeOptions]="[3, 6, 9]" showFirstLastButtons></mat-paginator>
-                        </div>
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef> <b> Gender</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.gender}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef><b>Mobile</b></th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.mobile}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef><b> Address</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef><b> Email</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.email}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="dateofbirth">
+            <th mat-header-cell *matHeaderCellDef><b> DOB</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.dateofbirth}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="consultingdoctor">
+            <th mat-header-cell *matHeaderCellDef><b>Consulting Doctor</b> </th>
+            <td mat-cell *matCellDef="let book_appointment">
+                {{book_appointment.consultingdoctor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dateofappointment">
+            <th mat-header-cell *matHeaderCellDef><b> Date of Appointment</b> </th>
+            <td mat-cell *matCellDef="let book_appointment">
+                {{book_appointment.dateofappointment}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="timeofappointment">
+            <th mat-header-cell *matHeaderCellDef><b> Time of Appointment</b> </th>
+            <td mat-cell *matCellDef="let book_appointment">
+                {{book_appointment.timeofappointment}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="injury">
+            <th mat-header-cell *matHeaderCellDef><b> Injury</b> </th>
+            <td mat-cell *matCellDef="let book_appointment"> {{book_appointment.injury}} </td>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="cancel">
+            <th mat-header-cell *matHeaderCellDef>Cancel</th>
+            <td mat-cell *matCellDef="let book_appointment"><button
+                    (click)="deletebookappointment(book_appointment._id)" mat-raised-button color="warn">Cancel</button>
+            </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[3, 6, 9]" showFirstLastButtons></mat-paginator>
+    <!-- </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
