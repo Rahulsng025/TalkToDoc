@@ -1,4 +1,4 @@
-export interface doctor_listing {
+export interface DoctorDetailsModel {
   name: String;
   speciality: String;
   degrees: String;
