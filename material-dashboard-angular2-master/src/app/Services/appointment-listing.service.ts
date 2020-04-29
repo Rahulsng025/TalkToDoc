@@ -26,7 +26,7 @@ export class AppointmentListingService {
     );
   }
   addbookappointment(newAppointment: AppointmentDetailsModel) {
-    return this.http.post(`${this.uri}/book_appointment/add`, newAppointment);
+    return this.http.post(`${this.uri}/book_appointment/`, newAppointment);
   }
 
   //
@@ -35,5 +35,5 @@ export class AppointmentListingService {
     return this.http.delete(`${this.uri}/book_appointment/${_id}`);
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 }

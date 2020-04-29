@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DoctorListingService } from '../../Services/doctorlisting.service';
+import { AppointmentListingService } from '../../Services/appointment-listing.service';
 import { book_appointment } from '../../../app/model/book_appointment.model';
 import { mergeMap } from 'rxjs/operators';
 
@@ -39,12 +39,12 @@ export class BookAppointmentComponent implements OnInit {
 
 
 
-  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
+  constructor(private bookAppointmentService: AppointmentListingService, private router: Router) { }
 
   ngOnInit(): void {
 
 
-    this.doctorlistingService
+    this.bookAppointmentService
       .getbookappointment()
       .subscribe((data: book_appointment[]) => {
         this.book_appointment = data;
@@ -63,9 +63,9 @@ export class BookAppointmentComponent implements OnInit {
 
     console.log('ID: ' + id);
 
-    this.doctorlistingService.deletebookappointment(id)
+    this.bookAppointmentService.deletebookappointment(id)
       .pipe(
-        mergeMap(() => this.doctorlistingService.getbookappointment())
+        mergeMap(() => this.bookAppointmentService.getbookappointment())
       )
       .subscribe((book_appointment: book_appointment[]) => {
 

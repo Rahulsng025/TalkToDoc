@@ -71,6 +71,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'home-care', component: HomeCareComponent },
     { path: 'medical-insurance', component: MedicalInsuranceComponent },
     { path: 'book-appointment', component: BookAppointmentComponent },
-    { path: 'appointment-list', component: AppointmentListComponent }
+    { path: 'appointment-list', component: AppointmentListComponent },
 
 ];

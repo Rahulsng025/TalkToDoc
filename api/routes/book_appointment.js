@@ -44,7 +44,7 @@ router.get("/:bookappointmentId", (req, res, next) => {
 
 //Handling POST request of Book_Appointment
 
-router.post("/appointment", (req, res, next) => {
+router.post("/", (req, res, next) => {
   const bookappointment = new book_appointment({
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,

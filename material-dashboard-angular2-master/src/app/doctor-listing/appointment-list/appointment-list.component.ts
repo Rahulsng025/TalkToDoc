@@ -3,6 +3,7 @@ import { NgForm } from "@angular/forms";
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-appointment-list",
@@ -37,10 +38,11 @@ export class AppointmentListComponent implements OnInit {
       .subscribe((data: any) => {
         // do something with the data.
         console.log("Booked!");
+        this.router.navigate(['/book-appointment']);
       });
   }
 
-  constructor(private appointmentListingService: AppointmentListingService) {}
+  constructor(private appointmentListingService: AppointmentListingService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
