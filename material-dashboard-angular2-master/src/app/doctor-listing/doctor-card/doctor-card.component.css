@@ -1,6 +1,6 @@
 .image {
   height: 20vh;
-  background-image: url("./../../../assets/img/Doctor_img/doctor.JPG");
+  /* background-image: url("./../../../assets/img/Doctor_img/doctor.JPG"); */
   background-size: cover;
   background-repeat: no-repeat;
 }

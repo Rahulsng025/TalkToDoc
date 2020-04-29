@@ -1,12 +1,12 @@
-export interface appointment_list {
-    name: string;
-    gender: string;
-    mobile: string;
-    address: string;
-    email: String;
-    dateofbirth: String;
-    consultingdoctor: String;
-    dateofappointment: String;
-    timeofappointment: String;
-    injury: String;
+export interface AppointmentDetailsModel {
+  name: string;
+  gender: string;
+  mobile: string;
+  address: string;
+  email: string;
+  dateofbirth: string;
+  consultingdoctor: string;
+  dateofappointment: string;
+  timeofappointment: string;
+  injury: string;
 }

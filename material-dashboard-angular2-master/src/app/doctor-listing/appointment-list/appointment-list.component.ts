@@ -1,70 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { DoctorListingService } from 'app/Services/doctorlisting.service';
-import { book_appointment } from 'app/model/book_appointment.model';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { NgForm } from "@angular/forms";
+
+import { AppointmentDetailsModel } from "app/model/appointment_list.model";
+import { AppointmentListingService } from "app/Services/appointment-listing.service";
 
 @Component({
-  selector: 'app-appointment-list',
-  templateUrl: './appointment-list.component.html',
-  styleUrls: ['./appointment-list.component.css']
+  selector: "app-appointment-list",
+  templateUrl: "./appointment-list.component.html",
+  styleUrls: ["./appointment-list.component.css"],
 })
 export class AppointmentListComponent implements OnInit {
-  book_appointment: book_appointment[];
+  @ViewChild("appointmentForm") appointmentForm: NgForm;
 
   public successMsg: String;
   public errorMsg: String;
 
-  public name: string;
-  public gender: string;
-  public mobile: string;
-  public address: string;
-  public email: string;
-  public dateofbirth: string;
-  public consultingdoctor: string;
-  public dateofappointment: string;
-  public timeofappointment: string;
-  public injury: string;
+  // adding new appointment.
+  bookNewAppointment() {
+    console.log(this.appointmentForm);
+    let newAppointment: AppointmentDetailsModel = {
+      name: this.appointmentForm.form.value.name,
+      gender: this.appointmentForm.form.value.gender,
+      mobile: this.appointmentForm.form.value.mobile,
+      address: this.appointmentForm.form.value.address,
+      email: this.appointmentForm.form.value.email,
+      dateofbirth: this.appointmentForm.form.value.dateofbirth,
+      consultingdoctor: this.appointmentForm.form.value.consultingdoctor,
+      timeofappointment: this.appointmentForm.form.value.timeofappointment,
+      dateofappointment: this.appointmentForm.form.value.dateofappointment,
+      injury: this.appointmentForm.form.value.injury,
+    };
 
-  print() {
-
-    this.router.navigate(['/book-appointment']);
+    // calling the service to add new appointment.
+    this.appointmentListingService
+      .addbookappointment(newAppointment)
+      .subscribe((data: any) => {
+        // do something with the data.
+        console.log("Booked!");
+      });
   }
 
-  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
+  constructor(private appointmentListingService: AppointmentListingService) {}
 
-  ngOnInit(): void {
-  }
-
-  addbookappointment() {
-    this.successMsg = "";
-    this.errorMsg = "";
-    this.doctorlistingService.addbookappointment(
-      this.name,
-      this.gender,
-      this.mobile,
-      this.address,
-      this.email,
-      this.dateofbirth,
-      this.consultingdoctor,
-      this.dateofappointment,
-      this.timeofappointment,
-      this.injury).subscribe((addbookappointment: book_appointment[]) => {
-        this.name = "";
-        this.gender = "";
-        this.mobile = "";
-        this.address = "";
-        this.email = "";
-        this.dateofbirth = "";
-        this.consultingdoctor = "";
-        this.dateofappointment = "";
-        this.timeofappointment = "";
-        this.injury = "";
-
-      },
-        (error: ErrorEvent) => {
-
-          this.errorMsg = error.error.message;
-        });
-  }
-
+  ngOnInit(): void {}
 }

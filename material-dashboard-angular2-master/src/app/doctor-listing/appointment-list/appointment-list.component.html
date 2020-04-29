@@ -1,71 +1,124 @@
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Book Appointment</h4>
-                        <p class="card-category"> Here</p>
-                    </div>
-                    <div class="card-body">
+<ngModeliv cngModelass="maingModel-cngModelngModeltent">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Book Appointment</h4>
+            <p class="card-category">Here</p>
+          </div>
+          <div class="card-body">
+            <mat-toolbar *ngIf="successMsg" color="accent">{{
+              successMsg
+            }}</mat-toolbar>
+            <mat-toolbar *ngIf="errorMsg" color="warn">{{
+              errorMsg
+            }}</mat-toolbar>
 
-                        <mat-toolbar *ngIf="successMsg" color="accent">{{successMsg}}</mat-toolbar>
-                        <mat-toolbar *ngIf="errorMsg" color="warn">{{errorMsg}}</mat-toolbar>
+            <div class="form-container">
+              <form (ngSubmit)="bookNewAppointment()" #appointmentForm="ngForm">
+                <mat-form-field>
+                  <input
+                    ngModel
+                    name="dateofappointment"
+                    matInput
+                    [matDatepicker]="picker"
+                    placeholder="Choose a date"
+                    required
+                  />
+                  <mat-datepicker-toggle
+                    matSuffix="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
 
-                        <div class="form-container">
-                            <form (submit)="addbookappointment()">
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="name"
+                    matInput
+                    placeholder="Name"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-form-field>
-                                    <input [(ngModel)]="dateofappointment" name="dateofappointment" matInput
-                                        [matDatepicker]="picker" placeholder="Choose a date">
-                                    <mat-datepicker-toggle matSuffix="picker"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker></mat-datepicker>
-                                </mat-form-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="gender"
+                    matInput
+                    placeholder="Gender"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="name" name="name" matInput placeholder="Name">
-                                </mat-from-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="mobile"
+                    matInput
+                    placeholder="Mobile"
+                    required
+                  />
+                </mat-from-field>
 
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="address"
+                    matInput
+                    placeholder="Address"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="gender" name="gender" matInput placeholder="Gender">
-                                </mat-from-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="email"
+                    matInput
+                    placeholder="Email"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="mobile" name="mobile" matInput placeholder="Mobile">
-                                </mat-from-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="dateofbirth"
+                    matInput
+                    placeholder="Date of Birth"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="address" name="address" matInput placeholder="Address">
-                                </mat-from-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="consultingdoctor"
+                    matInput
+                    placeholder="Consulting Doctor"
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="email" name="email" matInput placeholder="Email">
-                                </mat-from-field>
+                <mat-from-field>
+                  <input
+                    ngModel
+                    name="timeofappointment"
+                    matInput
+                    placeholder="Time of Appointment"
+                    required
+                  />
+                </mat-from-field>
 
-                                <mat-from-field>
-                                    <input [(ngModel)]="dateofbirth" name="dateofbirth" matInput
-                                        placeholder="Date of Birth">
-                                </mat-from-field>
-
-                                <mat-from-field>
-                                    <input [(ngModel)]="consultingdoctor" name="consultingdoctor" matInput
-                                        placeholder="Consulting Doctor">
-                                </mat-from-field>
-
-                                <mat-from-field>
-                                    <input [(ngModel)]="timeofappointment" name="timeofappointment" matInput
-                                        placeholder="Time of Appointment">
-                                </mat-from-field>
-
-
-                                <button mat-raised-button color="primary" (click)="print()">Make
-                                    Appointment</button>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
+                <button mat-raised-button color="primary">
+                  Make Appointment
+                </button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div></ngModeliv
+>
