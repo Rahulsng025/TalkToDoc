@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Subscription } from "rxjs";
+import { Router } from "@angular/router";
 
 import { DoctorListingService } from "../Services/doctor-listing.service";
 import { DoctorDetailsModel } from "../../app/model/doctor_listing.model";
@@ -38,7 +39,11 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
     });
   }
 
-  constructor(private doctorlistingService: DoctorListingService) {}
+  onLoadPage() {
+    this.router.navigate(['appointment-list']);
+  }
+
+  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
 
   // Load a list of all doctors whenever this component is visited.
   ngOnInit(): void {
