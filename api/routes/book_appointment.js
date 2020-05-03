@@ -74,6 +74,27 @@ router.post("/", (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
+//Handling Patch Request.
+router.patch('/:bookappointmentId', (req, res, next) => {
+  const id = req.params.bookappointmentId;
+  const updateOps = {};
+  for (const ops of req.body) {
+    updateOps[ops.propName] = ops.value;
+  }
+  book_appointment.update({ _id: id }, { $set: updateOps })
+    .exec()
+    .then(result => {
+      console.log(result);
+      res.status(200).json(result);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({
+        error: err
+      });
+    });
+});
+
 //Handling Delete Request by Id
 
 router.delete("/:bookappointmentId", (req, res, next) => {

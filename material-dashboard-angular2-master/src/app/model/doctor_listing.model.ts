@@ -4,5 +4,6 @@ export interface DoctorDetailsModel {
   degrees: String;
   experience: String[];
   training: String;
+  //Active: boolean;
   image: String;
 }

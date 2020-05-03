@@ -7,13 +7,15 @@ import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
 
 import { NotificationsComponent } from '../../notifications/notifications.component';
-import { UpgradeComponent } from '../../upgrade/upgrade.component';
+
 import { DiagnosticCenterComponent } from 'app/diagnostic-center/diagnostic-center.component';
 import { DoctorListingComponent } from 'app/doctor-listing/doctor-listing.component';
 import { HomeCareComponent } from 'app/home-care/home-care.component';
 import { MedicalInsuranceComponent } from 'app/medical-insurance/medical-insurance.component';
 import { BookAppointmentComponent } from 'app/doctor-listing/book-appointment/book-appointment.component';
 import { AppointmentListComponent } from 'app/doctor-listing/appointment-list/appointment-list.component';
+import { AdminComponent } from "app/admin/admin.component";
+import { DoctorAdminComponent } from 'app/admin/doctor-admin/doctor-admin.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -67,10 +69,12 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'diagnostic-center', component: DiagnosticCenterComponent },
     { path: 'doctor-listing', component: DoctorListingComponent },
     { path: 'notifications', component: NotificationsComponent },
-    { path: 'upgrade', component: UpgradeComponent },
+
     { path: 'home-care', component: HomeCareComponent },
     { path: 'medical-insurance', component: MedicalInsuranceComponent },
     { path: 'book-appointment', component: BookAppointmentComponent },
     { path: 'appointment-list', component: AppointmentListComponent },
+    { path: 'admin', component: AdminComponent },
+    { path: 'doctor-admin', component: DoctorAdminComponent }
 
 ];

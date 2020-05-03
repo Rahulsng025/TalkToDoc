@@ -10,7 +10,7 @@ import { TypographyComponent } from "../../typography/typography.component";
 import { IconsComponent } from "../../icons/icons.component";
 
 import { NotificationsComponent } from "../../notifications/notifications.component";
-import { UpgradeComponent } from "../../upgrade/upgrade.component";
+
 
 
 
@@ -42,6 +42,8 @@ import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insuran
 import { DoctorCardComponent } from "app/doctor-listing/doctor-card/doctor-card.component";
 import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/book-appointment.component";
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
+import { AdminComponent } from "app/admin/admin.component";
+import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -74,12 +76,14 @@ import { AppointmentListComponent } from "app/doctor-listing/appointment-list/ap
     DoctorListingComponent,
     DiagnosticCenterComponent,
     NotificationsComponent,
-    UpgradeComponent,
+
     HomeCareComponent,
     MedicalInsuranceComponent,
     DoctorCardComponent,
     BookAppointmentComponent,
-    AppointmentListComponent
+    AppointmentListComponent,
+    AdminComponent,
+    DoctorAdminComponent
   ],
 })
 export class AdminLayoutModule { }

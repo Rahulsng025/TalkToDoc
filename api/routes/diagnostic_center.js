@@ -60,6 +60,27 @@ router.post('/', (req, res, next) => {
 
 });
 
+//Handling Patch Request.
+router.patch('/:diagnosticcenterId', (req, res, next) => {
+    const id = req.params.diagnosticcenterId;
+    const updateOps = {};
+    for (const ops of req.body) {
+        updateOps[ops.propName] = ops.value;
+    }
+    diagnostic_center.update({ _id: id }, { $set: updateOps })
+        .exec()
+        .then(result => {
+            console.log(result);
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
 router.delete('/:diagnosticcenterId', (req, res, next) => {
     const id = req.params.diagnosticcenterId;
     diagnostic_center.remove({ _id: id })

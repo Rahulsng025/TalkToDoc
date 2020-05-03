@@ -8,35 +8,35 @@ const home_care = require('../models/home_care');
 
 router.get('/', (req, res, next) => {
     home_care.find()
-    .exec()
-    .then(docs => {
-        console.log(docs);
-        res.status(200).json(docs);
-    })
+        .exec()
+        .then(docs => {
+            console.log(docs);
+            res.status(200).json(docs);
+        })
 
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({
-            error: err
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
         });
-    });
 });
 
 //Handling incoming get request of Home Care by Id.
 
 router.get('/:homecareId', (req, res, next) => {
-    const id  = req.params.homecareId;
+    const id = req.params.homecareId;
     home_care.findById(id)
-    .exec()
-    .then(docs => {
-        console.log('From Database', docs);
-        res.status(200).json({docs});
-    })
+        .exec()
+        .then(docs => {
+            console.log('From Database', docs);
+            res.status(200).json({ docs });
+        })
 
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({error: err})
-    });
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err })
+        });
 });
 
 //Handling POST request by Home Care.
@@ -54,31 +54,52 @@ router.post('/', (req, res, next) => {
         .then(result => {
             console.log(result);
             res.status(201).json({
-              createdhomecare: homecare  
+                createdhomecare: homecare
             });
         })
-    .catch(err => console.log(err));
+        .catch(err => console.log(err));
 
 });
-        
+
+//Handling Patch Request.
+router.patch('/:homecareId', (req, res, next) => {
+    const id = req.params.homecareId;
+    const updateOps = {};
+    for (const ops of req.body) {
+        updateOps[ops.propName] = ops.value;
+    }
+    home_care.update({ _id: id }, { $set: updateOps })
+        .exec()
+        .then(result => {
+            console.log(result);
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
 
 //Handling delete request by Id.
 
 router.delete('/:homecareId', (req, res, next) => {
     const id = req.params.homecareId;
-    home_care.remove({_id:id})
-    .exec()
+    home_care.remove({ _id: id })
+        .exec()
 
-    .then(result => {
-        res.status(200).json(result);
-    })
+        .then(result => {
+            res.status(200).json(result);
+        })
 
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({
-            error: err
-    });
-    });
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
 });
 
 module.exports = router;
