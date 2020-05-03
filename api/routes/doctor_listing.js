@@ -7,6 +7,7 @@ const doctor_listing = require('../models/doctor_listing');
 //Handling incoming get request of doctor_listing..
 router.get('/', (req, res, next) => {
     doctor_listing.find()
+
         .exec()
         .then(docs => {
             console.log(docs);
@@ -57,6 +58,10 @@ router.post('/', (req, res, next) => {
         })
         .catch(err => console.log(err));
 });
+
+
+
+
 //Handling Patch Request.
 router.patch('/:doctorlistingId', (req, res, next) => {
     const id = req.params.doctorlistingId;

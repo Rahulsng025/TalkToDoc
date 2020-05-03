@@ -21,6 +21,7 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
     " degrees",
     "experience",
     " training",
+    "city"
   ];
 
   // fetch a list of all doctors with all of their details.
@@ -34,9 +35,13 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
 
   // searching a particular doctor from the fetched list.
   Search() {
-    this.allDoctorDetails = this.allDoctorDetails.filter((res) => {
-      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-    });
+    if (this.name != "") {
+      this.allDoctorDetails = this.allDoctorDetails.filter(res => {
+        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+      });
+    } else if (this.name == "") {
+      this.ngOnInit();
+    }
   }
 
   onLoadPage() {
