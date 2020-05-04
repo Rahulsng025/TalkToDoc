@@ -1,27 +1,26 @@
 <div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
-       
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
 
-                <table id = "customers">
-                    <tr>
-                      <th><b>Title</b></th>
-                      <th><b>Country Name</b></th>
-                      <th><b>Description</b></th>
-                   
-                    </tr>
-                  
-                    <tr *ngFor = 'let obj of medical_insurance'>
-                      <td>{{obj.title}}</td>
-                      <td>{{obj.country_name}}</td>
-                      <td>{{obj.description}}</td>
-               
-                  
-                    </tr>
-                  </table>
-        </div>
-            </div>
-            </div>
-        </div>
-    
+
+        <table id="customers">
+          <tr>
+            <th><b>Title</b></th>
+            <th><b>Country Name</b></th>
+            <th><b>Description</b></th>
+
+          </tr>
+
+          <tr *ngFor='let obj of allmedicalinsuranceDetails'>
+            <td>{{obj.title}}</td>
+            <td>{{obj.country_name}}</td>
+            <td>{{obj.description}}</td>
+
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

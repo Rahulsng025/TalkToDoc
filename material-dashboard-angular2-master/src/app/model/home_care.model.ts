@@ -1,4 +1,4 @@
-export interface home_care {
+export interface HomeCareModel {
 
     title: String,
     address: String,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DoctorListingService } from '../Services/doctorlisting.service';
-import {medical_insurance} from '../../app/model/medical_insurance.model';
+import { MedicalInsuranceService } from '../Services/medical-insurance.service';
+import { MedicalInsuranceModel } from '../../app/model/medical_insurance.model';
 
 @Component({
   selector: 'app-medical-insurance',
@@ -10,10 +10,10 @@ import {medical_insurance} from '../../app/model/medical_insurance.model';
 })
 export class MedicalInsuranceComponent implements OnInit {
 
-  medical_insurance: medical_insurance[];
+  allmedicalinsuranceDetails: MedicalInsuranceModel[];
   displayedcolumns: ['title', 'country_name', 'description'];
 
-  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
+  constructor(private medicalinsuranceService: MedicalInsuranceService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -21,13 +21,13 @@ export class MedicalInsuranceComponent implements OnInit {
 
   }
   fetchmedical_insurance() {
-    this.doctorlistingService
-    .getmedicalinsurance()
-    .subscribe((data: medical_insurance[]) => {
-      this.medical_insurance = data;
-    
-      console.log(this.medical_insurance);
-    });
+    this.medicalinsuranceService
+      .getmedicalinsurance()
+      .subscribe((data: MedicalInsuranceModel[]) => {
+        this.allmedicalinsuranceDetails = data;
+
+        console.log(this.allmedicalinsuranceDetails);
+      });
   }
 
 

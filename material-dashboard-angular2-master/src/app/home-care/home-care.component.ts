@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DoctorListingService } from '../Services/doctorlisting.service';
-import {home_care} from '../../app/model/home_care.model';
+//import { DoctorListingService } from '../Services/doctorlisting.service';
+import { HomeCareModel } from '../../app/model/home_care.model';
+import { HomeCareService } from '../Services/home-care.service';
 
 @Component({
   selector: 'app-home-care',
@@ -10,23 +11,24 @@ import {home_care} from '../../app/model/home_care.model';
 })
 export class HomeCareComponent implements OnInit {
 
-  home_care: home_care[];
-  displayedColumns = ['title', 'address',' state', 'country'];
+  allHomeCareDetails: HomeCareModel[];
+  displayedColumns = ['title', 'address', ' state', 'country'];
 
-  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
+  constructor(private homecareService: HomeCareService
+    , private router: Router) { }
 
   ngOnInit(): void {
     this.fetchhome_care();
   }
 
   fetchhome_care() {
-    this.doctorlistingService
-    .gethomecare()
-    .subscribe((data: home_care[]) => {
-      this.home_care = data;
-    
-      console.log(this.home_care);
-    });
+    this.homecareService
+      .gethomecare()
+      .subscribe((data: HomeCareModel[]) => {
+        this.allHomeCareDetails = data;
+
+        console.log(this.allHomeCareDetails);
+      });
   }
 
 }
