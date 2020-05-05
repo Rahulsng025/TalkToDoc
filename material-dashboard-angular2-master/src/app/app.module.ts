@@ -25,6 +25,7 @@ import { NotificationsComponent } from "./notifications/notifications.component"
 import { AgmCoreModule } from "@agm/core";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { DoctorListingService } from "./Services/doctorlisting.service";
+import { DiagnosticAdminComponent } from './admin/diagnostic-admin/diagnostic-admin.component';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { DoctorListingService } from "./Services/doctorlisting.service";
     HttpClientModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, AdminLayoutComponent],
+  declarations: [AppComponent, AdminLayoutComponent, DiagnosticAdminComponent],
   providers: [DoctorListingService],
   bootstrap: [AppComponent],
 })

@@ -92,12 +92,32 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ["./sidebar.component.css"],
 })
 export class SidebarComponent implements OnInit {
+  isUserLinksActive: boolean = true;
   menuItems: any[];
+  menuItemsAdmin: RouteInfo[] = [
+    { path: "/admin/doctors", title: "Doctors", class: "" },
+    { path: "/admin/diagnostic", title: "Diagnostic", class: "" }
+  ];
 
+  // currently active links (admin's or user's) based on User type.
+  activeNavLinks: any[];
+
+  // switches between the Admin links and User links
+  switchLinks() {
+    return (this.isUserLinksActive) ? this.menuItems : this.menuItemsAdmin;
+  }
+
+  // future usage to change the links (ie Admin links or User links)
+  // constructor(private loginService: LoginService) {
+  //   this.loginService.getActiveUser().subscribe((linkStatus: boolean) => {
+  //     this.isUserLinksActive = linkStatus;
+  //   });
+  // }
   constructor() { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter((menuItem) => menuItem);
+    this.activeNavLinks = this.switchLinks();
   }
   isMobileMenu() {
     if ($(window).width() > 991) {

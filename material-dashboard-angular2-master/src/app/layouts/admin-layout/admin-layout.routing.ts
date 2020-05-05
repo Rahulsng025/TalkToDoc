@@ -16,6 +16,8 @@ import { BookAppointmentComponent } from 'app/doctor-listing/book-appointment/bo
 import { AppointmentListComponent } from 'app/doctor-listing/appointment-list/appointment-list.component';
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from 'app/admin/doctor-admin/doctor-admin.component';
+import { DiagnosticAdminComponent } from 'app/admin/diagnostic-admin/diagnostic-admin.component';
+
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -74,7 +76,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'medical-insurance', component: MedicalInsuranceComponent },
     { path: 'book-appointment', component: BookAppointmentComponent },
     { path: 'appointment-list', component: AppointmentListComponent },
-    { path: 'admin', component: AdminComponent },
-    { path: 'doctor-admin', component: DoctorAdminComponent }
+    {
+        path: 'admin', component: AdminComponent, children: [
+            { path: "doctors", component: DoctorAdminComponent },
+            { path: "diagnostic", component: DiagnosticAdminComponent }
+        ]
+    }
 
 ];
