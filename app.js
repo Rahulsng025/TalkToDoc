@@ -25,7 +25,7 @@ mongoose.connect(
 );
 
 app.use(morgan("dev"));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //CORS (C-Cross O-Origin R-Resource S-Sharing) Errors

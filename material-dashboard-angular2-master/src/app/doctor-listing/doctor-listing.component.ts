@@ -21,7 +21,8 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
     " degrees",
     "experience",
     " training",
-    "city"
+    "city",
+    "cancel"
   ];
 
   // fetch a list of all doctors with all of their details.

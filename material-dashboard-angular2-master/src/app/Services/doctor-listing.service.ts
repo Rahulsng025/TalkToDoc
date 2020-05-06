@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 import { DoctorDetailsModel } from "./../model/doctor_listing.model";
 
@@ -8,7 +9,9 @@ import { DoctorDetailsModel } from "./../model/doctor_listing.model";
 })
 export class DoctorListingService {
   // stores doctor's details.
-  newDoctorDetails: DoctorDetailsModel;
+  newDoctorDetails: DoctorDetailsModel[];
+
+
 
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
@@ -16,11 +19,9 @@ export class DoctorListingService {
 
   // stores details for a new doctor which is to be added.
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
-    this.newDoctorDetails = newDoctorDetails;
-
     // API call to add a new doctor in the database.
     return this.http.post(
-      "${this.uri}/Doctor_Listing/add",
+      `${this.uri}/doctor_listing/add`,
       this.newDoctorDetails
     );
   }
@@ -37,9 +38,10 @@ export class DoctorListingService {
   }
 
   // return type is Observable.
-  deleteDoctorListing(_id: any) {
-    return this.http.get("${this.uri}/Doctor_Listing/delete/${id}");
+  deleteDoctorListing(_id: string): Observable<any> {
+
+    return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 }

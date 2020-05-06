@@ -29,7 +29,7 @@ export class AppointmentListingService {
     return this.http.post(`${this.uri}/book_appointment/`, newAppointment);
   }
 
-  //
+
   deletebookappointment(_id: string): Observable<any> {
     console.log("Passing ID (in Service): " + _id);
     return this.http.delete(`${this.uri}/book_appointment/${_id}`);

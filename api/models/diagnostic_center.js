@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const diagnostic_centerSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    established_in: Number,
+    established_in: String,
     address: String,
-    contact: Object,
+    contact: String,
     landmark: String,
     website: String
 

@@ -85,9 +85,9 @@ router.patch('/:doctorlistingId', (req, res, next) => {
 //Handling Delete Request by Id
 router.delete('/:doctorlistingId', (req, res, next) => {
     const id = req.params.doctorlistingId;
-    doctor_listing.remove({ _id: id })
+    doctor_listing.
+        remove({ _id: id })
         .exec()
-
         .then(result => {
             res.status(200).json(result);
         })

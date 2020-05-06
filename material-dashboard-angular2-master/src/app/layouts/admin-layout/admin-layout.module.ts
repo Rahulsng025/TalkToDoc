@@ -32,7 +32,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatButtonModule } from '@angular/material/button'
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
@@ -65,7 +65,8 @@ import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.compon
     MatProgressSpinnerModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule
   ],
   declarations: [
     DashboardComponent,

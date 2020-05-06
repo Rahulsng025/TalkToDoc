@@ -5,7 +5,7 @@ const doctor_listingSchema = mongoose.Schema({
     name: String,
     speciality: String,
     degrees: String,
-    experience: Object,
+    experience: String,
     training: String,
     city: String
     //Active: Boolean
