@@ -3,68 +3,85 @@
         <div class="row">
             <div class="col-md-12">
 
-
-                <div class="card">
-                    <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Doctor Admin</h4>
-                        <p class="card-category"> Here is the details of all doctors</p>
-                    </div>
-                    <div class="card-body">
-                        <table mat-table [dataSource]="allDoctorDetails">
-
-
-                            <ng-container matColumnDef="name">
-                                <th mat-header-cell *matHeaderCellDef> Name </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.name}} </td>
-                            </ng-container>
-
-
-                            <ng-container matColumnDef="speciality">
-                                <th mat-header-cell *matHeaderCellDef>Speciality </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.speciality}}
-                                </td>
-                            </ng-container>
+                <div class="search-div">
+                    <button mat-raised-button>
+                        <mat-icon>add</mat-icon>Create
+                    </button>
+                    <mat-form-field class="search-form-field" floatLabel="never">
+                        <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off"
+                            (keyup)="applyFilter()">
+                        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey"
+                            (click)="onSearchClear()">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <div class="mat-elevation-z8">
+                    <mat-table mat-table [dataSource]="allDoctorDetails">
 
 
-                            <ng-container matColumnDef="degrees">
-                                <th mat-header-cell *matHeaderCellDef>Degrees </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.degrees}} </td>
-                            </ng-container>
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.name}} </td>
+                        </ng-container>
 
-                            <ng-container matColumnDef="experience">
-                                <th mat-header-cell *matHeaderCellDef>experience </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.experience}}
-                                </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="training">
-                                <th mat-header-cell *matHeaderCellDef>training </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.training}} </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="city">
-                                <th mat-header-cell *matHeaderCellDef>City </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.city}} </td>
-                            </ng-container>
-
-                            <ng-container matColumnDef="cancel">
-                                <th mat-header-cell *matHeaderCellDef>Cancel </th>
-                                <td mat-cell *matCellDef="let allDoctorDetails"> <button
-                                        (click)="deleteDoctorListing(allDoctorDetails._id)" mat-raised-button
-                                        color="warn">Cancel</button> </td>
-                            </ng-container>
+                        <ng-container matColumnDef="department">
+                            <th mat-header-cell *matHeaderCellDef> Department </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.department}} </td>
+                        </ng-container>
 
 
+                        <ng-container matColumnDef="speciality">
+                            <th mat-header-cell *matHeaderCellDef>Speciality </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.speciality}}
+                            </td>
+                        </ng-container>
 
-                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                        </table>
 
-                    </div>
+                        <ng-container matColumnDef="degrees">
+                            <th mat-header-cell *matHeaderCellDef>Degrees </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.degrees}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="mobile">
+                            <th mat-header-cell *matHeaderCellDef> Mobile </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.mobile}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="email">
+                            <th mat-header-cell *matHeaderCellDef>Email </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.email}}
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="training">
+                            <th mat-header-cell *matHeaderCellDef>training </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.training}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="city">
+                            <th mat-header-cell *matHeaderCellDef>City </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> {{allDoctorDetails.city}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="cancel">
+                            <th mat-header-cell *matHeaderCellDef>Cancel </th>
+                            <td mat-cell *matCellDef="let allDoctorDetails"> <button
+                                    (click)="deleteDoctorListing(allDoctorDetails._id)" mat-raised-button
+                                    color="warn">Cancel</button> </td>
+                        </ng-container>
+
+
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </mat-table>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 
@@ -86,7 +103,7 @@
 
 
 
-    <!-- <div class="main-content">
+<!-- <div class="main-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

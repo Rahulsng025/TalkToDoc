@@ -28,6 +28,7 @@ import { DoctorListingService } from "./Services/doctorlisting.service";
 import { DiagnosticAdminComponent } from './admin/diagnostic-admin/diagnostic-admin.component';
 
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,

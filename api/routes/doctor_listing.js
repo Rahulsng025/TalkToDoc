@@ -42,10 +42,13 @@ router.post('/', (req, res, next) => {
     const doctorlisting = new doctor_listing({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
+        department: req.body.department,
         speciality: req.body.speciality,
-        degree: req.body.degree,
-        experience: req.body.experience,
-        training: req.body.training
+        degrees: req.body.degrees,
+        mobile: req.body.mobile,
+        email: req.body.email,
+        training: req.body.training,
+        city: req.body.city
     });
     doctorlisting
         .save()

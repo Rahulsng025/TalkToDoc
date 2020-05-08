@@ -14,13 +14,16 @@ import { mergeMap } from "rxjs/operators";
 export class DoctorAdminComponent implements OnInit {
   allDoctorDetails: DoctorDetailsModel[];
 
+  searchKey: string;
 
   displayedColumns = [
 
     "name",
+    "department",
     "speciality",
     "degrees",
-    "experience",
+    "mobile",
+    "email",
     "training",
     "city",
     "cancel"
@@ -60,4 +63,11 @@ export class DoctorAdminComponent implements OnInit {
       });
 
   }
+  // onSearchClear() {
+  //   this.searchKey = "";
+  //   this.applyFilter();
+
+  // applyFilter() {
+  //   this.allDoctorDetails.filter = this.searchKey.trim().toLowerCase();
+  // }
 }

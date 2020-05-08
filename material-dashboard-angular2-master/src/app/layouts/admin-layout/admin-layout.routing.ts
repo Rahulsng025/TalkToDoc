@@ -17,6 +17,8 @@ import { AppointmentListComponent } from 'app/doctor-listing/appointment-list/ap
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from 'app/admin/doctor-admin/doctor-admin.component';
 import { DiagnosticAdminComponent } from 'app/admin/diagnostic-admin/diagnostic-admin.component';
+import { Component } from '@angular/core';
+import { DoctorsPagelayoutComponent } from 'app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component';
 
 
 
@@ -78,7 +80,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'appointment-list', component: AppointmentListComponent },
     {
         path: 'admin', component: AdminComponent, children: [
+
             { path: "doctors", component: DoctorAdminComponent },
+            { path: "doctors-pagelayout", component: DoctorsPagelayoutComponent },
             { path: "diagnostic", component: DiagnosticAdminComponent }
         ]
     }

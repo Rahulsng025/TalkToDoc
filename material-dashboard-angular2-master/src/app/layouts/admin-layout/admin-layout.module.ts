@@ -33,6 +33,9 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatButtonModule } from '@angular/material/button'
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon'
+import { MatGridListModule } from '@angular/material/grid-list'
+
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
@@ -44,6 +47,10 @@ import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/bo
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.component";
+import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component";
+
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -66,7 +73,11 @@ import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.compon
     MatDatepickerModule,
     MatNativeDateModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatDialogModule,
+    MatGridListModule
+
   ],
   declarations: [
     DashboardComponent,
@@ -84,7 +95,9 @@ import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.compon
     BookAppointmentComponent,
     AppointmentListComponent,
     AdminComponent,
-    DoctorAdminComponent
+    DoctorAdminComponent,
+    DoctorsPagelayoutComponent
+
   ],
 })
 export class AdminLayoutModule { }

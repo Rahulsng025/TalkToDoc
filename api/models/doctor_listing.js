@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const doctor_listingSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
+    department: String,
     speciality: String,
     degrees: String,
-    experience: String,
+    mobile: String,
+    email: String,
     training: String,
     city: String
     //Active: Boolean

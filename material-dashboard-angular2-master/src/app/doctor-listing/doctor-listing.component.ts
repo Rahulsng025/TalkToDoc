@@ -17,9 +17,11 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
   name: string;
   displayedColumns = [
     "name",
+    "department",
     "speciality",
     " degrees",
-    "experience",
+    "mobile",
+    "email",
     " training",
     "city",
     "cancel"
