@@ -1,14 +1,18 @@
 import { Injectable, ViewChild } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-
+import { DoctorDetailsModel } from "app/model/doctor_listing.model";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
     providedIn: "root",
 })
 
 export class doctorspagelayoutService {
+    newDoctorDetails: DoctorDetailsModel[];
+    uri = "http://localhost:3000";
 
-    constructor() {
+    constructor(private http: HttpClient) {
 
     }
 
@@ -37,5 +41,21 @@ export class doctorspagelayoutService {
             training: '',
             city: ''
         });
+    }
+    getDoctorsList() {
+        return this.http.get(`${this.uri}/doctor_listing`);
+    }
+
+    deleteDoctorListing(_id: string): Observable<any> {
+
+        return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
+    }
+
+    addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
+        // API call to add a new doctor in the database.
+        return this.http.post(
+            `${this.uri}/doctor_listing/`, newDoctorDetails
+
+        );
     }
 }

@@ -35,7 +35,7 @@ export class AppointmentListComponent implements OnInit {
     // calling the service to add new appointment.
     this.appointmentListingService
       .addbookappointment(newAppointment)
-      .subscribe((data: any) => {
+      .subscribe((_data: any) => {
         // do something with the data.
         console.log("Booked!");
         this.router.navigate(['/book-appointment']);
