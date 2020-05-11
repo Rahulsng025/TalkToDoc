@@ -11,8 +11,8 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/dashboard",
     title: "Dashboard",
-    // icon: "dashboard", 
-    class: ""
+    // icon: "dashboard",
+    class: "",
   },
 
   {
@@ -30,8 +30,8 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/home-care",
     title: "Home Care",
-    // icon: "center", 
-    class: ""
+    // icon: "center",
+    class: "",
   },
   {
     path: "/medical-insurance",
@@ -42,8 +42,8 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/user-profile",
     title: "User Profile",
-    // icon: "person", 
-    class: ""
+    // icon: "person",
+    class: "",
   },
   {
     path: "/table-list",
@@ -60,8 +60,8 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/icons",
     title: "Icons",
-    // icon: "bubble_chart", 
-    class: ""
+    // icon: "bubble_chart",
+    class: "",
   },
 
   {
@@ -70,9 +70,6 @@ export const ROUTES: RouteInfo[] = [
     //icon: "notifications",
     class: "",
   },
-
-
-
 ];
 
 @Component({
@@ -81,12 +78,12 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ["./sidebar.component.css"],
 })
 export class SidebarComponent implements OnInit {
-  isUserLinksActive: boolean = true;
+  isUserLinksActive: boolean = false;
   menuItems: any[];
   menuItemsAdmin: RouteInfo[] = [
     { path: "/admin/doctors", title: "Doctors", class: "" },
 
-    { path: "/admin/diagnostic", title: "Diagnostic", class: "" }
+    { path: "/admin/diagnostic", title: "Diagnostic", class: "" },
   ];
 
   // currently active links (admin's or user's) based on User type.
@@ -94,7 +91,7 @@ export class SidebarComponent implements OnInit {
 
   // switches between the Admin links and User links
   switchLinks() {
-    return (this.isUserLinksActive) ? this.menuItems : this.menuItemsAdmin;
+    return this.isUserLinksActive ? this.menuItems : this.menuItemsAdmin;
   }
 
   // future usage to change the links (ie Admin links or User links)
@@ -103,7 +100,7 @@ export class SidebarComponent implements OnInit {
   //     this.isUserLinksActive = linkStatus;
   //   });
   // }
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.menuItems = ROUTES.filter((menuItem) => menuItem);

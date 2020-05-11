@@ -9,6 +9,7 @@ import { TableListComponent } from "../../table-list/table-list.component";
 import { TypographyComponent } from "../../typography/typography.component";
 import { IconsComponent } from "../../icons/icons.component";
 
+
 import { NotificationsComponent } from "../../notifications/notifications.component";
 
 
@@ -35,6 +36,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon'
 import { MatGridListModule } from '@angular/material/grid-list'
+import { MatSortModule } from '@angular/material/sort';
 
 
 import { MatSelectModule } from "@angular/material/select";
@@ -76,7 +78,8 @@ import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagel
     MatDialogModule,
     MatIconModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSortModule
 
   ],
   declarations: [

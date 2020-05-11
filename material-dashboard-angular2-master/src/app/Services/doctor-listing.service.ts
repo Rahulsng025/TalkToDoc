@@ -12,8 +12,6 @@ export class DoctorListingService {
   // stores doctor's details.
   newDoctorDetails: DoctorDetailsModel[];
 
-
-
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
   uri = "http://localhost:3000";
@@ -21,10 +19,7 @@ export class DoctorListingService {
   // stores details for a new doctor which is to be added.
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
     // API call to add a new doctor in the database.
-    return this.http.post(
-      `${this.uri}/doctor_listing/add`,
-      this.newDoctorDetails
-    );
+    return this.http.post(`${this.uri}/doctor_listing/`, this.newDoctorDetails);
   }
 
   // returns a list of all the doctors.
@@ -38,11 +33,19 @@ export class DoctorListingService {
     return this.http.get(`${this.uri}/doctor_listing/${Id}`);
   }
 
+  //update doctor list
+
+  updateDoctorListing(newDoctorDetails: DoctorDetailsModel) {
+    return this.http.patch(
+      `${this.uri}/doctor_listing/`,
+      this.newDoctorDetails
+    );
+  }
+
   // return type is Observable.
   deleteDoctorListing(_id: string): Observable<any> {
-
     return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 }
