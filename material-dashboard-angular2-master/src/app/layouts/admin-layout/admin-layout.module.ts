@@ -9,21 +9,16 @@ import { TableListComponent } from "../../table-list/table-list.component";
 import { TypographyComponent } from "../../typography/typography.component";
 import { IconsComponent } from "../../icons/icons.component";
 
-
 import { NotificationsComponent } from "../../notifications/notifications.component";
-
-
-
 
 import { MatInputModule } from "@angular/material/input";
 import {
   MatRippleModule,
   MatOptionModule,
   MatCommonModule,
-  MatNativeDateModule
-
+  MatNativeDateModule,
 } from "@angular/material/core";
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatCardModule } from "@angular/material/card";
 import { MatTableModule } from "@angular/material/table";
 import { MatDividerModule } from "@angular/material/divider";
@@ -31,13 +26,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { MatButtonModule } from '@angular/material/button'
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon'
-import { MatGridListModule } from '@angular/material/grid-list'
-import { MatSortModule } from '@angular/material/sort';
-
+import { MatButtonModule } from "@angular/material/button";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatIconModule } from "@angular/material/icon";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatSortModule } from "@angular/material/sort";
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
@@ -49,9 +43,13 @@ import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/bo
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.component";
+import { DiagnosticAdminComponent } from "app/admin/diagnostic-admin/diagnostic-admin.component";
+import { HomecareAdminComponent } from "app/admin/homecare-admin/homecare-admin.component";
 import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component";
-
-
+import { HomecareLayoutComponent } from 'app/admin/homecare-admin/homecare-layout/homecare-layout.component';
+import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
+import { MedicalAdminComponent } from "app/admin/medical-admin/medical-admin.component";
+import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic-layout/diagnostic-layout.component';
 
 @NgModule({
   imports: [
@@ -80,7 +78,6 @@ import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagel
     MatDialogModule,
     MatGridListModule,
     MatSortModule
-
   ],
   declarations: [
     DashboardComponent,
@@ -99,8 +96,13 @@ import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagel
     AppointmentListComponent,
     AdminComponent,
     DoctorAdminComponent,
-    DoctorsPagelayoutComponent
-
+    DoctorsPagelayoutComponent,
+    DiagnosticAdminComponent,
+    HomecareAdminComponent,
+    HomecareLayoutComponent,
+    MedicalAdminComponent,
+    MedicalLayoutComponent,
+    DiagnosticLayoutComponent
   ],
 })
 export class AdminLayoutModule { }

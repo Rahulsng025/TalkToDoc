@@ -1,13 +1,45 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { DiagnosticCenterModel } from "app/model/diagnostic_center.model";
+import { Observable } from "rxjs";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Injectable({
   providedIn: "root",
 })
 export class DoctorListingService {
+  diagnostic_center: DiagnosticCenterModel[]
+
   uri = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
+
+  form: FormGroup = new FormGroup({
+    $key: new FormControl(null),
+    name: new FormControl(""),
+    established_in: new FormControl(""),
+    address: new FormControl(""),
+    contact: new FormControl("", Validators.maxLength(10)),
+    landmark: new FormControl(""),
+    website: new FormControl("", Validators.required),
+
+  });
+
+  initializeFormGroup() {
+    this.form.setValue({
+      $key: null,
+      name: "",
+      established_in: "",
+      address: "",
+      contact: "",
+      landmark: "",
+      website: ""
+    });
+  }
+
+
+
+
 
   //Services of Diagnostic Center.
   getDiagnosticcenter() {
@@ -18,34 +50,12 @@ export class DoctorListingService {
     return this.http.get(`${this.uri}/diagnostic_center/${Id}`);
   }
 
-  addDiagnosticcenter(
-    name: any,
-    established_in: any,
-    address: any,
-    contact: any,
-    landmark: any,
-    website: any
-  ) {
-    const diagnosticcenter = {
-      name: name,
-      established_in: established_in,
-      address: address,
-      contact: contact,
-      landmark: landmark,
-      website: website,
-    };
+  addDiagnosticcenter(diagnostic_center: DiagnosticCenterModel) {
     return this.http.post(
-      `${this.uri}/Diagnostic_center/add`,
-      diagnosticcenter
-    );
+      `${this.uri}/Diagnostic_center/`, diagnostic_center);
   }
-  deleteDiagnosticcenter(_id: any) {
-    return this.http.get("${this.uri}/Diagnostic_center/delete/${id}");
+  deleteDiagnosticcenter(_id: string): Observable<any> {
+    return this.http.delete(`${this.uri}/Diagnostic_center/${_id}`);
   }
-
-
-
-  //Services of Medical Insurance.
-
 
 }

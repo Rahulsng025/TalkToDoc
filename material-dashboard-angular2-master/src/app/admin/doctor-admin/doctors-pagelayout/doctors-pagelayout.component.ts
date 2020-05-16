@@ -4,6 +4,7 @@ import { MatDialogRef } from "@angular/material/dialog";
 
 import { doctorspagelayoutService } from "app/admin/doctor-admin/doctors-pagelayout/doctorpagelayout.service";
 import { DoctorDetailsModel } from "app/model/doctor_listing.model";
+import { DoctorListingService } from "app/Services/doctor-listing.service";
 
 @Component({
   selector: "app-doctors-pagelayout",
@@ -17,7 +18,8 @@ export class DoctorsPagelayoutComponent implements OnInit {
   constructor(
     private service: doctorspagelayoutService,
     private router: Router,
-    public dialogRef: MatDialogRef<DoctorsPagelayoutComponent>
+    public dialogRef: MatDialogRef<DoctorsPagelayoutComponent>,
+    doctorlistingService: DoctorListingService
   ) {}
 
   ngOnInit(): void {
@@ -34,18 +36,23 @@ export class DoctorsPagelayoutComponent implements OnInit {
       this.service
         .addDoctorListing(this.service.form.value)
         .subscribe((data: DoctorDetailsModel[]) => {
-          this.allDoctorDetails = data;
-          console.log(this.allDoctorDetails);
           this.router.navigate(["/admin/doctors"]);
+          this.service.form.reset();
+          this.service.initializeFormGroup();
         });
-      this.service.form.reset();
-      this.service.initializeFormGroup();
-      this.onClose();
+    } else {
+      this.service
+        .patchDoctorListing(this.service.form.value)
+        .subscribe((data: DoctorDetailsModel[]) => {
+          this.router.navigate(["/admin/doctors"]);
+          this.service.form.reset();
+          this.service.initializeFormGroup();
+          this.onClose();
+        });
     }
   }
+
   onClose() {
-    this.service.form.reset();
-    this.service.initializeFormGroup();
     this.dialogRef.close();
   }
 }

@@ -10,11 +10,14 @@ import { FormGroup, FormControl } from "@angular/forms";
 })
 export class DoctorListingService {
   // stores doctor's details.
+  selectedDoctors: DoctorDetailsModel;
   newDoctorDetails: DoctorDetailsModel[];
 
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
   uri = "http://localhost:3000";
+  //Update doctor(call the update api) sb naam number ke sth
+  //EditDoctor()
 
   // stores details for a new doctor which is to be added.
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
@@ -31,15 +34,6 @@ export class DoctorListingService {
   // return type is Observable.
   getDoctorListingById(Id: any) {
     return this.http.get(`${this.uri}/doctor_listing/${Id}`);
-  }
-
-  //update doctor list
-
-  updateDoctorListing(newDoctorDetails: DoctorDetailsModel) {
-    return this.http.patch(
-      `${this.uri}/doctor_listing/`,
-      this.newDoctorDetails
-    );
   }
 
   // return type is Observable.

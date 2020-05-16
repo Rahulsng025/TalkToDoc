@@ -13,7 +13,7 @@ export class DoctorCardComponent implements OnInit {
   @Input() training: String;
   @Input() image: String;
   // material-dashboard-angular2-master\src\app\doctor-listing\doctor-card\doctor-card.component.ts
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

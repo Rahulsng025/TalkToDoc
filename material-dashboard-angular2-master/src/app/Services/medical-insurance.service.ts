@@ -1,16 +1,43 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { MedicalInsuranceModel } from "app/model/medical_insurance.model"
+import { Observable } from "rxjs";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
-import { MedicalInsuranceModel } from "../model/medical_insurance.model";
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MedicalInsuranceService {
 
-  newMedicalInsuranceDetails: MedicalInsuranceModel;
+  allMedicalInsuranceDetails: MedicalInsuranceModel;
 
   uri = "http://localhost:3000";
+
+  constructor(private http: HttpClient) { }
+
+  form: FormGroup = new FormGroup({
+    $key: new FormControl(null),
+    title: new FormControl("", Validators.required),
+    country_name: new FormControl("", Validators.required),
+    description: new FormControl("", Validators.required),
+
+
+  });
+
+  initializeFormGroup() {
+    this.form.setValue({
+      $key: null,
+      title: "",
+      country_name: "",
+      description: "",
+
+    });
+  }
+
+
 
 
   getmedicalinsurance() {
@@ -21,19 +48,11 @@ export class MedicalInsuranceService {
     return this.http.get(`${this.uri}/medical_insurance/${Id}`);
   }
 
-  addmedicalinsurance(title: any, country_name: any, description: any) {
-    const newMedicalInsuranceDetails = {
-      title: title,
-      country_name: country_name,
-      description: description,
-    };
-    return this.http.post(
-      `${this.uri}/medical_insurance/add`,
-      newMedicalInsuranceDetails
-    );
+  addmedicalinsurance(allMedicalInsuranceDetails: MedicalInsuranceModel) {
+    return this.http.post(`${this.uri}/medical_insurance/`, allMedicalInsuranceDetails);
   }
-  deletemedicalinsurance(_id: any) {
-    return this.http.get("${this.uri}/medical_insurance/delete/${id}");
+  deletemedicalinsurance(_id: string): Observable<any> {
+    return this.http.delete(`${this.uri}/medical_insurance/${_id}`);
   }
-  constructor(private http: HttpClient) { }
+
 }

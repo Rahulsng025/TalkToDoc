@@ -1,9 +1,9 @@
-export interface diagnostic_center {
+export interface DiagnosticCenterModel {
 
     name: String,
-    established_in: Number,
+    established_in: String,
     address: String,
-    contact: Object,
+    contact: string,
     landmark: String,
     website: String
 }

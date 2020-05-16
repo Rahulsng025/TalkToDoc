@@ -84,6 +84,12 @@ export class SidebarComponent implements OnInit {
     { path: "/admin/doctors", title: "Doctors", class: "" },
 
     { path: "/admin/diagnostic", title: "Diagnostic", class: "" },
+
+
+
+    { path: "/admin/homecare", title: "Home Care", class: "" },
+
+    { path: "/admin/medical", title: "Medical Insurance", class: "" }
   ];
 
   // currently active links (admin's or user's) based on User type.
@@ -100,7 +106,7 @@ export class SidebarComponent implements OnInit {
   //     this.isUserLinksActive = linkStatus;
   //   });
   // }
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter((menuItem) => menuItem);

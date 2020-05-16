@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DoctorListingService } from '../Services/doctorlisting.service';
-import {diagnostic_center} from '../../app/model/diagnostic_center.model';
+import { DiagnosticCenterModel } from '../../app/model/diagnostic_center.model';
 
 @Component({
   selector: 'app-diagnostic-center',
@@ -10,23 +10,23 @@ import {diagnostic_center} from '../../app/model/diagnostic_center.model';
 })
 export class DiagnosticCenterComponent implements OnInit {
 
-  diagnostic_center: diagnostic_center[];
-  displayedColumns = ['name', 'established_in','address', 'contact', ' landmark',' website'];
+  diagnostic_center: DiagnosticCenterModel[];
+  displayedColumns = ['name', 'established_in', 'address', 'contact', 'landmark', ' website'];
 
-  constructor(private doctorlistingService : DoctorListingService, private router: Router) { }
+  constructor(private doctorlistingService: DoctorListingService, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchdiagnostic_center();
   }
 
-  fetchdiagnostic_center(){
+  fetchdiagnostic_center() {
     this.doctorlistingService
-    .getDiagnosticcenter()
-    .subscribe((data: diagnostic_center[]) => {
-      this.diagnostic_center = data;
-    
-      console.log(this.diagnostic_center);
-    });
+      .getDiagnosticcenter()
+      .subscribe((data: DiagnosticCenterModel[]) => {
+        this.diagnostic_center = data;
+
+        console.log(this.diagnostic_center);
+      });
   }
 
 

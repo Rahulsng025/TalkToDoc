@@ -1,4 +1,5 @@
 export interface DoctorDetailsModel {
+  _id: any;
   name: String;
   department: String;
   speciality: String;
@@ -8,5 +9,4 @@ export interface DoctorDetailsModel {
   training: String;
   city: String;
   //Active: boolean;
-
 }

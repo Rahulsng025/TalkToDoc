@@ -27,6 +27,7 @@ export class MedicalInsuranceComponent implements OnInit {
         this.allmedicalinsuranceDetails = data;
 
         console.log(this.allmedicalinsuranceDetails);
+
       });
   }
 

@@ -8,10 +8,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app.routing";
 import { ComponentsModule } from "./components/components.module";
 
-
-
-
-
 import { AppComponent } from "./app.component";
 
 import { DashboardComponent } from "./dashboard/dashboard.component";
@@ -25,7 +21,9 @@ import { NotificationsComponent } from "./notifications/notifications.component"
 import { AgmCoreModule } from "@agm/core";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { DoctorListingService } from "./Services/doctorlisting.service";
-import { DiagnosticAdminComponent } from './admin/diagnostic-admin/diagnostic-admin.component';
+import { DiagnosticLayoutComponent } from './admin/diagnostic/diagnostic-layout/diagnostic-layout.component';
+
+
 
 
 
@@ -40,7 +38,7 @@ import { DiagnosticAdminComponent } from './admin/diagnostic-admin/diagnostic-ad
     HttpClientModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, AdminLayoutComponent, DiagnosticAdminComponent],
+  declarations: [AppComponent, AdminLayoutComponent, DiagnosticLayoutComponent],
   providers: [DoctorListingService],
   bootstrap: [AppComponent],
 })

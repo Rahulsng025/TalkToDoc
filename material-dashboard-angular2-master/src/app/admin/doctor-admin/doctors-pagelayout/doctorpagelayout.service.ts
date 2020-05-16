@@ -9,9 +9,10 @@ import { Observable } from "rxjs";
 })
 export class doctorspagelayoutService {
   newDoctorDetails: DoctorDetailsModel[];
+
   uri = "http://localhost:3000";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
@@ -50,11 +51,8 @@ export class doctorspagelayoutService {
     return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
   }
 
-  updateDoctorListing(_newDoctorDetails: DoctorDetailsModel) {
-    return this.http.patch(
-      `${this.uri}/doctor_listing/`,
-      this.newDoctorDetails
-    );
+  patchDoctorListing(newDoctorDetails: DoctorDetailsModel) {
+    return this.http.patch(`${this.uri}/doctor_listing/`, newDoctorDetails);
   }
 
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {

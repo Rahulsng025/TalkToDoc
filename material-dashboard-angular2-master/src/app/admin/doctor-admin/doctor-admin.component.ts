@@ -36,7 +36,7 @@ export class DoctorAdminComponent implements OnInit {
     private router: Router,
     private dialog: MatDialog,
     private service: doctorspagelayoutService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.fetchDoctorList();
@@ -72,7 +72,7 @@ export class DoctorAdminComponent implements OnInit {
   //  }
 
   onCreate() {
-    this.service.updateDoctorListing(this.service.form.value);
+    this.service.initializeFormGroup();
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
@@ -80,11 +80,5 @@ export class DoctorAdminComponent implements OnInit {
     this.dialog.open(DoctorsPagelayoutComponent, dialogConfig);
   }
 
-  onEdit() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
-    this.dialog.open(DoctorsPagelayoutComponent, dialogConfig);
-  }
+
 }
