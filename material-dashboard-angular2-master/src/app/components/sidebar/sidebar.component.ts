@@ -54,13 +54,13 @@ export const ROUTES: RouteInfo[] = [
   {
     path: "/typography",
     title: "Typography",
-    //icon: "library_books",
+    // icon: "library_books",
     class: "",
   },
   {
     path: "/icons",
     title: "Icons",
-    // icon: "bubble_chart",
+    //  icon: "bubble_chart",
     class: "",
   },
 
@@ -85,11 +85,13 @@ export class SidebarComponent implements OnInit {
 
     { path: "/admin/diagnostic", title: "Diagnostic", class: "" },
 
-
+    { path: "/admin/medical", title: "Medical Insurance", class: "" },
 
     { path: "/admin/homecare", title: "Home Care", class: "" },
 
-    { path: "/admin/medical", title: "Medical Insurance", class: "" }
+    { path: "/admin/appointment", title: "Appointment Boooking", class: "" }
+
+
   ];
 
   // currently active links (admin's or user's) based on User type.

@@ -32,6 +32,8 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatSortModule } from "@angular/material/sort";
+import { MatRadioModule } from "@angular/material/radio";
+
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
@@ -47,9 +49,11 @@ import { DiagnosticAdminComponent } from "app/admin/diagnostic-admin/diagnostic-
 import { HomecareAdminComponent } from "app/admin/homecare-admin/homecare-admin.component";
 import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component";
 import { HomecareLayoutComponent } from 'app/admin/homecare-admin/homecare-layout/homecare-layout.component';
+import { MedicalAdminComponent } from 'app/admin/medical-admin/medical-admin.component';
 import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
-import { MedicalAdminComponent } from "app/admin/medical-admin/medical-admin.component";
+
 import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic-layout/diagnostic-layout.component';
+import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointment-admin.component";
 
 @NgModule({
   imports: [
@@ -77,7 +81,10 @@ import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic
     MatIconModule,
     MatDialogModule,
     MatGridListModule,
-    MatSortModule
+    MatSortModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [
     DashboardComponent,
@@ -100,9 +107,10 @@ import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic
     DiagnosticAdminComponent,
     HomecareAdminComponent,
     HomecareLayoutComponent,
+    DiagnosticLayoutComponent,
     MedicalAdminComponent,
     MedicalLayoutComponent,
-    DiagnosticLayoutComponent
+    AppointmentAdminComponent
   ],
 })
 export class AdminLayoutModule { }

@@ -1,0 +1,134 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-div">
+                    <button mat-raised-button (click)="onCreate()">
+                        <mat-icon>add</mat-icon>Create
+                    </button>
+                    <mat-form-field class="search-form-field" floatLabel="never">
+                        <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off"
+                            (keyup)="onsearch()">
+                        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey"
+                            (click)="onSearchClear()">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+
+
+
+                <table mat-table [dataSource]="book_appointment" class="mat-elevation-z8">
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="fname">
+                        <th mat-header-cell *matHeaderCellDef> First Name </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.fname}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="lname">
+                        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.lname}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="gender">
+                        <th mat-header-cell *matHeaderCellDef> Gender </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.gender}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="mobile">
+                        <th mat-header-cell *matHeaderCellDef> Mobile </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.mobile}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="address">
+                        <th mat-header-cell *matHeaderCellDef>Address </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.address}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef> Email</th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.email}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="dateofbirth">
+                        <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.dateofbirth}}
+                        </td>
+                    </ng-container>
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="consultingdoctor">
+                        <th mat-header-cell *matHeaderCellDef> Consulting Doctor </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.consultingdoctor}}
+                        </td>
+                    </ng-container>
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="dateofappointment">
+                        <th mat-header-cell *matHeaderCellDef> Date of Appointment </th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.dateofappointment}}
+                        </td>
+                    </ng-container>
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="timeofappointment">
+                        <th mat-header-cell *matHeaderCellDef>Time of Appointment</th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.timeofappointment}}
+                        </td>
+                    </ng-container>
+
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="injury">
+                        <th mat-header-cell *matHeaderCellDef>Injury</th>
+                        <td mat-cell *matCellDef="let  element">
+                            {{ element.injury}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="action">
+                        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                        <mat-cell *matCellDef="let book_appointment">
+                            <button mat-icon-button (click)="onEdit(doctors)">
+                                <mat-icon>launch</mat-icon>
+                            </button>
+                            <button (click)="deletebookappointment(book_appointment._id)" mat-icon-button color="warn">
+                                <mat-icon>delete_outline</mat-icon>
+                            </button>
+                        </mat-cell>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

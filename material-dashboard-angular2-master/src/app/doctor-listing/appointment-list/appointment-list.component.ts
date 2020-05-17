@@ -5,6 +5,12 @@ import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
 import { Router } from "@angular/router";
 
+//For iterating the doctor's list
+interface consultingdoctor {
+  id: string;
+  name: string;
+}
+
 @Component({
   selector: "app-appointment-list",
   templateUrl: "./appointment-list.component.html",
@@ -16,11 +22,30 @@ export class AppointmentListComponent implements OnInit {
   public successMsg: String;
   public errorMsg: String;
 
+
+
+
+  consult: consultingdoctor[] = [
+    { id: '1', name: "DR. AKHIL AGRAWAL" },
+    { id: '2', name: "DR. S.N. SANKHWAR" },
+    { id: '3', name: "DR. VIMAL KUMAR" },
+    { id: '4', name: "DR. NOUSHIF M" }
+  ];
+
+
+
+  constructor(private appointmentListingService: AppointmentListingService, private router: Router) { }
+
+
+
+
+
   // adding new appointment.
   bookNewAppointment() {
     console.log(this.appointmentForm);
     let newAppointment: AppointmentDetailsModel = {
-      name: this.appointmentForm.form.value.name,
+      fname: this.appointmentForm.form.value.fname,
+      lname: this.appointmentForm.form.value.lname,
       gender: this.appointmentForm.form.value.gender,
       mobile: this.appointmentForm.form.value.mobile,
       address: this.appointmentForm.form.value.address,
@@ -42,7 +67,24 @@ export class AppointmentListComponent implements OnInit {
       });
   }
 
-  constructor(private appointmentListingService: AppointmentListingService, private router: Router) { }
+
 
   ngOnInit(): void { }
+
+  onClear() {
+    this.appointmentListingService.form.reset();
+    this.appointmentListingService.initializeFormGroup();
+  }
+  onSubmit() {
+    if (this.appointmentListingService.form.valid) {
+      this.appointmentListingService
+        .addbookappointment(this.appointmentListingService.form.value)
+        .subscribe((_data: AppointmentDetailsModel[]) => {
+          this.router.navigate(["/book-appointment"]);
+          this.appointmentListingService.form.reset();
+          this.appointmentListingService.initializeFormGroup();
+
+        });
+    }
+  }
 }

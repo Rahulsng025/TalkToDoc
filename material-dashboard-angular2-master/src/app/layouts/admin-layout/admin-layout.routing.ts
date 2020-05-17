@@ -21,9 +21,10 @@ import { Component } from "@angular/core";
 import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component";
 import { HomecareAdminComponent } from "app/admin/homecare-admin/homecare-admin.component";
 import { HomecareLayoutComponent } from "app/admin/homecare-admin/homecare-layout/homecare-layout.component";
-import { MedicalAdminComponent } from "app/admin/medical-admin/medical-admin.component";
-import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
 import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic-layout/diagnostic-layout.component';
+import { MedicalAdminComponent } from 'app/admin/medical-admin/medical-admin.component';
+import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
+import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointment-admin.component';
 
 export const AdminLayoutRoutes: Routes = [
   // {
@@ -92,7 +93,9 @@ export const AdminLayoutRoutes: Routes = [
       { path: "homecare", component: HomecareAdminComponent },
       { path: "homecare-layout", component: HomecareLayoutComponent },
       { path: "medical", component: MedicalAdminComponent },
-      { path: "medical-layout", component: MedicalLayoutComponent }
+      { path: "medical-layout", component: MedicalLayoutComponent },
+      { path: "appointment", component: AppointmentAdminComponent }
+
     ],
   },
 ];

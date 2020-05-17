@@ -47,7 +47,8 @@ router.get("/:appointmentlistId", (req, res, next) => {
 router.post("/", (req, res, next) => {
     const appointmentlist = new appointment_list({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
+        fname: req.body.fname,
+        lname: req.body.lname,
         gender: req.body.gender,
         mobile: req.body.mobile,
         address: req.body.address,

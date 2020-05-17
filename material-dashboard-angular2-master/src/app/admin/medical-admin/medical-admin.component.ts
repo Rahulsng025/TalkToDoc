@@ -15,7 +15,8 @@ import { MedicalLayoutComponent } from "app/admin/medical-admin/medical-layout/m
 })
 export class MedicalAdminComponent implements OnInit {
   allMedicalInsuranceDetails: MedicalInsuranceModel[];
-  displayedcolumns: ['title', 'country_name', 'description'];
+
+  displayedColumns: ['title', 'country_name', 'description'];
   searchKey: string;
 
   constructor(private medicalinsuranceService: MedicalInsuranceService,
@@ -24,10 +25,10 @@ export class MedicalAdminComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.fetchMedical_List();
+    this.fetchMedicalList();
   }
 
-  fetchMedical_List() {
+  fetchMedicalList() {
     this.medicalinsuranceService
       .getmedicalinsurance()
       .subscribe((data: MedicalInsuranceModel[]) => {

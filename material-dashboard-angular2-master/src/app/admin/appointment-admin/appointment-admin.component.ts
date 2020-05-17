@@ -1,27 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AppointmentListingService } from '../../Services/appointment-listing.service';
-import { mergeMap } from 'rxjs/operators';
 import { AppointmentDetailsModel } from 'app/model/appointment_list.model';
-
-
-
-
-
+import { AppointmentListingService } from 'app/Services/appointment-listing.service';
+import { Router } from '@angular/router';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-book-appointment',
-  templateUrl: './book-appointment.component.html',
-  styleUrls: ['./book-appointment.component.css']
+  selector: 'app-appointment-admin',
+  templateUrl: './appointment-admin.component.html',
+  styleUrls: ['./appointment-admin.component.css']
 })
-export class BookAppointmentComponent implements OnInit {
+export class AppointmentAdminComponent implements OnInit {
+
   book_appointment: AppointmentDetailsModel[];
   public loading = true;
   public errorMsg: String;
   public successMsg: String;
-
-
-
 
   public displayedColumns = [
     "fname",
@@ -35,10 +28,9 @@ export class BookAppointmentComponent implements OnInit {
     "dateofappointment",
     "timeofappointment",
     "injury",
-    "cancel"
+    "action"
 
   ];
-
 
 
   constructor(private bookAppointmentService: AppointmentListingService, private router: Router) { }

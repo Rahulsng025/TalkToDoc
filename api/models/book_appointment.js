@@ -1,14 +1,15 @@
 const mongoose = require("mongoose");
 const book_appointmentSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  name: String,
+  fname: String,
+  lname: String,
   gender: String,
-  mobile: Number,
+  mobile: String,
   address: String,
   email: String,
-  dateofbirth: Date,
+  dateofbirth: String,
   consultingdoctor: String,
-  dateofappointment: Date,
+  dateofappointment: String,
   timeofappointment: String,
   injury: String,
 });

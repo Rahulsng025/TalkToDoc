@@ -1,5 +1,6 @@
 export interface book_appointment {
-    name: string;
+    fname: string;
+    lname: string;
     gender: string;
     mobile: string;
     address: string;

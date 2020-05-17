@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
+
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 
@@ -14,6 +16,40 @@ export class AppointmentListingService {
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
   uri = "http://localhost:3000";
+
+  constructor(private http: HttpClient) { }
+
+  form: FormGroup = new FormGroup({
+    $key: new FormControl(null),
+    fname: new FormControl("", Validators.required),
+    lname: new FormControl("", Validators.required),
+    gender: new FormControl(""),
+    mobile: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    address: new FormControl(""),
+    email: new FormControl("", Validators.email),
+    dateofbirth: new FormControl(""),
+    consultingdoctor: new FormControl("", Validators.required),
+    dateofappointment: new FormControl("", Validators.required),
+    timeofappointment: new FormControl("", Validators.required),
+    injury: new FormControl("")
+  });
+
+  initializeFormGroup() {
+    this.form.setValue({
+      $key: null,
+      fname: '',
+      lname: '',
+      gender: '',
+      mobile: '',
+      address: '',
+      email: '',
+      dateofbirth: '',
+      consultingdoctor: '',
+      dateofappointment: '',
+      timeofappointment: '',
+      injury: ''
+    });
+  }
 
   getbookappointment(): Observable<AppointmentDetailsModel[]> {
     return this.http.get<AppointmentDetailsModel[]>(
@@ -35,5 +71,5 @@ export class AppointmentListingService {
     return this.http.delete(`${this.uri}/book_appointment/${_id}`);
   }
 
-  constructor(private http: HttpClient) { }
+
 }

@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const appointment_listSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    name: String,
+    fname: String,
+    lname: String,
     gender: String,
     mobile: String,
     address: String,
