@@ -84,7 +84,8 @@ import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointme
     MatSortModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+
   ],
   declarations: [
     DashboardComponent,

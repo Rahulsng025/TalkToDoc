@@ -3,6 +3,7 @@ import { NgForm } from "@angular/forms";
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
+import { MatSelectModule } from '@angular/material/select';
 import { Router } from "@angular/router";
 
 //For iterating the doctor's list
