@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import * as jsPDF from 'jspdf';
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
 import { MatSelectModule } from '@angular/material/select';
 import { Router } from "@angular/router";
+import { AppointmentDetailService } from "app/Services/appointment-detail.service";
 
 //For iterating the doctor's list
 interface consultingdoctor {
@@ -18,13 +19,34 @@ interface consultingdoctor {
   styleUrls: ["./appointment-list.component.css"],
 })
 export class AppointmentListComponent implements OnInit {
-  @ViewChild("appointmentForm") appointmentForm: NgForm;
+
+  //Convert html file to pdf
+
+  @ViewChild('content') content: ElementRef;
+
+
+  public downloadPDF() {
+    const doc = new jsPDF();
+
+    let specialElementHandler = {
+      '#editor': function (element: any, renderer: any) {
+        return true;
+      }
+    };
+
+    let content = this.content.nativeElement;
+    doc.fromHTML(content.innerHTML, 15, 15, {
+      'width': 190,
+      'elementHandlers': specialElementHandler
+    });
+    doc.save('first.pdf');
+  }
+
+  isAppointmentBooked: boolean = false;
+
 
   public successMsg: String;
   public errorMsg: String;
-
-
-
 
   consult: consultingdoctor[] = [
     { id: '1', name: "DR. AKHIL AGRAWAL" },
@@ -33,42 +55,7 @@ export class AppointmentListComponent implements OnInit {
     { id: '4', name: "DR. NOUSHIF M" }
   ];
 
-
-
-  constructor(private appointmentListingService: AppointmentListingService, private router: Router) { }
-
-
-
-
-
-  // adding new appointment.
-  bookNewAppointment() {
-    console.log(this.appointmentForm);
-    let newAppointment: AppointmentDetailsModel = {
-      fname: this.appointmentForm.form.value.fname,
-      lname: this.appointmentForm.form.value.lname,
-      gender: this.appointmentForm.form.value.gender,
-      mobile: this.appointmentForm.form.value.mobile,
-      address: this.appointmentForm.form.value.address,
-      email: this.appointmentForm.form.value.email,
-      dateofbirth: this.appointmentForm.form.value.dateofbirth,
-      consultingdoctor: this.appointmentForm.form.value.consultingdoctor,
-      timeofappointment: this.appointmentForm.form.value.timeofappointment,
-      dateofappointment: this.appointmentForm.form.value.dateofappointment,
-      injury: this.appointmentForm.form.value.injury,
-    };
-
-    // calling the service to add new appointment.
-    this.appointmentListingService
-      .addbookappointment(newAppointment)
-      .subscribe((_data: any) => {
-        // do something with the data.
-        console.log("Booked!");
-        this.router.navigate(['/book-appointment']);
-      });
-  }
-
-
+  constructor(private appointmentListingService: AppointmentListingService, private appointmentDetailService: AppointmentDetailService, private router: Router) { }
 
   ngOnInit(): void { }
 
@@ -81,11 +68,15 @@ export class AppointmentListComponent implements OnInit {
       this.appointmentListingService
         .addbookappointment(this.appointmentListingService.form.value)
         .subscribe((_data: AppointmentDetailsModel[]) => {
-          this.router.navigate(["/book-appointment"]);
           this.appointmentListingService.form.reset();
           this.appointmentListingService.initializeFormGroup();
+          this.isAppointmentBooked = true;
 
+          // passing the new form values to the 'appointment-details' component and its service.
+          this.appointmentDetailService.updateFormValues(this.appointmentListingService.form)
         });
+
+      this.router.navigate(['/appointment-detail']);
     }
   }
 }
