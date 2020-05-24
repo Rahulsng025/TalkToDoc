@@ -9,63 +9,63 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
   {
-    path: "/dashboard",
+    path: "/main/dashboard",
     title: "Dashboard",
     // icon: "dashboard",
     class: "",
   },
 
   {
-    path: "/doctor-listing",
+    path: "/main/doctor-listing",
     title: "Doctor Listing",
     //  icon: "doctor",
     class: "",
   },
   {
-    path: "/diagnostic-center",
+    path: "/main/diagnostic-center",
     title: "Diagnostic Center",
     //   icon: "center",
     class: "",
   },
   {
-    path: "/home-care",
+    path: "/main/home-care",
     title: "Home Care",
     // icon: "center",
     class: "",
   },
   {
-    path: "/medical-insurance",
+    path: "/main/medical-insurance",
     title: "Medical Insurance",
     // icon: "center",
     class: "",
   },
   {
-    path: "/user-profile",
+    path: "/main/user-profile",
     title: "User Profile",
     // icon: "person",
     class: "",
   },
   {
-    path: "/table-list",
+    path: "/main/table-list",
     title: "Table List",
     // icon: "content_paste",
     class: "",
   },
   {
-    path: "/typography",
+    path: "/main/typography",
     title: "Typography",
     // icon: "library_books",
     class: "",
   },
   {
-    path: "/icons",
+    path: "/main/icons",
     title: "Icons",
     //  icon: "bubble_chart",
     class: "",
   },
 
   {
-    path: "/notifications",
+    path: "/main/notifications",
     title: "Notifications",
     //icon: "notifications",
     class: "",
@@ -78,18 +78,18 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ["./sidebar.component.css"],
 })
 export class SidebarComponent implements OnInit {
-  isUserLinksActive: boolean = true;
+  isUserLinksActive: boolean = false;
   menuItems: any[];
   menuItemsAdmin: RouteInfo[] = [
-    { path: "/admin/doctors", title: "Doctors", class: "" },
+    { path: "/main/admin/doctors", title: "Doctors", class: "" },
 
-    { path: "/admin/diagnostic", title: "Diagnostic", class: "" },
+    { path: "/main/admin/diagnostic", title: "Diagnostic", class: "" },
 
-    { path: "/admin/medical", title: "Medical Insurance", class: "" },
+    { path: "/main/admin/medical", title: "Medical Insurance", class: "" },
 
-    { path: "/admin/homecare", title: "Home Care", class: "" },
+    { path: "/main/admin/homecare", title: "Home Care", class: "" },
 
-    { path: "/admin/appointment", title: "Appointment Boooking", class: "" }
+    { path: "/main/admin/appointment", title: "Appointment Boooking", class: "" }
 
 
   ];

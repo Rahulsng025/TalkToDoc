@@ -4,21 +4,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { NavigationComponent } from './auth/navigation/navigation.component';
+
+// const routes: Routes = [
+//   {
+//     path: '',
+//     redirectTo: 'dashboard',
+//     pathMatch: 'full',
+//   }, {
+//     path: '',
+//     component: AdminLayoutComponent,
+//     children: [{
+//       path: '',
+//       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+//     }]
+//   }
+// ];
 
 const routes: Routes = [
+  { path: "", pathMatch: 'full', component: NavigationComponent },
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
+    path: 'main', component: AdminLayoutComponent,
     children: [{
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
   }
-];
+]
 
 @NgModule({
   imports: [

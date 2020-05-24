@@ -17,7 +17,6 @@ import { AppointmentListComponent } from "app/doctor-listing/appointment-list/ap
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.component";
 import { DiagnosticAdminComponent } from "app/admin/diagnostic-admin/diagnostic-admin.component";
-import { Component } from "@angular/core";
 import { DoctorsPagelayoutComponent } from "app/admin/doctor-admin/doctors-pagelayout/doctors-pagelayout.component";
 import { HomecareAdminComponent } from "app/admin/homecare-admin/homecare-admin.component";
 import { HomecareLayoutComponent } from "app/admin/homecare-admin/homecare-layout/homecare-layout.component";
@@ -27,61 +26,19 @@ import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/m
 import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointment-admin.component';
 
 export const AdminLayoutRoutes: Routes = [
-  // {
-  //   path: '',
-  //   children: [ {
-  //     path: 'dashboard',
-  //     component: DashboardComponent
-  // }]}, {
-  // path: '',
-  // children: [ {
-  //   path: 'userprofile',
-  //   component: UserProfileComponent
-  // }]
-  // }, {
-  //   path: '',
-  //   children: [ {
-  //     path: 'icons',
-  //     component: IconsComponent
-  //     }]
-  // }, {
-  //     path: '',
-  //     children: [ {
-  //         path: 'notifications',
-  //         component: NotificationsComponent
-  //     }]
-  // }, {
-  //     path: '',
-  //     children: [ {
-  //         path: 'maps',
-  //         component: MapsComponent
-  //     }]
-  // }, {
-  //     path: '',
-  //     children: [ {
-  //         path: 'typography',
-  //         component: TypographyComponent
-  //     }]
-  // }, {
-  //     path: '',
-  //     children: [ {
-  //         path: 'upgrade',
-  //         component: UpgradeComponent
-  //     }]
-  // }
+  { path: "diagnostic-center", component: DiagnosticCenterComponent },
+  { path: "doctor-listing", component: DoctorListingComponent },
+  { path: "home-care", component: HomeCareComponent },
+  { path: "medical-insurance", component: MedicalInsuranceComponent },
+  { path: "book-appointment", component: BookAppointmentComponent },
+  { path: "appointment-list", component: AppointmentListComponent },
   { path: "dashboard", component: DashboardComponent },
   { path: "user-profile", component: UserProfileComponent },
   { path: "table-list", component: TableListComponent },
   { path: "typography", component: TypographyComponent },
   { path: "icons", component: IconsComponent },
-  { path: "diagnostic-center", component: DiagnosticCenterComponent },
-  { path: "doctor-listing", component: DoctorListingComponent },
   { path: "notifications", component: NotificationsComponent },
 
-  { path: "home-care", component: HomeCareComponent },
-  { path: "medical-insurance", component: MedicalInsuranceComponent },
-  { path: "book-appointment", component: BookAppointmentComponent },
-  { path: "appointment-list", component: AppointmentListComponent },
   {
     path: "admin",
     component: AdminComponent,
