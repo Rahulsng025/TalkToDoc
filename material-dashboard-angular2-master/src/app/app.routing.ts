@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { NavigationComponent } from './auth/navigation/navigation.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { HomeComponent } from './auth/home/home.component';
+
 
 // const routes: Routes = [
 //   {
@@ -22,7 +25,17 @@ import { NavigationComponent } from './auth/navigation/navigation.component';
 // ];
 
 const routes: Routes = [
-  { path: "", pathMatch: 'full', component: NavigationComponent },
+
+  {
+    path: '', pathMatch: 'full', component: NavigationComponent
+  },
+  {
+    path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'home', component: HomeComponent
+  },
+
   {
     path: 'main', component: AdminLayoutComponent,
     children: [{
@@ -37,7 +50,7 @@ const routes: Routes = [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes, {
-      useHash: true
+      useHash: false
     })
   ],
   exports: [

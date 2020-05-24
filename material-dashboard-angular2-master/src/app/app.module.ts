@@ -22,6 +22,8 @@ import { AgmCoreModule } from "@agm/core";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { DoctorListingService } from "./Services/doctorlisting.service";
 import { DiagnosticLayoutComponent } from './admin/diagnostic/diagnostic-layout/diagnostic-layout.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { HomeComponent } from './auth/home/home.component';
 
 
 
@@ -40,7 +42,7 @@ import { DiagnosticLayoutComponent } from './admin/diagnostic/diagnostic-layout/
     HttpClientModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, AdminLayoutComponent, DiagnosticLayoutComponent],
+  declarations: [AppComponent, AdminLayoutComponent, DiagnosticLayoutComponent, RegisterComponent, HomeComponent],
   providers: [DoctorListingService],
   bootstrap: [AppComponent],
 })
