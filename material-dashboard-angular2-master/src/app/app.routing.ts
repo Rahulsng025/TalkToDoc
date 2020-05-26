@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { NavigationComponent } from './auth/navigation/navigation.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './auth/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { AuthGuard } from "app/auth/guards/auth.gaurd";
 
 
 // const routes: Routes = [
@@ -26,15 +28,10 @@ import { HomeComponent } from './auth/home/home.component';
 
 const routes: Routes = [
 
-  {
-    path: '', pathMatch: 'full', component: NavigationComponent
-  },
-  {
-    path: 'register', component: RegisterComponent
-  },
-  {
-    path: 'home', component: HomeComponent
-  },
+  { path: '', component: HomeComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
 
   {
     path: 'main', component: AdminLayoutComponent,

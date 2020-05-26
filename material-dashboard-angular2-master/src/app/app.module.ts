@@ -22,8 +22,16 @@ import { AgmCoreModule } from "@agm/core";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { DoctorListingService } from "./Services/doctorlisting.service";
 import { DiagnosticLayoutComponent } from './admin/diagnostic/diagnostic-layout/diagnostic-layout.component';
+import { NavigationComponent } from 'app/auth/navigation/navigation.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './auth/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { ValidateService } from "app/Services/validate.service";
+import { AuthService } from 'app/Services/auth.service';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { AuthGuard } from "app/auth/guards/auth.gaurd";
+
 
 
 
@@ -41,9 +49,19 @@ import { HomeComponent } from './auth/home/home.component';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
+    FlashMessagesModule.forRoot()
   ],
-  declarations: [AppComponent, AdminLayoutComponent, DiagnosticLayoutComponent, RegisterComponent, HomeComponent],
-  providers: [DoctorListingService],
+  declarations: [AppComponent,
+    AdminLayoutComponent,
+    DiagnosticLayoutComponent,
+    NavigationComponent,
+    RegisterComponent,
+    HomeComponent,
+    LoginComponent,
+    ProfileComponent
+  ],
+
+  providers: [DoctorListingService, ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

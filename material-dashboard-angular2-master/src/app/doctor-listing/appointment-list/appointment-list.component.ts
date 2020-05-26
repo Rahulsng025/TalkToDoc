@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import * as jsPDF from 'jspdf';
+// import * as jsPDF from 'jspdf';
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
@@ -22,27 +22,27 @@ export class AppointmentListComponent implements OnInit {
 
   //Convert html file to pdf
 
-  @ViewChild('content') content: ElementRef;
+  // @ViewChild('content') content: ElementRef;
 
 
-  public downloadPDF() {
-    const doc = new jsPDF();
+  // public downloadPDF() {
+  //   // const doc = new jsPDF();
 
-    let specialElementHandler = {
-      '#editor': function (element: any, renderer: any) {
-        return true;
-      }
-    };
+  //   let specialElementHandler = {
+  //     '#editor': function (element: any, renderer: any) {
+  //       return true;
+  //     }
+  //   };
 
-    let content = this.content.nativeElement;
-    doc.fromHTML(content.innerHTML, 15, 15, {
-      'width': 190,
-      'elementHandlers': specialElementHandler
-    });
-    doc.save('first.pdf');
-  }
+  //   let content = this.content.nativeElement;
+  //   doc.fromHTML(content.innerHTML, 15, 15, {
+  //     'width': 190,
+  //     'elementHandlers': specialElementHandler
+  //   });
+  //   doc.save('first.pdf');
+  // }
 
-  isAppointmentBooked: boolean = false;
+  // isAppointmentBooked: boolean = false;
 
 
   public successMsg: String;
@@ -54,6 +54,7 @@ export class AppointmentListComponent implements OnInit {
     { id: '3', name: "DR. VIMAL KUMAR" },
     { id: '4', name: "DR. NOUSHIF M" }
   ];
+  isAppointmentBooked: boolean;
 
   constructor(private appointmentListingService: AppointmentListingService, private appointmentDetailService: AppointmentDetailService, private router: Router) { }
 

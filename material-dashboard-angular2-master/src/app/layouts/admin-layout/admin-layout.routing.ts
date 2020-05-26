@@ -24,6 +24,7 @@ import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic
 import { MedicalAdminComponent } from 'app/admin/medical-admin/medical-admin.component';
 import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
 import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointment-admin.component';
+import { AuthGuard } from 'app/auth/guards/auth.gaurd';
 
 export const AdminLayoutRoutes: Routes = [
   { path: "diagnostic-center", component: DiagnosticCenterComponent },
@@ -32,7 +33,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "medical-insurance", component: MedicalInsuranceComponent },
   { path: "book-appointment", component: BookAppointmentComponent },
   { path: "appointment-list", component: AppointmentListComponent },
-  { path: "dashboard", component: DashboardComponent },
+  { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuard] },
   { path: "user-profile", component: UserProfileComponent },
   { path: "table-list", component: TableListComponent },
   { path: "typography", component: TypographyComponent },
