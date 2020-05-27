@@ -12,8 +12,11 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   name: String;
-  username: String;
+  number: String;
+  gender: String;
   email: String;
+  country: String;
+  username: String;
   password: String;
 
   constructor(private validateService: ValidateService,
@@ -26,7 +29,10 @@ export class RegisterComponent implements OnInit {
   onRegisterSubmit() {
     const user = {
       name: this.name,
+      number: this.number,
+      gender: this.gender,
       email: this.email,
+      country: this.country,
       username: this.username,
       password: this.password,
 

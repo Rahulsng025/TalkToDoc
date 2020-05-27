@@ -89,7 +89,9 @@ export class SidebarComponent implements OnInit {
 
     { path: "/main/admin/homecare", title: "Home Care", class: "" },
 
-    { path: "/main/admin/appointment", title: "Appointment Boooking", class: "" }
+    { path: "/main/admin/appointment", title: "Appointment Boooking", class: "" },
+
+    { path: "/main/admin/user", title: "User Registration", class: "" }
 
 
   ];

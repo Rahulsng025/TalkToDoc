@@ -55,6 +55,7 @@ import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/m
 import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic-layout/diagnostic-layout.component';
 import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointment-admin.component";
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -111,7 +112,8 @@ import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointme
     DiagnosticLayoutComponent,
     MedicalAdminComponent,
     MedicalLayoutComponent,
-    AppointmentAdminComponent
+    AppointmentAdminComponent,
+
   ],
 })
 export class AdminLayoutModule { }

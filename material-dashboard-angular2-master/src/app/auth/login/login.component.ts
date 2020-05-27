@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.authService.authenticateUser(user).subscribe(data => {
       if (data.success) {
         this.authService.storeUserData(data.token, data.user);
-        this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 5000 });
+        this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 500 });
         this.router.navigate(['/main/dashboard']);
       }
       else {
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           cssClass: 'alert-danger',
           timeout: 3000
         });
-        this.router.navigate(['/login']);
+        this.router.navigate(['http://localhost:4200/login']);
       }
 
     });

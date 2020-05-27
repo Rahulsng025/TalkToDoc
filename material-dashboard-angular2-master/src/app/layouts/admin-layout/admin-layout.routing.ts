@@ -26,6 +26,7 @@ import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/m
 import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointment-admin.component';
 import { AuthGuard } from 'app/auth/guards/auth.gaurd';
 
+
 export const AdminLayoutRoutes: Routes = [
   { path: "diagnostic-center", component: DiagnosticCenterComponent },
   { path: "doctor-listing", component: DoctorListingComponent },

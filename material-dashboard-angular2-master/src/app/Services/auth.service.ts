@@ -14,7 +14,7 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
-  registerUser(user: { name: String; email: String; username: String; password: String; }) {
+  registerUser(user: { name: String; number: String; gender: String; email: String; country: String; username: String; password: String; }) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
@@ -50,7 +50,7 @@ export class AuthService {
   }
 
   loggedIn() {
-    return tokenNotExpired();
+    return tokenNotExpired('id_token');
   }
 
   logout() {

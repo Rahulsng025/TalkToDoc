@@ -48,7 +48,7 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
   }
 
   onLoadPage() {
-    this.router.navigate(['appointment-list']);
+    this.router.navigate(['main/appointment-list']);
   }
 
   constructor(private doctorlistingService: DoctorListingService, private router: Router) { }

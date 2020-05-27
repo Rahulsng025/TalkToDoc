@@ -77,7 +77,7 @@ export class AppointmentListComponent implements OnInit {
           this.appointmentDetailService.updateFormValues(this.appointmentListingService.form)
         });
 
-      this.router.navigate(['/appointment-detail']);
+      this.router.navigate(['/main/book-appointment']);
     }
   }
 }

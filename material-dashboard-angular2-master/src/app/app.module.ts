@@ -39,6 +39,7 @@ import { AuthGuard } from "app/auth/guards/auth.gaurd";
 
 
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -58,7 +59,8 @@ import { AuthGuard } from "app/auth/guards/auth.gaurd";
     RegisterComponent,
     HomeComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+
   ],
 
   providers: [DoctorListingService, ValidateService, AuthService, AuthGuard],

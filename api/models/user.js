@@ -9,14 +9,29 @@ const UserSchema = mongoose.Schema({
         type: String
     },
 
+    number: {
+        type: String,
+        required: true
+    },
+
+    gender: {
+        type: String,
+    },
+
     email: {
         type: String,
         required: true
     },
+
+    country: {
+        type: String
+    },
+
     username: {
         type: String,
         require: true
     },
+
     password: {
         type: String,
         require: true
