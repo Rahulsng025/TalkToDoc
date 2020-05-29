@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-//import { DoctorListingService } from '../Services/doctorlisting.service';
 import { HomeCareModel } from "../../app/model/home_care.model";
 import { HomeCareService } from "../Services/home-care.service";
 
@@ -16,7 +15,7 @@ export class HomeCareComponent implements OnInit {
   constructor(
     private homecareService: HomeCareService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.fetchhome_care();

@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from "rxjs";
 import { tokenNotExpired } from 'angular2-jwt';
+import { UserRegistrationModel } from 'app/model/user_registration.model'
 
 
 @Injectable({
@@ -11,6 +13,10 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthenticationService {
   authToken: any;
   user: any;
+
+  allUserRegistrationDetails: UserRegistrationModel[];
+
+  uri = "http://localhost:3000";
 
   constructor(private http: Http) { }
 
@@ -58,4 +64,9 @@ export class AuthenticationService {
     this.user = null;
     localStorage.clear();
   }
+
+
+
 }
+
+

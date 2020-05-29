@@ -25,6 +25,8 @@ import { MedicalAdminComponent } from 'app/admin/medical-admin/medical-admin.com
 import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/medical-layout.component';
 import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointment-admin.component';
 import { AuthGuard } from 'app/auth/guards/auth.gaurd';
+import { UserRegistrationComponent } from "app/admin/user-registration/user-registration.component";
+import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -53,7 +55,9 @@ export const AdminLayoutRoutes: Routes = [
       { path: "homecare-layout", component: HomecareLayoutComponent },
       { path: "medical", component: MedicalAdminComponent },
       { path: "medical-layout", component: MedicalLayoutComponent },
-      { path: "appointment", component: AppointmentAdminComponent }
+      { path: "appointment", component: AppointmentAdminComponent },
+      { path: "user", component: UserRegistrationComponent },
+      { path: "doctor", component: DoctorRegistrationComponent }
 
     ],
   },

@@ -54,6 +54,8 @@ import { MedicalLayoutComponent } from 'app/admin/medical-admin/medical-layout/m
 
 import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic-layout/diagnostic-layout.component';
 import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointment-admin.component";
+import { UserRegistrationComponent } from 'app/admin/user-registration/user-registration.component';
+import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
 
 
 @NgModule({
@@ -113,6 +115,8 @@ import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointme
     MedicalAdminComponent,
     MedicalLayoutComponent,
     AppointmentAdminComponent,
+    UserRegistrationComponent,
+    DoctorRegistrationComponent
 
   ],
 })

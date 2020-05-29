@@ -78,7 +78,7 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ["./sidebar.component.css"],
 })
 export class SidebarComponent implements OnInit {
-  isUserLinksActive: boolean = true;
+  isUserLinksActive: boolean = false;
   menuItems: any[];
   menuItemsAdmin: RouteInfo[] = [
     { path: "/main/admin/doctors", title: "Doctors", class: "" },
@@ -91,7 +91,9 @@ export class SidebarComponent implements OnInit {
 
     { path: "/main/admin/appointment", title: "Appointment Boooking", class: "" },
 
-    { path: "/main/admin/user", title: "User Registration", class: "" }
+    { path: "/main/admin/user", title: "User Registration", class: "" },
+
+    { path: "/main/admin/doctor", title: "Doctor Resgistration", class: "" }
 
 
   ];
