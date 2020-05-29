@@ -68,6 +68,41 @@ router.get('/profile', passport.authenticate('jwt', { session: false }), (req, r
 
 });
 
+router.get('/', (req, res, next) => {
+
+
+    Doctor.find()
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).json(doc);
+
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
+//To get user data by id
+
+router.get('/:registerId', (req, res, next) => {
+    const id = req.params.registerId;
+    Doctor.findById(id)
+        .exec()
+        .then(doc => {
+            console.log('From Database', doc);
+            res.status(200).json({ doc });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err })
+        });
+});
+
+
 
 module.exports = router;
 

@@ -67,5 +67,41 @@ router.get('/profile', passport.authenticate('jwt', { session: false }), (req, r
 
 });
 
+//To get users data
+
+router.get('/', (req, res, next) => {
+
+
+    User.find()
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).json(doc);
+
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
+//To get user data by id
+
+router.get('/:registerId', (req, res, next) => {
+    const id = req.params.registerId;
+    User.findById(id)
+        .exec()
+        .then(doc => {
+            console.log('From Database', doc);
+            res.status(200).json({ doc });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err })
+        });
+});
+
 
 module.exports = router;
