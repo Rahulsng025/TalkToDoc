@@ -3,12 +3,13 @@ const router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
-const User = require('../models/user');
+const Doctor = require('../models/doctor');
 const config = require('../../config/database');
 
-//User Register
+//Doctor Register
+
 router.post('/register', (req, res, next) => {
-    let newUser = new User({
+    let newUser = new Doctor({
         name: req.body.name,
         number: req.body.number,
         gender: req.body.gender,
@@ -16,12 +17,12 @@ router.post('/register', (req, res, next) => {
         username: req.body.username,
         password: req.body.password
     });
-    User.addUser(newUser, (err, user) => {
+    Doctor.addUser(newUser, (err, doctor) => {
         if (err) {
-            res.json({ success: false, msg: 'Failed to register user' });
+            res.json({ success: false, msg: 'Failed to register doctor' });
         }
         else {
-            res.json({ success: true, msg: 'User registered' });
+            res.json({ success: true, msg: 'Doctor registered' });
         }
     });
 });
@@ -31,27 +32,27 @@ router.post('/authenticate', (req, res, next) => {
     const username = req.body.username;
     const password = req.body.password;
 
-    User.getUserByUsername(username, (err, user) => {
+    Doctor.getUserByUsername(username, (err, doctor) => {
         if (err) throw err;
-        if (!user) {
+        if (!doctor) {
             return res.json({ success: false, msg: 'User not found' });
         }
 
-        User.comparePassword(password, user.password, (err, isMatch) => {
+        Doctor.comparePassword(password, doctor.password, (err, isMatch) => {
             if (err) throw err;
             if (isMatch) {
-                const token = jwt.sign({ data: user }, config.secret, {
+                const token = jwt.sign({ data: doctor }, config.secret, {
                     expiresIn: 604800 //1 week
                 });
 
                 res.json({
                     success: true,
                     token: 'JWT ' + token,
-                    user: {
+                    doctor: {
                         id: user._id,
-                        name: user.name,
-                        username: user.username,
-                        email: user.email
+                        name: doctor.name,
+                        username: doctor.username,
+                        email: doctor.email
                     }
                 })
             } else {
@@ -63,9 +64,10 @@ router.post('/authenticate', (req, res, next) => {
 
 //Profile
 router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
-    res.json({ user: req.user });
+    res.json({ doctor: req.doctor });
 
 });
 
 
 module.exports = router;
+

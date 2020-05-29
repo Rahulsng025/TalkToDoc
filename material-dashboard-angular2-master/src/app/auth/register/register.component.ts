@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from "app/Services/validate.service";
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { AuthService } from 'app/Services/auth.service';
+import { AuthenticationService } from 'app/Services/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,13 +15,12 @@ export class RegisterComponent implements OnInit {
   number: String;
   gender: String;
   email: String;
-  country: String;
   username: String;
   password: String;
 
   constructor(private validateService: ValidateService,
     private flashMessagesService: FlashMessagesService,
-    private authService: AuthService,
+    private authenticationService: AuthenticationService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -32,7 +31,6 @@ export class RegisterComponent implements OnInit {
       number: this.number,
       gender: this.gender,
       email: this.email,
-      country: this.country,
       username: this.username,
       password: this.password,
 
@@ -51,7 +49,7 @@ export class RegisterComponent implements OnInit {
       return false;
     }
     //Register User
-    this.authService.registerUser(user).subscribe(data => {
+    this.authenticationService.registerUser(user).subscribe(data => {
       if (data.success) {
         this.flashMessagesService.show('You are now registered and can now login', { cssClass: 'alert-success', timeout: 3000 });
 

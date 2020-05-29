@@ -27,10 +27,31 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './auth/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ValidateService } from "app/Services/validate.service";
-import { AuthService } from 'app/Services/auth.service';
+import { AuthenticationService } from 'app/Services/authentication.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+//Social login
+import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+
+let config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("287086951134-teihdlr84kr5haq0u0h4482cnfmasi8j.apps.googleusercontent.com")
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("706276323536977")
+  }
+]);
+export function provideConfig() {
+  return config;
+}
+
+
 
 
 
@@ -50,7 +71,9 @@ import { AuthGuard } from "app/auth/guards/auth.gaurd";
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    NgbModule,
+    SocialLoginModule
   ],
   declarations: [AppComponent,
     AdminLayoutComponent,
@@ -63,7 +86,12 @@ import { AuthGuard } from "app/auth/guards/auth.gaurd";
 
   ],
 
-  providers: [DoctorListingService, ValidateService, AuthService, AuthGuard],
+  providers: [DoctorListingService, ValidateService, AuthenticationService, AuthGuard,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

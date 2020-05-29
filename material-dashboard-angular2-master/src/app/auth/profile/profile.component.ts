@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'app/Services/auth.service';
+import { AuthenticationService } from 'app/Services/authentication.service';
 import { Router } from '@angular/router';
+
+//Social Login
+import { AuthService } from "angularx-social-login";
+import { SocialUser } from "angularx-social-login";
+
 
 @Component({
   selector: 'app-profile',
@@ -8,21 +13,40 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  user: Object;
 
-  constructor(private authService: AuthService,
-    private router: Router) { }
+  //Social Login
+  private user: SocialUser;
+  private loggedIn: boolean;
+
+
+
+  users: Object;
+
+  constructor(private authenticationService: AuthenticationService,
+    private router: Router,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.authService.getProfile().subscribe(profile => {
-      this.user = profile.user;
-    },
-      err => {
-        console.log(err);
-        return false;
-      });
+    //     this.authenticationService.getProfile().subscribe(profile => {
+    //       this.users = profile.user;
+    //     },
+    //       err => {
+    //         console.log(err);
+    //         return false;
+    //       });
+    //   }
+    // }
+
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
   }
 }
+
+
+
+
 
 
 

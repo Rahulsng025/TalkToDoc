@@ -18,6 +18,7 @@ const medicalinsuranceRoutes = require("./api/routes/medical_insurance");
 const bookappointmentRoutes = require("./api/routes/book_appointment");
 const appointmentlistRoutes = require("./api/routes/appointment_list");
 const usersRoutes = require("./api/routes/users");
+const doctorsRoutes = require("./api/routes/doctors");
 
 
 
@@ -64,6 +65,7 @@ app.use("/medical_insurance", medicalinsuranceRoutes);
 app.use("/book_appointment", bookappointmentRoutes);
 app.use("/appointment_list", appointmentlistRoutes);
 app.use("/users", usersRoutes);
+app.use("/doctors", doctorsRoutes);
 
 
 module.exports = app;

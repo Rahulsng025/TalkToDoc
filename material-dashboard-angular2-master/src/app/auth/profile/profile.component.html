@@ -1,7 +1,13 @@
-<div *ngIf="user">
+<!-- <div *ngIf="user">
     <h2 class="page-header">{{user.name}}</h2>
     <ul class="list-group">
         <li class="list-group-item">Username : {{user.username}}</li>
         <li class="list-group-item">Email : {{user.email}}</li>
     </ul>
+</div> -->
+
+<div class="col-md-6" *ngIf="user">
+    <img src={{user.photourl}}>
+    <h4>{{user.email}}</h4>
+    <h4>{{user.name}}</h4>
 </div>
