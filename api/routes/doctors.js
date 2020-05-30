@@ -49,7 +49,7 @@ router.post('/authenticate', (req, res, next) => {
                     success: true,
                     token: 'JWT ' + token,
                     doctor: {
-                        id: user._id,
+                        id: doctor._id,
                         name: doctor.name,
                         username: doctor.username,
                         email: doctor.email

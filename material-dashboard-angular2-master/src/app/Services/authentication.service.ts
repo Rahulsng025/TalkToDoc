@@ -12,43 +12,62 @@ import { UserRegistrationModel } from 'app/model/user_registration.model'
 })
 export class AuthenticationService {
   authToken: any;
-  user: any;
+  role: any;
 
   allUserRegistrationDetails: UserRegistrationModel[];
 
   uri = "http://localhost:3000";
 
+
   constructor(private http: Http) { }
 
-  registerUser(user: { name: String; number: String; gender: String; email: String; username: String; password: String; }) {
+  //For user registration
+
+  registerUser(data: { name: String; number: String; gender: String; email: String; username: String; password: String; }, role: string) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
+    return this.http.post('http://localhost:3000/' + role + '/register', data, { headers: headers })
       .map(res => res.json());
   }
 
-  authenticateUser(user: { username: String; password: String; }) {
+  //For user and doctor both registration
+
+
+
+
+
+  //For user authentication
+
+  authenticateUser(data: { username: String; password: String; }, role: string) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+    return this.http.post('http://localhost:3000/' + role + '/authenticate', data, { headers: headers })
       .map(res => res.json());
   }
 
-  getProfile() {
+  //For doctor authentication
+
+
+  //For users profile
+  getProfile(role) {
     let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/users/profile', { headers: headers })
+    return this.http.get('http://localhost:3000/' + role + '/profile', { headers: headers })
       .map(res => res.json());
   }
 
-  storeUserData(token, user) {
+
+  //For user storage
+  storeData(token, data) {
     localStorage.setItem('id_token', token);
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(data));
     this.authToken = token;
-    this.user = user;
+    this.role = data;
   }
+
+
 
   loadToken() {
     const token = localStorage.getItem('id_token');
@@ -61,7 +80,7 @@ export class AuthenticationService {
 
   logout() {
     this.authToken = null;
-    this.user = null;
+    this.role = null;
     localStorage.clear();
   }
 

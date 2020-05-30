@@ -18,4 +18,5 @@ export class DoctorService {
   getdoctors() {
     return this.http.get(`${this.uri}/doctors`);
   }
+
 }

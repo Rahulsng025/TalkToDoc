@@ -16,6 +16,7 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-logi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  role: string;
 
   focus;
   focus1;
@@ -38,9 +39,9 @@ export class LoginComponent implements OnInit {
       password: this.password
     }
 
-    this.authenticationService.authenticateUser(user).subscribe(data => {
+    this.authenticationService.authenticateUser(user, this.role).subscribe(data => {
       if (data.success) {
-        this.authenticationService.storeUserData(data.token, data.user);
+        this.authenticationService.storeData(data.token, data.user);
         this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 500 });
         this.router.navigate(['/main/dashboard']);
       }
@@ -49,7 +50,7 @@ export class LoginComponent implements OnInit {
           cssClass: 'alert-danger',
           timeout: 3000
         });
-        this.router.navigate(['http://localhost:4200/login']);
+        this.router.navigate(['/login']);
 
       }
 
