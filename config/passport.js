@@ -3,6 +3,7 @@ const ExtractJwt = require('passport-jwt').ExtractJwt;
 const User = require('../api/models/user');
 const Doctor = require('../api/models/doctor')
 const config = require('../config/database');
+const Diagnostic = require('../api/models/diagnostic');
 
 module.exports = function (passport) {
     let opts = {};
