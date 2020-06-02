@@ -1,7 +1,7 @@
 #logreg-forms{
     width:412px;
-    margin:10vh auto;
-    background-color:#f3f3f3;
+    margin:03vh auto;
+    background-color:b#f3f3f3;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -105,3 +105,41 @@
     }
     
 }
+#logreg-forms {
+    overflow: hidden;
+  }
+  #logreg-forms {
+    float: right;
+    clear: both;
+  }
+
+ body {
+    background-image: url("https://www.linuxfoundation.org/wp-content/uploads/2016/12/lf_background_trees.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    height: 900px;
+    background-attachment: fixed;
+    
+    
+}
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    /* if you want it vertically middle of the navbar. */
+}
+
+div.third {
+    background: rgba(117, 200, 118, 0.3);
+  }

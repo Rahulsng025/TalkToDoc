@@ -1,5 +1,4 @@
-<!-- First Design Layout -->
-<div>
+<!-- <div>
     <h2 class="page-header">Register</h2>
     <form (submit)="onRegisterSubmit()">
 
@@ -57,102 +56,133 @@
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>
-</div>
-
-<!-- Second Design Layout -->
-<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
-
-<div class="container">
-    <div class="card bg-light">
-        <article class="card-body mx-auto" style="max-width: 400px;">
-            <h4 class="card-title mt-3 text-center" style="color: black;">Create Account</h4>
-            <p class="text-center" style="color: black;">Get started with your free account</p>
-            <p>
-                <a href="" class="btn btn-block btn-google" style="background-color: #405D9D;"> <i
-                        class="fab fa-google-plus-g"></i>  
-                    Login via
-                    Google</a>
-                <a href="" class="btn btn-block btn-facebook" style="background-color: #405D9D;"> <i
-                        class="fab fa-facebook-f"></i>   Login via
-                    facebook</a>
-            </p>
-            <p class="divider-text">
-                <span class="bg-light" style="color: black;">OR</span>
-            </p>
-
-            <form (submit)="onRegisterSubmit()">
-                <!-- For Testing -->
-<!-- <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                    </div>
-
-                    <select id="role" name="role" [(ngModel)]="role" class="form-control" (change)="fun()">
-                        <option value="doctor">Doctor</option>
-                        <option value="user">User</option> -->
-<!-- <option *ngFor="let option of options" value="option">
-                        {{option}} -->
-
-<!-- </select>
-                </div> -->
-
-
-<!-- For Testing -->
-<!-- <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                    </div>
-                    <input name="name" class="form-control" placeholder="Full name" type="text">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                    </div>
-                    <input name="number" class="form-control" placeholder="Email address" type="email">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                    </div>
-                    <input name="email" class="form-control" placeholder="Phone number" type="text">
-
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                    </div>
-                    <select class="form-control">
-                        <option selected="gender"> Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                    </div>
-                    <input class="form-control" placeholder="Username" type="username">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                    </div>
-                    <input class="form-control" placeholder="Create password" type="password">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
-                </div>
-                <p class="text-center" style="color: black;">Have an account? <a href="/login">Log In</a> </p>
-            </form>
-        </article>
-    </div>
-
 </div> -->
--->
+
+
+
+
+<html>
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body class="centered">
+    <div class="container-fluid">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+
+                </ul>
+
+            </div>
+        </nav>
+        <!-- Registration Form -->
+        <div class="row">
+            <div class="col-md-5">
+                <form (submit)="onRegisterSubmit()">
+
+
+                    <div class="panel-group">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Registration</div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="role" style="color: black;"> Select Role: </label>
+                        <select id="role" [(ngModel)]="role" class="form-control" (change)="fun()">
+                            <option value="doctors">Doctor</option>
+                            <option value="users">User</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" style="color: black;"> Full name: </label>
+                        <input class="form-control" type="text" id="name" [(ngModel)]="name"
+                            placeholder="Enter your Full Name" required />
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number" style="color: black;"> Mobile Number: </label>
+                        <input required type="text" [(ngModel)]="number" class="form-control"
+                            placeholder="Enter your number" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" style="color: black;">Email Address: </label>
+                        <input class="form-control" type="email" [(ngModel)]="email" aria-describedby="emailHelp"
+                            placeholder="Enter your email" required />
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" style="color: black;">Gender:</label>
+                        <select id="gender" class="form-control" [(ngModel)]="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" for="user" style="color: black;"> Username</label>
+                        <input class="form-control" [(ngModel)]="username" type="text" id="user"
+                            placeholder="Enter your password" required />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" style="color: black;">Password: </label>
+                        <input required name="password" [(ngModel)]="password" type="password" class="form-control " />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <!-- Text apper on the screen -->
+            <div class="text" class="col-md-7">
+                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">HealthCare for
+                    Everyone,
+                    EveryWhere</h1>
+                <p style="font-family:Georgia, 'Times New Roman', Times, serif;">For millions of people,
+                    Tok2dok is the trusted and
+                    familiar
+                    home where they
+                    know <br> they’ll find a healing
+                    touch.It connects them with everything they need to take <br> good care of themselves
+                    and
+                    their
+                    family -
+                    assessing health issues</p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -19,6 +19,7 @@ export class AuthenticationService {
   uri = "http://localhost:3000";
 
 
+
   constructor(private http: Http) { }
 
   //For user registration

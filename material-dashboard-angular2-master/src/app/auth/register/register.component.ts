@@ -96,7 +96,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  fun() {
-    console.log(this.role);
+  submit() {
+    this.router.navigate[('home')];
   }
 }
