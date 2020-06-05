@@ -67,39 +67,39 @@ router.get('/profile', passport.authenticate('jwt', { session: false }), (req, r
 
 });
 
-// router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => {
 
 
-//     Diagnostic.find()
-//         .exec()
-//         .then(doc => {
-//             console.log(doc);
-//             res.status(200).json(doc);
+    Diagnostic.find()
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).json(doc);
 
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json({
-//                 error: err
-//             });
-//         });
-// });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
 
 
 
-// router.get('/:registerId', (req, res, next) => {
-//     const id = req.params.registerId;
-//     Diagnostic.findById(id)
-//         .exec()
-//         .then(doc => {
-//             console.log('From Database', doc);
-//             res.status(200).json({ doc });
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json({ error: err })
-//         });
-// });
+router.get('/:registerId', (req, res, next) => {
+    const id = req.params.registerId;
+    Diagnostic.findById(id)
+        .exec()
+        .then(doc => {
+            console.log('From Database', doc);
+            res.status(200).json({ doc });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err })
+        });
+});
 
 
 

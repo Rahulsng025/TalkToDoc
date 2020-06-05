@@ -1,0 +1,105 @@
+.navbar-brand img {
+    height: 50px;
+}
+
+.card-body img {
+    height: 50px;
+    
+}
+.card-body .card-title {
+    color: white;
+}
+.card-body .card-text {
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.slider
+{
+   height:600px;
+   width:100%; 
+}
+.card-group {
+    height: 150px;
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link,.navbar .navbar-nav .nav-item .nav-link:visited {
+    color:black;
+    margin-right: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,.navbar .navbar-nav .nav-item .nav-link:active{
+    color: grey;
+   
+}
+.slider {
+    position:relative;
+    float: left;
+}
+/* For blur effect on slider images */
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+.slider:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    z-index: 1;
+}
+/* Sidebar Content */
+
+.welcome_docmed_area .welcome_thumb .thumb_1 {
+    left: 0;
+  }
+  .welcome_docmed_area .welcome_thumb .thumb_1 img {
+    width: 60%;
+  }
+  @media (max-width: 767px) {
+  .welcome_docmed_area .welcome_thumb .thumb_1 img {
+    width: 100%;
+  }
+}
+.welcome_docmed_area .welcome_thumb .thumb_2 {
+    position: absolute;
+    bottom: -94px;
+    right: -37px;
+  }
+
+  @media (max-width: 767px) {
+  .welcome_docmed_area .welcome_thumb .thumb_2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.welcome_docmed_area .welcome_thumb .thumb_2 {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+  }
+}
+
+.welcome_docmed_area .welcome_thumb .thumb_2 img {
+    width: 89%;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .welcome_docmed_area .welcome_thumb .thumb_2 img {
+        width: 100%;
+      }
+    }

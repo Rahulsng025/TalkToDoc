@@ -56,6 +56,7 @@ import { DiagnosticLayoutComponent } from 'app/admin/diagnostic-admin/diagnostic
 import { AppointmentAdminComponent } from "app/admin/appointment-admin/appointment-admin.component";
 import { UserRegistrationComponent } from 'app/admin/user-registration/user-registration.component';
 import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
+import { DiagnosticRegistrationComponent } from 'app/admin/diagnostic-registration/diagnostic-registration.component';
 
 
 @NgModule({
@@ -116,7 +117,9 @@ import { DoctorRegistrationComponent } from "app/admin/doctor-registration/docto
     MedicalLayoutComponent,
     AppointmentAdminComponent,
     UserRegistrationComponent,
-    DoctorRegistrationComponent
+    DoctorRegistrationComponent,
+    DiagnosticRegistrationComponent
+
 
   ],
 })

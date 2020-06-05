@@ -27,6 +27,7 @@ import { AppointmentAdminComponent } from 'app/admin/appointment-admin/appointme
 import { AuthGuard } from 'app/auth/guards/auth.gaurd';
 import { UserRegistrationComponent } from "app/admin/user-registration/user-registration.component";
 import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
+import { DiagnosticRegistrationComponent } from "app/admin/diagnostic-registration/diagnostic-registration.component";
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -57,7 +58,8 @@ export const AdminLayoutRoutes: Routes = [
       { path: "medical-layout", component: MedicalLayoutComponent },
       { path: "appointment", component: AppointmentAdminComponent },
       { path: "user", component: UserRegistrationComponent },
-      { path: "doctor", component: DoctorRegistrationComponent }
+      { path: "doctor", component: DoctorRegistrationComponent },
+      { path: "Diagnostic", component: DiagnosticRegistrationComponent }
 
     ],
   },

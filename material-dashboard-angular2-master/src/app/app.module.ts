@@ -33,9 +33,12 @@ import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 //Social login
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+
+
 
 
 
@@ -75,7 +78,9 @@ export function provideConfig() {
     AppRoutingModule,
     FlashMessagesModule.forRoot(),
     NgbModule,
-    SocialLoginModule
+    SocialLoginModule,
+
+
   ],
   declarations: [AppComponent,
     AdminLayoutComponent,
@@ -87,13 +92,15 @@ export function provideConfig() {
     ProfileComponent,
 
 
+
+
   ],
 
   providers: [DoctorListingService, ValidateService, AuthenticationService, AuthGuard,
     {
       provide: AuthServiceConfig,
       useFactory: provideConfig
-    }
+    },
   ],
   bootstrap: [AppComponent],
 })
