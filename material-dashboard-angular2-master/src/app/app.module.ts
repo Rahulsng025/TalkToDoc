@@ -32,6 +32,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 
 //Social login
@@ -79,6 +82,9 @@ export function provideConfig() {
     FlashMessagesModule.forRoot(),
     NgbModule,
     SocialLoginModule,
+    MatIconModule,
+    MatExpansionModule
+
 
 
   ],
@@ -101,6 +107,7 @@ export function provideConfig() {
       provide: AuthServiceConfig,
       useFactory: provideConfig
     },
+
   ],
   bootstrap: [AppComponent],
 })

@@ -12,18 +12,24 @@
 .card-body .card-text {
     color: white;
 }
+/* .navbar .navbar-expand-lg .navbar-light{
+  color:#83c4ff;
+} */
 
 .navbar {
     margin-bottom: 0;
+    
 }
 
 .slider
 {
    height:600px;
    width:100%; 
+   margin-bottom: 0;
 }
 .card-group {
     height: 150px;
+    
 }
 
 
@@ -103,3 +109,36 @@
         width: 100%;
       }
     }
+
+    .page-footer {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+.copy-right_text {
+  padding-bottom: 30px;
+  background: #000000;
+}
+
+
+.copy-right_text .footer_border {
+  padding-bottom: 30px;
+}
+
+
+.copy-right_text .copy_right {
+  font-size: 16px;
+  color: #919191;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+
+  .copy-right_text .copy_right {
+    font-size: 14px;
+  }
+}
+
+.copy-right_text .copy_right a {
+  color: #5DB2FF;
+}

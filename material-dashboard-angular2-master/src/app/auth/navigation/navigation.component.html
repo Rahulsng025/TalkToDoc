@@ -1,34 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Tok2Dok</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="#navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                <a class="nav-link" [routerLink]="['/']">Home <span></span></a>
-            </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-
-
-
-            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                <a class="nav-link" [routerLink]="['/login']">Login </a>
-            </li>
-
-            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                <a class="nav-link" [routerLink]="['/register']">Register </a>
-            </li>
-        </ul>
-
-    </div>
-</nav> -->
-
-<!-- Secon Navigation Panel -->
-
 <html>
 
 <head>
@@ -41,7 +10,6 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar -->
             <a class="navbar-brand" href="#"><img src="../../assets/img/tok2doklogo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,14 +17,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link" [routerLink]="['/']">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link" [routerLink]="['/login']">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link" [routerLink]="['/register']">Register</a>
                     </li>
                 </ul>
             </div>
@@ -69,29 +37,31 @@
 <ngb-carousel>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider1.png" alt="Random first slide" width="1600" height="600">
+            <img src="../../assets/slider/slider4.jpg" alt="Random first slide" width="1600" height="800">
         </div>
         <div class="carousel-caption">
-            <h3>10 seconds between slides...</h3>
-            <p>This carousel uses customized default values.</p>
+            <h3>Healthcare For Whole Family</h3>
+            <p>Wherever the art of medicine is loved, there is also a love of humanity.
+            </p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider4.jpg" alt="Random second slide" width="1600" height="800">
+            <img src="../../assets/slider/slider3.jpg" alt="Random second slide" width="1600" height="600">
         </div>
         <div class="carousel-caption">
-            <h3>No mouse events...</h3>
-            <p>This carousel doesn't pause or resume on mouse events</p>
+            <h3>Exceptional Care Close to You</h3>
+            <p>Getting out of the hospital is a lot like resigning from a book club. You're not out of it until the
+                computer says you're out of it.</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider3.jpg" alt="Random third slide" width="1600" height="600">
+            <img src="../../assets/slider/slider1.png" alt="Random third slide" width="1600" height="600">
         </div>
         <div class="carousel-caption">
-            <h3>No keyboard...</h3>
-            <p>This carousel uses customized default values.</p>
+            <h3>Keeping You Well</h3>
+            <p>Healing in a matter of time, but it is sometimes also a matter of opportunity</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
@@ -99,8 +69,9 @@
             <img src="../../assets/slider/slider2.jpg" alt="Random fourth slide" width="1600" height="800">
         </div>
         <div class="carousel-caption">
-            <h3>And no wrap after last slide.</h3>
-            <p>This carousel uses customized default values.</p>
+            <h3>Better Care and Better Understanding.</h3>
+            <p>If we could give every individual the right amount of nourishment and exercise, not too little and not
+                too much, we would have found the safest way to health.</p>
         </div>
     </ng-template>
 </ngb-carousel>
@@ -113,10 +84,12 @@
 
             <div class=" col-md-4">
                 <div class="card" style="background-color: #83c4ff;">
-                    <div class="card-body">
+                    <div class=" card-body">
                         <img src="../../assets/logo/logo1.png">
-                        <h2 class="card-title">Hospitality</h2>
-                        <h4 class="card-text">Clinical excellence must be the priority for any health care service
+                        <h2 class="card-title" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Hospitality</h2>
+                        <h4 class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">Clinical
+                            excellence must be the priority for any health care service
                             provider..
                         </h4>
                         <button type="button" class="btn btn-outline-light">Apply for Service</button>
@@ -129,9 +102,11 @@
                 <div class="card" style="background-color:#17a2b8;">
                     <div class=" card-body">
                         <img src="../../assets/logo/logo2.png">
-                        <h2 class="card-title">Home Care Service</h2>
+                        <h2 class="card-title" style="font-family: Georgia, 'Times New Roman', Times, serif;">Home Care
+                            Service</h2>
 
-                        <h4 class="card-text">We'll be there to care for your loved ones when you cannot..</h4>
+                        <h4 class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">We'll be
+                            there to care for your loved ones when you cannot..</h4>
                         <button type="button" class="btn btn-outline-light">Make an Appointment</button>
 
                     </div>
@@ -141,8 +116,10 @@
                 <div class="card" style="background-color: #83c4ff;">
                     <div class="card-body">
                         <img src="../../assets/logo/logo3.png">
-                        <h2 class="card-title">Emergency Care</h2>
-                        <h4 class="card-text">Clinical excellence must be the priority for any health care service
+                        <h2 class="card-title" style="font-family: Georgia, 'Times New Roman', Times, serif;">Emergency
+                            Care</h2>
+                        <h4 class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;">Clinical
+                            excellence must be the priority for any health care service
                             provider..
                         </h4>
                         <button type="button" class="btn btn-outline-light">Register</button>
@@ -163,6 +140,7 @@
 </div>
 
 <!-- Line Division End -->
+<br><br><br><br><br>
 
 <!-- welcome_docmed_area_start -->
 <div class="welcome_docmed_area">
@@ -180,20 +158,25 @@
             </div>
             <div class="col-md-6">
                 <div class="welcome_docmed_info">
-                    <h4>Welcome to Tok2Dok</h4>
-                    <h1 style="color: #17a2b8;">Best Care For Your <br>
+                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">Welcome to Tok2Dok</h4>
+                    <h1 style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">Best Care For
+                        Your <br>
                         Good Health</h1><br>
-                    <p>For millions of people, Tok2dok is the trusted and familiar home where they know they’ll find a
+                    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">For millions of people, Tok2dok is
+                        the trusted and familiar home where they know they’ll find a
                         healing touch.It connects them with everything they need to take good care of themselves and
                         their family - assessing health issues, finding the right doctor, booking diagnostic tests,
                         obtaining medicines, storing health records or learning new ways to live healthier.</p><br>
                     <ul>
-                        <li> <i class="flaticon-right"></i> Tok2Dok is at your phone step with same familiar touch where
+                        <li style="font-family: Georgia, 'Times New Roman', Times, serif;"> <i
+                                class="flaticon-right"></i> Tok2Dok is at your phone step with same familiar touch where
                             we connect </li><br>
-                        <li> <i class="flaticon-right"></i> We stand because we understand that what it takes for good
+                        <li style="font-family: Georgia, 'Times New Roman', Times, serif;"> <i
+                                class="flaticon-right"></i> We stand because we understand that what it takes for good
                             care of your loved ones with quick services
                         </li><br>
-                        <li> <i class="flaticon-right"></i> Healthcare providers now have an easy way to connect with
+                        <li style="font-family: Georgia, 'Times New Roman', Times, serif;"> <i
+                                class="flaticon-right"></i> Healthcare providers now have an easy way to connect with
                             patients to provide services and to build trust </li>
                     </ul>
 
@@ -209,140 +192,294 @@
 <!-- Line Division Start -->
 <div class="progress">
     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+</div> <br><br><br>
 
 <!-- Line Division End -->
 <!-- Card Start -->
 
-<h2 style="text-align: center; color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">3 Steps for
-    Better Health</h2>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="card mb-3" style="max-width: 500px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="../../assets/Step/step1.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"
-                            style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
-                            Checkups Available</h5>
-                        <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Some people
-                            see
-                            their doctor every moment for a checkup or test to make sure everything is ok but now
-                            Tok2Dok
-                            provide Free
-                            sample
-                            collection at home,digital reports in 24 hours.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
-                        <button type="button" class="btn btn-light">Book Test</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 500px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="../../assets/Step/step2.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"
-                            style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
-                            Connect With Doctor</h5>
-                        <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Don’t self
-                            medicate. Talk to an expert. Consult a doctor in less than 2
-                            minutes.Because in Tok2Dok you can easily find a doctor in your locality </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <button type="button" class="btn btn-light">Doctor Listing</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 500px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="../../assets/Step/Step3.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"
-                            style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
-                            Appointment Booking</h5>
-                        <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Now, in
-                            Tok2Dok
-                            you
-                            can book
-                            appointment in minutes. After successfully booking the appointment, you can also download a
-                            PDF
-                            file according to your filling details
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <button type="button" class="btn btn-light" href="login">Appointment Booking</button>
+        <div class=col-md-6>
 
+            <h2 style="text-align:justify; color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">3
+                Steps For
+                Better Health</h2>
+            <hr>
+            <div class="card mb-3" style="max-width: 500px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="../../assets/Step/step1.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                                Checkups Available</h5>
+                            <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Some
+                                people
+                                see
+                                their doctor every moment for a checkup or test to make sure everything is ok but now
+                                Tok2Dok
+                                provide Free
+                                sample
+                                collection at home,digital reports in 24 hours.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
+                            <button type="button" class="btn btn-light">Book Test</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="card mb-3" style="max-width: 500px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="../../assets/Step/step2.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                                Connect With Doctor</h5>
+                            <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Don’t
+                                self
+                                medicate. Talk to an expert. Consult a doctor in less than 2
+                                minutes.Because in Tok2Dok you can easily find a doctor in your locality </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <button type="button" class="btn btn-light">Doctor Listing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 500px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="../../assets/Step/Step3.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                                Appointment Booking</h5>
+                            <p class="card-text" style="color: black; font-family:Arial, Helvetica, sans-serif;">Now, in
+                                Tok2Dok
+                                you
+                                can book
+                                appointment in minutes. After successfully booking the appointment, you can also
+                                download a
+                                PDF
+                                file according to your filling details
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <button type="button" class="btn btn-light" href="login">Appointment Booking</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card End (Left Hand Side Details) -->
+
+        <!-- Card Start (Right Hand Side Detail) -->
+        <div class=col-md-6>
+            <h2 style="text-align:justify; color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                Find Doctors in top specialities</h2>
+            <hr>
+            <br>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            Our Resposibilites
+
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+                    <p>Creating a positive and productive work culture through leadership and
+                        maintaining the high quality in the delivery of patient care</p>
+                </mat-expansion-panel>
+                <br><br>
+            </mat-accordion>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            Orthodontics
+
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+                    <p>Dr.Akhil Agarwal completed his B.D.S. and M.D.S. from the world renowned
+                        King George’s Medical College (KGMC),Lucknow in the year 2002 and 2006 respectively.
+                        He has been awarded Best Clinical Excellence award in Lingual Residency program, 2016.
+                        He was awarded "Best Scientific Paper Award" at a Lingual conference, AIIMS, 2017.
+                        He is the first certified Invisalign provider in Lucknow region.</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <br><br>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            Paediatric Haemato-Oncology
+
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+                    <p>Dr Vimal Kumar underwent his undergraduate training from the prestigious Madras Medical College,
+                        Chennai, and postgraduate training from SMS Medical College, Jaipur where he was awarded
+                        GOLD MEDAL as the best outgoing student of the year. He underwent fellowship training in
+                        Paediatric Haematology/Oncology from Apollo Speciality Hospital, Chennai and further special
+                        training in Bone Marrow Transplantation at St. Mary's Hospital (Imperial College NHS), London,
+                        UK under the Royal College of Paediatrics and Child Health, UK</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <br><br>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            Transplanation-liver
+
+                        </mat-panel-title>
+
+                    </mat-expansion-panel-header>
+                    <p>Dr.Noushif is a Liver transplant and Hepato-Pancreato-Biliary Surgeon
+                        at Aster Integrated Liver care. He completed his graduation (MBBS)
+                        from Calicut Medical College and surgical residency (MS General Surgery)
+                        from Trivandrum Medical College at Kerala University. He further went on to
+                        pursue Magister Chirurgiae (MCh Surgical Gastroenterology) from the renowned King
+                        Georges Medical University at Lucknow, where he received advanced training in Surgical
+                        Gastroenterology and HPB surgery. He further did his focused training in Liver Transplant
+                        and Hepato-Pancreato-Biliary surgery at the Centre for Liver and Biliary Sciences,
+                        Indraprastha Apollo Hospital, New Delhi. With special Interest in HPB surgeries and Liver
+                        transplant, Dr.Noushif is adept in advanced laparoscopy and robotic surgery. He has authored
+                        indexed publications and text book chapters, and is also among the editorial board of
+                        international
+                        scientific journals. He is a member of various international academic forums including the
+                        American
+                        College of Surgeons.</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Card End (Right Hand Side Detail) -->
+
+<!-- Line Division Start -->
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<!-- Line Division End -->
+<br><br><br>
+
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h4 style="font-family: 'Times New Roman', Times, serif; color: #17a2b8;">Tok2Dok</h4>
+                <hr>
+                <div class="row">
+                    <div class="col l3 s6">
+                        <ul>
+                            <li>
+                                <a class="grey-text text-lighten-3">Home</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a class="grey-text text-lighten-3">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l3 offset-l3 s6">
+                        <ul>
+                            <li>
+                                <a class="grey-text text-lighten-3">Doctors</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a class="grey-text text-lighten-3">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h4 style="color: #17a2b8;">Departments</h4>
+                <hr>
+                <ul>
+                    <li><a class="grey-text text-lighten-3">Diagnostic</a></li>
+                    <li><a class="grey-text text-lighten-3">Medical Insurance</a></li>
+                    <li><a class="grey-text text-lighten-3">Home Care</a></li>
+                    <li><a class="grey-text text-lighten-3">Test Booking</a></li>
+                </ul>
+                <br>
+                <h4 style="color: #17a2b8;">Address</h4>
+                <hr>
+                <p>Contact: 8840110906</p>
+                <p>Email: rahulsingh50219@gmail.com </p>
+            </div>
+            <br><br>
+
+
+
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <br><br><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="../../assets/img/tok2doklogo.png" class="card-img" alt="...">
+            </div>
+            <div class="col-md-10">
+                <p>For millions of people, Tok2dok is the trusted and familiar home where they know they’ll find a
+                    healing touch. It connects them with everything they need to take good care of themselves and their
+                    family - assessing health issues, finding the right doctor, booking diagnostic tests, obtaining
+                    medicines, storing health records or learning new ways to live healthier.</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</footer>
+
+
+<div class="copy-right_text">
+    <div class="container">
+        <div class="footer_border"></div>
+        <div class="row">
+            <div class="col-xl-12">
+                <p class="copy_right text-center">
+
+                    Copyright 2020 &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | Designed
+                    and Developed by <a>Rahul Singh</a>
+
+                </p>
             </div>
         </div>
     </div>
 </div>
-<!-- Card End -->
-<!-- expert_doctors_area_start -->
-<!-- <div class="expert_doctors_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="doctors_title mb-55">
-                    <h3>Expert Doctors</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="expert_active owl-carousel">
-                    <div class="single_expert">
-                        <div class="expert_thumb">
-                            <img src="../../assets/doctor/doctor1.jpg" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                    <div class="single_expert">
-                        <div class="expert_thumb">
-                            <img src="../../assets/doctor/doctor2.jpg" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                    <div class="single_expert">
-                        <div class="expert_thumb">
-                            <img src="../../assets/doctor/doctor3.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                    <div class="single_expert">
-                        <div class="expert_thumb">
-                            <img src="../../assets/doctor/doctor4.jpg" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- expert_doctors_area_end -->
 
+
+<!-- Footer End -->
 
 </html>

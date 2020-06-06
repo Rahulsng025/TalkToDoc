@@ -67,44 +67,37 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </head>
 
 <body class="centered">
-    <div class="container-fluid">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor03">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-
-                </ul>
-
-            </div>
-        </nav>
-        <!-- Registration Form -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="../../assets/img/tok2doklogo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" [routerLink]="['/']">Home</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" [routerLink]="['/login']">Login</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" [routerLink]="['/register']">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Registration Form -->
+    <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <div class="panel-group">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Registration</div>
-                    </div>
-                </div>
-
                 <form (submit)="onRegisterSubmit()">
-
-
-
-
                     <div class="form-group">
                         <label for="role" style="color: black;"> Select Role: </label>
                         <select id="role" [(ngModel)]="role" name="role" class="form-control">
@@ -167,23 +160,25 @@
                 </form>
             </div>
             <!-- Text apper on the screen -->
-            <div class="text" class="col-md-7">
-                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">HealthCare for
-                    Everyone,
-                    EveryWhere</h1>
-                <p style="font-family:Georgia, 'Times New Roman', Times, serif;">For millions of people,
-                    Tok2dok is the trusted and
-                    familiar
-                    home where they
-                    know <br> they’ll find a healing
-                    touch.It connects them with everything they need to take <br> good care of themselves
-                    and
-                    their
-                    family -
-                    assessing health issues</p>
-            </div>
+            <!-- <div class="row">
+                <div clsss="col-md-7">
 
+                    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">HealthCare for
+                        Everyone,
+                        EveryWhere</h1>
+                    <p style="font-family:Georgia, 'Times New Roman', Times, serif;">For millions of people,
+                        Tok2dok is the trusted and
+                        familiar
+                        home where they
+                        know <br> they’ll find a healing
+                        touch.It connects them with everything they need to take <br> good care of themselves
+                        and
+                        their
+                        family -
+                        assessing health issues</p>
 
+                </div>
+            </div> -->
         </div>
     </div>
 </body>

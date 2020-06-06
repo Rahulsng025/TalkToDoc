@@ -28,10 +28,11 @@ span.req {
 } 
 
  .centered {
-  background-image: url("https://maxemhealthurgentcare.com/wp-content/uploads/2020/02/Nurse.jpeg");
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+  url("https://maxemhealthurgentcare.com/wp-content/uploads/2020/02/Nurse.jpeg");
   background-size: cover;
   background-repeat: no-repeat, repeat;
-  height: 900px;
+  height: 800px;
   background-attachment: fixed;
   }
    text {
