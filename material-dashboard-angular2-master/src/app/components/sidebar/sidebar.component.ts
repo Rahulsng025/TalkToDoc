@@ -4,70 +4,70 @@ declare const $: any;
 declare interface RouteInfo {
   path: string;
   title: string;
-  //  icon: string;
+  icon: string;
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
   {
     path: "/main/dashboard",
     title: "Dashboard",
-    // icon: "dashboard",
+    icon: "dashboard",
     class: "",
   },
 
   {
     path: "/main/doctor-listing",
     title: "Doctor Listing",
-    //  icon: "doctor",
+    icon: "assignment_ind",
     class: "",
   },
   {
     path: "/main/diagnostic-center",
     title: "Diagnostic Center",
-    //   icon: "center",
+    icon: "account_balance",
     class: "",
   },
   {
     path: "/main/home-care",
     title: "Home Care",
-    // icon: "center",
+    icon: "add_box",
     class: "",
   },
   {
     path: "/main/medical-insurance",
     title: "Medical Insurance",
-    // icon: "center",
+    icon: "group_add",
     class: "",
   },
   {
     path: "/main/user-profile",
     title: "User Profile",
-    // icon: "person",
+    icon: "person",
     class: "",
   },
   {
     path: "/main/table-list",
     title: "Table List",
-    // icon: "content_paste",
+    icon: "content_paste",
     class: "",
   },
   {
     path: "/main/typography",
     title: "Typography",
-    // icon: "library_books",
+    icon: "library_books",
     class: "",
   },
   {
     path: "/main/icons",
     title: "Icons",
-    //  icon: "bubble_chart",
+    icon: "bubble_chart",
     class: "",
   },
 
   {
     path: "/main/notifications",
     title: "Notifications",
-    //icon: "notifications",
+    icon: "notifications",
     class: "",
   },
 ];
@@ -81,21 +81,21 @@ export class SidebarComponent implements OnInit {
   isUserLinksActive: boolean = true;
   menuItems: any[];
   menuItemsAdmin: RouteInfo[] = [
-    { path: "/main/admin/doctors", title: "Doctors", class: "" },
+    { path: "/main/admin/doctors", title: "Doctors", icon: "", class: "" },
 
-    { path: "/main/admin/diagnostic", title: "Diagnostic", class: "" },
+    { path: "/main/admin/diagnostic", title: "Diagnostic", icon: "", class: "" },
 
-    { path: "/main/admin/medical", title: "Medical Insurance", class: "" },
+    { path: "/main/admin/medical", title: "Medical Insurance", icon: "", class: "" },
 
-    { path: "/main/admin/homecare", title: "Home Care", class: "" },
+    { path: "/main/admin/homecare", title: "Home Care", icon: "", class: "" },
 
-    { path: "/main/admin/appointment", title: "Appointment Boooking", class: "" },
+    { path: "/main/admin/appointment", title: "Appointment Boooking", icon: "", class: "" },
 
-    { path: "/main/admin/user", title: "User Registration", class: "" },
+    { path: "/main/admin/user", title: "User Registration", icon: "", class: "" },
 
-    { path: "/main/admin/doctor", title: "Doctor Resgistration", class: "" },
+    { path: "/main/admin/doctor", title: "Doctor Resgistration", icon: "", class: "" },
 
-    { path: "/main/admin/Diagnostic", title: "Diagnostic Centers", class: " " }
+    { path: "/main/admin/Diagnostic", title: "Diagnostic Centers", icon: "", class: " " }
 
 
   ];
