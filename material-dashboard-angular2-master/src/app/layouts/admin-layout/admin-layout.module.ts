@@ -37,10 +37,10 @@ import { MatRadioModule } from "@angular/material/radio";
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
+import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
 import { DiagnosticCenterComponent } from "app/diagnostic-center/diagnostic-center.component";
 import { HomeCareComponent } from "app/home-care/home-care.component";
 import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insurance.component";
-import { DoctorCardComponent } from "app/doctor-listing/doctor-card/doctor-card.component";
 import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/book-appointment.component";
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
 import { AdminComponent } from "app/admin/admin.component";
@@ -98,12 +98,13 @@ import { DiagnosticRegistrationComponent } from 'app/admin/diagnostic-registrati
     TypographyComponent,
     IconsComponent,
     DoctorListingComponent,
+    DoctorsComponent,
     DiagnosticCenterComponent,
     NotificationsComponent,
 
     HomeCareComponent,
     MedicalInsuranceComponent,
-    DoctorCardComponent,
+
     BookAppointmentComponent,
     AppointmentListComponent,
     AdminComponent,

@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 import { DoctorDetailsModel } from "./../model/doctor_listing.model";
-import { FormGroup, FormControl } from "@angular/forms";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Injectable({
   providedIn: "root",
@@ -16,8 +16,10 @@ export class DoctorListingService {
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
   uri = "http://localhost:3000";
-  //Update doctor(call the update api) sb naam number ke sth
-  //EditDoctor()
+
+  constructor(private http: HttpClient) { }
+
+
 
   // stores details for a new doctor which is to be added.
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
@@ -41,5 +43,5 @@ export class DoctorListingService {
     return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
   }
 
-  constructor(private http: HttpClient) {}
+
 }

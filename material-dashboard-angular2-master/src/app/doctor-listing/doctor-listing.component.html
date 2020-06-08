@@ -1,21 +1,46 @@
 <div class="main-content">
   <div class="container-fluid">
-
     <div class="row">
-
       <div class="col-md-8">
+
         <div class="card">
           <div class="card-header card-header-danger">
-            <lable><b>Search By Name:</b></lable>
-            <input type="text" #myInput [(ngModel)]="name" (input)="Search()">
+            <h3 class="card-title"
+              style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SEARCH FOR
+              DOCTORS
+              IN YOUR LOCALITY</h3>
           </div>
         </div>
-        <br>
-        <div class="card" *ngFor="let eachDoctor of allDoctorDetails">
+
+
+        <div class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Search by name:</mat-label>
+            <input matInput [(ngModel)]="name" (input)="Searchbyname()">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Search by speciality:</mat-label>
+            <input matInput [(ngModel)]="speciality" (input)="Searchbyspeciality()">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Search by <cite></cite>:</mat-label>
+            <input matInput [(ngModel)]="city" (input)="Searchbycity()">
+          </mat-form-field>
+
+          <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onSubmit()">Submit</button>
+        </div>
+
+
+        <br> <br> <br>
+        <div class="card" *ngFor="let eachDoctor of allDoctorDetails"
+          style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
 
           <div class="card-header card-header-danger">
-            <h4 class="card-title">Edit Profile</h4>
-            <p class="card-category">Complete your profile</p>
+            <h4 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              Doctors Profile</h4>
+            <p class="card-category">Complete profile</p>
           </div>
 
           <div class="card-body">
@@ -44,34 +69,6 @@
 
                 <div class="col-md-8">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Degrees" />{{ eachDoctor.degrees }}
-                  </mat-form-field>
-                </div>
-
-                <div class="col-md-8">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Mobile" />{{ eachDoctor.mobile }}
-                  </mat-form-field>
-                </div>
-
-                <div class="col-md-8">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" />{{
-                      eachDoctor.email
-                    }}
-                  </mat-form-field>
-                </div>
-
-                <div class="col-md-8">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Trainig" />{{
-                      eachDoctor.training
-                    }}
-                  </mat-form-field>
-                </div>
-
-                <div class="col-md-8">
-                  <mat-form-field class="example-full-width">
                     <input matInput placeholder="City" />{{
                       eachDoctor.city
                     }}
@@ -81,14 +78,18 @@
               </div>
 
               <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage()">
-                Book Appointment
+                View Profile
               </button>
+
+              <!-- <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage()">
+                Book Appointment
+              </button> -->
               <div class="clearfix"></div>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="card card-profile">
           <div class="card-avatar">
             <a href="javascript:void(0)">
@@ -110,7 +111,7 @@
             <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
