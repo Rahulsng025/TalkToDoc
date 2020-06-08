@@ -3,9 +3,24 @@
     <div class="row">
       <div class="col-md-12">
 
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title"
+              style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              Book Appointment |
+              <a href="main/dashboard">Home</a>
+              <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
+            </h4>
+          </div>
+        </div>
+
+        <h4 style="color: black; margin-left: 38px;">Book Appointment</h4>
+        <hr>
+        <br>
         <form [formGroup]=appointmentListingService.form class="normal-form" (submit)="onSubmit()">
           <mat-grid-list cols="2" rowHeight="200px">
             <!-- First Grid Start From Here -->
+
 
             <mat-grid-tile>
               <div class="controles-container">
@@ -73,8 +88,10 @@
             </mat-grid-tile>
 
           </mat-grid-list>
-
+          <br>
           <!-- Second Grid Start From Here -->
+          <h4 style="color: black; margin-left: 30px;">Appointment Details</h4>
+          <hr>
 
           <mat-grid-list cols="2" rowHeight="200px">
             <mat-grid-tile>
@@ -121,20 +138,20 @@
 
               </div>
 
-              <div class="button-row">
-                <button mat-raised-button color="primary" type="submit"
-                  [disabled]="appointmentListingService.form.invalid">
-                  Submit
-                </button>
-                <button mat-raised-button color="warn" (click)="onClear()">
-                  Clear
-                </button>
-              </div>
+
 
             </mat-grid-tile>
-
           </mat-grid-list>
-
+          <br>
+          <br>
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="appointmentListingService.form.invalid">
+              Submit
+            </button>
+            <button mat-raised-button color="warn" (click)="onClear()">
+              Clear
+            </button>
+          </div>
         </form>
       </div>
     </div>
