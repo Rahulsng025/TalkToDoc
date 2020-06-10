@@ -6,6 +6,7 @@ import { AppointmentListingService } from "app/Services/appointment-listing.serv
 import { MatSelectModule } from '@angular/material/select';
 import { Router } from "@angular/router";
 import { AppointmentDetailService } from "app/Services/appointment-detail.service";
+import { FlashMessagesService } from "angular2-flash-messages";
 
 //For iterating the doctor's list
 interface consultingdoctor {
@@ -56,7 +57,10 @@ export class AppointmentListComponent implements OnInit {
   ];
   isAppointmentBooked: boolean;
 
-  constructor(private appointmentListingService: AppointmentListingService, private appointmentDetailService: AppointmentDetailService, private router: Router) { }
+  constructor(private appointmentListingService: AppointmentListingService,
+    private appointmentDetailService: AppointmentDetailService,
+    private router: Router,
+    private FlashMessage: FlashMessagesService) { }
 
   ngOnInit(): void { }
 
@@ -76,7 +80,7 @@ export class AppointmentListComponent implements OnInit {
           // passing the new form values to the 'appointment-details' component and its service.
           this.appointmentDetailService.updateFormValues(this.appointmentListingService.form)
         });
-
+      this.FlashMessage.show('Appointment Booked Successfully', { cssClass: 'alert-success', timeout: 5000 });
       this.router.navigate(['/main/book-appointment']);
     }
   }

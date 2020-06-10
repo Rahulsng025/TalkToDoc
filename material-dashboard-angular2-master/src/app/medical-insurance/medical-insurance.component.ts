@@ -11,7 +11,7 @@ import { MedicalInsuranceModel } from '../../app/model/medical_insurance.model';
 export class MedicalInsuranceComponent implements OnInit {
 
   allmedicalinsuranceDetails: MedicalInsuranceModel[];
-  displayedcolumns: ['title', 'country_name', 'description'];
+  displayedcolumns: ['title', 'country_name', 'description', 'pic'];
 
   constructor(private medicalinsuranceService: MedicalInsuranceService, private router: Router) { }
 

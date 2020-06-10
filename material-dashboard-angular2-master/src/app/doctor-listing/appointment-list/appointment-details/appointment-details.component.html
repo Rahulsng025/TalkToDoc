@@ -11,12 +11,12 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
-                                    <tr *ngFor="let detail of appointment | keyvalues">
+                                    <tr *ngFor="let detail of appointment | keyvalue">
                                         <td class="table-heading">
                                             {{ detail.key }}
                                         </td>
                                         <td>
-                                            {{ detail.values }}
+                                            {{ detail.value }}
                                         </td>
                                     </tr>
                                 </tbody>
@@ -25,3 +25,6 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>

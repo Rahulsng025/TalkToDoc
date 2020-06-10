@@ -14,6 +14,7 @@ import { HomeCareComponent } from "app/home-care/home-care.component";
 import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insurance.component";
 import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/book-appointment.component";
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
+import { AppointmentDetailsComponent } from "app/doctor-listing/appointment-list/appointment-details/appointment-details.component";
 import { AdminComponent } from "app/admin/admin.component";
 import { DoctorAdminComponent } from "app/admin/doctor-admin/doctor-admin.component";
 import { DiagnosticAdminComponent } from "app/admin/diagnostic-admin/diagnostic-admin.component";
@@ -39,6 +40,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "medical-insurance", component: MedicalInsuranceComponent },
   { path: "book-appointment", component: BookAppointmentComponent },
   { path: "appointment-list", component: AppointmentListComponent },
+  { path: "appointment-details", component: AppointmentDetailsComponent },
   { path: "dashboard", component: DashboardComponent, canActivate: [AuthGuard] },
   { path: "user-profile", component: UserProfileComponent },
   { path: "table-list", component: TableListComponent },

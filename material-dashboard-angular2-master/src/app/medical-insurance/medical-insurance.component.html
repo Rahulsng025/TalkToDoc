@@ -1,4 +1,4 @@
-<div class="main-content">
+<!-- <div class="main-content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
@@ -22,5 +22,442 @@
         </table>
       </div>
     </div>
+  </div>
+</div> -->
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- Main Heading Start -->
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title"
+              style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MEET
+              INSAURENCE PROVIDERS</h4>
+          </div>
+        </div>
+        <!-- Main Heading End -->
+
+
+        <!-- Description Start -->
+        <div class="row">
+          <div class="col-md-12">
+            <p style="color: black;">A Health insurance policy is a contract between the insurance company and the
+              policyholder,
+              wherein the insurer pays for the medical expenses incurred by the life insured.The insurer will either
+              provide a
+              reimbursement for your medical expenses or ensure you are eligible for cashless treatment for injuries
+              or
+              illnesses
+              covered under the policy at one of the network hospitals. You can also get tax deductions on the
+              premiums
+              paid towards
+              health insurance under Section 80D of the Income Tax Act, 1961.</p>
+          </div>
+        </div>
+        <br>
+
+        <!-- Description End -->
+
+        <!-- Nav Link Start -->
+        <ul>
+          <li><a href="#Benifitesofhealthinsurance">Benifites of health insurance</a></li>
+          <li><a href="#Mediclaimpolicy">Mediclaim policy</a></li>
+          <li><a href="#Healthinsurancenews">Health insurance news</a></li>
+          <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
+        </ul>
+
+        <!-- Nav Link End -->
+
+        <!--Form Data Start  -->
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card" *ngFor="let obj of allmedicalinsuranceDetails"
+              style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+              <div class="card-header card-header-danger">
+                <h4 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Health Insurance Company</h4>
+                <p class="card-category">Company profile</p>
+              </div>
+
+              <div class="card-body">
+
+                <form>
+
+                  <div class="row">
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Title" />{{ obj.title }}
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Country Name" />{{ obj.country_name }}
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Description" />{{ obj.description }}
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Data End -->
+
+        <!-- General Description about Health insurance start -->
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Benefits of Health Insurance:</h4>
+
+              </div>
+            </div>
+            <p style="color: black;">The following are the main benefits of being covered by a health insurance policy:
+            </p>
+
+            <!-- 3 Card Start from here -->
+            <div class="card-deck">
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets/medical/medical1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Cashless Treatment:</h5>
+                  <p class="card-text" style="color: black;">When you are covered under a health insurance policy, you
+                    can avail
+                    cashless treatments which essentially means that you can receive medical treatments without
+                    having to pay the hospital from your own pockets..</p>
+                </div>
+
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets/medical/medical2.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Cover for Pre- as well as Post-Hospitalisation Expenses:
+                  </h5>
+                  <p class="card-text" style="color: black;">Effective insurance policies offer coverage for pre- as
+                    well as
+                    post-hospitalisation expenses for a period of 60 days before and after an insured individual is
+                    hospitalised..
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets//medical/medical3.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Transportation Expenses:</h5>
+                  <p class="card-text" style="color: black;">In case you hold a health insurance policy and get
+                    hospitalised the plan
+                    will cover the costs incurred on using an ambulance to transport you from your home to the hospital
+                    or vice-versa..</p>
+                </div>
+
+              </div>
+            </div>
+            <!-- 3 Card End from here -->
+
+            <!--Another 3 Card Start from here -->
+            <div class="card-deck">
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets/medical/medical4.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Medical Check-ups:</h5>
+                  <p class="card-text" style="color: black;">Most health insurance policies offer free health check-ups.
+                    However, most insurance companies only offer these check-ups for free depending on your No
+                    Claim Bonus.</p>
+                </div>
+
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets/medical/medical5.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Room Rent:</h5>
+                  <p class="card-text" style="color: black;">In case you are hospitalised, you will have to incur costs
+                    on room rent.
+                    Having a health insurance policy will ensure that these costs are covered to a significant extent.
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../../assets//medical/medical6.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black;">Online Purchasing Facility:</h5>
+                  <p class="card-text" style="color: black;">Thanks to the advancements in technology, you no longer
+                    need to visit a branch of
+                    the health insurance company in order to purchase a plan. You can do so from the comfort of your own
+                    home or office...</p>
+                </div>
+
+              </div>
+            </div>
+            <!--Another 3 Card End from here -->
+
+          </div>
+        </div>
+        <!-- General Description about Health insurance end -->
+
+        <br>
+        <!-- Information related to COVID-19 Start-->
+
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Coronavirus and Health Insurance: 7 Things You Need to Know</h4>
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <div class="col-md-12">
+                <form>
+                  <div>
+                    <p style="color: black;">With fresh coronavirus-related cases registered in India, insurers are
+                      witnessing a sharp
+                      increase in enquiries on
+                      health insurance policies. As per reports, queries on insurance policies have increased by 40%
+                      since the detection of new coronavirus cases.
+                      In this section, we have compiled 7 frequently asked questions related to coronavirus and health
+                      insurance policies to
+                      make things clearer for you.</p>
+
+                    <h4 style="color: black;font: bold;">• What is coronavirus?</h4>
+
+                    <p style="color: black;">Coronavirus is a type of virus that causes illness ranging from common cold
+                      to severe diseases such
+                      as
+                      Middle East Respiratory Syndrome (MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV).</p>
+
+                    <h4 style="color: black; font: bold;">• What are the usual symptoms for coronavirus?</h4>
+
+                    <p style="color: black;"> Symptoms are similar to any other flu such as cough, runny nose, sore
+                      throat, and fever. These
+                      symptoms may appear between 2-14 days from contacting the virus.</p>
+
+                    <h4 style="color: black; font: bold;"> • Is coronavirus curable?</h4>
+
+                    <p style="color: black; font: bold;"> No specific treatment for coronavirus has been confirmed yet.
+                      However, one can be cured depending
+                      on
+                      the severity of the disease.</p>
+
+                    <h4 style="color: black; font: bold;">• How can I protect myself from contacting the disease?</h4>
+
+                    <p style="color: black;">Precautionary measures like washing your hands thoroughly with sanitiser
+                      and
+                      warm water would help.
+                      Also, avoid large group gatherings for safety. Wear a mask if you are travelling.</p>
+
+                    <h4 style="color: black; font: bold;">• Do health insurance policies cover such diseases?</h4>
+
+                    <p style="color: black;">Most clinics and hospitals in India are conducting coronavirus tests for
+                      free. However,
+                      hospitalisation charges, including room rent, surgical procedures and medical expenses are to be
+                      borne
+                      by patients. This is where a standard health insurance policy comes into play. If you have a
+                      pre-existing policy, your post-hospitalisation expenses will be covered by your insurer.</p>
+
+                    <h4 style="color: black; font: bold;">• Is there any waiting period?</h4>
+
+                    <p style="color: black;"> Coronavirus doesn’t fall under the pre-existing disease category. Hence,
+                      waiting period is not</p>
+                    applicable.
+
+                    <h4 style="color: black; font: bold;">• Is it necessary to buy a new health insurance policy
+                      specifically for coronavirus?</h4>
+
+                    <p style="color: black;">If you don’t have an existing policy, you should sign up for one. Any
+                      standard health insurance
+                      policy
+                      will help covering your hospitalisation and medical expenses. Certain insurance service providers,
+                      like Digit has rolled out policies designed specifically to cover coronavirus-related treatments.
+                      You
+                      might check such policies too.</p>
+
+                    <h4 style="color: black; font: bold;">•What is cost of Covid 19 testing in India?</h4>
+
+                    <p style="color: black;">As of March 17, 2020, testing is being done free of charge for all
+                      individuals who require to be
+                      tested as per the guidelines. For others, the cost for the first and second step screening
+                      analysis
+                      is
+                      Rs.1,500 and Rs.3,000 respectively.</p>
+
+                    <h4 style="color: black;">•How many testing centres are there in India?</h4>
+
+                    <p style="color: black;">As of 16 March, 2020, there are 110 government testing centres in the
+                      country. For a detailed and
+                      up-to-date list of Covid 19 testing centres, please visit the official website of the Indian
+                      Council
+                      of Medical Research (ICMR) icmr.nic.in.</p>
+
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <hr>
+
+        <!-- Information related to COVID-19 End-->
+        <h2>Read Health Insurance news </h2>
+        <div class="row">
+          <div class="col-md-10">
+
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  5,600 health insurance claims collected</h4>
+              </div>
+              <div class="card-body">
+                According to figures gathered by the insurance companies, around 5,600 claims have come to the notice
+                of the insurers for a settlement involving which involves a total amount of Rs.70 crore and this means
+                an expenditure of Rs.1.25 lakh, on an average, for every policyholder.
+
+                These 5,600 claims, when looked at against the 1.8 lakh cases, this translates to only 3.1 per cent of
+                the people who have been tested positive and claimed health insurance.
+
+                Around 2,132 people have now availed and are undergoing treatment under the Ayushman Bharat Pradhan
+                Mantri Jan Arogya Yojana (AB-PMJAY). This is the government’s paperless and cashless healthcare access
+                service for all poor families.
+
+                While these 5,600 claims relate to the health insurance policies which were sold by health insurance
+                and general insurance companies, a lot of sources have said say that these include claims relating to
+                Ayushman Bharat.
+
+              </div>
+            </div>
+            <br>
+
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Digital Payments and e-KYC helping citizens buying insurance during COVID-19</h4>
+              </div>
+              <div class="card-body">
+                During the time of COVID-19, digital payments along with the service of e-KYC have been helping citizens
+                buy insurance. With the help of digital payments, customers can calculate their premiums to be paid
+                monthly. Apart from this, customers can use their smartphone to upload pictures of a policy which is to
+                be renewed.
+
+                Digital mode of payments has also helped extend the process of KYC online. E-KYC can be availed online
+                to buy insurance and banking facilities. Insurers and banking institutions are allowing customers to use
+                the e-KYC services to purchase insurance policies, open bank accounts, transfer money and other services
+                also.
+
+                With the help of digital payments and digital customer service, financial transactions can be done
+                online without any requirement to visit the bank branch. Digital payments have increased by 40% since
+                February with many users registering on various online payments.
+
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  EMI waived off for 12 months as car-manufacturers try to lure back their buyers</h4>
+              </div>
+              <div class="card-body">
+                Most car-manufacturing companies are now rolling out schemes to attract buyers and stand back on their
+                feet. The lockdown and fear over the coronavirus had put a stop to the customers’ interest in buying.
+                Companies are now preparing themselves to restart factories that have been closed for over six weeks.
+
+                Companies like Renault, Hyundai, Volkswagen, Honda, Tata Motors, Mahindra & Mahindra, and Skoda Auto are
+                now providing a lot of finance options which include allowing a car buyer to pay EMIs, only after twelve
+                months of the purchase of the vehicle.
+
+                Other than the regular discounts on Bharat Stage VI (BS-VI) cars like Vento, and Polo, the German auto
+                titan, Volkswagen (VW) is now offering its customers a 12-month EMI holiday and the car buyer can start
+                paying the EMIs from the second year onwards.
+
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  A strong CAGR predicted for health insurance in India till 2025</h4>
+              </div>
+              <div class="card-body">
+                A research report by TechSci found that the health insurance market in India will be driven forward by
+                the increasing disposable income that Indians have as well as the various attractive features offered by
+                health insurance companies now. This is augmented by an increasing workforce, awareness of health
+                insurance policies, and an understanding that rising healthcare costs require health insurance policies
+                to be met. Furthermore, it is mandatory that public and private sector employees are provided with
+                heatlh insurance. The ‘'Ayushman Bharat’' health insurance scheme launched by the Government of India is
+                also a boost to the health insurance sector in India. This is a national health protection scheme that
+                provides health insurance to approximately 100 million families. This has increased the reach of health
+                insurance to even the most vulnerable sections of society. In India there are standalone health insurers
+                as well as public and private sector health insurers. The largest share of the health insurance market
+                in India went to private health insurers in the year 2019. Due to the high number of road accidents,
+                medical insurance dominated the insurance sector in India. There is a higher preference for private
+                insurance firms since they provide customized plans according to the coverage required and budget
+                available.
+
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card-header card-header-info">
+                <h4 class="card-title"
+                  style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  The number of health insurance claims increase while motor insurances lessen during the lockdown</h4>
+              </div>
+              <div class="card-body">
+                Many non-life insurers have been seeing a rise in health segment claims during the lockdown in the
+                country. On the other hand, the number of own damage claims in the motor segment has gone down during
+                this period because of the lockdown.
+
+                With the lockdown in place, there have been lesser vehicles on the roads which are preventing accidents
+                and that is resulting in the lesser number of claims. Fewer claims of insurances usually improve the
+                loss ratio of the insurer’s in the motor segment.
+
+                The loss ratio is calculated in order to indicate the underwriting performance of the insurer. If the
+                loss ratio is above 100 then the premium which is collected is not adequate to pay for the claims. The
+                industry is currently operating at a loss ratio of 80 in the motor segment.
+
+                According to Sanjay Saxena, head of retail claims at Bajaj Allianz General Insurance, losses will be
+                coming down in the motor segment given the lower number of claims in this period of time. There are also
+                insurers who feel that once the lockdown period is over, there will be a surge in claims.
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
   </div>
 </div>

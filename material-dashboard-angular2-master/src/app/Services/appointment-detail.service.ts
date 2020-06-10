@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, Validator } from '@angular/forms';
 
 
 @Injectable({

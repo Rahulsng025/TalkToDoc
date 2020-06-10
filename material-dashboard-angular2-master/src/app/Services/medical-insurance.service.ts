@@ -23,6 +23,7 @@ export class MedicalInsuranceService {
     title: new FormControl("", Validators.required),
     country_name: new FormControl("", Validators.required),
     description: new FormControl("", Validators.required),
+    pic: new FormControl("", Validators.required)
 
 
   });

@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
+
+
 import { DoctorDetailsModel } from "./../model/doctor_listing.model";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
@@ -12,6 +14,8 @@ export class DoctorListingService {
   // stores doctor's details.
   selectedDoctors: DoctorDetailsModel;
   newDoctorDetails: DoctorDetailsModel[];
+
+
 
   // URL to connect to the (node) server.
   // Change this to connect to the Cloud server.
@@ -27,11 +31,14 @@ export class DoctorListingService {
     return this.http.post(`${this.uri}/doctor_listing/`, this.newDoctorDetails);
   }
 
+
   // returns a list of all the doctors.
   // return type is Observable.
   getDoctorsList() {
     return this.http.get(`${this.uri}/doctor_listing`);
+
   }
+
 
   // return type is Observable.
   getDoctorListingById(Id: any) {

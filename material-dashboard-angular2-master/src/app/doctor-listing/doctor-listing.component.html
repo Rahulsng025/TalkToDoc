@@ -25,7 +25,7 @@
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <mat-label>Search by <cite></cite>:</mat-label>
+            <mat-label>Search by city:</mat-label>
             <input matInput [(ngModel)]="city" (input)="Searchbycity()">
           </mat-form-field>
 
@@ -77,7 +77,11 @@
 
               </div>
 
-              <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage()">
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage({_id:eachDoctor._id,name:eachDoctor.name, 
+              department:eachDoctor.department,
+              speciality:eachDoctor.speciality,city:eachDoctor.city,
+              trainig:eachDoctor.training,email:eachDoctor.email, 
+              mobile:eachDoctor.mobile, degrees:eachDoctor.degrees})" eachDoctor>
                 View Profile
               </button>
 
