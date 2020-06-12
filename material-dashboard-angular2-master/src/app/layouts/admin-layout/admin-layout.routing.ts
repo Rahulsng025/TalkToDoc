@@ -30,6 +30,8 @@ import { UserRegistrationComponent } from "app/admin/user-registration/user-regi
 import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
 import { DiagnosticRegistrationComponent } from "app/admin/diagnostic-registration/diagnostic-registration.component";
 import { DoctorsComponent } from "app/doctor-listing/doctors/doctors.component";
+import { HomecareAppointmentAdminComponent } from 'app/admin/homecare-appointment-admin/homecare-appointment-admin.component';
+
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -63,7 +65,9 @@ export const AdminLayoutRoutes: Routes = [
       { path: "appointment", component: AppointmentAdminComponent },
       { path: "user", component: UserRegistrationComponent },
       { path: "doctor", component: DoctorRegistrationComponent },
-      { path: "Diagnostic", component: DiagnosticRegistrationComponent }
+      { path: "Diagnostic", component: DiagnosticRegistrationComponent },
+      { path: "homecareappointment", component: HomecareAppointmentAdminComponent }
+
 
     ],
   },

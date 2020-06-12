@@ -20,6 +20,7 @@ const appointmentlistRoutes = require("./api/routes/appointment_list");
 const usersRoutes = require("./api/routes/users");
 const doctorsRoutes = require("./api/routes/doctors");
 const diagnosticsRoutes = require('./api/routes/diagnostics');
+const homecareappointmentRoutes = require('./api/routes/home_care_appointment');
 
 
 
@@ -68,6 +69,7 @@ app.use("/appointment_list", appointmentlistRoutes);
 app.use("/users", usersRoutes);
 app.use("/doctors", doctorsRoutes);
 app.use("/diagnostics", diagnosticsRoutes);
+app.use("/home_care_appointment", homecareappointmentRoutes);
 
 
 module.exports = app;

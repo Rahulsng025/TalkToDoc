@@ -1,26 +1,222 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
 
-        <table id="customers">
-          <tr>
-            <th><b>Title</b></th>
-            <th><b>Address</b></th>
-            <th><b>State</b></th>
-            <th><b>Country</b></th>
-          </tr>
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title"
+              style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SEE OUR HOME
+              CARE PROVIDERS</h4>
+          </div>
+        </div>
 
-          <tr *ngFor='let obj of allHomeCareDetails'>
-            <td>{{obj.title}}</td>
-            <td>{{obj.address}}</td>
-            <td>{{obj.state}}</td>
-            <td>{{obj.country}}</td>
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card" *ngFor="let obj of allHomeCareDetails"
+              style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+              <div class="card-header card-header-danger">
+                <h4 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Home Care Service Providers</h4>
+                <p class="card-category">Company profile</p>
+              </div>
+
+              <div class="card-body">
+
+                <form>
 
 
-          </tr>
-        </table>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Title" />{{ obj.title }}
+                      </mat-form-field>
+                    </div>
 
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Country Name" />{{ obj.address }}
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Description" />{{ obj.state }}
+                      </mat-form-field>
+                    </div>
+
+
+                    <div class="col-md-8">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Description" />{{ obj.country }}
+                      </mat-form-field>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title"
+              style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              Appointment Here
+
+              <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
+            </h4>
+          </div>
+        </div>
+
+
+        <form [formGroup]=homecareappointmentService.form class="normal-form" (submit)="onSubmit()">
+          <mat-grid-list cols="2" rowHeight="200px">
+            <!-- First Grid Start From Here -->
+
+
+            <mat-grid-tile>
+              <div class="controles-container">
+                <input type="hidden" fromControlName="$key">
+                <mat-form-field>
+                  <mat-label>WHO ARE YOU SEEKING CARE FOR?</mat-label>
+                  <mat-select formControlName="forwhom">
+                    <mat-option value="myself">Myself</mat-option>
+                    <mat-option value="spouse">Spouse</mat-option>
+                    <mat-option value="parents">Parents</mat-option>
+                    <mat-option value="grandparents">Grandparents</mat-option>
+                    <mat-option value="couple">Couple</mat-option>
+                    <mat-option value="friend">Friend</mat-option>
+                    <mat-option value="discharge client">Discharge Client</mat-option>
+                    <mat-option value="others">Others</mat-option>
+                  </mat-select>
+                  <mat-error>This field is manadatory.</mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field>
+                  <mat-label>Approx: Age</mat-label>
+                  <mat-select formControlName="age">
+                    <mat-option value="Below 50 years old">Below 50 years old</mat-option>
+                    <mat-option value="50-55 years old">50-55 years old</mat-option>
+                    <mat-option value="56-60 years old">56-60 years old</mat-option>
+                    <mat-option value="61-65 years old">61-65 years old</mat-option>
+                    <mat-option value="66-70 years old">66-70 years old</mat-option>
+                    <mat-option value="71-75 years old">71-75 years old</mat-option>
+                    <mat-option value="76-80 years old">76-80 years old</mat-option>
+                    <mat-option value="81-85 years old">81-85 years old</mat-option>
+                    <mat-option value="86-90 years old">86-90 years old</mat-option>
+                    <mat-option value="Above 90 years old">Above 90 years old</mat-option>
+                  </mat-select>
+                  <mat-error>Please Fill the Detail.</mat-error>
+                </mat-form-field>
+
+
+
+                <mat-form-field>
+                  <mat-label>HOW SOON WILL THE CARE BEGIN?</mat-label>
+                  <mat-select formControlName="howsoon">
+                    <mat-option value="this week">This Week</mat-option>
+                    <mat-option value="this month">This Month</mat-option>
+                    <mat-option value="next month">Next Month</mat-option>
+                    <mat-option value="within 6 months">Within 6 Months</mat-option>
+                  </mat-select>
+                  <mat-error>Please Fill the Detail.</mat-error>
+                </mat-form-field>
+              </div>
+
+
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <div class="controles-container">
+                <div class="add-bottom-padding">
+                  <mat-radio-group formControlName="gender">
+                    <mat-radio-button value="Male">Male</mat-radio-button>
+                    <mat-radio-button value="Female">Female</mat-radio-button>
+                    <mat-radio-button value="Other">Other</mat-radio-button>
+                  </mat-radio-group>
+
+
+                  <mat-form-field>
+                    <mat-label>FREQUENCY</mat-label>
+                    <mat-select formControlName="frequency">
+                      <mat-option value="less than 10 hours/week ">Less Than 10 Hours/Week</mat-option>
+                      <mat-option value="10-20 hours/week">10-20 Hours/Week</mat-option>
+                      <mat-option value="20-40 hours/week">20-40 Hours/Week</mat-option>
+                    </mat-select>
+                    <mat-error>Please Fill the Detail.</mat-error>
+                  </mat-form-field>
+
+
+                </div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+
+
+
+          <!-- Second Grid Start From Here -->
+
+          <br>
+          <h5 style="margin-left: 30px; font: normal; color: #000;">WHO CAN BE CONTACTED ABOUT CARE INFORMATION?
+
+          </h5>
+
+          <mat-grid-list cols="2" rowHeight="200px">
+            <mat-grid-tile>
+              <div class="controles-container">
+                <input type="hidden" fromControlName="$key">
+
+
+                <mat-form-field>
+                  <input formControlName="name" matInput placeholder="Your Name">
+                  <mat-error>This field is manadatory.</mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field>
+                  <input formControlName="email" matInput placeholder="Email Address">
+                  <mat-error>This field is manadatory.</mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field>
+                  <input formControlName="number" matInput placeholder="Phone Number">
+                  <mat-error>This field is manadatory.</mat-error>
+                </mat-form-field>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <br>
+          <br>
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit"
+              [disabled]="homecareappointmentService.form.invalid">
+              Submit
+            </button>
+            <button mat-raised-button color="warn" (click)="onClear()">
+              Clear
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

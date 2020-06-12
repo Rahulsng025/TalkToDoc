@@ -4,27 +4,33 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Doctors Registration Table</h4>
+                        <h4 class="card-title ">Home Care Appointments</h4>
 
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
-                                    <th>Name</th>
-                                    <th>Mobile Number</th>
+                                    <th>For Whom</th>
+                                    <th>How Soon</th>
+                                    <th>Age</th>
+                                    <th>Frequency</th>
                                     <th>Gender</th>
+                                    <th>Name</th>
                                     <th>Email</th>
-                                    <th>Username</th>
+                                    <th>Number</th>
+
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let user of allDoctorRegistrationDetails">
-                                        <td>{{user.name}}</td>
-                                        <td>{{user.number}}</td>
+                                    <tr *ngFor="let user of newHomeCareAppointmentDetails">
+                                        <td>{{user.forwhom}}</td>
+                                        <td>{{user.howsoon}}</td>
+                                        <td>{{user.age}}</td>
+                                        <td>{{user.frequency}}</td>
                                         <td>{{user.gender}}</td>
+                                        <td>{{user.name}}</td>
                                         <td>{{user.email}}</td>
-                                        <td>{{user.username}}</td>
-
+                                        <td>{{user.number}}</td>
                                     </tr>
 
                                 </tbody>
@@ -33,3 +39,6 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
