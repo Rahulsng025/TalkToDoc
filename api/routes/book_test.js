@@ -2,11 +2,12 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const diagnostic_center = require('../models/diagnostic_center');
+const book_test = require('../models/book_test');
 
-//Handling incoming get request of doctor_listing.
+//Handling incoming get request of book_test.
 router.get('/', (req, res, next) => {
-    diagnostic_center.find()
+    book_test.find()
+
         .exec()
         .then(docs => {
             console.log(docs);
@@ -20,10 +21,10 @@ router.get('/', (req, res, next) => {
         });
 });
 
-//Diagnostic_center ID
-router.get('/:diagnosticcenterId', (req, res, next) => {
-    const id = req.params.diagnosticcenterId;
-    diagnostic_center.findById(id)
+//Book_test ID
+router.get('/:booktestId', (req, res, next) => {
+    const id = req.params.booktestId;
+    book_test.findById(id)
         .exec()
         .then(doc => {
             console.log("From Database", doc);
@@ -35,25 +36,24 @@ router.get('/:diagnosticcenterId', (req, res, next) => {
         });
 });
 
-
-//Handling POST request of diagnostic_center.
+//Handling POST request of book_test.
 router.post('/', (req, res, next) => {
-    const diagnosticcenter = new diagnostic_center({
+    const booktest = new book_test({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        established_in: req.body.established_in,
-        address: req.body.address,
-        contact: req.body.contact,
-        landmark: req.body.landmark,
-        website: req.body.website
+        age: req.body.age,
+        gender: req.body.gender,
+        number: req.body.number,
+        email: req.body.email,
+
     });
-    diagnosticcenter
+    booktest
         .save()
         .then(result => {
             console.log(result);
             res.status(201).json({
-                message: "Handling post request to diagnostic_center",
-                createdDiagnosticCenter: diagnosticcenter
+                message: "Handling post request to book_test",
+                createdbooktest: booktest
             });
         })
         .catch(err => console.log(err));
@@ -61,13 +61,13 @@ router.post('/', (req, res, next) => {
 });
 
 //Handling Patch Request.
-router.patch('/:diagnosticcenterId', (req, res, next) => {
-    const id = req.params.diagnosticcenterId;
+router.patch('/:booktestId', (req, res, next) => {
+    const id = req.params.booktestId;
     const updateOps = {};
     for (const ops of req.body) {
         updateOps[ops.propName] = ops.value;
     }
-    diagnostic_center.update({ _id: id }, { $set: updateOps })
+    book_test.update({ _id: id }, { $set: updateOps })
         .exec()
         .then(result => {
             console.log(result);
@@ -82,9 +82,10 @@ router.patch('/:diagnosticcenterId', (req, res, next) => {
 });
 
 //Handling Delete Requests
-router.delete('/:diagnosticcenterId', (req, res, next) => {
-    const id = req.params.diagnosticcenterId;
-    diagnostic_center.remove({ _id: id })
+
+router.delete('/:booktestId', (req, res, next) => {
+    const id = req.params.booktestId;
+    book_test.remove({ _id: id })
         .exec()
 
         .then(result => {

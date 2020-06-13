@@ -27,6 +27,14 @@ export const ROUTES: RouteInfo[] = [
     icon: "account_balance",
     class: "",
   },
+
+  {
+    path: "/main/book-test",
+    title: "Book Test",
+    icon: "science",
+    class: ""
+  },
+
   {
     path: "/main/home-care",
     title: "Home Care",

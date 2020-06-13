@@ -31,11 +31,13 @@ import { DoctorRegistrationComponent } from "app/admin/doctor-registration/docto
 import { DiagnosticRegistrationComponent } from "app/admin/diagnostic-registration/diagnostic-registration.component";
 import { DoctorsComponent } from "app/doctor-listing/doctors/doctors.component";
 import { HomecareAppointmentAdminComponent } from 'app/admin/homecare-appointment-admin/homecare-appointment-admin.component';
+import { BookTestComponent } from "app/book-test/book-test.component";
 
 
 
 export const AdminLayoutRoutes: Routes = [
   { path: "diagnostic-center", component: DiagnosticCenterComponent },
+  { path: "book-test", component: BookTestComponent },
   { path: "Doctors", component: DoctorsComponent },
   { path: "doctor-listing", component: DoctorListingComponent },
   { path: "home-care", component: HomeCareComponent },

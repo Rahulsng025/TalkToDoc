@@ -59,6 +59,7 @@ import { UserRegistrationComponent } from 'app/admin/user-registration/user-regi
 import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
 import { DiagnosticRegistrationComponent } from 'app/admin/diagnostic-registration/diagnostic-registration.component';
 import { HomecareAppointmentAdminComponent } from "app/admin/homecare-appointment-admin/homecare-appointment-admin.component";
+import { BookTestComponent } from 'app/book-test/book-test.component';
 
 
 @NgModule({
@@ -123,7 +124,8 @@ import { HomecareAppointmentAdminComponent } from "app/admin/homecare-appointmen
     UserRegistrationComponent,
     DoctorRegistrationComponent,
     DiagnosticRegistrationComponent,
-    HomecareAppointmentAdminComponent
+    HomecareAppointmentAdminComponent,
+    BookTestComponent
 
 
   ],
