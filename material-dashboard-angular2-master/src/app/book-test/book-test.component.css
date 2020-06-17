@@ -1,0 +1,139 @@
+.slider
+{
+   height:350px;
+   width:100%; 
+   margin-bottom: 0;
+}
+
+.slider {
+    position:relative;
+    float: left;
+}
+/* For blur effect on slider images */
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+.slider:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    z-index: 1;
+}
+
+.example-card {
+    max-width: 400px;
+    
+  }
+  .header img {
+    float: left;
+    width: 50px;
+  }
+  
+  .header h4 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+  .header p {
+    position: relative;
+    bottom: 20px;
+    left: 60px;
+  }
+
+  .Header img {
+    float: left;
+    width: 35px;
+  }
+  .Header h4 {
+    position: relative;
+    bottom: 0px;
+    left: 15px;
+  }
+
+  .Header p {
+    position: relative;
+    bottom: 30px;
+    left: 60px;
+  }
+
+  /* Add Test Content Start*/
+
+  @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+.login-block{
+    background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #fff, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #fff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+float:left;
+width:100%;
+padding : 50px 0;
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+.carousel-inner{border-radius:0 10px 10px 0;}
+.carousel-caption{text-align:left; left:5%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#00bcd4;}
+.login-sec .copy-text a{color:#00bcd4;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #00bcd4;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#00bcd4; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #DE6262; color:#00bcd4; font-weight:600;}
+.banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+.banner-text h2{color:#fff; font-weight:600;}
+.banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+.banner-text p{color:#fff;}
+
+  /* Add Test Content End */
+
+  /* Add Diagnostic Center Start */
+
+  body{
+		background-color: #25274d;
+	}
+	.contact{
+		padding: 4%;
+		height: 400px;
+	}
+	.col-md-3{
+		background: #00bcd4;
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.contact-info{
+		margin-top:10%;
+	}
+	.contact-info img{
+		margin-bottom: 15%;
+	}
+	.contact-info h2{
+		margin-bottom: 10%;
+	}
+	.col-md-9{
+		background: #fff;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	.contact-form label{
+		font-weight:600;
+	}
+	.contact-form button{
+		background: #25274d;
+		color: #fff;
+		font-weight: 600;
+		width: 25%;
+	}
+	.contact-form button:focus{
+		box-shadow:none;
+	}
+
+  /* Add Diagnostic Center End */

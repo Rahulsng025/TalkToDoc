@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -37,7 +38,6 @@ import { MatRadioModule } from "@angular/material/radio";
 
 import { MatSelectModule } from "@angular/material/select";
 import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.component";
-import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
 import { DiagnosticCenterComponent } from "app/diagnostic-center/diagnostic-center.component";
 import { HomeCareComponent } from "app/home-care/home-care.component";
 import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insurance.component";
@@ -60,6 +60,7 @@ import { DoctorRegistrationComponent } from "app/admin/doctor-registration/docto
 import { DiagnosticRegistrationComponent } from 'app/admin/diagnostic-registration/diagnostic-registration.component';
 import { HomecareAppointmentAdminComponent } from "app/admin/homecare-appointment-admin/homecare-appointment-admin.component";
 import { BookTestComponent } from 'app/book-test/book-test.component';
+import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { BookTestComponent } from 'app/book-test/book-test.component';
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    NgbModule
 
   ],
   declarations: [
@@ -125,7 +127,8 @@ import { BookTestComponent } from 'app/book-test/book-test.component';
     DoctorRegistrationComponent,
     DiagnosticRegistrationComponent,
     HomecareAppointmentAdminComponent,
-    BookTestComponent
+    BookTestComponent,
+    DoctorsComponent
 
 
   ],

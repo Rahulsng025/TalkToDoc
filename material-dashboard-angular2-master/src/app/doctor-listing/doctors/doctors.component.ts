@@ -10,8 +10,7 @@ import { DoctorsDetailService } from "app/Services/doctors-detail.service";
 })
 export class DoctorsComponent implements OnInit {
   doctor: DoctorDetailsModel;
-  serverID: number = 10;
-  serverStatus: string = 'Online';
+
 
 
   constructor(private doctorsdetailService: DoctorsDetailService) { }
@@ -25,8 +24,4 @@ export class DoctorsComponent implements OnInit {
 
     });
   }
-
-
-
-
 }

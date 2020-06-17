@@ -31,24 +31,12 @@ import { AuthenticationService } from 'app/Services/authentication.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-
-
-
 //Social login
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
-
-
-
-
-
-
-
-
-
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 let config = new AuthServiceConfig([
   {
@@ -64,16 +52,6 @@ export function provideConfig() {
   return config;
 }
 
-
-
-
-
-
-
-
-
-
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -85,14 +63,13 @@ export function provideConfig() {
     HttpClientModule,
     AppRoutingModule,
     FlashMessagesModule.forRoot(),
-    NgbModule,
     SocialLoginModule,
     MatIconModule,
-    MatExpansionModule
-
-
+    MatExpansionModule,
+    NgbModule
 
   ],
+
   declarations: [AppComponent,
     AdminLayoutComponent,
     DiagnosticLayoutComponent,
@@ -101,15 +78,6 @@ export function provideConfig() {
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-
-
-
-
-
-
-
-
-
   ],
 
   providers: [DoctorListingService, ValidateService, AuthenticationService, AuthGuard,

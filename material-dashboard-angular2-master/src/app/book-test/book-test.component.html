@@ -1,1 +1,549 @@
-<p>book-test works!</p>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Search Start bar -->
+                <mat-form-field>
+                    <mat-label style="font: normal;">Search your city</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let location of search" [value]="location.value">
+                            {{location.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!--Search bar End  -->
+
+                <!-- Slider Start -->
+                <ngb-carousel>
+                    <ng-template ngbSlide>
+                        <div class="slider">
+                            <img src="../../assets/test/test1.jpg" alt="Random first slide" width="1600" height="400">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Healthcare For Whole Family</h3>
+                            <p>Get lab tests and full body checkups from the comfort of your home..
+                            </p>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="slider">
+                            <img src="../../assets/test/test2.png" alt="Random second slide" width="1600" height="400">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Exceptional Care Close to You</h3>
+                            <p>Getting out of the hospital is a lot like resigning from a book club. You're not out
+                                of
+                                it
+                                until the
+                                computer says you're out of it.</p>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="slider">
+                            <img src="../../assets/test/test5.png" alt="Random third slide" width="1600" height="400">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Keeping You Well</h3>
+                            <p>Healing in a matter of time, but it is sometimes also a matter of opportunity</p>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <div class="slider">
+                            <img src="../../assets/test/test4.jpg" alt="Random fourth slide" width="1600" height="400">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Better Care and Better Understanding.</h3>
+                            <p>If we could give every individual the right amount of nourishment and exercise, not
+                                too
+                                little and not
+                                too much, we would have found the safest way to health.</p>
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+                <!-- Slider End -->
+
+                <!-- Heading -->
+
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;">
+                    TOP DIAGNOSTIC
+                    PACKAGES</h3>
+                <h5
+                    style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font: normal; color: #000;">
+                    A range of comprehensive health checkups for your entire family </h5>
+                <!-- Top Diagnostic Packages -->
+
+
+                <mat-card class="example-card" style="width: 16rem;">
+                    <mat-card-header>
+                        <mat-card-title style="font-family: 'Times New Roman', Times, serif;">Complete Blood Count
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <mat-card-content>
+                        <p style="margin-left: 18px;">
+                            Known as Complete Blood Count<br> Automated Blood (CBC)
+                        </p>
+                        <br>
+                        <h4 style="margin-left: 17px;">₹400</h4>
+                        <br>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions>
+                        <button mat-button color="primary">Blood Test</button>
+                    </mat-card-actions>
+                </mat-card>
+
+                <br>
+                <mat-divider></mat-divider>
+
+                <!-- Heading -->
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;">
+
+                    HEALTH CHECKUP AND SCREENING FOR</h3>
+
+                <!-- Health Checkup card Start -->
+                <div class="card-deck">
+
+                    <div class="card">
+                        <img class="card-img-top" src="../../assets/health/health1.jpeg" alt="Card image cap"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Diabetes
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../../assets/health/health2.png" alt="Card image cap"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Skin
+                                Care</h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../../assets/health/health3.jpeg" alt="Card image cap"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Kidney
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../../assets/health/health4.jpg" alt="Card image cap"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Bone
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../../assets/health/health5.jpg" alt="Card image cap"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Fever
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Health Checkup card end -->
+
+                <br>
+                <mat-divider></mat-divider>
+
+            </div>
+
+            <!-- Heading -->
+
+            <div class="col-md-12">
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;">
+                    TOP DIAGNOSTIC
+                    PACKAGES</h3>
+            </div>
+
+            <!-- Top Booked Medical Search -->
+            <div class="col-md-4">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-header"
+                        style="font: xx-large;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: #000;">
+                        <img src="../../assets/Booktestlogo/logo1.webp" style="height: 50px;">
+                        Liquid Profile
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; font: normal;">
+                                Ldl Cholesterol Test</h5>
+                            <p style="color: black;">Also known as Cholesterol Ldl Enzymatic Colorimetric Method Blood
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; font: normal;">
+                                Hdl Cholesterol Test</h5>
+                            <p style="color: black;">Also known as Cholesterol Hdl Enzymatic Colorimetric Method Blood
+                            </p>
+
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; font: normal;">
+                                Vldl Cholesterol Test</h5>
+                            <p>Also known as Vldl Cholesterol Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; font: normal;">
+                                Total Cholesterol Test</h5>
+                            <p>Also known as Cholesterol Test</p>
+                        </li>
+
+
+                        <li class="list-group-item">
+                            <h5
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: black; font: normal;">
+                                Triglycerides Blood Test</h5>
+                            <p>Also known as Triglycerides Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <button class="btn btn-info">Book Now</button>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-header"
+                        style="font: xx-large;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: #000;">
+                        <img src="../../assets/Booktestlogo/logo2.webp" style="height: 50px;">
+                        Liver Profile
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                        color: black; font: normal;">Gamma Glutamyl Transferase</h5>
+                            <p>Gamma-glutamyl transferase (GGT) is an enzyme that is found in many organs throughout
+                                the body.</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Total Bilirubin</h5>
+                            <p>Also known as Bilirubin Total Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Ast Test</h5>
+                            <p>Also known as SGOT</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Alp Test</h5>
+                            <p> Alkaline phosphatase (ALP) is an enzyme found mostly in the cells of bone and the
+                                liver</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Albumin Test</h5>
+                            <p>Also known as Albumin Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <button class="btn btn-info">Book Now</button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card" style="width: 25rem;"
+                    style="font: xx-large;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: #000;">
+                    <div class="card-header">
+                        <img src="../../assets/Booktestlogo/logo3.webp" style="height: 50px;">
+                        Blood Sugar
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Hba1C Test</h5>
+                            <p>Also known as Glycosylated Haemoglobin Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Fasting Blood Sugar Test</h5>
+                            <p>Also known as GLucose Fasting Blood</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Random Blood Sugar Test</h5>
+                            <p>Aslo known as RBS</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Blood Sugar Levels After Eating</h5>
+                            <p>Also known as Post Prandial Blood Sugar</p>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                            color: black; font: normal;">Creatinine Test</h5>
+                            <p>A creatinine blood test measures the level of creatinine in the blood.
+                                Also known as Creatinine Conventional Blood</p>
+                        </li>
+
+
+                        <li class="list-group-item">
+                            <button class="btn btn-info">Book Now</button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!--Why book with us and How It works -->
+
+            <div class="col-md-6" style="background-color: white;">
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal; margin-left: 55px;">
+                    Why Book With Us ?</h3>
+                <hr>
+                <div class="header">
+                    <img src="../../assets/test/logo1.webp" alt="logo" />
+                    <h4 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal; ">Free Home
+                        Sample Collection</h4>
+                    <br>
+                    <p style="color: #000;"> A certified professional will collect your sample from <br> a location of
+                        your preference.</p>
+                </div>
+                <hr>
+                <div class="header">
+                    <img src="../../assets/test/logo2.webp" alt="logo" />
+                    <h4 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;  ">
+                        Digital reports</h4>
+                    <br>
+                    <p style="color: #000;"> Get the reports right in your mailbox within 24 hours.<br> You will be
+                        notified
+                        of the tests requiring more time <br> for investigation and report generation..</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6" style="background-color: white;">
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal; margin-left: 45px;">
+                    How It Works ?</h3>
+                <hr>
+                <br>
+                <div class="Header">
+                    <img src="../../assets/test/logo3.svg" alt="logo" />
+                    <h4 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal; ">
+                        Search & select the test</h4>
+                    <br>
+                    <p style="color: #000;"> Search for tests and packages and seamlessly book <br> a home sample
+                        collection.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div class="Header">
+                    <img src="../../assets/test/logo4.svg" alt="logo" />
+                    <h4 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal; ">
+                        Schedule a home sample collection </h4>
+                    <br>
+                    <p style="color: #000;">We will email you the reports. You can also access <br> your reports within
+                        your
+                        account</p>
+                </div>
+
+            </div>
+
+            <br><br>
+            <!-- Heading -->
+
+            <div class="col-md-12">
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;">
+                    NOT FINDING WHAT YOU ARE LOOKING FOR?</h3>
+            </div>
+
+
+            <!-- Add Test Start-->
+
+            <div class="col-md-12">
+
+                <section class="login-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 login-sec">
+                                <h2 class="text-center">Submit a Query</h2>
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        <label for="name" class="text-uppercase" style="color: #000;">Your Name</label>
+                                        <input type="text" class="form-control" placeholder="">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="query" class="text-uppercase" style="color: #000;">Query</label>
+                                        <input type="password" class="form-control" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="number" class="text-uppercase" style="color: #000;">Mobile
+                                            No.</label>
+                                        <input type="password" class="form-control" placeholder="">
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-info">Submit</button>
+                                    </div>
+
+
+                                </form>
+                                <div class="copy-text"><a href="http://grafreez.com"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-8 banner-sec">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                        </li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block img-fluid" src="../../assets/test/diagnostic2.jpg"
+                                                alt="First slide">
+
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block img-fluid" src="../../assets/test/diagnostic3.jpg"
+                                                alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block img-fluid"
+                                                src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg"
+                                                alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Add Test End -->
+            <div class="col-md-12">
+                <h3 style="font-family:'Times New Roman', Times, serif; color: #000; font: normal;">
+                    PARTNER WITH US</h3>
+            </div>
+
+            <!-- Add Diagnostic Center Start -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="contact-info">
+                            <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image" />
+                            <h2>Contact Us</h2>
+                            <h4>We would love to hear from you !</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="center">Diagnostic Center:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="center" placeholder="Enter your Name"
+                                        name="center">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="based">We are based on:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="based" placeholder="Enter your Location"
+                                        name="based">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="registration">Registration No:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="registration"
+                                        placeholder="Enter your Registration Number" name="registration">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">My Mail Id is:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Enter your email Id" name="email">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="phone">My Phone number is:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="phone"
+                                        placeholder="Enter you Mobile Number" name="phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-info">I Wish TO Partner With You</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- Add Diagnostic Center End -->
+
+
+
+
+
+        </div>
+    </div>
+</div>

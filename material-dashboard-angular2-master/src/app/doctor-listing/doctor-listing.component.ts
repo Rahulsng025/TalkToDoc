@@ -14,6 +14,8 @@ import { DoctorsDetailService } from "app/Services/doctors-detail.service"
 })
 export class DoctorListingComponent implements OnInit, OnDestroy {
   allDoctorDetails: DoctorDetailsModel[];
+
+
   doctorListingSubscription: Subscription;
 
   name: string;
@@ -77,7 +79,7 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
 
   onLoadPage(doctor: DoctorDetailsModel) {
     this.doctorsdetailService.showDoctor(doctor);
-    this.router.navigate(['main/Doctors']);
+    this.router.navigate(['main/doctors']);
   }
 
   // onLoadPage() {

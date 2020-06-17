@@ -29,16 +29,16 @@ import { AuthGuard } from 'app/auth/guards/auth.gaurd';
 import { UserRegistrationComponent } from "app/admin/user-registration/user-registration.component";
 import { DoctorRegistrationComponent } from "app/admin/doctor-registration/doctor-registration.component";
 import { DiagnosticRegistrationComponent } from "app/admin/diagnostic-registration/diagnostic-registration.component";
-import { DoctorsComponent } from "app/doctor-listing/doctors/doctors.component";
+
 import { HomecareAppointmentAdminComponent } from 'app/admin/homecare-appointment-admin/homecare-appointment-admin.component';
 import { BookTestComponent } from "app/book-test/book-test.component";
-
+import { DoctorsComponent } from "app/doctor-listing/doctors/doctors.component";
 
 
 export const AdminLayoutRoutes: Routes = [
   { path: "diagnostic-center", component: DiagnosticCenterComponent },
   { path: "book-test", component: BookTestComponent },
-  { path: "Doctors", component: DoctorsComponent },
+
   { path: "doctor-listing", component: DoctorListingComponent },
   { path: "home-care", component: HomeCareComponent },
   { path: "medical-insurance", component: MedicalInsuranceComponent },
@@ -51,6 +51,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "typography", component: TypographyComponent },
   { path: "icons", component: IconsComponent },
   { path: "notifications", component: NotificationsComponent },
+  { path: "doctors", component: DoctorsComponent },
 
   {
     path: "admin",
