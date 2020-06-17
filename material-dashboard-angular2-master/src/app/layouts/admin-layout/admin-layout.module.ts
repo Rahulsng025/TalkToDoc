@@ -34,6 +34,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatSortModule } from "@angular/material/sort";
 import { MatRadioModule } from "@angular/material/radio";
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 import { MatSelectModule } from "@angular/material/select";
@@ -61,6 +62,9 @@ import { DiagnosticRegistrationComponent } from 'app/admin/diagnostic-registrati
 import { HomecareAppointmentAdminComponent } from "app/admin/homecare-appointment-admin/homecare-appointment-admin.component";
 import { BookTestComponent } from 'app/book-test/book-test.component';
 import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
+import { LipidProfileComponent } from 'app/book-test/lipid-profile/lipid-profile.component';
+import { LiverProfileComponent } from 'app/book-test/liver-profile/liver-profile.component';
+import { BloodSugarComponent } from 'app/book-test/blood-sugar/blood-sugar.component';
 
 
 @NgModule({
@@ -93,7 +97,8 @@ import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgbModule
+    NgbModule,
+    MatExpansionModule
 
   ],
   declarations: [
@@ -128,7 +133,10 @@ import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
     DiagnosticRegistrationComponent,
     HomecareAppointmentAdminComponent,
     BookTestComponent,
-    DoctorsComponent
+    DoctorsComponent,
+    LipidProfileComponent,
+    LiverProfileComponent,
+    BloodSugarComponent
 
 
   ],

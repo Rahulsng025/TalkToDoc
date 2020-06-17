@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from "@angular/router";
 
 interface Search {
   value: string;
@@ -27,7 +28,8 @@ export class BookTestComponent implements OnInit {
     { value: "10", viewValue: "Kolkata" },
     { value: "11", viewValue: "Ahemdabad" }
   ]
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig,
+    private router: Router) {
     config.interval = 4000;
     config.wrap = false;
     config.keyboard = false;
@@ -35,6 +37,16 @@ export class BookTestComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onLoadPage() {
+    this.router.navigate(['main/lipid-profile']);
+  }
+  onLoad() {
+    this.router.navigate(['main/liver-profile']);
+  }
+  onClick() {
+    this.router.navigate(['main/blood-sugar']);
   }
 
 }

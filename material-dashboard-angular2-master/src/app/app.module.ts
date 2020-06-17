@@ -38,6 +38,8 @@ import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
+
+
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -77,7 +79,9 @@ export function provideConfig() {
     RegisterComponent,
     HomeComponent,
     LoginComponent,
-    ProfileComponent,
+    ProfileComponent
+
+
   ],
 
   providers: [DoctorListingService, ValidateService, AuthenticationService, AuthGuard,
