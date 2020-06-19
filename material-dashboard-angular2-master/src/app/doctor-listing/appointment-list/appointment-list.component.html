@@ -24,7 +24,7 @@
 
             <mat-grid-tile>
               <div class="controles-container">
-                <input type="hidden" fromControlName="$key">
+                <input type="hidden" formControlName="$key">
                 <mat-form-field>
                   <input formControlName="fname" matInput placeholder="First Name">
                   <mat-error>This field is manadatory.</mat-error>
@@ -38,7 +38,7 @@
 
                 <mat-form-field>
                   <input formControlName="mobile" matInput placeholder="Mobile*" />
-                  <mat-error *ngIf="homecareappointemtnService.form.controls['mobile'].errors?.required">This field is
+                  <mat-error *ngIf="appointmentListingService.form.controls['mobile'].errors?.required">This field is
                     mandatory.</mat-error>
                   <mat-error *ngIf="appointmentListingService.form.controls['mobile'].errors?.minlength">Minimum 10
                     charactors needed.</mat-error>
@@ -79,7 +79,7 @@
           <mat-grid-list cols="2" rowHeight="80px">
             <mat-grid-tile>
               <div class="controles-container">
-                <input type="hidden" fromControlName="$key">
+                <input type="hidden" formControlName="$key">
                 <mat-form-field>
                   <input formControlName="address" matInput placeholder="Address">
                   <mat-error>This field is manadatory.</mat-error>
@@ -96,7 +96,7 @@
           <mat-grid-list cols="2" rowHeight="200px">
             <mat-grid-tile>
               <div class="controles-container">
-                <input type="hidden" fromControlName="$key">
+                <input type="hidden" formControlName="$key">
 
                 <mat-form-field>
                   <input formControlName="consultingdoctor" matInput placeholder="Consulting Doctor">
@@ -119,7 +119,7 @@
 
             <mat-grid-tile>
               <div class="controles-container">
-                <input type="hidden" fromControlName="$key">
+                <input type="hidden" formControlName="$key">
 
                 <mat-form-field>
                   <input formControlName="dateofappointment" matInput [matDatepicker]="picker"

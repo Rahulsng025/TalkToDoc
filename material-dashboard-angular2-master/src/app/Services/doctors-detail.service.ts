@@ -7,21 +7,18 @@ import { DoctorDetailsModel } from "../../app/model/doctor_listing.model";
   providedIn: 'root'
 })
 export class DoctorsDetailService {
-
-  doctor: DoctorDetailsModel;
-
+  doctorToShow: DoctorDetailsModel;
   tracker = new Subject<DoctorDetailsModel>();
 
   constructor() { }
 
-  getDoctor() {
-
-    return this.tracker.asObservable();
-
+  getDoctorDetails() {
+    return this.doctorToShow;
   }
-  showDoctor(doctorDetail: DoctorDetailsModel) {
-    this.doctor = doctorDetail;
-    this.tracker.next(this.doctor);
 
+  test(value: DoctorDetailsModel) {
+    console.log('Value sent to Service:');
+    console.log(value);
+    this.doctorToShow = value;
   }
 }

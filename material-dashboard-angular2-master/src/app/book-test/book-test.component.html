@@ -15,52 +15,36 @@
                 <!--Search bar End  -->
 
                 <!-- Slider Start -->
-                <ngb-carousel>
-                    <ng-template ngbSlide>
-                        <div class="slider">
-                            <img src="../../assets/test/test1.jpg" alt="Random first slide" width="1600" height="400">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Healthcare For Whole Family</h3>
-                            <p>Get lab tests and full body checkups from the comfort of your home..
-                            </p>
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="slider">
-                            <img src="../../assets/test/test2.png" alt="Random second slide" width="1600" height="400">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Exceptional Care Close to You</h3>
-                            <p>Getting out of the hospital is a lot like resigning from a book club. You're not out
-                                of
-                                it
-                                until the
-                                computer says you're out of it.</p>
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="slider">
-                            <img src="../../assets/test/test5.png" alt="Random third slide" width="1600" height="400">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Keeping You Well</h3>
-                            <p>Healing in a matter of time, but it is sometimes also a matter of opportunity</p>
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="slider">
-                            <img src="../../assets/test/test4.jpg" alt="Random fourth slide" width="1600" height="400">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Better Care and Better Understanding.</h3>
-                            <p>If we could give every individual the right amount of nourishment and exercise, not
-                                too
-                                little and not
-                                too much, we would have found the safest way to health.</p>
-                        </div>
-                    </ng-template>
-                </ngb-carousel>
+
+                <!-- Card -->
+                <div class="card card-cascade wider reverse">
+
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../../assets/test/book.png" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!-- Title -->
+                        <h3 class="card-title"><strong
+                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Book
+                                Test</strong></h3>
+                        <hr>
+
+
+                        <!-- Text -->
+                        <h3 class="card-text"
+                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Get lab
+                            tests and full body checkups from the comfort of your home
+                        </h3>
+                    </div>
+                </div>
+                <!-- Card -->
                 <!-- Slider End -->
 
                 <!-- Heading -->
@@ -74,26 +58,103 @@
                 <!-- Top Diagnostic Packages -->
 
 
-                <mat-card class="example-card" style="width: 16rem;">
-                    <mat-card-header>
-                        <mat-card-title style="font-family: 'Times New Roman', Times, serif;">Complete Blood Count
-                        </mat-card-title>
-                    </mat-card-header>
-                    <mat-divider></mat-divider>
-                    <br>
-                    <mat-card-content>
-                        <p style="margin-left: 18px;">
-                            Known as Complete Blood Count<br> Automated Blood (CBC)
-                        </p>
-                        <br>
-                        <h4 style="margin-left: 17px;">₹400</h4>
-                        <br>
-                    </mat-card-content>
-                    <mat-divider></mat-divider>
-                    <mat-card-actions>
-                        <button mat-button color="primary">Blood Test</button>
-                    </mat-card-actions>
-                </mat-card>
+                <div class="row">
+                    <div class="col-md-3" style="background-color: #eee;">
+                        <mat-card class="example-card" style="width: 16rem;">
+                            <mat-card-header>
+                                <mat-card-title style="font-family: 'Times New Roman', Times, serif;">Complete
+                                    Blood Count
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <mat-card-content>
+                                <p style="margin-left: 18px;">
+                                    Known as Complete Blood Count<br> Automated Blood (CBC)
+                                </p>
+                                <br>
+                                <h4 style="margin-left: 17px;">₹300</h4>
+                                <br>
+                            </mat-card-content>
+
+                            <mat-card-actions>
+                                <button class="btn btn-danger" (click)="onclick()">Blood Test</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3" style="background-color: #eee;">
+                        <mat-card class="example-card" style="width: 16rem;">
+                            <mat-card-header>
+                                <mat-card-title style="font-family: 'Times New Roman', Times, serif;">Liver Function
+                                    Test
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <mat-card-content>
+                                <p style="margin-left: 18px;">
+                                    Known as Liver Functin Bloood Test (LFT)
+                                </p>
+                                <br>
+                                <h4 style="margin-left: 17px;">₹400</h4>
+                                <br>
+                            </mat-card-content>
+                            <mat-divider></mat-divider>
+                            <mat-card-actions>
+                                <button class="btn btn-danger" (click)="onload()">Blood Test</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3" style="background-color: #eee;">
+                        <mat-card class="example-card" style="width: 16rem;">
+                            <mat-card-header>
+                                <mat-card-title style="font-family: 'Times New Roman', Times, serif;">Hba1c
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <mat-card-content>
+                                <p style="margin-left: 16px;">
+                                    Blood Sugar Fasting (FBS)
+                                    Known as Glycostylated Haemoglobin
+                                </p>
+                                <br>
+                                <h4 style="margin-left: 17px;">₹300</h4>
+                                <br>
+                            </mat-card-content>
+                            <mat-divider></mat-divider>
+                            <mat-card-actions>
+                                <button class="btn btn-danger" (click)="load()">Blood Test</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3" style="background-color: #eee;">
+                        <mat-card class="example-card" style="width: 16rem;">
+                            <mat-card-header>
+                                <mat-card-title style="font-family: 'Times New Roman', Times, serif;">ALP Test
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <mat-card-content>
+                                <p style="margin-left: 16px;">
+                                    Alkaline phosphatase level test (ALP test)
+                                </p>
+                                <br>
+                                <h4 style="margin-left: 17px;">₹300</h4>
+                                <br>
+                            </mat-card-content>
+                            <mat-divider></mat-divider>
+                            <mat-card-actions>
+                                <button class="btn btn-danger" (click)="click()">Blood Test</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+
+                </div>
 
                 <br>
                 <mat-divider></mat-divider>

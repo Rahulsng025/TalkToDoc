@@ -70,18 +70,20 @@ export class AppointmentListComponent implements OnInit {
   }
   onSubmit() {
     if (this.appointmentListingService.form.valid) {
+      this.appointmentDetailService.updateValue(this.appointmentListingService.form.value);
+
       this.appointmentListingService
         .addbookappointment(this.appointmentListingService.form.value)
         .subscribe((_data: AppointmentDetailsModel[]) => {
+
+          // passing the new form values to the 'appointment-details' component and its service.
+
           this.appointmentListingService.form.reset();
           this.appointmentListingService.initializeFormGroup();
           this.isAppointmentBooked = true;
-
-          // passing the new form values to the 'appointment-details' component and its service.
-          this.appointmentDetailService.updateFormValues(this.appointmentListingService.form)
         });
       this.FlashMessage.show('Appointment Booked Successfully', { cssClass: 'alert-success', timeout: 5000 });
-      this.router.navigate(['/main/book-appointment']);
+      this.router.navigate(['/main/appointment-details']);
     }
   }
 }

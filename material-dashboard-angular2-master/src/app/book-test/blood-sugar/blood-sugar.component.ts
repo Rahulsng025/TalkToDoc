@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-blood-sugar',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BloodSugarComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+  }
+  onPageLoad() {
+    this.router.navigate(['main/paitent-details']);
   }
 
 }

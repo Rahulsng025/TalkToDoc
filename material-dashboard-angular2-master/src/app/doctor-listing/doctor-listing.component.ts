@@ -6,6 +6,7 @@ import { Router } from "@angular/router";
 import { DoctorListingService } from "../Services/doctor-listing.service";
 import { DoctorDetailsModel } from "../../app/model/doctor_listing.model";
 import { DoctorsDetailService } from "app/Services/doctors-detail.service"
+import { collectExternalReferences } from "@angular/compiler";
 
 @Component({
   selector: "app-doctor-listing",
@@ -39,6 +40,10 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
       .getDoctorsList()
       .subscribe((doctorsList: DoctorDetailsModel[]) => {
         this.allDoctorDetails = doctorsList;
+
+        // debugging.
+        console.log('Sender: ');
+        console.log(doctorsList);
       });
   }
 
@@ -78,8 +83,8 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
 
 
   onLoadPage(doctor: DoctorDetailsModel) {
-    this.doctorsdetailService.showDoctor(doctor);
-    this.router.navigate(['main/doctors']);
+    this.doctorsdetailService.test(doctor);
+    this.router.navigate(['main/Doctors']);
   }
 
   // onLoadPage() {

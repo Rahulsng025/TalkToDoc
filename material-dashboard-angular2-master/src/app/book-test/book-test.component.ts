@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { Router } from "@angular/router";
 
 interface Search {
@@ -47,6 +47,21 @@ export class BookTestComponent implements OnInit {
   }
   onClick() {
     this.router.navigate(['main/blood-sugar']);
+  }
+  onclick() {
+    this.router.navigate(['main/blood-sugar'])
+  }
+
+  onload() {
+    this.router.navigate(['main/liver-profile']);
+  }
+
+  load() {
+    this.router.navigate(['main/blood-sugar']);
+  }
+
+  click() {
+    this.router.navigate(['main/liver-profile']);
   }
 
 }

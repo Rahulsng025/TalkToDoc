@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { FormGroup, FormControl, Validator } from '@angular/forms';
+import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 
 
 @Injectable({
@@ -9,11 +8,16 @@ import { FormGroup, FormControl, Validator } from '@angular/forms';
 
 
 export class AppointmentDetailService {
-  // details: AppointmentDetail;
-  appointmentUpdateTracker = new Subject<FormGroup>();
+  details: AppointmentDetailsModel;
 
-  updateFormValues(form: FormGroup) {
-    this.appointmentUpdateTracker.next(form);
+  updateValue(values: AppointmentDetailsModel) {
+
+    this.details = values;
+  }
+
+  getValues() {
+
+    return this.details;
   }
 
   constructor() { }

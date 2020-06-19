@@ -79,7 +79,8 @@ export function provideConfig() {
     RegisterComponent,
     HomeComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+
 
 
   ],

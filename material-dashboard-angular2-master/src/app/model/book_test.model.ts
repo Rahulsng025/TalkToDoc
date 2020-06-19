@@ -1,8 +1,11 @@
 export interface BookTestModel {
-    name: string;
+    patient_name: string;
+    age: string;
     gender: String;
     number: string;
-    age: string;
-    email: string;
-    address: string;
+    locality: String;
+    pincode: String;
+    home_address: String
+    landmark: String;
+    date: String;
 }

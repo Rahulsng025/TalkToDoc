@@ -3,8 +3,13 @@ import { ValidateService } from "app/Services/validate.service";
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthenticationService } from 'app/Services/authentication.service';
 import { Router } from '@angular/router';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
 
+// enumeration
+enum Roles {
+  "Doctor",
+  "User",
+  "Diagnostic Center Owner",
+};
 
 @Component({
   selector: 'app-register',
@@ -12,13 +17,6 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  options = [
-    "Doctor",
-    "User"
-  ]
-
-
 
   selectedrole: any;
 
@@ -28,9 +26,7 @@ export class RegisterComponent implements OnInit {
   email: String;
   username: String;
   password: String;
-
-
-  role: string
+  role: Roles;
 
   constructor(private validateService: ValidateService,
     private flashMessagesService: FlashMessagesService,
@@ -41,9 +37,7 @@ export class RegisterComponent implements OnInit {
   }
   onRegisterSubmit() {
 
-
-
-    if (this.role !== 'doctor') {
+    if (this.role !== Roles.Doctor) {
 
       const user = {
         name: this.name,
@@ -70,8 +64,6 @@ export class RegisterComponent implements OnInit {
 
     }
 
-
-    //Required Fields
     if (!this.validateService.validateRegister(this.selectedrole)) {
       this.flashMessagesService.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
       this.flashMessagesService.grayOut(true);
@@ -84,7 +76,7 @@ export class RegisterComponent implements OnInit {
       return false;
     }
     //Register User
-    this.authenticationService.registerUser(this.selectedrole, this.role).subscribe(data => {
+    this.authenticationService.registerUser(this.selectedrole, this.getRole()).subscribe(data => {
       if (data.success) {
         this.flashMessagesService.show('You are now registered and can now login', { cssClass: 'alert-success', timeout: 3000 });
 
@@ -94,6 +86,12 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/register']);
       }
     });
+  }
+
+  getRole() {
+    if (this.role === Roles.Doctor) return "Doctor";
+    else if (this.role === Roles.User) return "User";
+    else return "diagnostics";
   }
 
   submit() {

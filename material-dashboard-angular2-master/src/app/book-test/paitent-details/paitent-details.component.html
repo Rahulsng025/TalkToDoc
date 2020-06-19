@@ -1,0 +1,142 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"
+                            style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                            Book Appointment |
+                            <a href="main/dashboard">Home</a>
+                            <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
+                        </h4>
+                    </div>
+                </div>
+
+                <h4 style="color: black; margin-left: 38px;">Book Appointment</h4>
+                <hr>
+                <br>
+                <form [formGroup]=booktestService.form class="normal-form" (submit)="onSubmit()">
+                    <mat-grid-list cols="2" rowHeight="200px">
+                        <!-- First Grid Start From Here -->
+
+
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <input type="hidden" fromControlName="$key">
+                                <mat-form-field>
+                                    <input formControlName="patient_name" matInput placeholder="Patient Name">
+                                    <mat-error>This field is manadatory.</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field>
+                                    <input formControlName="age" matInput placeholder="Age">
+                                    <mat-error>This field is manadatory.</mat-error>
+                                </mat-form-field>
+
+
+                                <mat-form-field>
+                                    <input formControlName="mobile" matInput placeholder="Mobile*" />
+                                    <mat-error *ngIf="booktestService.form.controls['mobile'].errors?.required">This
+                                        field is
+                                        mandatory.</mat-error>
+                                    <mat-error *ngIf="booktestService.form.controls['mobile'].errors?.minlength">
+                                        Minimum 10
+                                        charactors needed.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <div class="add-bottom-padding">
+                                    <mat-radio-group formControlName="gender">
+                                        <mat-radio-button value="Male">Male</mat-radio-button>
+                                        <mat-radio-button value="Female">Female</mat-radio-button>
+                                        <mat-radio-button value="Other">Other</mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+
+
+                                <mat-form-field>
+                                    <input formControlName="locality" matInput placeholder="Locality" />
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
+
+
+                                <mat-form-field>
+                                    <input formControlName="pincode" matInput placeholder="pincode" />
+
+                                </mat-form-field>
+
+                            </div>
+
+
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+
+
+                    <mat-grid-list cols="2" rowHeight="80px">
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <input type="hidden" fromControlName="$key">
+                                <mat-form-field>
+                                    <input formControlName="home_address" matInput placeholder="Home Address">
+                                    <mat-error>This field is manadatory.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+
+                    </mat-grid-list>
+                    <br>
+                    <!-- Second Grid Start From Here -->
+                    <h4 style="color: black; margin-left: 30px;">Appointment Details</h4>
+                    <hr>
+
+                    <mat-grid-list cols="2" rowHeight="200px">
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <input type="hidden" fromControlName="$key">
+
+                                <mat-form-field>
+                                    <input formControlName="landmark" matInput placeholder="Landmark">
+                                    <mat-error>This field is manadatory.</mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <input type="hidden" fromControlName="$key">
+
+                                <mat-form-field>
+                                    <input formControlName="date" matInput [matDatepicker]="picker"
+                                        placeholder="Date of Appointment" />
+
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+
+                                </mat-form-field>
+                            </div>
+
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                    <br>
+                    <br>
+                    <div class="button-row">
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]="booktestService.form.invalid">
+                            Submit
+                        </button>
+                        <button mat-raised-button color="warn" (click)="onClear()">
+                            Clear
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,14 +11,9 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
-                                    <tr *ngFor="let detail of appointment | keyvalue">
-                                        <td class="table-heading">
-                                            {{ detail.key }}
-                                        </td>
-                                        <td>
-                                            {{ detail.value }}
-                                        </td>
-                                    </tr>
+                                    {{ details.fname }}
+                                    {{details.lname}}
+                                    {{details.consultingdoctor}}
                                 </tbody>
                             </table>
                         </div>

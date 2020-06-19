@@ -11,17 +11,9 @@ import { DoctorsDetailService } from "app/Services/doctors-detail.service";
 export class DoctorsComponent implements OnInit {
   doctor: DoctorDetailsModel;
 
-
-
   constructor(private doctorsdetailService: DoctorsDetailService) { }
 
   ngOnInit(): void {
-
-    this.doctorsdetailService.getDoctor().subscribe((doctordetail: DoctorDetailsModel) => {
-
-
-      this.doctor = doctordetail
-
-    });
+    this.doctor = this.doctorsdetailService.getDoctorDetails();
   }
 }

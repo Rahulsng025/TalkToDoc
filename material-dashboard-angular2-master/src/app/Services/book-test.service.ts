@@ -11,13 +11,50 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class BookTestService {
-  newBookTest: BookTestModel[];
+  updateFormValue(form: FormGroup) {
+    throw new Error("Method not implemented.");
+  }
+  newBookTestDetails: BookTestModel[];
 
 
 
   uri = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
+
+  form: FormGroup = new FormGroup({
+    $key: new FormGroup(null),
+    patient_name: new FormControl("", Validators.required),
+    age: new FormControl("", Validators.required),
+    gender: new FormControl("", Validators.required),
+    number: new FormControl("", [
+      Validators.required,
+      Validators.minLength(10),
+    ]),
+    locality: new FormControl("", Validators.required),
+    pincode: new FormControl("", Validators.required),
+    home_address: new FormControl("", Validators.required),
+    landmark: new FormControl("", Validators.required),
+    date: new FormControl("", Validators.required),
+  });
+
+  initializeFormGroup() {
+    this.form.setValue({
+      $key: null,
+      patient_name: "",
+      age: "",
+      gender: "",
+      number: "",
+      locality: "",
+      pincode: "",
+      home_address: "",
+      landmark: "",
+      date: "",
+    });
+  }
+
+
+
 
   getbooktest() {
     return this.http.get(`${this.uri}/book_test`);
@@ -27,8 +64,8 @@ export class BookTestService {
     return this.http.get(`${this.uri}/book_test/${Id}`);
   }
 
-  postbooktest(_newBookTest: BookTestModel) {
-    return this.http.post(`${this.uri}/book_test/`, _newBookTest);
+  postbooktest(_newBookTestDetails: BookTestModel) {
+    return this.http.post(`${this.uri}/book_test/`, _newBookTestDetails);
   }
 
   deletebooktest(_id: string): Observable<any> {

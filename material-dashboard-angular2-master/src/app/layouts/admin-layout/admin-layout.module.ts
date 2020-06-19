@@ -65,6 +65,7 @@ import { DoctorsComponent } from 'app/doctor-listing/doctors/doctors.component';
 import { LipidProfileComponent } from 'app/book-test/lipid-profile/lipid-profile.component';
 import { LiverProfileComponent } from 'app/book-test/liver-profile/liver-profile.component';
 import { BloodSugarComponent } from 'app/book-test/blood-sugar/blood-sugar.component';
+import { PaitentDetailsComponent } from 'app/book-test/paitent-details/paitent-details.component';
 
 
 @NgModule({
@@ -136,7 +137,8 @@ import { BloodSugarComponent } from 'app/book-test/blood-sugar/blood-sugar.compo
     DoctorsComponent,
     LipidProfileComponent,
     LiverProfileComponent,
-    BloodSugarComponent
+    BloodSugarComponent,
+    PaitentDetailsComponent
 
 
   ],

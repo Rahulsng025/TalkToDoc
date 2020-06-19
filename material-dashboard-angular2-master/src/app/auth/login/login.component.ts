@@ -8,7 +8,11 @@ import { AuthService } from "angularx-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
 
 
-
+enum Roles {
+  "Doctor",
+  "User",
+  "Diagnostic Center Owner"
+}
 
 @Component({
   selector: 'app-login',
@@ -16,10 +20,7 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-logi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  role: string;
-
-  focus;
-  focus1;
+  role: Roles;
 
   username: String;
   password: String;
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
       password: this.password
     }
 
-    this.authenticationService.authenticateUser(user, this.role).subscribe(data => {
+    this.authenticationService.authenticateUser(user, this.getRole()).subscribe(data => {
       if (data.success) {
         this.authenticationService.storeData(data.token, data.user);
         this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 500 });
@@ -56,6 +57,13 @@ export class LoginComponent implements OnInit {
 
     });
   }
+
+  getRole() {
+    if (this.role === Roles.Doctor) return "Doctor";
+    else if (this.role === Roles.User) return "User";
+    else return "diagnostics";
+  }
+
   //Navigate to the registration page.
   onLoadPage() {
     this.router.navigate(['/register']);
