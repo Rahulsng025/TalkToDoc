@@ -34,7 +34,7 @@ export class PaitentDetailsComponent implements OnInit {
         this.booktestService.form.reset();
         this.booktestService.initializeFormGroup();
         this.isappointmentBooked = true;
-        this.booktestService.updateFormValue(this.booktestService.form)
+
       });
   }
 

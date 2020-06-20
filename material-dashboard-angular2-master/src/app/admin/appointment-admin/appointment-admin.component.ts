@@ -67,7 +67,7 @@ export class AppointmentAdminComponent implements OnInit {
         console.log(book_appointment);
 
         this.book_appointment = book_appointment;
-        this.successMsg = "Successfully cancelled the appointmet"
+        this.successMsg = "Successfully cancelled the appointment"
       },
         (error: ErrorEvent) => {
           this.errorMsg = error.error.message;

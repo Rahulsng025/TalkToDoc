@@ -63,10 +63,10 @@ export class DoctorAdminComponent implements OnInit {
       });
   }
 
-  //  onSearchClear() {
-  //   this.searchKey = "";
-  //   this.applyFilter();
-  //  }
+  onSearchClear() {
+    this.searchKey = "";
+    //   this.applyFilter();
+  }
   // applyFilter() {
   //   this.allDoctorDetails.filter = this.searchKey.trim().toLowerCase();
   //  }

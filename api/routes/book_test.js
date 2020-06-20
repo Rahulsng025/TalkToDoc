@@ -41,13 +41,15 @@ router.post('/', (req, res, next) => {
     const booktest = new book_test({
         _id: new mongoose.Types.ObjectId(),
         patient_name: req.body.patient_name,
-        age: req.body.age,
         gender: req.body.gender,
+        age: req.body.age,
+        email: req.body.email,
         number: req.body.number,
+        home_address: req.body.home_address,
         locality: req.body.locality,
         pincode: req.body.pincode,
-        home_address: req.body.home_address,
-        landmark: req.body.landmark,
+        city: req.body.city,
+        time: req.body.time,
         date: req.body.date
 
     });

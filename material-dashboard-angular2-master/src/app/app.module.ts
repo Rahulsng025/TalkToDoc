@@ -37,6 +37,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { BooktestAdminComponent } from './admin/booktest-admin/booktest-admin.component';
 
 
 
@@ -80,6 +81,7 @@ export function provideConfig() {
     HomeComponent,
     LoginComponent,
     ProfileComponent,
+    BooktestAdminComponent,
 
 
 

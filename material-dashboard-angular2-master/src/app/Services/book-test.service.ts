@@ -11,9 +11,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class BookTestService {
-  updateFormValue(form: FormGroup) {
-    throw new Error("Method not implemented.");
-  }
+
   newBookTestDetails: BookTestModel[];
 
 
@@ -23,18 +21,20 @@ export class BookTestService {
   constructor(private http: HttpClient) { }
 
   form: FormGroup = new FormGroup({
-    $key: new FormGroup(null),
+    $key: new FormControl(null),
     patient_name: new FormControl("", Validators.required),
-    age: new FormControl("", Validators.required),
     gender: new FormControl("", Validators.required),
+    age: new FormControl("", Validators.required),
+    email: new FormControl("", Validators.required),
     number: new FormControl("", [
       Validators.required,
       Validators.minLength(10),
     ]),
+    home_address: new FormControl("", Validators.required),
     locality: new FormControl("", Validators.required),
     pincode: new FormControl("", Validators.required),
-    home_address: new FormControl("", Validators.required),
-    landmark: new FormControl("", Validators.required),
+    city: new FormControl("", Validators.required),
+    time: new FormControl("", Validators.required),
     date: new FormControl("", Validators.required),
   });
 
@@ -43,12 +43,14 @@ export class BookTestService {
       $key: null,
       patient_name: "",
       age: "",
+      email: "",
       gender: "",
       number: "",
       locality: "",
       pincode: "",
       home_address: "",
-      landmark: "",
+      city: "",
+      time: "",
       date: "",
     });
   }

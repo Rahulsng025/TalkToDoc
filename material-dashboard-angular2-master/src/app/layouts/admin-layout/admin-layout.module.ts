@@ -68,6 +68,7 @@ import { BloodSugarComponent } from 'app/book-test/blood-sugar/blood-sugar.compo
 import { PaitentDetailsComponent } from 'app/book-test/paitent-details/paitent-details.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
