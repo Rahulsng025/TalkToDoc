@@ -38,6 +38,8 @@ import { LiverProfileComponent } from "app/book-test/liver-profile/liver-profile
 import { BloodSugarComponent } from "app/book-test/blood-sugar/blood-sugar.component";
 import { PaitentDetailsComponent } from "app/book-test/paitent-details/paitent-details.component";
 import { BooktestAdminComponent } from 'app/admin/booktest-admin/booktest-admin.component';
+import { BooktestqueryComponent } from "app/admin/booktestquery/booktestquery.component";
+import { BooktestcontactComponent } from "app/admin/booktestcontact/booktestcontact.component"
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -79,9 +81,9 @@ export const AdminLayoutRoutes: Routes = [
       { path: "doctor", component: DoctorRegistrationComponent },
       { path: "Diagnostic", component: DiagnosticRegistrationComponent },
       { path: "homecareappointment", component: HomecareAppointmentAdminComponent },
-      { path: "booktest", component: BooktestAdminComponent }
-
-
+      { path: "booktest", component: BooktestAdminComponent },
+      { path: "booktestquery", component: BooktestqueryComponent },
+      { path: "booktestcontact", component: BooktestcontactComponent }
     ],
   },
 ];

@@ -66,6 +66,9 @@ import { LipidProfileComponent } from 'app/book-test/lipid-profile/lipid-profile
 import { LiverProfileComponent } from 'app/book-test/liver-profile/liver-profile.component';
 import { BloodSugarComponent } from 'app/book-test/blood-sugar/blood-sugar.component';
 import { PaitentDetailsComponent } from 'app/book-test/paitent-details/paitent-details.component';
+import { BooktestAdminComponent } from 'app/admin/booktest-admin/booktest-admin.component';
+import { BooktestqueryComponent } from 'app/admin/booktestquery/booktestquery.component';
+import { BooktestcontactComponent } from 'app/admin/booktestcontact/booktestcontact.component';
 
 
 
@@ -139,7 +142,10 @@ import { PaitentDetailsComponent } from 'app/book-test/paitent-details/paitent-d
     LipidProfileComponent,
     LiverProfileComponent,
     BloodSugarComponent,
-    PaitentDetailsComponent
+    PaitentDetailsComponent,
+    BooktestAdminComponent,
+    BooktestqueryComponent,
+    BooktestcontactComponent
 
 
   ],

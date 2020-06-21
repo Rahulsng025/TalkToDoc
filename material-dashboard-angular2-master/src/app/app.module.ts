@@ -33,11 +33,13 @@ import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table'
+
 //Social login
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { BooktestAdminComponent } from './admin/booktest-admin/booktest-admin.component';
+
 
 
 
@@ -69,7 +71,8 @@ export function provideConfig() {
     SocialLoginModule,
     MatIconModule,
     MatExpansionModule,
-    NgbModule
+    NgbModule,
+    MatTableModule
 
   ],
 
@@ -81,7 +84,7 @@ export function provideConfig() {
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-    BooktestAdminComponent,
+
 
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 import { Router } from "@angular/router";
+import { BookTestQueryModel } from 'app/model/book_test_query.model';
 
 interface Search {
   value: string;
@@ -14,6 +15,8 @@ interface Search {
   styleUrls: ['./book-test.component.css']
 })
 export class BookTestComponent implements OnInit {
+
+  newBookTestQuery: BookTestQueryModel[];
 
   search: Search[] = [
     { value: "1", viewValue: "Delhi" },

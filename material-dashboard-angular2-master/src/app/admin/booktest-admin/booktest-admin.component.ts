@@ -18,6 +18,7 @@ export class BooktestAdminComponent implements OnInit {
   public errorMsg: String;
   public successMsg: String;
 
+
   public displayedColumns = [
     "patient_name",
     "gender",

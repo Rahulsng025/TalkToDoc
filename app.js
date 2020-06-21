@@ -22,7 +22,8 @@ const doctorsRoutes = require("./api/routes/doctors");
 const diagnosticsRoutes = require('./api/routes/diagnostics');
 const homecareappointmentRoutes = require('./api/routes/home_care_appointment');
 const booktestRoutes = require('./api/routes/book_test');
-
+const booktestqueryRoutes = require('./api/routes/booktestquery');
+const booktestcontactRoutes = require('./api/routes/booktestcontact');
 
 
 //Mongoose Connection
@@ -72,6 +73,8 @@ app.use("/doctors", doctorsRoutes);
 app.use("/diagnostics", diagnosticsRoutes);
 app.use("/home_care_appointment", homecareappointmentRoutes);
 app.use("/book_test", booktestRoutes);
+app.use("/booktestquery", booktestqueryRoutes);
+app.use("/booktestcontact", booktestcontactRoutes);
 
 
 module.exports = app;
