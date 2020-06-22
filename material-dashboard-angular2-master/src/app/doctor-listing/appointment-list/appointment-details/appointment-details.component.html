@@ -1,24 +1,101 @@
 <div class="main-content">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+
+
+                <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Simple Table</h4>
-                        <p class="card-category"> Here is a subtitle for this table</p>
+                        <h3 class="card-title"
+                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Appointment
+                            Booking Form</h3>
                     </div>
+
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    {{ details.fname }}
-                                    {{details.lname}}
-                                    {{details.consultingdoctor}}
-                                </tbody>
-                            </table>
+
+                        <div id="content" #content>
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="fname" style="margin-left: 20px; color: #000;">First name:</label>
+                                        {{ details.fname }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="lname" style="margin-left: 20px; color: #000;">Last
+                                            name:</label>{{ details.lname }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="gender"
+                                            style="margin-left: 20px; color: #000;">Gender:</label>{{ details.gender }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="number" style="margin-left: 20px; color: #000;">Mobile
+                                            Number:</label>{{ details.mobile }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="address"
+                                            style="margin-left: 20px; color: #000;">Address:</label>{{ details.address }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="email" style="margin-left: 20px; color: #000;">Email
+                                            Address:</label>{{ details.email }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="DOB" style="margin-left: 20px; color: #000;">Date of
+                                            Birth:</label>{{ details.dateofbirth }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="doctor" style="margin-left: 20px; color: #000;">Consultig of
+                                            Doctor:</label>{{ details.consultingdoctor }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="appointment" style="margin-left: 20px; color: #000;">Date of
+                                            Appointment:</label>{{ details.dateofappointment }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="time of appointment" style="margin-left: 20px; color: #000;">Time of
+                                            Appointment:</label>{{ details.timeofappointment }}
+                                    </div>
+                                    <br>
+
+                                    <div class="col-md-12">
+                                        <label for="injury"
+                                            style="margin-left: 20px; color: #000;">Injury:</label>{{ details.injury }}
+                                    </div>
+
+                                    <button class="btn btn-danger" (click)="downloadPDF()"
+                                        style="margin-left: 500px; ">Export to
+                                        PDF</button>
+
+                                </div>
+
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
