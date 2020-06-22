@@ -9,7 +9,9 @@ const doctor_listingSchema = mongoose.Schema({
     mobile: String,
     email: String,
     training: String,
-    city: String
+    city: String,
+    image: String,
+    profile: String
     //Active: Boolean
 
 });

@@ -51,6 +51,8 @@ router.post("/", (req, res, next) => {
     email: req.body.email,
     training: req.body.training,
     city: req.body.city,
+    image: req.body.city,
+    profile: req.body.profile
   });
   doctorlisting
     .save()

@@ -8,5 +8,7 @@ export interface DoctorDetailsModel {
   email: String;
   training: String;
   city: String;
+  image: String;
+  profile: String;
 
 }

@@ -29,7 +29,8 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
     "email",
     " training",
     "city",
-    "cancel"
+    "profile",
+    "image"
   ];
   speciality: string;
   city: string;

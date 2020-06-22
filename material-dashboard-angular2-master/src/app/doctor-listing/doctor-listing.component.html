@@ -74,13 +74,23 @@
                   </mat-form-field>
                 </div>
 
+                <div class="col-md-8">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="City" />{{
+                      eachDoctor.training
+                    }}
+                  </mat-form-field>
+                </div>
+
+
               </div>
 
-              <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage({_id:eachDoctor._id, name:eachDoctor.name, 
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                (click)="onLoadPage({_id:eachDoctor._id, name:eachDoctor.name, 
                 department:eachDoctor.department,
                 speciality:eachDoctor.speciality, city:eachDoctor.city,
-                trainig:eachDoctor.training ,email:eachDoctor.email, 
-                mobile:eachDoctor.mobile, degrees:eachDoctor.degrees})" eachDoctor>
+                training:eachDoctor.training ,email:eachDoctor.email, 
+                mobile:eachDoctor.mobile, degrees:eachDoctor.degrees, profile:eachDoctor.profile, image:eachDoctor.image})" eachDoctor>
                 View Profile
               </button>
 
