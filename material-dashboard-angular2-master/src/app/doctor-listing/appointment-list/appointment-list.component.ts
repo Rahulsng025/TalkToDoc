@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-// import * as jsPDF from 'jspdf';
+
 
 import { AppointmentDetailsModel } from "app/model/appointment_list.model";
 import { AppointmentListingService } from "app/Services/appointment-listing.service";
@@ -20,31 +20,6 @@ interface consultingdoctor {
   styleUrls: ["./appointment-list.component.css"],
 })
 export class AppointmentListComponent implements OnInit {
-
-  //Convert html file to pdf
-
-  // @ViewChild('content') content: ElementRef;
-
-
-  // public downloadPDF() {
-  //   // const doc = new jsPDF();
-
-  //   let specialElementHandler = {
-  //     '#editor': function (element: any, renderer: any) {
-  //       return true;
-  //     }
-  //   };
-
-  //   let content = this.content.nativeElement;
-  //   doc.fromHTML(content.innerHTML, 15, 15, {
-  //     'width': 190,
-  //     'elementHandlers': specialElementHandler
-  //   });
-  //   doc.save('first.pdf');
-  // }
-
-  // isAppointmentBooked: boolean = false;
-
 
   public successMsg: String;
   public errorMsg: String;

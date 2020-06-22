@@ -6,6 +6,7 @@ declare interface RouteInfo {
   title: string;
   icon: string;
   class: string;
+
 }
 export const ROUTES: RouteInfo[] = [
   {
@@ -86,32 +87,35 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ["./sidebar.component.css"],
 })
 export class SidebarComponent implements OnInit {
-  isUserLinksActive: boolean = true;
+  isUserLinksActive: boolean = false;
   menuItems: any[];
+
   menuItemsAdmin: RouteInfo[] = [
-    { path: "/main/admin/doctors", title: "Doctors", icon: "", class: "" },
+    {
+      path: "/main/admin/doctors", title: "Doctors Listing", icon: "person_add", class: ""
+    },
 
-    { path: "/main/admin/diagnostic", title: "Diagnostic", icon: "", class: "" },
+    { path: "/main/admin/diagnostic", title: "Diagnostic Centers", icon: "add_business", class: "" },
 
-    { path: "/main/admin/medical", title: "Medical Insurance", icon: "", class: "" },
+    { path: "/main/admin/homecare", title: "Home Care", icon: "home", class: "" },
 
-    { path: "/main/admin/homecare", title: "Home Care", icon: "", class: "" },
+    { path: "/main/admin/medical", title: "Medical Insurance", icon: "medical_services", class: "" },
 
-    { path: "/main/admin/appointment", title: "Appointment Boooking", icon: "", class: "" },
+    { path: "/main/admin/appointment", title: "Appointment Boooking", icon: "import_contacts", class: "" },
 
-    { path: "/main/admin/homecareappointment", title: "Home Care Appointments", icon: "", class: "" },
+    { path: "/main/admin/homecareappointment", title: "Home Care Appointments", icon: "enhanced_encryption", class: "" },
 
-    { path: "/main/admin/booktest", title: "Book Test Appointment", icon: "", class: "" },
+    { path: "/main/admin/booktest", title: "Book Test Appointment", icon: "science", class: "" },
 
-    { path: "/main/admin/user", title: "User Registration", icon: "", class: "" },
+    { path: "/main/admin/user", title: "User Registration", icon: "account_box", class: "" },
 
-    { path: "/main/admin/doctor", title: "Doctor Resgistration", icon: "", class: "" },
+    { path: "/main/admin/doctor", title: "Doctor Resgistration", icon: "library_add", class: "" },
 
-    { path: "/main/admin/Diagnostic", title: "Diagnostic Registration", icon: "", class: " " },
+    { path: "/main/admin/Diagnostic", title: "Diagnostic Registration", icon: "how_to_reg", class: " " },
 
-    { path: "/main/admin/booktestquery", title: "Test Query", icon: "", class: "" },
+    { path: "/main/admin/booktestquery", title: "Test Query", icon: "file_copy", class: "" },
 
-    { path: "/main/admin/booktestcontact", title: "Test Contact", icon: "", class: "" }
+    { path: "/main/admin/booktestcontact", title: "Test Contact", icon: "contacts", class: "" }
 
   ];
 
