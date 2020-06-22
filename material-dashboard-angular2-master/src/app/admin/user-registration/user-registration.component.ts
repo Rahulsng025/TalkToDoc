@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { UserService } from 'app/Services/user.service'
 import { UserRegistrationModel } from 'app/model/user_registration.model'
+import { mergeMap } from 'rxjs/operators';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { UserRegistrationModel } from 'app/model/user_registration.model'
 export class UserRegistrationComponent implements OnInit {
 
   allUserRegistrationDetails: UserRegistrationModel[];
-  displayedColumns = ['name', 'number', 'gender', 'email', 'username'];
+  displayedColumns = ['name', 'number', 'gender', 'email', 'username', 'action'];
 
   constructor(private userService: UserService,
     private router: Router) { }
@@ -26,6 +27,18 @@ export class UserRegistrationComponent implements OnInit {
       this.allUserRegistrationDetails = doctor;
       console.log(this.allUserRegistrationDetails);
     });
+  }
 
+  deleteusers(id: string) {
+    console.log("ID:" + id);
+    this.userService
+      .deleteusers(id)
+      .pipe(mergeMap(() => this.userService.getusers()))
+      .subscribe((allUserRegistrationDetails: UserRegistrationModel[]) => {
+        console.log(`Data received`);
+        console.log(allUserRegistrationDetails);
+
+        this.allUserRegistrationDetails = allUserRegistrationDetails;
+      });
   }
 }

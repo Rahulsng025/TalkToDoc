@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { DoctorService } from 'app/Services/doctor.service'
-import { DoctorRegistrationModel } from 'app/model/Doctor_registration.model'
+import { DoctorService } from 'app/Services/doctor.service';
+import { DoctorRegistrationModel } from 'app/model/Doctor_registration.model';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-doctor-registration',
@@ -12,7 +13,7 @@ export class DoctorRegistrationComponent implements OnInit {
 
 
   allDoctorRegistrationDetails: DoctorRegistrationModel[];
-  displayedColumns = ['name', 'number', 'gender', 'email', 'username'];
+  displayedColumns = ['name', 'number', 'gender', 'email', 'username', 'action'];
 
 
   constructor(private doctorService: DoctorService,
@@ -29,5 +30,16 @@ export class DoctorRegistrationComponent implements OnInit {
     });
 
   }
+  deletedoctors(id: string) {
+    console.log("ID:" + id);
+    this.doctorService
+      .deletedoctors(id)
+      .pipe(mergeMap(() => this.doctorService.getdoctors()))
+      .subscribe((allDoctorRegistrationDetails: DoctorRegistrationModel[]) => {
+        console.log(`Data received`);
+        console.log(allDoctorRegistrationDetails);
 
+        this.allDoctorRegistrationDetails = allDoctorRegistrationDetails;
+      });
+  }
 }

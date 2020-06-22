@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DoctorRegistrationModel } from 'app/model/doctor_registration.model';
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,7 @@ export class DoctorService {
     return this.http.get(`${this.uri}/doctors`);
   }
 
+  deletedoctors(_id: string): Observable<any> {
+    return this.http.delete(`${this.uri}/doctors/${_id}`);
+  }
 }

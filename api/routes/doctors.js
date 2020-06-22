@@ -103,6 +103,25 @@ router.get('/:registerId', (req, res, next) => {
 });
 
 
+router.delete("/:doctorId", (req, res, next) => {
+    const id = req.params.doctorId;
+
+    Doctor.remove({ _id: id })
+        .exec()
+        .then((result) => {
+            res.status(200).json(result);
+        })
+
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json({
+                error: err,
+            });
+        });
+});
+
+
+
 
 module.exports = router;
 

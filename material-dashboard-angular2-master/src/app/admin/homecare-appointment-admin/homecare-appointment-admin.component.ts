@@ -17,7 +17,7 @@ export class HomecareAppointmentAdminComponent implements OnInit {
 
   newHomeCareAppointmentDetails: HomeCareAppointmentModel[];
 
-  displayedColumns = ["name", "gender", "email", "howsoon", "number", "frequency", "forwhom", "age", "delete"];
+  displayedColumns = ["name", "gender", "email", "howsoon", "number", "frequency", "forwhom", "age", "action"];
 
   constructor(private homecareappointmentService: HomeCareAppointmentService) { }
 
