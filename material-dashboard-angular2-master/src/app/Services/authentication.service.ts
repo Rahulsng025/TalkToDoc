@@ -40,6 +40,8 @@ export class AuthenticationService {
   //For user authentication
 
   authenticateUser(data: { username: String; password: String; }, role: string) {
+    console.log('In authenticateUser function:');
+    console.log(role);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/' + role + '/authenticate', data, { headers: headers })

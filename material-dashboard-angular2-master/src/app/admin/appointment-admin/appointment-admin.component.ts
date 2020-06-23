@@ -75,4 +75,12 @@ export class AppointmentAdminComponent implements OnInit {
         });
   }
 
+  updateInfo(userID: string, newData: AppointmentDetailsModel) {
+    if (this.bookAppointmentService.form.valid) {
+      this.bookAppointmentService.updateAppointment(userID, newData).subscribe((result: AppointmentDetailsModel) => {
+        console.log('result:');
+        console.log(result);
+      });
+    }
+  }
 }

@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const booktestquery = require('../models/booktestquery');
+const contact = require('../models/contact');
 
-//Handling incoming get request of book_test.
+//Handling incoming get request of doctor_listing.
 router.get('/', (req, res, next) => {
-    booktestquery.find()
-
+    contact.find()
         .exec()
         .then(docs => {
             console.log(docs);
@@ -21,10 +20,10 @@ router.get('/', (req, res, next) => {
         });
 });
 
-//Book_test ID
-router.get('/:booktestqueryId', (req, res, next) => {
-    const id = req.params.booktestqueryId;
-    booktestquery.findById(id)
+//Diagnostic_center ID
+router.get('/:contactId', (req, res, next) => {
+    const id = req.params.contactId;
+    contact.findById(id)
         .exec()
         .then(doc => {
             console.log("From Database", doc);
@@ -36,32 +35,34 @@ router.get('/:booktestqueryId', (req, res, next) => {
         });
 });
 
-//Handling POST request of book_test.
+
+//Handling POST request of contact.
 router.post('/', (req, res, next) => {
-    const booktest = new booktestquery({
+    const contactdetail = new contact({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        query: req.body.query,
-        mobile: req.body.mobile,
+        email: req.body.email,
+        message: req.body.message,
+
     });
-    booktest
+    contactdetail
         .save()
         .then(result => {
             console.log(result);
             res.status(201).json({
-                message: "Handling post request to book_test_query",
-                createdbooktest: booktest
+                message: "Handling post request to contact",
+                createdcontact: contactdetail
             });
         })
         .catch(err => console.log(err));
 
 });
 
-//Handling Delete Requests
 
-router.delete('/:booktestqueryId', (req, res, next) => {
-    const id = req.params.booktestqueryId;
-    booktestquery.remove({ _id: id })
+//Handling Delete Requests
+router.delete('/:contactId', (req, res, next) => {
+    const id = req.params.contactId;
+    contact.remove({ _id: id })
         .exec()
 
         .then(result => {

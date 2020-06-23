@@ -34,12 +34,15 @@ import { AuthGuard } from "app/auth/guards/auth.gaurd";
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table'
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 
 
 //Social login
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ContactComponent } from 'app/auth/contact/contact.component';
 
 
 
@@ -73,7 +76,9 @@ export function provideConfig() {
     MatIconModule,
     MatExpansionModule,
     NgbModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule,
+    MatButtonModule
 
   ],
 
@@ -85,6 +90,7 @@ export function provideConfig() {
     HomeComponent,
     LoginComponent,
     ProfileComponent,
+    ContactComponent,
 
 
 

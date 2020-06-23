@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto ">
+            <ul class="navbar-nav mr-auto ">
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                     <a class="nav-link" [routerLink]="['/']">
                         <mat-icon style="margin-top: 10px;">home</mat-icon>Home
@@ -70,7 +70,8 @@
                         <label for="email" style="color: black;">Email Address: </label>
                         <input class="form-control" name="email" type="email" [(ngModel)]="email"
                             aria-describedby="emailHelp" placeholder="Enter your email" required />
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        <small id="emailHelp" style="color: black;">We'll never share your
+                            email with anyone
                             else.</small>
 
                     </div>

@@ -1,0 +1,73 @@
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"
+                            style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                            Contact Us |
+                            <a href="main/dashboard">Home</a>
+                            <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
+                        </h4>
+                    </div>
+                </div>
+
+                <br>
+                <form [formGroup]=contactService.form class="normal-form" (submit)="onSubmit()">
+                    <mat-grid-list cols="2" rowHeight="60px">
+                        <!-- First Grid Start From Here -->
+
+
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <label>Enter your Name</label>
+                                <input type="hidden" formControlName="$key">
+                                <mat-form-field>
+                                    <input formControlName="name" matInput placeholder="Name">
+
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <label>Enter your Email Address</label>
+                                <input type="hidden" formControlName="$key">
+                                <mat-form-field>
+
+                                    <input formControlName="email" matInput placeholder="Email">
+
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <mat-grid-list cols="1" rowHeight="160px">
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <label>Enter your Message</label>
+                                <input type="hidden" formControlName="$key">
+                                <mat-form-field>
+                                    <input formControlName="message" matInput placeholder="Message">
+
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <div class="button-row">
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]="contactService.form.invalid">
+                            Submit
+                        </button>
+                        <button mat-raised-button color="warn" (click)="onClear()">
+                            Clear
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

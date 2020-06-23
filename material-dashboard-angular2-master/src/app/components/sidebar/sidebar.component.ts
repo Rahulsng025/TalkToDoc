@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { LoginService } from "app/Services/login-service.service";
 
 declare const $: any;
 declare interface RouteInfo {
@@ -115,7 +116,9 @@ export class SidebarComponent implements OnInit {
 
     { path: "/main/admin/booktestquery", title: "Test Query", icon: "file_copy", class: "" },
 
-    { path: "/main/admin/booktestcontact", title: "Test Contact", icon: "contacts", class: "" }
+    { path: "/main/admin/booktestcontact", title: "Test Contact", icon: "contacts", class: "" },
+
+    { path: "/main/admin/contact", title: "Contect Us", icon: "chat", class: "" }
 
   ];
 
@@ -124,6 +127,12 @@ export class SidebarComponent implements OnInit {
 
   // switches between the Admin links and User links
   switchLinks() {
+    var username = this.loginService.getRole();
+    if (username === 'Admin') {
+      this.isUserLinksActive = false;
+    } else {
+      this.isUserLinksActive = true;
+    }
     return this.isUserLinksActive ? this.menuItems : this.menuItemsAdmin;
   }
 
@@ -133,7 +142,7 @@ export class SidebarComponent implements OnInit {
   //     this.isUserLinksActive = linkStatus;
   //   });
   // }
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter((menuItem) => menuItem);

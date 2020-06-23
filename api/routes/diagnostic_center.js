@@ -63,11 +63,9 @@ router.post('/', (req, res, next) => {
 //Handling Patch Request.
 router.patch('/:diagnosticcenterId', (req, res, next) => {
     const id = req.params.diagnosticcenterId;
-    const updateOps = {};
-    for (const ops of req.body) {
-        updateOps[ops.propName] = ops.value;
-    }
-    diagnostic_center.update({ _id: id }, { $set: updateOps })
+    const diagnosticInfo = req.body;
+
+    diagnostic_center.update({ _id: id }, diagnosticInfo)
         .exec()
         .then(result => {
             console.log(result);

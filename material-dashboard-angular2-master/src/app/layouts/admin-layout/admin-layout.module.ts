@@ -69,6 +69,8 @@ import { PaitentDetailsComponent } from 'app/book-test/paitent-details/paitent-d
 import { BooktestAdminComponent } from 'app/admin/booktest-admin/booktest-admin.component';
 import { BooktestqueryComponent } from 'app/admin/booktestquery/booktestquery.component';
 import { BooktestcontactComponent } from 'app/admin/booktestcontact/booktestcontact.component';
+import { ContactComponent } from 'app/admin/Contact/contact.component';
+
 
 
 
@@ -145,7 +147,9 @@ import { BooktestcontactComponent } from 'app/admin/booktestcontact/booktestcont
     PaitentDetailsComponent,
     BooktestAdminComponent,
     BooktestqueryComponent,
-    BooktestcontactComponent
+    BooktestcontactComponent,
+    ContactComponent
+
 
 
   ],

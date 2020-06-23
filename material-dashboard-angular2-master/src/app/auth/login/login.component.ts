@@ -7,12 +7,7 @@ import { FlashMessagesService } from "angular2-flash-messages";
 import { AuthService } from "angularx-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
 
-
-enum Roles {
-  "Doctor",
-  "User",
-  "Diagnostic Center Owner"
-}
+import { LoginService } from 'app/Services/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +15,7 @@ enum Roles {
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  role: Roles;
+  role: string;
 
   username: String;
   password: String;
@@ -28,6 +23,7 @@ export class LoginComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService,
     private authService: AuthService,
     private router: Router,
+    private loginService: LoginService,
     private FlashMessage: FlashMessagesService) { }
 
 
@@ -40,7 +36,14 @@ export class LoginComponent implements OnInit {
       password: this.password
     }
 
-    this.authenticationService.authenticateUser(user, this.getRole()).subscribe(data => {
+    // enabling nav links (when admin logs in.)
+    if (this.username === 'Admin') {
+      this.loginService.username = this.username;
+      this.router.navigate(['main/admin/doctors']);
+      return;
+    }
+
+    this.authenticationService.authenticateUser(user, this.role).subscribe(data => {
       if (data.success) {
         this.authenticationService.storeData(data.token, data.user);
         this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 500 });
@@ -52,16 +55,8 @@ export class LoginComponent implements OnInit {
           timeout: 3000
         });
         this.router.navigate(['/login']);
-
       }
-
     });
-  }
-
-  getRole() {
-    if (this.role === Roles.Doctor) return "Doctor";
-    else if (this.role === Roles.User) return "User";
-    else return "diagnostics";
   }
 
   //Navigate to the registration page.

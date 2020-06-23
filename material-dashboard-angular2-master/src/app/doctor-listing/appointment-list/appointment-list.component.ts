@@ -24,12 +24,7 @@ export class AppointmentListComponent implements OnInit {
   public successMsg: String;
   public errorMsg: String;
 
-  consult: consultingdoctor[] = [
-    { id: '1', name: "DR. AKHIL AGRAWAL" },
-    { id: '2', name: "DR. S.N. SANKHWAR" },
-    { id: '3', name: "DR. VIMAL KUMAR" },
-    { id: '4', name: "DR. NOUSHIF M" }
-  ];
+
   isAppointmentBooked: boolean;
 
   constructor(private appointmentListingService: AppointmentListingService,
@@ -61,4 +56,5 @@ export class AppointmentListComponent implements OnInit {
       this.router.navigate(['/main/appointment-details']);
     }
   }
+
 }

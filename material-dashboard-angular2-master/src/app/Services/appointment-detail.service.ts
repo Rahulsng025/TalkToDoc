@@ -11,12 +11,10 @@ export class AppointmentDetailService {
   details: AppointmentDetailsModel;
 
   updateValue(values: AppointmentDetailsModel) {
-
     this.details = values;
   }
 
   getValues() {
-
     return this.details;
   }
 

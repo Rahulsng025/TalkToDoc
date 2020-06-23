@@ -39,7 +39,9 @@ import { BloodSugarComponent } from "app/book-test/blood-sugar/blood-sugar.compo
 import { PaitentDetailsComponent } from "app/book-test/paitent-details/paitent-details.component";
 import { BooktestAdminComponent } from 'app/admin/booktest-admin/booktest-admin.component';
 import { BooktestqueryComponent } from "app/admin/booktestquery/booktestquery.component";
-import { BooktestcontactComponent } from "app/admin/booktestcontact/booktestcontact.component"
+import { BooktestcontactComponent } from "app/admin/booktestcontact/booktestcontact.component";
+import { ContactComponent } from 'app/admin/Contact/contact.component';
+
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -64,6 +66,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "blood-sugar", component: BloodSugarComponent },
   { path: "paitent-details", component: PaitentDetailsComponent },
 
+
   {
     path: "admin",
     component: AdminComponent,
@@ -83,7 +86,8 @@ export const AdminLayoutRoutes: Routes = [
       { path: "homecareappointment", component: HomecareAppointmentAdminComponent },
       { path: "booktest", component: BooktestAdminComponent },
       { path: "booktestquery", component: BooktestqueryComponent },
-      { path: "booktestcontact", component: BooktestcontactComponent }
+      { path: "booktestcontact", component: BooktestcontactComponent },
+      { path: "contact", component: ContactComponent }
     ],
   },
 ];

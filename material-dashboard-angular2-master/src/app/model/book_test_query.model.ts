@@ -1,6 +1,3 @@
-export interface BookTestQueryModel {
-    name: string;
-    query: string;
-    number: string;
-
+export class BookTestQueryModel {
+    constructor(public name, public query, public mobile) { }
 }

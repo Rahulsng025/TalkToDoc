@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const booktestcontactSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    name: String,
+    Name: String,
     location: String,
     reg_number: String,
     email: String,

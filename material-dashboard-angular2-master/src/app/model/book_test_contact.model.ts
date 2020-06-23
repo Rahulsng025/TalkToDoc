@@ -1,7 +1,3 @@
-export interface BookTestContactModel {
-    name: String;
-    location: String;
-    reg_number: String;
-    email: String;
-    number: String;
+export class BookTestContactModel {
+    constructor(public Name, public location, public reg_number, public email, public number) { }
 }

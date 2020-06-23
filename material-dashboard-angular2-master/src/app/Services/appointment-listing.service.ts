@@ -67,10 +67,13 @@ export class AppointmentListingService {
 
 
   deletebookappointment(_id: string): Observable<any> {
-    console.log("Passing ID (in Service): " + _id);
     return this.http.delete(`${this.uri}/book_appointment/${_id}`);
   }
 
-
+  updateAppointment(_id: string, newValues: AppointmentDetailsModel): Observable<any> {
+    console.log("Passing ID (in Service): " + _id);
+    console.log(newValues);
+    return this.http.patch(`${this.uri}/book_appointment/${_id}`, newValues);
+  }
 
 }

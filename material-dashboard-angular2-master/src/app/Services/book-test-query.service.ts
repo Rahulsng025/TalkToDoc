@@ -9,7 +9,7 @@ import { Observable } from "rxjs";
 })
 export class BookTestQueryService {
 
-  newBookTestQuery: BookTestQueryModel[];
+  newBookTestQuery: BookTestQueryModel;
 
 
   uri = "http://localhost:3000";
@@ -24,8 +24,10 @@ export class BookTestQueryService {
     return this.http.get(`${this.uri}/booktestquery/${Id}`);
   }
 
-  postbooktestquery(_newBookTestDetails: BookTestQueryModel) {
-    return this.http.post(`${this.uri}/booktestquery/`, _newBookTestDetails);
+  postbooktestquery(newBookTestDetails: BookTestQueryModel) {
+    console.log('Sending POST request..');
+    console.log(newBookTestDetails);
+    return this.http.post(`${this.uri}/booktestquery/`, newBookTestDetails);
   }
 
   deletebooktestquery(_id: string): Observable<any> {

@@ -40,7 +40,7 @@ router.get('/:booktestcontactId', (req, res, next) => {
 router.post('/', (req, res, next) => {
     const booktest = new booktestcontact({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
+        Name: req.body.Name,
         location: req.body.location,
         reg_number: req.body.reg_number,
         email: req.body.email,

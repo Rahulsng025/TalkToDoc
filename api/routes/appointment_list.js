@@ -73,14 +73,18 @@ router.post("/", (req, res, next) => {
 //Handling Patch Request.
 router.patch('/:appointmentlistId', (req, res, next) => {
     const id = req.params.appointmentlistId;
-    const updateOps = {};
-    for (const ops of req.body) {
-        updateOps[ops.propName] = ops.value;
-    }
-    appointment_list.update({ _id: id }, { $set: updateOps })
+    const appointmentInfo = req.body;
+
+
+
+    console.log(id);
+    console.log(appointmentInfo);
+
+    appointment_list.findByIdAndUpdate({ _id: id }, appointmentInfo)
         .exec()
         .then(result => {
             console.log(result);
+            console.log('Result updated');
             res.status(200).json(result);
         })
         .catch(err => {

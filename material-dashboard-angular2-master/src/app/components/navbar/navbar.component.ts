@@ -4,6 +4,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'app/Services/authentication.service';
 import { FlashMessagesService } from "angular2-flash-messages";
+import { LoginService } from 'app/Services/login-service.service';
 
 @Component({
     selector: 'app-navbar',
@@ -20,6 +21,7 @@ export class NavbarComponent implements OnInit {
 
     constructor(location: Location,
         private element: ElementRef,
+        private loginService: LoginService,
         private router: Router,
         private authenticationService: AuthenticationService,
         FlashMessage: FlashMessagesService) {
@@ -132,9 +134,12 @@ export class NavbarComponent implements OnInit {
     onLogoutClick() {
         this.authenticationService.logout();
         // this.FlashMessage.show('You are logged out', {
-        //     cssClass: 'alert-success', timeout: 3000
+        //     cssClass: 'alert-success', timeout: 2000
         // });
-        this.router.navigate(['http://localhost:4200']);
 
+        // resetting user to non-admin role.
+        this.loginService.username = 'users';
+
+        this.router.navigate(['http://localhost:4200']);
     }
 }

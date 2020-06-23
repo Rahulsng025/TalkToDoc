@@ -467,22 +467,25 @@
                                 <form class="login-form">
                                     <div class="form-group">
                                         <label for="name" class="text-uppercase" style="color: #000;">Your Name</label>
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input type="text" [(ngModel)]="name" class="form-control" name="name"
+                                            placeholder="Enter your Name">
 
                                     </div>
                                     <div class="form-group">
                                         <label for="query" class="text-uppercase" style="color: #000;">Query</label>
-                                        <input type="password" class="form-control" placeholder="">
+                                        <input type="text" [(ngModel)]="query" class="form-control" name="query"
+                                            placeholder="Enter your Query">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="number" class="text-uppercase" style="color: #000;">Mobile
                                             No.</label>
-                                        <input type="password" class="form-control" placeholder="">
+                                        <input type="text" [(ngModel)]="mobile" name="mobile" class="form-control"
+                                            placeholder="Enter your Number">
                                     </div>
 
                                     <div>
-                                        <button class="btn btn-info">Submit</button>
+                                        <button class="btn btn-info" (click)="onSubmit()">Submit</button>
                                     </div>
 
 
@@ -552,28 +555,29 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="center">Diagnostic Center:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="center" placeholder="Enter your Name"
-                                        name="center">
+                                    <input type="text" [(ngModel)]="Name" name="Name" class="form-control" id="center"
+                                        placeholder="Enter your Name" name="center">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="based">We are based on:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="based" placeholder="Enter your Location"
-                                        name="based">
+                                    <input type="text" [(ngModel)]="location" name="location" class="form-control"
+                                        id="based" placeholder="Enter your Location" name="based">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="registration">Registration No:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="registration"
-                                        placeholder="Enter your Registration Number" name="registration">
+                                    <input type="text" [(ngModel)]="reg_number" name="reg_number" class="form-control"
+                                        id="registration" placeholder="Enter your Registration Number"
+                                        name="registration">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="email">My Mail Id is:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="email"
+                                    <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email"
                                         placeholder="Enter your email Id" name="email">
                                 </div>
                             </div>
@@ -581,14 +585,15 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="phone">My Phone number is:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="phone"
-                                        placeholder="Enter you Mobile Number" name="phone">
+                                    <input type="text" [(ngModel)]="number" name="number" class="form-control"
+                                        id="phone" placeholder="Enter you Mobile Number" name="phone">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-info">I Wish TO Partner With You</button>
+                                    <button type="submit" class="btn btn-info" (click)="onPageLoad()">I Wish TO Partner
+                                        With You</button>
                                 </div>
                             </div>
                         </div>
