@@ -18,13 +18,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto ">
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/']">Home</a>
+                        <a class="nav-link" [routerLink]="['/']">
+                            <mat-icon style="margin:0.5;">home</mat-icon>Home
+                        </a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/login']">Login</a>
+                        <a class="nav-link" [routerLink]="['/login']">
+                            <mat-icon style="margin-top: 1px;">how_to_reg</mat-icon>Login
+                        </a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/register']">Register</a>
+                        <a class="nav-link" [routerLink]="['/register']">
+                            <mat-icon style="margin-top: 1px;">person_pin</mat-icon>Register
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -288,8 +294,10 @@
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
 
-                        <mat-panel-title style="color: #17a2b8; text-align:center;">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                        <mat-panel-title style="color: #17a2b8; ">
+                            <mat-icon style="margin-right: 0.2em; ">
+                                home
+                            </mat-icon>
                             Our Resposibilites
 
                         </mat-panel-title>
@@ -305,7 +313,7 @@
                     <mat-expansion-panel-header>
 
                         <mat-panel-title style="color: #17a2b8; text-align:center;">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            <mat-icon style="margin-right: 0.2em;">add_business</mat-icon>
                             Orthodontics
 
                         </mat-panel-title>
@@ -324,7 +332,7 @@
                     <mat-expansion-panel-header>
 
                         <mat-panel-title style="color: #17a2b8; text-align:center;">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            <mat-icon style="margin-right: 0.2em;">import_contacts</mat-icon>
                             Paediatric Haemato-Oncology
 
                         </mat-panel-title>
@@ -344,7 +352,7 @@
                     <mat-expansion-panel-header>
 
                         <mat-panel-title style="color: #17a2b8; text-align:center;">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                            <mat-icon style="margin-right: 0.2em;">medical_services</mat-icon>
                             Transplanation-liver
 
                         </mat-panel-title>
@@ -395,22 +403,33 @@
                     <div class="col l3 s6">
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3">Home</a>
+                                <a>
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">home</mat-icon>Home
+                                </a>
                             </li>
                             <br>
                             <li>
-                                <a class="grey-text text-lighten-3">About Us</a>
+                                <a>
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">person</mat-icon>About Us
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col l3 offset-l3 s6">
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3">Doctors</a>
+                                <a>
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">person_add</mat-icon>
+                                    Doctors
+                                </a>
                             </li>
                             <br>
                             <li>
-                                <a class="grey-text text-lighten-3">Contact</a>
+                                <a>
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">contact_phone</mat-icon>
+                                    Contact
+                                </a>
+
                             </li>
                         </ul>
                     </div>
@@ -421,10 +440,21 @@
                 <h4 style="color: #17a2b8;">Departments</h4>
                 <hr>
                 <ul>
-                    <li><a class="grey-text text-lighten-3">Diagnostic</a></li>
-                    <li><a class="grey-text text-lighten-3">Medical Insurance</a></li>
-                    <li><a class="grey-text text-lighten-3">Home Care</a></li>
-                    <li><a class="grey-text text-lighten-3">Test Booking</a></li>
+                    <li><a class="grey-text text-lighten-3">
+                            <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">add_business</mat-icon>
+                            Diagnostic
+                        </a></li>
+                    <li><a class="grey-text text-lighten-3">
+                            <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">medical_services</mat-icon>
+                            Medical Insurance
+                        </a></li>
+                    <li><a class="grey-text text-lighten-3">
+                            <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">home</mat-icon>Home Care
+                        </a></li>
+                    <li><a class="grey-text text-lighten-3">
+                            <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">science</mat-icon>Test
+                            Booking
+                        </a></li>
                 </ul>
                 <br>
                 <h4 style="color: #17a2b8;">Address</h4>

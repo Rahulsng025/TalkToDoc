@@ -30,13 +30,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto ">
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/']">Home</a>
+                        <a class="nav-link" [routerLink]="['/']">
+                            <mat-icon style="margin-top: 1px;">home</mat-icon>Home
+                        </a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/login']">Login</a>
+                        <a class="nav-link" [routerLink]="['/login']">
+                            <mat-icon style="margin-top: 1px;">how_to_reg</mat-icon>Login
+                        </a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/register']">Register</a>
+                        <a class="nav-link" [routerLink]="['/register']">
+                            <mat-icon style="margin-top: 1px;">person_pin</mat-icon>Register
+                        </a>
                     </li>
                 </ul>
             </div>
