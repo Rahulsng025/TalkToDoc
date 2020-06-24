@@ -4,13 +4,6 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthenticationService } from 'app/Services/authentication.service';
 import { Router } from '@angular/router';
 
-// enumeration
-enum Roles {
-  "Doctor",
-  "User",
-  "Diagnostic Center Owner",
-};
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -26,7 +19,7 @@ export class RegisterComponent implements OnInit {
   email: String;
   username: String;
   password: String;
-  role: Roles;
+  role: string;
 
   constructor(private validateService: ValidateService,
     private flashMessagesService: FlashMessagesService,
@@ -37,7 +30,8 @@ export class RegisterComponent implements OnInit {
   }
   onRegisterSubmit() {
 
-    if (this.role !== Roles.Doctor) {
+    if (this.role !== 'doctors') {
+      console.log('IF condition');
 
       const user = {
         name: this.name,
@@ -51,6 +45,7 @@ export class RegisterComponent implements OnInit {
       this.selectedrole = user;
     }
     else {
+      console.log('Else condition');
       const doctor = {
         name: this.name,
         number: this.number,
@@ -89,8 +84,8 @@ export class RegisterComponent implements OnInit {
   }
 
   getRole() {
-    if (this.role === Roles.Doctor) return "Doctor";
-    else if (this.role === Roles.User) return "User";
+    if (this.role === "doctors") return "doctors";
+    else if (this.role === "users") return "users";
     else return "diagnostics";
   }
 
