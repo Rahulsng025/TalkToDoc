@@ -42,5 +42,62 @@ span.req {
     right: -150%;
     transform: translate(-50%, -50%);
   }
+
+  
+  .navbar-brand img {
+    height: 50px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link,.navbar .navbar-nav .nav-item .nav-link:visited {
+    color:black;
+    margin-right: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,.navbar .navbar-nav .nav-item .nav-link:active{
+    color: grey;
+   
+}
+
+.navbar .navbar-nav .nav-item .nav-link:link,.navbar .navbar-nav .nav-item .nav-link:visited{
+    color: rgba(0,0,0,1);
+    margin-right: 20px;
+  }
+  .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
+    margin-right: 20px;
+    border-bottom: 2px solid #3C589C;
+  }
+
+  .page-footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+.copy-right_text {
+padding-bottom: 30px;
+background: #000000;
+}
+
+
+.copy-right_text .footer_border {
+padding-bottom: 30px;
+}
+
+
+.copy-right_text .copy_right {
+font-size: 16px;
+color: #919191;
+margin-bottom: 0;
+font-weight: 400;
+}
+
+@media (max-width: 767px) {
+
+.copy-right_text .copy_right {
+  font-size: 14px;
+}
+}
+
+.copy-right_text .copy_right a {
+color: #5DB2FF;
+}
     
     
