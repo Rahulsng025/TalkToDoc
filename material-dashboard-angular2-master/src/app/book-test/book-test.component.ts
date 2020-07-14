@@ -19,8 +19,8 @@ interface Search {
 })
 export class BookTestComponent implements OnInit {
   name: string;
-  mobile: string;
   query: string;
+  mobile: string;
 
   Name: String;
   location: String;

@@ -6,6 +6,7 @@ const book_testSchema = mongoose.Schema({
     gender: String,
     age: String,
     email: String,
+    test: String,
     number: String,
     home_address: String,
     locality: String,

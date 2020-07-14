@@ -28,6 +28,7 @@ export class BookTestService {
     gender: new FormControl("", Validators.required),
     age: new FormControl("", Validators.required),
     email: new FormControl("", Validators.required),
+    test: new FormControl("", Validators.required),
     number: new FormControl("", [
       Validators.required,
       Validators.minLength(10),
@@ -46,6 +47,7 @@ export class BookTestService {
       patient_name: "",
       age: "",
       email: "",
+      test: "",
       gender: "",
       number: "",
       locality: "",

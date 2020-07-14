@@ -44,6 +44,7 @@ router.post('/', (req, res, next) => {
         gender: req.body.gender,
         age: req.body.age,
         email: req.body.email,
+        test: req.body.test,
         number: req.body.number,
         home_address: req.body.home_address,
         locality: req.body.locality,

@@ -17,7 +17,7 @@ export class BooktestcontactComponent implements OnInit {
   public loading = true;
 
   public displayedColumns = [
-    "name",
+    "Name",
     "location",
     "reg_number",
     "email",

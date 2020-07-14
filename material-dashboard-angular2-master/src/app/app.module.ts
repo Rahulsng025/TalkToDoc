@@ -43,6 +43,10 @@ import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ContactComponent } from 'app/auth/contact/contact.component';
+import { AboutComponent } from 'app/auth/about/about.component';
+import { WhyusComponent } from './auth/whyus/whyus.component';
+
+
 
 
 
@@ -91,6 +95,10 @@ export function provideConfig() {
     LoginComponent,
     ProfileComponent,
     ContactComponent,
+    AboutComponent,
+    WhyusComponent,
+
+
 
 
 

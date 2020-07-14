@@ -70,6 +70,8 @@ import { BooktestAdminComponent } from 'app/admin/booktest-admin/booktest-admin.
 import { BooktestqueryComponent } from 'app/admin/booktestquery/booktestquery.component';
 import { BooktestcontactComponent } from 'app/admin/booktestcontact/booktestcontact.component';
 import { ContactComponent } from 'app/admin/Contact/contact.component';
+import { AddDoctorsComponent } from 'app/add-doctors/add-doctors.component';
+import { DoctorComponent } from 'app/admin/doctor/doctor.component';
 
 
 
@@ -148,7 +150,9 @@ import { ContactComponent } from 'app/admin/Contact/contact.component';
     BooktestAdminComponent,
     BooktestqueryComponent,
     BooktestcontactComponent,
-    ContactComponent
+    ContactComponent,
+    AddDoctorsComponent,
+    DoctorComponent
 
 
 

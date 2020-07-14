@@ -55,18 +55,18 @@ export const ROUTES: RouteInfo[] = [
     icon: "person",
     class: "",
   },
-  {
-    path: "/main/table-list",
-    title: "Table List",
-    icon: "content_paste",
-    class: "",
-  },
-  {
-    path: "/main/typography",
-    title: "Typography",
-    icon: "library_books",
-    class: "",
-  },
+  // {
+  //   path: "/main/table-list",
+  //   title: "Table List",
+  //   icon: "content_paste",
+  //   class: "",
+  // },
+  // {
+  //   path: "/main/typography",
+  //   title: "Typography",
+  //   icon: "library_books",
+  //   class: "",
+  // },
   {
     path: "/main/icons",
     title: "Icons",
@@ -74,12 +74,12 @@ export const ROUTES: RouteInfo[] = [
     class: "",
   },
 
-  {
-    path: "/main/notifications",
-    title: "Notifications",
-    icon: "notifications",
-    class: "",
-  },
+  // {
+  //   path: "/main/notifications",
+  //   title: "Notifications",
+  //   icon: "notifications",
+  //   class: "",
+  // },
 ];
 
 @Component({
@@ -118,7 +118,9 @@ export class SidebarComponent implements OnInit {
 
     { path: "/main/admin/booktestcontact", title: "Test Contact", icon: "contacts", class: "" },
 
-    { path: "/main/admin/contact", title: "Contect Us", icon: "chat", class: "" }
+    { path: "/main/admin/contact", title: "Contect Us", icon: "chat", class: "" },
+
+    { path: "/main/admin/adddoctors", title: "Add Doctors", icon: "person", class: "" }
 
   ];
 

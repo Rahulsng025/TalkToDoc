@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 
-const doctor_listingSchema = mongoose.Schema({
+const add_dcotorsSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
+    gender: String,
+    mobile: String,
+    email: String,
+    certificate: String,
     department: String,
     speciality: String,
     degrees: String,
-    mobile: String,
-    email: String,
     training: String,
     city: String,
-    image: String,
-    profile: String
 
 
 });
 
-module.exports = mongoose.model('doctor_listing', doctor_listingSchema);
+module.exports = mongoose.model('add_doctors', add_dcotorsSchema);

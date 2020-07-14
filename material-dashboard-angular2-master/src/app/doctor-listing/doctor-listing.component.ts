@@ -105,4 +105,8 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.doctorListingSubscription.unsubscribe();
   }
+
+  onLoad() {
+    this.router.navigate(['main/add-doctors']);
+  }
 }

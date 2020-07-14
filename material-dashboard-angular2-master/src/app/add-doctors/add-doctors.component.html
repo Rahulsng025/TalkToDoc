@@ -7,19 +7,17 @@
                     <div class="card-header card-header-danger">
                         <h4 class="card-title"
                             style="font: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                            Book Test Appointment |
+                            Doctor Register |
                             <a href="main/dashboard">Home</a>
-
+                            <!-- <i class="material-icons" style="margin: 0px;">home</i> -->
                         </h4>
                     </div>
                 </div>
 
-                <h4 style="color: black; margin-left: 38px;">Add Patient Details</h4>
+                <h4 style="color: black; margin-left: 38px;">Doctors Details</h4>
                 <hr>
                 <br>
-
-
-                <form [formGroup]=booktestService.form class="normal-form" (submit)="onSubmit()">
+                <form [formGroup]=adddoctorsService.form class="normal-form" (submit)="onSubmit()">
                     <mat-grid-list cols="2" rowHeight="200px">
                         <!-- First Grid Start From Here -->
 
@@ -28,22 +26,17 @@
                             <div class="controles-container">
                                 <input type="hidden" formControlName="$key">
                                 <mat-form-field>
-                                    <input formControlName="patient_name" matInput placeholder="Patient Name">
-                                    <mat-error>This field is manadatory.</mat-error>
-                                </mat-form-field>
-
-                                <mat-form-field>
-                                    <input formControlName="age" matInput placeholder="Age">
+                                    <input formControlName="name" matInput placeholder="Full Name">
                                     <mat-error>This field is manadatory.</mat-error>
                                 </mat-form-field>
 
 
                                 <mat-form-field>
-                                    <input formControlName="number" matInput placeholder="Mobile*" />
-                                    <mat-error *ngIf="booktestService.form.controls['number'].errors?.required">This
+                                    <input formControlName="mobile" matInput placeholder="Mobile*" />
+                                    <mat-error *ngIf="adddoctorsService.form.controls['mobile'].errors?.required">This
                                         field is
                                         mandatory.</mat-error>
-                                    <mat-error *ngIf="booktestService.form.controls['number'].errors?.minlength">
+                                    <mat-error *ngIf="adddoctorsService.form.controls['mobile'].errors?.minlength">
                                         Minimum 10
                                         charactors needed.</mat-error>
                                 </mat-form-field>
@@ -60,18 +53,16 @@
                                     </mat-radio-group>
                                 </div>
 
-                                <mat-form-field>
-                                    <input formControlName="email" matInput placeholder="Email">
-                                    <mat-error>This field is manadatory.</mat-error>
-                                </mat-form-field>
 
                                 <mat-form-field>
-                                    <input formControlName="test" matInput placeholder="Selected Test">
-                                    <mat-select formControlName="test">
-                                        <mat-option value="Lipid Test">Lipid Test</mat-option>
-                                        <mat-option value="Liver Test">Liver Test</mat-option>
-                                        <mat-option value="Blood Test">Blood Test</mat-option>
-                                    </mat-select>
+                                    <input formControlName="email" matInput placeholder="Email" />
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
+
+
+                                <mat-form-field>
+                                    <input formControlName="certificate" matInput placeholder="Certified" />
+                                    <mat-error>This field is manadatory.</mat-error>
                                 </mat-form-field>
 
                             </div>
@@ -82,9 +73,20 @@
 
 
 
+                    <mat-grid-list cols="2" rowHeight="80px">
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <input type="hidden" formControlName="$key">
+                                <mat-form-field>
+                                    <input formControlName="department" matInput placeholder="Department">
+                                    <mat-error>This field is manadatory.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </mat-grid-tile>
+
+                    </mat-grid-list>
                     <br>
                     <!-- Second Grid Start From Here -->
-                    <h4 style="color: black; margin-left: 30px;">Select Patient Address</h4>
 
 
                     <mat-grid-list cols="2" rowHeight="200px">
@@ -93,14 +95,16 @@
                                 <input type="hidden" formControlName="$key">
 
                                 <mat-form-field>
-                                    <input formControlName="home_address" matInput placeholder="Home Address" />
-                                    <mat-error>Enter your Home Address</mat-error>
+                                    <input formControlName="speciality" matInput placeholder="Speciality">
+
                                 </mat-form-field>
 
+
                                 <mat-form-field>
-                                    <input formControlName="pincode" matInput placeholder="pincode" />
-                                    <mat-error>This Field is manadatory</mat-error>
+                                    <input formControlName="degrees" matInput placeholder="Degrees">
+                                    <mat-error>This field is manadatory.</mat-error>
                                 </mat-form-field>
+
 
                             </div>
                         </mat-grid-tile>
@@ -110,48 +114,21 @@
                                 <input type="hidden" formControlName="$key">
 
                                 <mat-form-field>
-                                    <input formControlName="locality" matInput placeholder="Landmark">
-                                    <mat-error>Enter your landmark.</mat-error>
+                                    <input formControlName="training" matInput placeholder="Training" />
+                                    <mat-error>This field is manadatory.</mat-error>
+
+
                                 </mat-form-field>
 
                                 <mat-form-field>
                                     <input formControlName="city" matInput placeholder="City">
-                                    <mat-error>Enter your city name.</mat-error>
                                 </mat-form-field>
 
-                            </div>
-                        </mat-grid-tile>
-                    </mat-grid-list>
 
-                    <!-- Third grid Start from here... -->
-                    <h4 style="color: black; margin-left: 30px;">Select Time Slot</h4>
-
-
-                    <mat-grid-list cols="2" rowHeight="130px">
-                        <mat-grid-tile>
-                            <div class="controles-container">
-                                <input type="hidden" formControlName="$key">
-
-                                <mat-form-field>
-                                    <input formControlName="time" matInput placeholder="Time" />
-                                    <mat-error>This field is manadatory.</mat-error>
-                                </mat-form-field>
 
                             </div>
-                        </mat-grid-tile>
 
-                        <mat-grid-tile>
-                            <div class="controles-container">
-                                <input type="hidden" formControlName="$key">
-                                <mat-form-field>
-                                    <input formControlName="date" matInput [matDatepicker]="picker"
-                                        placeholder="Date of Appointment" />
 
-                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker></mat-datepicker>
-
-                                </mat-form-field>
-                            </div>
 
                         </mat-grid-tile>
                     </mat-grid-list>
@@ -159,7 +136,7 @@
                     <br>
                     <div class="button-row">
                         <button mat-raised-button color="primary" type="submit"
-                            [disabled]="booktestService.form.invalid">
+                            [disabled]="adddoctorsService.form.invalid">
                             Submit
                         </button>
                         <button mat-raised-button color="warn" (click)="onClear()">

@@ -9,7 +9,9 @@ import { HomeComponent } from './auth/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from "app/auth/guards/auth.gaurd";
-import { ContactComponent } from 'app/auth/contact/contact.component'
+import { ContactComponent } from 'app/auth/contact/contact.component';
+import { AboutComponent } from 'app/auth/about/about.component';
+import { WhyusComponent } from 'app/auth/whyus/whyus.component';
 
 
 // const routes: Routes = [
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'whyus', component: WhyusComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
 
   {

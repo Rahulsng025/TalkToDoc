@@ -21,7 +21,7 @@ export class BooktestqueryComponent implements OnInit {
   public displayedColumns = [
     "name",
     "query",
-    "number",
+    "mobile",
     "action"
   ];
 
