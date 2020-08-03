@@ -55,6 +55,7 @@ router.post("/", (req, res, next) => {
         department: req.body.department,
         speciality: req.body.speciality,
         training: req.body.training,
+        degrees: req.body.degrees,
         city: req.body.city
     });
 

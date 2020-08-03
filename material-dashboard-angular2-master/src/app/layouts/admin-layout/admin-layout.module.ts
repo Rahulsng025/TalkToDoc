@@ -42,7 +42,6 @@ import { DoctorListingComponent } from "app/doctor-listing/doctor-listing.compon
 import { DiagnosticCenterComponent } from "app/diagnostic-center/diagnostic-center.component";
 import { HomeCareComponent } from "app/home-care/home-care.component";
 import { MedicalInsuranceComponent } from "app/medical-insurance/medical-insurance.component";
-import { BookAppointmentComponent } from "app/doctor-listing/book-appointment/book-appointment.component";
 import { AppointmentListComponent } from "app/doctor-listing/appointment-list/appointment-list.component";
 import { AppointmentDetailsComponent } from "app/doctor-listing/appointment-list/appointment-details/appointment-details.component"
 import { AdminComponent } from "app/admin/admin.component";
@@ -123,8 +122,6 @@ import { DoctorComponent } from 'app/admin/doctor/doctor.component';
 
     HomeCareComponent,
     MedicalInsuranceComponent,
-
-    BookAppointmentComponent,
     AppointmentListComponent,
     AppointmentDetailsComponent,
     AdminComponent,

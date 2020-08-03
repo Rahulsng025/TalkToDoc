@@ -47,7 +47,14 @@ export class LoginComponent implements OnInit {
       if (data.success) {
         this.authenticationService.storeData(data.token, data.user);
         this.FlashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 500 });
-        this.router.navigate(['/main/dashboard']);
+
+        // role based routing
+        if (this.role == 'users') { this.router.navigate(['/main/dashboard']); }
+        else if (this.role == 'diagnostics') { this.router.navigate(['/main/diagnostic-center']); }
+        else if (this.role == 'doctors') { this.router.navigate(['/main/add-doctors']); }
+        else {
+          this.router.navigate(['/login']);
+        }
       }
       else {
         this.FlashMessage.show(data.msg, {
