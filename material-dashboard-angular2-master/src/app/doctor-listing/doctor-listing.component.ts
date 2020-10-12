@@ -7,6 +7,7 @@ import { DoctorListingService } from "../Services/doctor-listing.service";
 import { DoctorDetailsModel } from "../../app/model/doctor_listing.model";
 import { DoctorsDetailService } from "app/Services/doctors-detail.service"
 import { collectExternalReferences } from "@angular/compiler";
+import { AuthenticationService } from "app/Services/authentication.service"
 
 @Component({
   selector: "app-doctor-listing",
@@ -94,7 +95,8 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
 
   constructor(private doctorlistingService: DoctorListingService,
     private router: Router,
-    private doctorsdetailService: DoctorsDetailService) { }
+    private doctorsdetailService: DoctorsDetailService,
+    private authenticationService: AuthenticationService) { }
 
   // Load a list of all doctors whenever this component is visited.
   ngOnInit(): void {

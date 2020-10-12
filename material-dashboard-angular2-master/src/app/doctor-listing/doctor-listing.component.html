@@ -28,7 +28,8 @@
             <input matInput [(ngModel)]="city" (input)="Searchbycity()">
           </mat-form-field>
 
-          <button mat-raised-button class="btn btn-info pull-right" (click)="onLoad()">Doctors</button>
+          <button *ngIf="authenticationService.loggedIn()" mat-raised-button class="btn btn-info pull-right"
+            (click)="onLoad()">Doctors</button>
 
           <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onSubmit()">Submit</button>
         </div>
