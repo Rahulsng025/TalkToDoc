@@ -14,21 +14,6 @@ import { AboutComponent } from 'app/auth/about/about.component';
 import { WhyusComponent } from 'app/auth/whyus/whyus.component';
 
 
-// const routes: Routes = [
-//   {
-//     path: '',
-//     redirectTo: 'dashboard',
-//     pathMatch: 'full',
-//   }, {
-//     path: '',
-//     component: AdminLayoutComponent,
-//     children: [{
-//       path: '',
-//       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
-//     }]
-//   }
-// ];
-
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
