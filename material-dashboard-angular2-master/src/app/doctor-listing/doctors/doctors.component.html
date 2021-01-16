@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-md-8">
 
-                <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <div class="card">
 
                     <div class="card-header card-header-danger">
                         <h3 class="card-title"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                            style="font-family: CormorantUpright;">
                             {{doctor.name}}</h3>
 
                     </div>
@@ -15,11 +15,11 @@
                     <div class="card-body">
                         <div class="row" style="width: 100%;">
                             <div class="col-md-8">
-                                <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                <h3 style="font-family:  CormorantUpright;">
                                     Profile Description
                                 </h3>
                                 <mat-divider></mat-divider>
-                                <p>{{doctor.profile}} </p>
+                                <p style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">{{doctor.profile}} </p>
                             </div>
                         </div>
 
@@ -27,24 +27,24 @@
                 </div>
 
 
-                <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <div class="card" style="font-family:  CormorantUpright;">
                     <div class="card-body">
                         <div class="row" style="width: 100%;">
                             <div class="col-md-8">
-                                <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                <h3 style="font-family:  CormorantUpright;">
                                     Qualification
                                 </h3>
                                 <mat-divider></mat-divider>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <p>Degrees: {{doctor.degrees}}</p>
-                                        <p>Experience/Training: {{doctor.training}}</p>
+                                        <p style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Degrees: {{doctor.degrees}}</p>
+                                        <p style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Experience/Training: {{doctor.training}}</p>
                                     </div>
 
 
                                     <div class="col-md-4">
-                                        <p>Gender: Male</p>
-                                        <p>Department: {{doctor.department}}</p>
+                                        <p style="font-family: CormorantGaramond; font-size: 17x; text-align: justify; color: #3b3838;">Gender: Male</p>
+                                        <p style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Department: {{doctor.department}}</p>
                                     </div>
 
 
@@ -55,11 +55,11 @@
                     </div>
                 </div>
 
-                <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <div class="card" >
                     <div class="card-body">
                         <div class="row" style="width: 100%;">
                             <div class="col-md-8">
-                                <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                <h3  style="font-family: CormorantUpright;">
                                     Specialties
                                 </h3>
                                 <mat-divider></mat-divider>
@@ -68,7 +68,7 @@
                                         {{doctor.speciality}}
                                     </div>
                                     <br> <br>
-                                    <p style="margin-left: 15px;">Specialty doctors have training in a specific area of
+                                    <p style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Specialty doctors have training in a specific area of
                                         medicine. This allows them
                                         to treat complex health problems that primary care doctors may not be able to.
                                     </p>
@@ -81,22 +81,22 @@
 
             <div class="col-md-4">
 
-                <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <div class="card">
 
                     <div class="card-header card-header-danger">
                         <h4 class="card-title"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                        style="font-family: CormorantUpright;">
                             Contact</h4>
                     </div>
 
                     <div class="card-body">
                         <div class="row" style="width: 100%;">
                             <div class="col-md-4">
-                                <p>Number: {{doctor.mobile}}</p>
+                                <p  style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Number: {{doctor.mobile}}</p>
                                 <mat-divider></mat-divider>
-                                <p>City: {{doctor.city}}</p>
+                                <p  style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">City: {{doctor.city}}</p>
                                 <mat-divider></mat-divider>
-                                <p>Email: {{doctor.email}}</p>
+                                <p  style="font-family: CormorantGaramond; font-size: 17px; text-align: justify; color: #3b3838;">Email: {{doctor.email}}</p>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
             </div>
 
             <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onLoadPage()"
-                style="margin-left: 640px;">
+                style="margin-left: 640px;font-family: CormorantGaramond; font-size: 17px; text-align: justify; ">
                 Book Appointment
             </button>
 

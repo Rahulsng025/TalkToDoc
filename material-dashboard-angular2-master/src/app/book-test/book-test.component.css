@@ -115,3 +115,26 @@ padding : 50px 0;
 	}
 
   /* Add Diagnostic Center End */
+
+    /* Font Family */
+
+    @font-face {
+      font-family: CormorantGaramond;
+      src: url(../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+    }
+    
+    .CormorantGaramond {
+      font-family: CormorantGaramond;
+      color: #292727;
+    }
+    
+    @font-face {
+      font-family: CormorantUpright;
+      src: url(../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
+    }
+    
+    .CormorantUpright {
+      font-family: CormorantUpright;
+      font-size: 22px;
+    }
+    

@@ -5,7 +5,7 @@
 
         <div class="card">
           <div class="card-header card-header-danger">
-            <h3 class="card-title">SEARCH FOR
+            <h3 class="card-title" style="font-family: CormorantGaramond;">SEARCH FOR
               DOCTORS
               IN YOUR LOCALITY</h3>
           </div>
@@ -14,22 +14,22 @@
 
         <div class="example-form">
           <mat-form-field class="example-full-width">
-            <mat-label>Search by name:</mat-label>
+            <mat-label style="font-family: CormorantUpright; font-size: 20px; text-align: justify; color: #3b3838; ">Search by name:</mat-label>
             <input matInput [(ngModel)]="name" (input)="Searchbyname()">
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <mat-label>Search by speciality:</mat-label>
+            <mat-label style="font-family: CormorantUpright; font-size: 20px; text-align: justify; color: #3b3838; ">Search by speciality:</mat-label>
             <input matInput [(ngModel)]="speciality" (input)="Searchbyspeciality()">
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <mat-label>Search by city:</mat-label>
+            <mat-label style="font-family: CormorantUpright; font-size: 20px; text-align: justify; color: #3b3838; ">Search by city:</mat-label>
             <input matInput [(ngModel)]="city" (input)="Searchbycity()">
           </mat-form-field>
 
           <button *ngIf="authenticationService.loggedIn()" mat-raised-button class="btn btn-info pull-right"
-            (click)="onLoad()">Doctors</button>
+            (click)="onLoad()" style="font-family: CormorantUpright;">Doctors</button>
 
           <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="onSubmit()">Submit</button>
         </div>
@@ -37,8 +37,7 @@
 
 
         <br> <br> <br>
-        <div class="card" *ngFor="let eachDoctor of allDoctorDetails"
-          style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <div class="card" *ngFor="let eachDoctor of allDoctorDetails">
 
           <div class="card-header card-header-danger">
             <h4 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
@@ -52,7 +51,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Name" />{{ eachDoctor.name }}
+                    <input matInput placeholder="Name" style="font-family: CormorantUpright; font-size: 20px; text-align: justify; color: #3b3838;">{{ eachDoctor.name }}
                   </mat-form-field>
                 </div>
 

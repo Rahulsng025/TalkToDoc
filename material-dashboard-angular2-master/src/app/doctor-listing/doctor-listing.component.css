@@ -1,3 +1,23 @@
 .example-container .mat-form-field + .mat-form-field {
   margin-left: 8px;
 }
+  /* Font Family */
+
+  @font-face {
+    font-family: CormorantGaramond;
+    src: url(../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+  }
+  
+  .CormorantGaramond {
+    font-family: CormorantGaramond;
+  }
+  
+  @font-face {
+    font-family: CormorantUpright;
+    src: url(../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
+  }
+  
+  .CormorantUpright {
+    font-family: CormorantUpright;
+  }
+  

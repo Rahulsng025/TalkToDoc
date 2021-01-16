@@ -29,11 +29,12 @@ span.req {
 
  .centered {
   background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-  url("https://maxemhealthurgentcare.com/wp-content/uploads/2020/02/Nurse.jpeg");
+  url("../../../assets/slider/walter-otto-PT70CT6mATQ-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat, repeat;
   height: 800px;
   background-attachment: fixed;
+  
   }
    text {
     position: absolute;
@@ -99,5 +100,23 @@ font-weight: 400;
 .copy-right_text .copy_right a {
 color: #5DB2FF;
 }
-    
+
+/* Font Family */
+
+.CormorantGaramond {
+  font-family: CormorantGaramond;
+  color: #3b3838;
+
+}
+
+.CormorantUpright {
+  font-family: CormorantUpright;
+  color: #3b3838;
+  font-size: 25px;
+}
+
+.Allura {
+  font-family: Allura;
+}
+
     

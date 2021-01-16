@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*  Font Family */
+
+@font-face {
+	font-family: Allura;
+	src: url(./assets/Font-Family/Allura-Regular.ttf) format('truetype');
+}
+.Allura {
+	font-family: Allura;
+}
+
+/* Routes Name */
+@font-face {
+	font-family: CormorantGaramond;
+	src: url(./assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+}
+
+.CormorantGaramond {
+	font-family: CormorantGaramond;
+}
+
+/* Heading of Blog */
+@font-face {
+	font-family: CormorantUpright;
+	src: url(./assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
+}
+
+.CormorantUpright {
+	font-family: CormorantUpright;
+}
+
+
+/* Blog Heading */
+@font-face {
+	font-family: Suranna;
+	src: url(./assets/Font-Family/Suranna-Regular.ttf) format('truetype');
+}
+
+.Suranna {
+	font-family: Suranna;
+
+}
+
+
+/* Heading */
+@font-face {
+	font-family: DrSugiyama;
+	src: url(./assets/Font-Family/DrSugiyama-Regular.ttf) format('truetype');
+}
+
+.DrSugiyama {
+	font-family: DrSugiyama;
+
+}
+

@@ -1,28 +1,23 @@
-/* #customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #3f51b5;
-    color: white;
-  } */
-/* 
-  li {
+
+    /* Font Family */
+
+    @font-face {
+      font-family: CormorantGaramond;
+      src: url(../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+    }
     
-      display: inline-block;
-   
-  } */
+    .CormorantGaramond {
+      font-family: CormorantGaramond;
+      color: #292727;
+    }
+    
+    @font-face {
+      font-family: CormorantUpright;
+      src: url(../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
+    }
+    
+    .CormorantUpright {
+      font-family: CormorantUpright;
+      font-size: 22px;
+    }
+    

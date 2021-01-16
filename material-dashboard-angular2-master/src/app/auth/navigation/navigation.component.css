@@ -12,9 +12,6 @@
 .card-body .card-text {
     color: white;
 }
-/* .navbar .navbar-expand-lg .navbar-light{
-  color:#83c4ff;
-} */
 
 .navbar {
     margin-bottom: 0;
@@ -32,6 +29,80 @@
     
 }
 
+/* Introduction of "Welcome to Tok2Dok" Start*/
+.welcome_docmed_area .welcome_thumb{
+  margin-bottom: 100px;
+}
+
+.welcome_docmed_area .welcome_thumb .thumb_1 {
+	left: 0;
+}
+.welcome_docmed_area .welcome_thumb .thumb_1 img {
+	width: 50%;
+  border: 5px solid white;
+  border-radius: 15px 50px;
+}
+@media (max-width: 767px) {
+	.welcome_docmed_area .welcome_thumb .thumb_1 img {
+    width: 100%;
+    
+	}
+}
+
+.welcome_docmed_area .welcome_thumb .thumb_1 {
+  width: 100%;
+
+}
+.welcome_docmed_area .welcome_thumb .thumb_2 {
+
+	position: absolute;
+	bottom: 64px;
+	right: 60px;
+	
+}
+
+.welcome_docmed_area .welcome_thumb .thumb_2 {
+	
+	height: 65%;
+	width: 50%;
+}
+
+.welcome_docmed_area .welcome_thumb .card {
+	height: 100%;
+}
+
+@media (max-width: 767px) {
+	.welcome_docmed_area .welcome_thumb .thumb_2 {
+	
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.welcome_docmed_area .welcome_thumb .thumb_2 {
+		
+		position: absolute;
+		right: 0;
+		bottom: -40px;
+	}
+}
+
+.welcome_docmed_area .welcome_thumb .thumb_2 img {
+	border-radius: 15px 50px;
+	width: 95%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.welcome_docmed_area .welcome_thumb .thumb_2 img {
+		width: 100%;
+	}
+}
+
+
+/* Introduction of "Welcome to Tok2Dok End" */
 
 .navbar .navbar-nav .nav-item .nav-link,.navbar .navbar-nav .nav-item .nav-link:visited {
     color:black;
@@ -39,7 +110,7 @@
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover,.navbar .navbar-nav .nav-item .nav-link:active{
-    color: grey;
+   color: rgb(59, 58, 58);;
    
 }
 .slider {
@@ -64,51 +135,6 @@
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
     z-index: 1;
 }
-/* Sidebar Content */
-
-.welcome_docmed_area .welcome_thumb .thumb_1 {
-    left: 0;
-  }
-  .welcome_docmed_area .welcome_thumb .thumb_1 img {
-    width: 60%;
-  }
-  @media (max-width: 767px) {
-  .welcome_docmed_area .welcome_thumb .thumb_1 img {
-    width: 100%;
-  }
-}
-.welcome_docmed_area .welcome_thumb .thumb_2 {
-    position: absolute;
-    bottom: -94px;
-    right: -37px;
-  }
-
-  @media (max-width: 767px) {
-  .welcome_docmed_area .welcome_thumb .thumb_2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-.welcome_docmed_area .welcome_thumb .thumb_2 {
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-  }
-}
-
-.welcome_docmed_area .welcome_thumb .thumb_2 img {
-    width: 89%;
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    .welcome_docmed_area .welcome_thumb .thumb_2 img {
-        width: 100%;
-      }
-    }
 
     .page-footer {
       font-family: Georgia, 'Times New Roman', Times, serif;
@@ -150,7 +176,48 @@
   margin-right: 20px;
   border-bottom: 2px solid #3C589C;
 }
-/* Contact us */
+/* Font Family */
 
+.CormorantGaramond {
+  font-family: CormorantGaramond;
+  color: #3b3838;
 
+}
+
+.CormorantUpright {
+  font-family: CormorantUpright;
+  color: #3b3838;
+  font-size: 25px;
+}
+.card-body .card-title {
+  font-family: CormorantUpright;
+  color: #3C589C;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.Allura {
+  font-family: Allura;
+}
+
+.card-body .card-text {
+  font-family: CormorantUpright;
+  color: #3b3838;
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+.panel_style {
+  font-family: CormorantUpright;
+  color: #3C589C;
+  font-size: 20px;
  
+}
+.panel_style_body {
+  font-family: CormorantUpright;
+  color: #3b3838;
+  font-size: 17px;
+  text-align: justify;
+  
+ 
+}

@@ -159,3 +159,25 @@ div.third {
     margin-right: 20px;
     border-bottom: 2px solid #3C589C;
 }
+
+/* Font Family */
+
+.CormorantGaramond {
+    font-family: CormorantGaramond;
+    color: #007bff;
+ 
+  
+  }
+  
+  .CormorantUpright {
+    font-family: CormorantUpright;
+    font-size: 18px;
+    text-align: justify;
+   
+  }
+  
+  .Allura {
+    font-family: Allura;
+    font-size: 18px;
+    
+  }

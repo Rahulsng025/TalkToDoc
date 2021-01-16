@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
 </head>
 
+<!-- Nav Link -->
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -18,18 +19,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav  ml-auto ">
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/']">
-                            <mat-icon style="margin:0.5;">home</mat-icon>Home
+                        <a class="nav-link" [routerLink]="['/']"
+                        style="font-size: 15px; font-family: CormorantGaramond; color: rgb(59, 58, 58);">
+                            <mat-icon style="margin:0.5; color: rgb(59, 58, 58);">home</mat-icon>Home
                         </a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/login']">
-                            <mat-icon style="margin-top: 1px;">how_to_reg</mat-icon>Login
+                        <a class="nav-link" [routerLink]="['/login']"
+                        style="font-size: 15px; font-family: CormorantGaramond; color: rgb(59, 58, 58);">
+                            <mat-icon style="margin-top: 1px; color: rgb(59, 58, 58);">how_to_reg</mat-icon>Login
                         </a>
                     </li>
-                    <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/register']">
-                            <mat-icon style="margin-top: 1px;">person_pin</mat-icon>Register
+                    <li class=" nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link" [routerLink]="['/register']"
+                        style="font-size: 15px; font-family: CormorantGaramond; color: rgb(59, 58, 58);">
+                            <mat-icon style="margin-top: 1px; color: rgb(59, 58, 58);">person_pin</mat-icon>Register
                         </a>
                     </li>
                 </ul>
@@ -39,53 +43,64 @@
     </header>
 </body>
 
-
+<!-- NGB-Carousel(Slider) -->
 <ngb-carousel>
     <ng-template ngbSlide>
         <div class="slider">
             <img src="../../assets/slider/slider4.jpg" alt="Random first slide" width="1700" height="800">
         </div>
         <div class="carousel-caption">
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <h2 class="CormorantGaramond" style="color: white;">
                 Healthcare For Whole Family</h2>
-            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+            <p class="CormorantUpright" style="color: white;">
                 Wherever the art of medicine is loved, there is also a love of humanity.
             </p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider3.jpg" alt="Random second slide" width="1800" height="800">
+            <img src="../../../assets/slider/SLIDER3.jpg" alt="Random second slide" width="1800" height="1000">
         </div>
         <div class="carousel-caption">
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <h2 class="CormorantGaramond" style="color: white;">
                 Exceptional Care Close to You</h2>
-            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <p class="CormorantUpright" style="color: white;">
                 Getting out of the hospital is a lot like resigning from a book club. You're not out of it until the
                 computer says you're out of it.</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider1.png" alt="Random third slide" width="1700" height="700">
+            <img src="../../../assets/slider/SLIDER41.jpg" alt="Random third slide" width="1700" height="1100">
         </div>
         <div class="carousel-caption">
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+            <h2 class="CormorantGaramond" style="color: white;">
                 Keeping You Well</h2>
-            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+            <p class="CormorantUpright" style="color: white;">
                 Healing in a matter of time, but it is sometimes also a matter of opportunity</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div class="slider">
-            <img src="../../assets/slider/slider2.jpg" alt="Random fourth slide" width="1700" height="900">
+            <img src="../../../assets/slider/SLIDER5.jpg" alt="Random fourth slide" width="1700" height="1100">
         </div>
         <div class="carousel-caption">
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+            <h2 class="CormorantGaramond" style="color: white;">
                 Better Care and Better Understanding.</h2>
-            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">If
+            <p class="CormorantUpright" style="color: white;">If
                 we could give every individual the right amount of nourishment and exercise, not too little and not
                 too much, we would have found the safest way to health.</p>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="slider">
+            <img src="../../../assets/slider/SLIDER2.jpg" alt="Random fourth slide" width="1700" height="1000">
+        </div>
+        <div class="carousel-caption">
+            <h2 class="CormorantGaramond" style="color: white;">
+                Healthcare For Whole Family.</h2>
+            <p class="CormorantUpright" style="color: white;">If
+                Wherever the art of medicine is loved, there is also a love of humanity..</p>
         </div>
     </ng-template>
 </ngb-carousel>
@@ -107,38 +122,36 @@
             <div class="col-md-6">
                 <div class="welcome_thumb">
                     <div class="thumb_1">
-                        <img src="../../assets/sidebar/sidebar1.png" alt="">
+                        <img src="../../../assets/addition_img/landing1.jpg" alt="">
                     </div>
-                    <div class="thumb_2">
-                        <img src="../../assets/sidebar/sidebar2.jpg" alt="">
+
+                     <div class="thumb_2">
+                        <img src="../../../assets/addition_img/landing2.jpg" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="welcome_docmed_info">
-                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">Welcome to Tok2Dok</h4>
-                    <h1 style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">Best Care For
+                    <h4 class="CormorantGaramond" style="font-size: 30px;">Welcome to Tok2Dok</h4>
+                   <hr>
+                    <h1 class="CormorantGaramond" style="color: #3C589C;">Best Care For
                         Your <br>
                         Good Health</h1><br>
-                    <p
-                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                    <p class="panel_style_body container">
                         For millions of people, Tok2dok is
                         the trusted and familiar home where they know they’ll find a
                         healing touch.It connects them with everything they need to take good care of themselves and
                         their family - assessing health issues, finding the right doctor, booking diagnostic tests,
                         obtaining medicines, storing health records or learning new ways to live healthier.</p><br>
                     <ul>
-                        <li
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                        <li class="panel_style_body container">
                             <i class="flaticon-right"></i> Tok2Dok is at your phone step with same familiar touch where
                             we connect </li><br>
-                        <li
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                        <li class="panel_style_body container">
                             <i class="flaticon-right"></i> We stand because we understand that what it takes for good
                             care of your loved ones with quick services
                         </li><br>
-                        <li
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                        <li class="panel_style_body container">
                             <i class="flaticon-right"></i> Healthcare providers now have an easy way to connect with
                             patients to provide services and to build trust </li>
                     </ul>
@@ -147,7 +160,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 <!-- welcome_docmed_area_end -->
 <br><br><br><br><br>
 <br><br>
@@ -164,22 +177,21 @@
     <div class="row">
         <div class=col-md-6>
 
-            <h2 style="text-align:justify; color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">3
+            <h2 class="CormorantGaramond">3
                 Steps For
                 Better Health</h2>
-            <hr>
+          
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../assets/Step/step1.jpg" class="card-img" alt="...">
+                        <img src="../../assets/Step/step1.jpg" class="card-img" alt="..."
+                        style="margin-top: 10px; margin-left: 7px;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"
-                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            <h5 class="card-title " >
                                 Checkups Available</h5>
-                            <p class="card-text"
-                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                            <p class="card-text">
                                 Some
                                 people
                                 see
@@ -189,8 +201,8 @@
                                 sample
                                 collection at home,digital reports in 24 hours.
                             </p>
-                            <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']"> Book
+                            <p class="card-text"><small class="text-muted" style="font-family: CormorantUpright; font-size: 15px;">Last updated 8 mins ago</small></p>
+                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantUpright; font-size: 15px;"> Book
                                 Test</button>
                         </div>
                     </div>
@@ -199,21 +211,20 @@
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../assets/Step/step2.jpg" class="card-img" alt="...">
+                        <img src="../../assets/Step/step2.jpg" class="card-img" alt="..."
+                        style="margin-top: 10px; margin-left: 7px;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"
-                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            <h5 class="card-title">
                                 Connect With Doctor</h5>
-                            <p class="card-text"
-                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                            <p class="card-text">
                                 Don’t
                                 self
                                 medicate. Talk to an expert. Consult a doctor in less than 2
                                 minutes.Because in Tok2Dok you can easily find a doctor in your locality </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']">Doctor
+                            <p class="card-text"><small class="text-muted" style="font-family: CormorantUpright; font-size: 15px;">Last updated 3 mins ago</small></p>
+                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantUpright; font-size: 15px;">Doctor
                                 Listing</button>
                         </div>
                     </div>
@@ -222,15 +233,14 @@
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../assets/Step/Step3.jpg" class="card-img" alt="...">
+                        <img src="../../assets/Step/Step3.jpg" class="card-img" alt="..."
+                        style="margin-top: 10px; margin-left: 7px;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"
-                                style="color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            <h5 class="card-title">
                                 Appointment Booking</h5>
-                            <p class="card-text"
-                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify; color: #000;">
+                            <p class="card-text">
                                 Now, in
                                 Tok2Dok
                                 you
@@ -239,8 +249,8 @@
                                 download a
                                 PDF
                                 file according to your filling details
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']">Appointment
+                            <p class="card-text"><small class="text-muted"  style="font-family: CormorantUpright; font-size: 15px;">Last updated 3 mins ago</small></p>
+                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantUpright; font-size: 15px;">Appointment
                                 Booking</button>
 
                         </div>
@@ -252,15 +262,15 @@
 
         <!-- Card Start (Right Hand Side Detail) -->
         <div class=col-md-6>
-            <h2 style="text-align:justify; color: #17a2b8; font-family: Georgia, 'Times New Roman', Times, serif;">
+            <h2 class="CormorantGaramond">
                 Find Doctors in top specialities</h2>
-            <hr>
+  
             <br>
             <mat-accordion>
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
+                    <mat-expansion-panel-header >
 
-                        <mat-panel-title style="color: #17a2b8; ">
+                        <mat-panel-title class="panel_style">
                             <mat-icon style="margin-right: 0.2em; ">
                                 home
                             </mat-icon>
@@ -269,8 +279,7 @@
                         </mat-panel-title>
 
                     </mat-expansion-panel-header>
-                    <p
-                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify;">
+                    <p class="panel_style_body">
                         Creating a positive and productive work culture through leadership and
                         maintaining the high quality in the delivery of patient care</p>
                 </mat-expansion-panel>
@@ -280,15 +289,14 @@
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
 
-                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                        <mat-panel-title class="panel_style">
                             <mat-icon style="margin-right: 0.2em;">add_business</mat-icon>
                             Orthodontics
 
                         </mat-panel-title>
 
                     </mat-expansion-panel-header>
-                    <p
-                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify;">
+                    <p class="panel_style_body">
                         Dr.Akhil Agarwal completed his B.D.S. and M.D.S. from the world renowned
                         King George’s Medical College (KGMC),Lucknow in the year 2002 and 2006 respectively.
                         He has been awarded Best Clinical Excellence award in Lingual Residency program, 2016.
@@ -301,15 +309,14 @@
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
 
-                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                        <mat-panel-title class="panel_style">
                             <mat-icon style="margin-right: 0.2em;">import_contacts</mat-icon>
                             Paediatric Haemato-Oncology
 
                         </mat-panel-title>
 
                     </mat-expansion-panel-header>
-                    <p
-                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify;">
+                    <p class="panel_style_body">
                         Dr Vimal Kumar underwent his undergraduate training from the prestigious Madras Medical College,
                         Chennai, and postgraduate training from SMS Medical College, Jaipur where he was awarded
                         GOLD MEDAL as the best outgoing student of the year. He underwent fellowship training in
@@ -323,15 +330,14 @@
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
 
-                        <mat-panel-title style="color: #17a2b8; text-align:center;">
+                        <mat-panel-title class="panel_style">
                             <mat-icon style="margin-right: 0.2em;">medical_services</mat-icon>
                             Transplanation-liver
 
                         </mat-panel-title>
 
                     </mat-expansion-panel-header>
-                    <p
-                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify;">
+                    <p class="panel_style_body">
                         Dr.Noushif is a Liver transplant and Hepato-Pancreato-Biliary Surgeon
                         at Aster Integrated Liver care. He completed his graduation (MBBS)
                         from Calicut Medical College and surgical residency (MS General Surgery)
@@ -358,7 +364,6 @@
     </div>
 </div>
 
-
 <!-- Card End (Right Hand Side Detail) -->
 
 <!-- Line Division Start -->
@@ -374,23 +379,21 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h4 style="font-family: 'Times New Roman', Times, serif; color: #17a2b8;">Tok2Dok</h4>
+                <h4 class="CormorantGaramond"  style="color: #3C589C;">Tok2Dok</h4>
                 <hr>
                 <div class="row">
                     <div class="col l3 s6">
                         <ul>
                             <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/home']"
-                                    style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #000;">home
+                                <a [routerLink]="['/home']" class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #3b3838;">home
                                     </mat-icon>Home
                                 </a>
                             </li>
                             <br>
                             <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/about']"
-                                    style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #000;">person
+                                <a [routerLink]="['/about']"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #3b3838;">person
                                     </mat-icon>About Us
                                 </a>
                             </li>
@@ -399,18 +402,16 @@
                     <div class="col l3 offset-l3 s6">
                         <ul>
                             <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/whyus']"
-                                    style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #000;">person_add
+                                <a [routerLink]="['/whyus']"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #3b3838;">person_add
                                     </mat-icon>
                                     Why Us
                                 </a>
                             </li>
                             <br>
                             <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/contact']"
-                                    style="color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #000;">
+                                <a [routerLink]="['/contact']"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #3b3838;">
                                         contact_phone</mat-icon>
                                     Contact
                                 </a>
@@ -421,34 +422,30 @@
 
             </div>
             <div class="col l4 offset-l2 s12">
-                <h4 style="color: #17a2b8;">Departments</h4>
+                <h4 class="CormorantGaramond" style="color: #3C589C;">Departments</h4>
                 <hr>
                 <ul>
-                    <li><a class="grey-text text-lighten-3"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                            <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">add_business</mat-icon>
+                    <li><a class="grey-text text-lighten-3"  class="panel_style_body">
+                            <mat-icon style="margin-left: 3px; margin-bottom: 5px; ">add_business</mat-icon>
                             Diagnostic
                         </a></li>
-                    <li><a class="grey-text text-lighten-3"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <li><a class="grey-text text-lighten-3"  class="panel_style_body">
                             <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">medical_services</mat-icon>
                             Medical Insurance
                         </a></li>
-                    <li><a class="grey-text text-lighten-3"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <li><a class="grey-text text-lighten-3"  class="panel_style_body">
                             <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">home</mat-icon>Home Care
                         </a></li>
-                    <li><a class="grey-text text-lighten-3"
-                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <li><a class="grey-text text-lighten-3"  class="panel_style_body">
                             <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">science</mat-icon>Test
                             Booking
                         </a></li>
                 </ul>
                 <br>
-                <h4 style="color: #17a2b8;">Address</h4>
+                <h4 class="CormorantGaramond" style="color: #3C589C;">Address</h4>
                 <hr>
-                <p>Contact: 8840110906</p>
-                <p>Email: rahulsingh50219@gmail.com </p>
+                <p class="panel_style_body">Contact: 8840110906</p>
+                <p class="panel_style_body">Email: rahulsingh50219@gmail.com </p>
             </div>
             <br><br>
 
@@ -469,7 +466,7 @@
                 <img src="../../assets/img/tok2doklogo.png" class="card-img" alt="...">
             </div>
             <div class="col-md-10">
-                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: justify;">
+                <p class="panel_style_body">
                     For millions of
                     people, Tok2dok is the trusted and familiar home where they know they’ll find a
                     healing touch. It connects them with everything they need to take good care of themselves and their
