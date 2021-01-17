@@ -157,7 +157,7 @@ div.third {
 }
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
     margin-right: 20px;
-    border-bottom: 2px solid #3C589C;
+    border-bottom: 2px solid black;
 }
 
 /* Font Family */

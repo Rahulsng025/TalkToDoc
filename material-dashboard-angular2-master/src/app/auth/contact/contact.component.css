@@ -1,219 +1,189 @@
-
-    .navbar-brand img {
-        height: 50px;
-    }
-
-    .navbar .navbar-nav .nav-item .nav-link,.navbar .navbar-nav .nav-item .nav-link:visited {
-        color:black;
-        margin-right: 20px;
-    }
-    
-    .navbar .navbar-nav .nav-item .nav-link:hover,.navbar .navbar-nav .nav-item .nav-link:active{
-        color: grey;
-       
-    }
-
-    .navbar .navbar-nav .nav-item .nav-link:link,.navbar .navbar-nav .nav-item .nav-link:visited{
-        color: rgba(0,0,0,1);
-        margin-right: 20px;
-      }
-      .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
-        margin-right: 20px;
-        border-bottom: 2px solid #3C589C;
-      }
+.centered {
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url(E:\Talk2Doc\material-dashboard-angular2-master\src\assets\login\log.jpg);
+    background-size: cover;
+    height: 150vh;
+    background-attachment: fixed;
+    background-position: center;
       
-    body {
-        margin:0;
-        color:#edf3ff;
-        background:#c8c8c8;
-        background:url(https://hdqwalls.com/download/material-design-4k-2048x1152.jpg) fixed;
-        background-size: cover;
-        font:600 16px/18px 'Open Sans',sans-serif;
-    }
-    :after,:before{box-sizing:border-box}
-    .clearfix:after,.clearfix:before{content:'';display:table}
-    .clearfix:after{clear:both;display:block}
-    a{color:inherit;text-decoration:none}
-    
-    .login-wrap{
-        width: 100%;
-        margin:auto;
-        max-width:510px;
-        min-height:510px;
-        position:relative;
-        background:url(https://maxcdn.icons8.com/app/uploads/2016/03/material-1-1000x563.jpg) no-repeat center;
-        background-size: cover;
-        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-    }
-    .login-html{
-        width:100%;
-        height:100%;
-        position:absolute;
-        padding:90px 70px 50px 70px;
-        background:rgba(0,0,0,0.5);
-    }
-    .login-html .sign-in-htm,
-    .login-html .for-pwd-htm{
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        position:absolute;
-        -webkit-transform:rotateY(180deg);
-                transform:rotateY(180deg);
-        -webkit-backface-visibility:hidden;
-                backface-visibility:hidden;
-        -webkit-transition:all .4s linear;
-        transition:all .4s linear;
-    }
-    .login-html .sign-in,
-    .login-html .for-pwd,
-    .login-form .group .check{
-        display:none;
-    }
-    .login-html .tab,
-    .login-form .group .label,
-    .login-form .group .button{
-        text-transform:uppercase;
-    }
-    .login-html .tab{
-        font-size:22px;
-        margin-right:15px;
-        padding-bottom:5px;
-        margin:0 15px 10px 0;
-        display:inline-block;
-        border-bottom:2px solid transparent;
-    }
-    .login-html .sign-in:checked + .tab,
-    .login-html .for-pwd:checked + .tab{
-        color:#fff;
-        border-color:#1161ee;
-    }
-    .login-form{
-        min-height:345px;
-        position:relative;
-        -webkit-perspective:1000px;
-                perspective:1000px;
-        -webkit-transform-style:preserve-3d;
-                transform-style:preserve-3d;
-    }
-    .login-form .group{
-        margin-bottom:15px;
-    }
-    .login-form .group .label,
-    .login-form .group .input,
-    .login-form .group .button{
-        width:100%;
-        color:#fff;
-        display:block;
-    }
-    .login-form .group .input,
-    .login-form .group .button{
-        border:none;
-        padding:15px 20px;
-        border-radius:25px;
-        background:rgba(255,255,255,.1);
-    }
-  
-    .login-form .group .label{
-        color:#aaa;
-        font-size:12px;
-    }
-    .login-form .group .button{
-        background:#1161ee;
-    }
-    .login-form .group label .icon{
-        width:15px;
-        height:15px;
-        border-radius:2px;
-        position:relative;
-        display:inline-block;
-        background:rgba(255,255,255,.1);
-    }
-    .login-form .group label .icon:before,
-    .login-form .group label .icon:after{
-        content:'';
-        width:10px;
-        height:2px;
-        background:#fff;
-        position:absolute;
-        -webkit-transition:all .2s ease-in-out 0s;
-        transition:all .2s ease-in-out 0s;
-    }
-    .login-form .group label .icon:before{
-        left:3px;
-        width:5px;
-        bottom:6px;
-        -webkit-transform:scale(0) rotate(0);
-                transform:scale(0) rotate(0);
-    }
-    .login-form .group label .icon:after{
-        top:6px;
-        right:0;
-        -webkit-transform:scale(0) rotate(0);
-                transform:scale(0) rotate(0);
-    }
-    .login-form .group .check:checked + label{
-        color:#fff;
-    }
-    .login-form .group .check:checked + label .icon{
-        background:#1161ee;
-    }
-    .login-form .group .check:checked + label .icon:before{
-        -webkit-transform:scale(1) rotate(45deg);
-                transform:scale(1) rotate(45deg);
-    }
-    .login-form .group .check:checked + label .icon:after{
-        -webkit-transform:scale(1) rotate(-45deg);
-                transform:scale(1) rotate(-45deg);
-    }
-    .login-html .sign-in:checked + .tab + .for-pwd + .tab + .login-form .sign-in-htm{
-        -webkit-transform:rotate(0);
-                transform:rotate(0);
-    }
-    .login-html .for-pwd:checked + .tab + .login-form .for-pwd-htm{
-        -webkit-transform:rotate(0);
-                transform:rotate(0);
-    }
-    
-    .hr{
-        height:2px;
-        margin:60px 0 50px 0;
-        background:rgba(255,255,255,.2);
-    }
-    .foot-lnk{
-        text-align:center;
-    }
-
-    .page-footer {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-  
-  .copy-right_text {
-    padding-bottom: 30px;
-    background: #000000;
   }
   
-  
-  .copy-right_text .footer_border {
-    padding-bottom: 30px;
+  .navbar .navbar-nav .nav-item .nav-link:link,.navbar .navbar-nav .nav-item .nav-link:visited{
+    color: rgba(0,0,0,1);
+    margin-right: 20px;
+  }
+  .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
+    margin-right: 20px;
+    border-bottom: 2px solid black;
   }
   
+  /* Font Family */
   
-  .copy-right_text .copy_right {
+  .CormorantGaramond {
+    font-family: CormorantGaramond;
+    color: #007bff;
+  
+  }
+  
+  .CormorantUpright {
+    font-family: CormorantUpright;
+    font-size: 18px;
+    text-align: justify;
+  }
+  
+  .Allura {
+    font-family: Allura;
+  }
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+      
+  /* Registration Form Example */
+  
+  #logreg-forms{
+    
+    width:412px;
+    margin-bottom: 70px;
+    margin:03vh auto;
+    background-color:b#f3f3f3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  #logreg-forms form {
+    width: 100%;
+    max-width: 410px;
+    padding: 15px;
+    margin: auto;
+  }
+  #logreg-forms .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
     font-size: 16px;
-    color: #919191;
-    margin-bottom: 0;
-    font-weight: 400;
+  }
+  #logreg-forms .form-control:focus { z-index: 2; }
+  #logreg-forms .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #logreg-forms .form-signin input[type="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   
-  @media (max-width: 767px) {
+  #logreg-forms .social-login{
+    width:390px;
+    margin:0 auto;
+    margin-bottom: 14px;
+  }
+  #logreg-forms .social-btn{
+    font-weight: 100;
+    color:white;
+    width:190px;
+    font-size: 0.9rem;
+  }
   
-    .copy-right_text .copy_right {
-      font-size: 14px;
+  #logreg-forms a{
+    display: block;
+    padding-top:10px;
+    color:lightseagreen;
+  }
+  
+  #logreg-form .lines{
+    width:200px;
+    border:1px solid red;
+  }
+  
+  
+  #logreg-forms button[type="submit"]{ margin-top:10px; }
+  
+  #logreg-forms .facebook-btn{  background-color:#3C589C; }
+  
+  #logreg-forms .google-btn{ background-color: #DF4B3B; }
+  
+  #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
+  
+  #logreg-forms .form-signup .social-btn{ width:210px; }
+  
+  #logreg-forms .form-signup input { margin-bottom: 2px;}
+  
+  .form-signup .social-login{
+    width:210px !important;
+    margin: 0 auto;
+  }
+  
+  
+  
+  @media screen and (max-width:500px){
+    #logreg-forms{
+        width:300px;
     }
+    
+    #logreg-forms  .social-login{
+        width:200px;
+        margin:0 auto;
+        margin-bottom: 10px;
+    }
+    #logreg-forms  .social-btn{
+        font-size: 1.3rem;
+        font-weight: 100;
+        color:white;
+        width:200px;
+        height: 56px;
+        
+    }
+    #logreg-forms .social-btn:nth-child(1){
+        margin-bottom: 5px;
+    }
+    #logreg-forms .social-btn span{
+        display: none;
+    }
+    #logreg-forms  .facebook-btn:after{
+        content:'Facebook';
+    }
+  
+    #logreg-forms  .google-btn:after{
+        content:'Google+';
+    }
+    
+  }
+  #logreg-forms {
+    overflow: hidden;
+  }
+  #logreg-forms {
+    
+    float: right;
+    clear: both;
   }
   
-  .copy-right_text .copy_right a {
-    color: #5DB2FF;
+  header {
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url(E:\Talk2Doc\material-dashboard-angular2-master\src\assets\login\log.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+      
+  }
+
+  
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    /* if you want it vertically middle of the navbar. */
+  }
+  
+  
+  div.third {
+    background: rgba(117, 200, 118, 0.3);
   }
