@@ -174,24 +174,41 @@
 }
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
   margin-right: 20px;
-  border-bottom: 2px solid #3C589C;
+  border-bottom: 2px solid black;
 }
 /* Font Family */
 
-.CormorantGaramond {
-  font-family: CormorantGaramond;
-  color: #3b3838;
+@font-face {
+	font-family: CormorantGaramond;
+	src: url(../../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+}
 
+.CormorantGaramond {
+	font-family: CormorantGaramond;
+}
+
+@font-face {
+	font-family: Suranna;
+	src: url(../../../assets/Font-Family/Suranna-Regular.ttf) format('truetype');
+}
+
+.Suranna {
+	font-family: Suranna;
+
+}
+
+/* Heading of Blog */
+@font-face {
+	font-family: CormorantUpright;
+	src: url(../../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
 }
 
 .CormorantUpright {
-  font-family: CormorantUpright;
-  color: #3b3838;
-  font-size: 25px;
+	font-family: CormorantUpright;
 }
 .card-body .card-title {
   font-family: CormorantUpright;
-  color: #3C589C;
+  color: #758fd1;
   font-size: 25px;
   margin-bottom: 20px;
 }
@@ -200,10 +217,20 @@
   font-family: Allura;
 }
 
+@font-face {
+	font-family: DrSugiyama;
+	src: url(../../../assets/Font-Family/DrSugiyama-Regular.ttf) format('truetype');
+}
+
+.DrSugiyama {
+	font-family: DrSugiyama;
+
+}
+
 .card-body .card-text {
   font-family: CormorantUpright;
   color: #3b3838;
-  font-size: 17px;
+  font-size: 20px;
   text-align: justify;
   margin-bottom: 15px;
 }
@@ -216,8 +243,14 @@
 .panel_style_body {
   font-family: CormorantUpright;
   color: #3b3838;
-  font-size: 17px;
+  font-size: 22px;
   text-align: justify;
   
  
+}
+
+.expansion_block{
+  font-family: CormorantUpright;
+  color: #3b3838;
+  font-size: 20px;
 }

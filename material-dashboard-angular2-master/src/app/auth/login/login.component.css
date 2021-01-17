@@ -130,6 +130,7 @@
     left: 30%;
     transform: translate(-50%, -50%);
     color: white;
+   
   }
 
   .logo {
@@ -162,22 +163,25 @@ div.third {
 
 /* Font Family */
 
+
+@font-face {
+	font-family: CormorantGaramond;
+	src: url(../../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+}
+
 .CormorantGaramond {
     font-family: CormorantGaramond;
-    color: #007bff;
- 
-  
-  }
-  
-  .CormorantUpright {
+    color: #758fd1;
+    font-size: 37px;
+}
+
+/* Heading of Blog */
+@font-face {
+	font-family: CormorantUpright;
+	src: url(../../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
+}
+
+.CormorantUpright {
     font-family: CormorantUpright;
-    font-size: 18px;
-    text-align: justify;
-   
-  }
-  
-  .Allura {
-    font-family: Allura;
-    font-size: 18px;
-    
-  }
+    font-size: 22px;
+}

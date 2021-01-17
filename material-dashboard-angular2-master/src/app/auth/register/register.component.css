@@ -2,7 +2,7 @@
   background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
   url(E:\Talk2Doc\material-dashboard-angular2-master\src\assets\login\log.jpg);
   background-size: cover;
-  height: 150vh;
+  height: 130vh;
   background-attachment: fixed;
   background-position: center;
     
@@ -19,20 +19,29 @@
 
 /* Font Family */
 
-.CormorantGaramond {
-  font-family: CormorantGaramond;
-  color: #007bff;
+/* Font Family */
 
+
+@font-face {
+	font-family: CormorantGaramond;
+	src: url(../../../assets/Font-Family/CormorantGaramond-Medium.ttf) format('truetype');
+}
+
+.CormorantGaramond {
+    font-family: CormorantGaramond;
+    color: #758fd1;
+    font-size: 37px;
+}
+
+/* Heading of Blog */
+@font-face {
+	font-family: CormorantUpright;
+	src: url(../../../assets/Font-Family/CormorantUpright-Medium.ttf) format('truetype');
 }
 
 .CormorantUpright {
-  font-family: CormorantUpright;
-  font-size: 18px;
-  text-align: justify;
-}
-
-.Allura {
-  font-family: Allura;
+    font-family: CormorantUpright;
+    font-size: 22px;
 }
 .hero-text {
   text-align: left;
