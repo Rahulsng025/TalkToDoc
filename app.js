@@ -34,7 +34,7 @@ mongoose.connect(
   process.env.MONGO_ATLAS_PW +
   "@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
   {
-    useNewUrlParser: true,
+    useNewUrlParser: true,useUnifiedTopology: true
   }
 );
 
