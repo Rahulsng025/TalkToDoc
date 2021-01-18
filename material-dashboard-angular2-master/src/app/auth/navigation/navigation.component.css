@@ -228,9 +228,9 @@
 }
 
 .card-body .card-text {
-  font-family: CormorantUpright;
-  color: #3b3838;
-  font-size: 20px;
+  font-family: Suranna;
+  color: #252424;
+  font-size: 19px;
   text-align: justify;
   margin-bottom: 15px;
 }
@@ -241,16 +241,16 @@
  
 }
 .panel_style_body {
-  font-family: CormorantUpright;
-  color: #3b3838;
-  font-size: 22px;
+  font-family: Suranna;
+  color: #252424;
+  font-size: 20px;
   text-align: justify;
   
  
 }
 
 .expansion_block{
-  font-family: CormorantUpright;
-  color: #3b3838;
+  font-family: Suranna;
+  color: #252424;
   font-size: 20px;
 }
