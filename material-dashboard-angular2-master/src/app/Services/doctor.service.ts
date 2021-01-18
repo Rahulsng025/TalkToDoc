@@ -17,10 +17,10 @@ export class DoctorService {
   constructor(private http: HttpClient) { }
 
   getdoctors() {
-    return this.http.get(`${this.uri}/doctors`);
+    return this.http.get(`/doctors`);
   }
 
   deletedoctors(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/doctors/${_id}`);
+    return this.http.delete(`/doctors/${_id}`);
   }
 }

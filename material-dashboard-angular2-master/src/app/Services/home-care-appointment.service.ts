@@ -44,18 +44,18 @@ export class HomeCareAppointmentService {
     });
   }
   gethomecareappointment() {
-    return this.http.get(`${this.uri}/home_care_appointment`);
+    return this.http.get(`/home_care_appointment`);
   }
   gethomecareappointmentById(Id: any) {
-    return this.http.get(`${this.uri}/home_care_appointment/${Id}`);
+    return this.http.get(`/home_care_appointment/${Id}`);
   }
 
   addhomecareappointment(_newHomeCareAppointmentDetails: HomeCareModel) {
-    return this.http.post(`${this.uri}/home_care_appointment/`, _newHomeCareAppointmentDetails);
+    return this.http.post(`/home_care_appointment/`, _newHomeCareAppointmentDetails);
   }
 
   deletehomecareappointment(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/home_care_appointment/${_id}`);
+    return this.http.delete(`/home_care_appointment/${_id}`);
   }
 
 

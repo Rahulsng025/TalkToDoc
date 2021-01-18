@@ -44,15 +44,15 @@ export class ContactService {
 
 
   getcontact() {
-    return this.http.get(`${this.uri}/contact`);
+    return this.http.get(`/contact`);
   }
 
   deletecontact(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/contact/${_id}`);
+    return this.http.delete(`/contact/${_id}`);
   }
   postcontact(newContactDetails: ContactModel) {
     // API call to add a new doctor in the database.
-    return this.http.post(`${this.uri}/contact/`, newContactDetails);
+    return this.http.post(`/contact/`, newContactDetails);
   }
 }
 

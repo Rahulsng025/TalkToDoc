@@ -52,21 +52,21 @@ export class AddDoctorsService {
 
   getadddoctors(): Observable<AddDoctorsModel[]> {
     return this.http.get<AddDoctorsModel[]>(
-      `${this.uri}/add_doctors`
+      `/add_doctors`
     );
   }
   getadddoctorsById(Id: any): Observable<AddDoctorsModel[]> {
     return this.http.get<AddDoctorsModel[]>(
-      `${this.uri}/add_doctors/${Id}`
+      `/add_doctors/${Id}`
     );
   }
   addadddoctors(newdoctorsDetails: AddDoctorsModel) {
-    return this.http.post(`${this.uri}/add_doctors/`, newdoctorsDetails);
+    return this.http.post(`/add_doctors/`, newdoctorsDetails);
   }
 
 
   deleteadddoctors(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/add_doctors/${_id}`);
+    return this.http.delete(`/add_doctors/${_id}`);
   }
 
 

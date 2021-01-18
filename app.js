@@ -30,9 +30,7 @@ const adddoctorsRoutes = require('./api/routes/add_doctors');
 
 //Mongoose Connection
 mongoose.connect(
-  "mongodb+srv://rahulsng25:" +
-  process.env.MONGO_ATLAS_PW +
-  "@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
+  "mongodb+srv://rahulsng25:7843914275@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,useUnifiedTopology: true
   }
@@ -79,6 +77,13 @@ app.use("/booktestquery", booktestqueryRoutes);
 app.use("/booktestcontact", booktestcontactRoutes);
 app.use("/contact", contactRoutes);
 app.use("/add_doctors", adddoctorsRoutes);
+
+// For deploying the application
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 
 
 module.exports = app;

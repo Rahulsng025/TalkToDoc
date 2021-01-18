@@ -53,27 +53,27 @@ export class AppointmentListingService {
 
   getbookappointment(): Observable<AppointmentDetailsModel[]> {
     return this.http.get<AppointmentDetailsModel[]>(
-      `${this.uri}/book_appointment`
+      `/book_appointment`
     );
   }
   getbookappointmentById(Id: any): Observable<AppointmentDetailsModel[]> {
     return this.http.get<AppointmentDetailsModel[]>(
-      `${this.uri}/book_appointment/${Id}`
+      `/book_appointment/${Id}`
     );
   }
   addbookappointment(newAppointment: AppointmentDetailsModel) {
-    return this.http.post(`${this.uri}/book_appointment/`, newAppointment);
+    return this.http.post(`/book_appointment/`, newAppointment);
   }
 
 
   deletebookappointment(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/book_appointment/${_id}`);
+    return this.http.delete(`/book_appointment/${_id}`);
   }
 
   updateAppointment(_id: string, newValues: AppointmentDetailsModel): Observable<any> {
     console.log("Passing ID (in Service): " + _id);
     console.log(newValues);
-    return this.http.patch(`${this.uri}/book_appointment/${_id}`, newValues);
+    return this.http.patch(`/book_appointment/${_id}`, newValues);
   }
 
 }

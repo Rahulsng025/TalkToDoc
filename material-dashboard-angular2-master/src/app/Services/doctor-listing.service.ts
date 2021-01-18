@@ -28,26 +28,26 @@ export class DoctorListingService {
   // stores details for a new doctor which is to be added.
   addDoctorListing(newDoctorDetails: DoctorDetailsModel) {
     // API call to add a new doctor in the database.
-    return this.http.post(`${this.uri}/doctor_listing/`, this.newDoctorDetails);
+    return this.http.post(`/doctor_listing/`, this.newDoctorDetails);
   }
 
 
   // returns a list of all the doctors.
   // return type is Observable.
   getDoctorsList() {
-    return this.http.get(`${this.uri}/doctor_listing`);
+    return this.http.get(`/doctor_listing`);
 
   }
 
 
   // return type is Observable.
   getDoctorListingById(Id: any) {
-    return this.http.get(`${this.uri}/doctor_listing/${Id}`);
+    return this.http.get(`/doctor_listing/${Id}`);
   }
 
   // return type is Observable.
   deleteDoctorListing(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/doctor_listing/${_id}`);
+    return this.http.delete(`/doctor_listing/${_id}`);
   }
 
 

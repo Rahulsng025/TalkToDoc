@@ -17,21 +17,21 @@ export class BookTestQueryService {
   constructor(private http: HttpClient) { }
 
   getbooktestquery() {
-    return this.http.get(`${this.uri}/booktestquery`);
+    return this.http.get(`/booktestquery`);
   }
 
   getbooktestqueryId(Id: any) {
-    return this.http.get(`${this.uri}/booktestquery/${Id}`);
+    return this.http.get(`/booktestquery/${Id}`);
   }
 
   postbooktestquery(newBookTestDetails: BookTestQueryModel) {
     console.log('Sending POST request..');
     console.log(newBookTestDetails);
-    return this.http.post(`${this.uri}/booktestquery/`, newBookTestDetails);
+    return this.http.post(`/booktestquery/`, newBookTestDetails);
   }
 
   deletebooktestquery(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/booktestquery/${_id}`);
+    return this.http.delete(`/booktestquery/${_id}`);
   }
 
 }

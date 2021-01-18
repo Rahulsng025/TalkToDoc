@@ -63,19 +63,19 @@ export class BookTestService {
 
 
   getbooktest() {
-    return this.http.get(`${this.uri}/book_test`);
+    return this.http.get(`/book_test`);
   }
 
   getbooktestbuId(Id: any) {
-    return this.http.get(`${this.uri}/book_test/${Id}`);
+    return this.http.get(`/book_test/${Id}`);
   }
 
   postbooktest(_newBookTestDetails: BookTestModel) {
-    return this.http.post(`${this.uri}/book_test/`, _newBookTestDetails);
+    return this.http.post(`/book_test/`, _newBookTestDetails);
   }
 
   deletebooktest(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/book_test/${_id}`);
+    return this.http.delete(`/book_test/${_id}`);
   }
 
 

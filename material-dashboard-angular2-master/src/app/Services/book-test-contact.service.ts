@@ -15,18 +15,18 @@ export class BookTestContactService {
   constructor(private http: HttpClient) { }
 
   getbooktestcontact() {
-    return this.http.get(`${this.uri}/booktestcontact`);
+    return this.http.get(`/booktestcontact`);
   }
 
   getbooktestcontactId(Id: any) {
-    return this.http.get(`${this.uri}/booktestcontact/${Id}`);
+    return this.http.get(`/booktestcontact/${Id}`);
   }
 
   postbooktestcontact(_newBookTestContact: BookTestContactModel) {
-    return this.http.post(`${this.uri}/booktestcontact/`, _newBookTestContact);
+    return this.http.post(`/booktestcontact/`, _newBookTestContact);
   }
 
   deletebooktestcontact(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/booktestcontact/${_id}`);
+    return this.http.delete(`/booktestcontact/${_id}`);
   }
 }

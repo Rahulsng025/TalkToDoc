@@ -42,18 +42,18 @@ export class MedicalInsuranceService {
 
 
   getmedicalinsurance() {
-    return this.http.get(`${this.uri}/medical_insurance`);
+    return this.http.get(`/medical_insurance`);
   }
 
   getmedicalinsuranceById(Id: any) {
-    return this.http.get(`${this.uri}/medical_insurance/${Id}`);
+    return this.http.get(`/medical_insurance/${Id}`);
   }
 
   addmedicalinsurance(allMedicalInsuranceDetails: MedicalInsuranceModel) {
-    return this.http.post(`${this.uri}/medical_insurance/`, allMedicalInsuranceDetails);
+    return this.http.post(`/medical_insurance/`, allMedicalInsuranceDetails);
   }
   deletemedicalinsurance(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/medical_insurance/${_id}`);
+    return this.http.delete(`/medical_insurance/${_id}`);
   }
 
 }
