@@ -212,7 +212,10 @@
   font-size: 25px;
   margin-bottom: 20px;
 }
-
+@font-face {
+	font-family: Allura;
+	src: url(../../../assets/Font-Family/Allura-Regular.ttf) format('truetype');
+}
 .Allura {
   font-family: Allura;
 }
@@ -251,6 +254,7 @@
 
 .expansion_block{
   font-family: Suranna;
+  text-align: justify;
   color: #252424;
-  font-size: 20px;
+  font-size: 18px;
 }
