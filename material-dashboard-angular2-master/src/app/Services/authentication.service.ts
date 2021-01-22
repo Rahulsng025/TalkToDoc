@@ -27,7 +27,7 @@ export class AuthenticationService {
   registerUser(data: { name: String; number: String; gender: String; email: String; username: String; password: String; }, role: string) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post( 'http://localhost:8080/' + role + '/register', data, { headers: headers })
+    return this.http.post(  + role + '/register', data, { headers: headers })
       .map(res => res.json());
   }
 
@@ -44,7 +44,7 @@ export class AuthenticationService {
     console.log(role);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post( 'http://localhost:8080/' + role + '/authenticate', data, { headers: headers })
+    return this.http.post( + role + '/authenticate', data, { headers: headers })
       .map(res => res.json());
   }
 
@@ -57,7 +57,7 @@ export class AuthenticationService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get( 'http://localhost:8080/' + role + '/profile', { headers: headers })
+    return this.http.get(  + role + '/profile', { headers: headers })
       .map(res => res.json());
   }
 
