@@ -30,8 +30,7 @@ export class RegisterComponent implements OnInit {
 	ngOnInit(): void {}
 	onRegisterSubmit() {
 		if (this.role != 'doctors') {
-			console.log('IF condition');
-
+      console.log(`**** Role: ${this.role} *******`);
 			const user = {
 				name: this.name,
 				number: this.number,
@@ -41,9 +40,7 @@ export class RegisterComponent implements OnInit {
 				password: this.password
 			};
 			this.selectedrole = user;
-			console.log('Role selected: ' + this.selectedrole);
 		} else {
-			console.log('Else condition', this.role);
 			const doctor = {
 				name: this.name,
 				number: this.number,
@@ -53,7 +50,6 @@ export class RegisterComponent implements OnInit {
 				password: this.password
 			};
 			this.selectedrole = doctor;
-			console.log('Role selected: ' + this.selectedrole);
 		}
 
 		if (!this.validateService.validateRegister(this.selectedrole)) {
@@ -69,7 +65,6 @@ export class RegisterComponent implements OnInit {
 		}
 		//Register User
 		this.authenticationService.registerUser(this.selectedrole, this.getRole()).subscribe((data) => {
-			console.log('Authentication Service called');
 			if (data.success) {
 				this.flashMessagesService.show('You are now registered and can now login', {
 					cssClass: 'alert-success',
