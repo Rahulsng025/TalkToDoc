@@ -43,7 +43,7 @@ export class AuthenticationService {
   authenticateUser(data: { username: String; password: String; }, role: string) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post( + role + '/authenticate', data, { headers: headers })
+    return this.http.post(role + '/authenticate', data, { headers: headers })
       .map(res => res.json());
   }
 
