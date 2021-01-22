@@ -257,17 +257,17 @@ var AuthenticationService = /** @class */ (function () {
     AuthenticationService.prototype.registerUser = function (data, role) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(+role + '/register', data, { headers: headers })
+        console.log('******' + role);
+        return this.http.post('localhost:8080/' + role + '/register', data, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     //For user and doctor both registration
     //For user authentication
     AuthenticationService.prototype.authenticateUser = function (data, role) {
-        console.log('In authenticateUser function:');
-        console.log(role);
+        console.log('Auth User called');
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post(+role + '/authenticate', data, { headers: headers })
+        return this.http.post('localhost:8080/' + role + '/authenticate', data, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     //For doctor authentication
@@ -560,7 +560,8 @@ var ValidateService = /** @class */ (function () {
     };
     ValidateService.prototype.validateEmail = function (email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
+        var re2 = /^[A-Za-z][A-Za-z0-9]{4, 20}@[a-z]{2, 6}.[a-z]{2, 3}$/;
+        return re2.test(email);
     };
     ValidateService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1529,48 +1530,52 @@ var RegisterComponent = /** @class */ (function () {
         this.authenticationService = authenticationService;
         this.router = router;
     }
-    RegisterComponent.prototype.ngOnInit = function () {
-    };
+    RegisterComponent.prototype.ngOnInit = function () { };
     RegisterComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
-        if (this.role !== 'doctors') {
-            console.log('IF condition');
+        if (this.role != 'doctors') {
+            console.log("**** Role: " + this.role + " *******");
             var user = {
                 name: this.name,
                 number: this.number,
                 gender: this.gender,
                 email: this.email,
                 username: this.username,
-                password: this.password,
+                password: this.password
             };
             this.selectedrole = user;
         }
         else {
-            console.log('Else condition');
             var doctor = {
                 name: this.name,
                 number: this.number,
                 gender: this.gender,
                 email: this.email,
                 username: this.username,
-                password: this.password,
+                password: this.password
             };
             this.selectedrole = doctor;
         }
         if (!this.validateService.validateRegister(this.selectedrole)) {
             this.flashMessagesService.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
             this.flashMessagesService.grayOut(true);
-            return false;
+            // return false;
         }
         //Valid Email
+        console.log(this.selectedrole.email);
         if (!this.validateService.validateEmail(this.selectedrole.email)) {
             this.flashMessagesService.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
+            // return false;
         }
         //Register User
+        console.log("Code reached to line 67");
         this.authenticationService.registerUser(this.selectedrole, this.getRole()).subscribe(function (data) {
+            console.log('reached at 71');
             if (data.success) {
-                _this.flashMessagesService.show('You are now registered and can now login', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessagesService.show('You are now registered and can now login', {
+                    cssClass: 'alert-success',
+                    timeout: 3000
+                });
                 _this.router.navigate(['/login']);
             }
             else {
@@ -1580,15 +1585,25 @@ var RegisterComponent = /** @class */ (function () {
         });
     };
     RegisterComponent.prototype.getRole = function () {
-        if (this.role === "doctors")
-            return "doctors";
-        else if (this.role === "users")
-            return "users";
-        else
-            return "diagnostics";
+        if (this.role === 'doctors') {
+            console.log('Role is doctor');
+            return 'doctors';
+        }
+        else if (this.role === 'users') {
+            console.log('Role is user');
+            return 'users';
+        }
+        else {
+            console.log('Role is diagnosis');
+            return 'diagnosis';
+        }
     };
     RegisterComponent.prototype.submit = function () {
-        this.router.navigate[('home')];
+        this.router.navigate['home'];
+    };
+    // function to give a sense that things are getting better and fixed.
+    RegisterComponent.prototype.test = function () {
+        console.log("Form submitted");
     };
     RegisterComponent.ctorParameters = function () { return [
         { type: app_Services_validate_service__WEBPACK_IMPORTED_MODULE_1__["ValidateService"] },

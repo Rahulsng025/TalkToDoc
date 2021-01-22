@@ -55,16 +55,19 @@ export class RegisterComponent implements OnInit {
 		if (!this.validateService.validateRegister(this.selectedrole)) {
 			this.flashMessagesService.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
 			this.flashMessagesService.grayOut(true);
-			return false;
+			// return false;
 		}
 
-		//Valid Email
+    //Valid Email
+    console.log(this.selectedrole.email);
 		if (!this.validateService.validateEmail(this.selectedrole.email)) {
 			this.flashMessagesService.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
-			return false;
+			// return false;
 		}
-		//Register User
+    //Register User
+    console.log("Code reached to line 67");
 		this.authenticationService.registerUser(this.selectedrole, this.getRole()).subscribe((data) => {
+      console.log('reached at 71');
 			if (data.success) {
 				this.flashMessagesService.show('You are now registered and can now login', {
 					cssClass: 'alert-success',
@@ -80,9 +83,18 @@ export class RegisterComponent implements OnInit {
 	}
 
 	getRole() {
-		if (this.role === 'doctors') return 'doctors';
-		else if (this.role === 'users') return 'users';
-		else return 'diagnostics';
+		if (this.role === 'doctors') {
+      console.log('Role is doctor');
+      return 'doctors'
+    }
+		else if (this.role === 'users') {
+      console.log('Role is user');
+      return 'users';
+    }
+		else {
+      console.log('Role is diagnosis');
+      return 'diagnosis';
+    }
 	}
 
 	submit() {

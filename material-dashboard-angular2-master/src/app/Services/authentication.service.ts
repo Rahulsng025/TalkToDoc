@@ -28,7 +28,7 @@ export class AuthenticationService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     console.log('******' + role);
-    return this.http.post(  + role + '/register', data, { headers: headers })
+    return this.http.post( 'localhost:8080/' + role + '/register', data, { headers: headers })
       .map(res => res.json());
   }
 
@@ -41,9 +41,10 @@ export class AuthenticationService {
   //For user authentication
 
   authenticateUser(data: { username: String; password: String; }, role: string) {
+    console.log('Auth User called');
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post(role + '/authenticate', data, { headers: headers })
+    return this.http.post('localhost:8080/' + role + '/authenticate', data, { headers: headers })
       .map(res => res.json());
   }
 
