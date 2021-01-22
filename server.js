@@ -3,7 +3,7 @@
 const http = require('http');
 const app = require('./app');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
 //We need to pass a listner, So a function which essentially  is executed whenever a new request arrrives.
 const server = http.createServer(app);

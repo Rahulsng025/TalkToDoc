@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { Observable } from "rxjs";
 import { tokenNotExpired } from 'angular2-jwt';
 import { UserRegistrationModel } from 'app/model/user_registration.model'
+import { environment } from 'environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+  env = environment;
   authToken: any;
   role: string;
 
   allUserRegistrationDetails: UserRegistrationModel[];
-
-  uri = "http://localhost:3000";
-
-
 
   constructor(private http: Http) { }
 
@@ -28,14 +24,11 @@ export class AuthenticationService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     console.log('******' + role);
-    return this.http.post( 'localhost:8080/' + role + '/register', data, { headers: headers })
+    return this.http.post(`${this.env.server}:${this.env.port}/${role}/register`, data, { headers: headers })
       .map(res => res.json());
   }
 
   //For user and doctor both registration
-
-
-
 
 
   //For user authentication
@@ -44,7 +37,7 @@ export class AuthenticationService {
     console.log('Auth User called');
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('localhost:8080/' + role + '/authenticate', data, { headers: headers })
+    return this.http.post(`${this.env.server}:${this.env.port}/${role}/authenticate`, data, { headers: headers })
       .map(res => res.json());
   }
 
@@ -57,7 +50,7 @@ export class AuthenticationService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get(  + role + '/profile', { headers: headers })
+    return this.http.get(`${this.env.server}:${this.env.port}/${role}/profile`, { headers: headers })
       .map(res => res.json());
   }
 
