@@ -12,7 +12,7 @@ import { UserRegistrationModel } from 'app/model/user_registration.model'
 })
 export class AuthenticationService {
   authToken: any;
-  role: any;
+  role: string;
 
   allUserRegistrationDetails: UserRegistrationModel[];
 
@@ -27,6 +27,7 @@ export class AuthenticationService {
   registerUser(data: { name: String; number: String; gender: String; email: String; username: String; password: String; }, role: string) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
+    console.log('******' + role);
     return this.http.post(  + role + '/register', data, { headers: headers })
       .map(res => res.json());
   }
@@ -40,8 +41,6 @@ export class AuthenticationService {
   //For user authentication
 
   authenticateUser(data: { username: String; password: String; }, role: string) {
-    console.log('In authenticateUser function:');
-    console.log(role);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post( + role + '/authenticate', data, { headers: headers })
