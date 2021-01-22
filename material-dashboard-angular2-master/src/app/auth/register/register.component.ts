@@ -64,7 +64,7 @@ export class RegisterComponent implements OnInit {
 			return false;
 		}
 		//Register User
-		this.authenticationService.registerUser(this.selectedrole, this.getRole()).subscribe((data) => {
+		this.authenticationService.registerUser(this.selectedrole, 'users').subscribe((data) => {
 			if (data.success) {
 				this.flashMessagesService.show('You are now registered and can now login', {
 					cssClass: 'alert-success',
