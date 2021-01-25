@@ -17,10 +17,10 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getusers() {
-    return this.http.get(`${this.uri}/users`);
+    return this.http.get(`/users`);
   }
 
   deleteusers(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/users/${_id}`);
+    return this.http.delete(`/users/${_id}`);
   }
 }

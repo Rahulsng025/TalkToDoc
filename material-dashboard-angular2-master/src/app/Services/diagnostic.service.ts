@@ -17,10 +17,10 @@ export class DiagnosticService {
   constructor(private http: HttpClient) { }
 
   getDiagnostic() {
-    return this.http.get(`${this.uri}/diagnostics`);
+    return this.http.get(`/diagnostics`);
   }
 
   deleteDiagnostic(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/diagnostics/${_id}`);
+    return this.http.delete(`/diagnostics/${_id}`);
   }
 }

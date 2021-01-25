@@ -30,9 +30,7 @@ const adddoctorsRoutes = require('./api/routes/add_doctors');
 
 //Mongoose Connection
 mongoose.connect(
-  "mongodb+srv://rahulsng25:" +
-  process.env.MONGO_ATLAS_PW +
-  "@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
+  "mongodb+srv://rahulsng25:7843914275@tok2dok-rdnof.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,useUnifiedTopology: true
   }
@@ -43,19 +41,14 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//CORS (C-Cross O-Origin R-Resource S-Sharing) Errors
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-  );
-  if (req.method === "OPTIONs") {
-    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
-    return res.status(200).json({});
-  }
-  next();
-});
+// //CORS (C-Cross O-Origin R-Resource S-Sharing) Errors
+// app.use((req, res, next) => {
+//   if (req.method === "OPTIONS") {
+//     res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+//     return res.status(200).json({});
+//   }
+//   next();
+// });
 
 //Passport Middleware
 app.use(passport.initialize());
@@ -79,6 +72,13 @@ app.use("/booktestquery", booktestqueryRoutes);
 app.use("/booktestcontact", booktestcontactRoutes);
 app.use("/contact", contactRoutes);
 app.use("/add_doctors", adddoctorsRoutes);
+
+// For deploying the application
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 
 
 module.exports = app;

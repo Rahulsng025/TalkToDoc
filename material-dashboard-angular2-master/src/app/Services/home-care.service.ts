@@ -34,19 +34,19 @@ export class HomeCareService {
   }
 
   gethomecare() {
-    return this.http.get(`${this.uri}/home_care`);
+    return this.http.get(`/home_care`);
   }
 
   gethomecareById(Id: any) {
-    return this.http.get(`${this.uri}/home_care/${Id}`);
+    return this.http.get(`/home_care/${Id}`);
   }
 
   addhomecare(_newHomeCareDetails: HomeCareModel) {
-    return this.http.post(`${this.uri}/home_care/`, _newHomeCareDetails);
+    return this.http.post(`/home_care/`, _newHomeCareDetails);
   }
 
   deletehomecare(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/home_care/${_id}`);
+    return this.http.delete(`/home_care/${_id}`);
   }
 
 

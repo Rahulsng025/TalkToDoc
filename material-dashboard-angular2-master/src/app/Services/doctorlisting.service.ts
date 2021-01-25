@@ -43,19 +43,19 @@ export class DoctorListingService {
 
   //Services of Diagnostic Center.
   getDiagnosticcenter() {
-    return this.http.get(`${this.uri}/diagnostic_center`);
+    return this.http.get(`/diagnostic_center`);
   }
 
   getDiagnosticcenterById(Id: any) {
-    return this.http.get(`${this.uri}/diagnostic_center/${Id}`);
+    return this.http.get(`/diagnostic_center/${Id}`);
   }
 
   addDiagnosticcenter(diagnostic_center: DiagnosticCenterModel) {
     return this.http.post(
-      `${this.uri}/Diagnostic_center/`, diagnostic_center);
+      `/Diagnostic_center/`, diagnostic_center);
   }
   deleteDiagnosticcenter(_id: string): Observable<any> {
-    return this.http.delete(`${this.uri}/Diagnostic_center/${_id}`);
+    return this.http.delete(`/Diagnostic_center/${_id}`);
   }
 
 }
