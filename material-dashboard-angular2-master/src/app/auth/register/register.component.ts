@@ -55,14 +55,14 @@ export class RegisterComponent implements OnInit {
 		if (!this.validateService.validateRegister(this.selectedrole)) {
 			this.flashMessagesService.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
 			this.flashMessagesService.grayOut(true);
-			// return false;
+			return false;
 		}
 
     //Valid Email
     console.log(this.selectedrole.email);
 		if (!this.validateService.validateEmail(this.selectedrole.email)) {
 			this.flashMessagesService.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
-			// return false;
+			return false;
 		}
     //Register User
     console.log("Code reached to line 67");
