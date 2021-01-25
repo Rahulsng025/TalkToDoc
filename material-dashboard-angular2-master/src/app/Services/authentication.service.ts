@@ -21,8 +21,8 @@ export class AuthenticationService {
   //For user registration
 
   registerUser(data: { name: String; number: String; gender: String; email: String; username: String; password: String; }, role: string) {
-    console.log('******' + role);
-    return this.http.post(`${this.env.server}:${this.env.port}/${role}/register`, data)
+    console.log('******' + role); 
+    return this.http.post(`${role}/register`, data)
       .map(res => res.json());
   }
 
