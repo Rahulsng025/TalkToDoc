@@ -33,9 +33,7 @@ export class AuthenticationService {
 
   authenticateUser(data: { username: String; password: String; }, role: string) {
     console.log('Auth User called');
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post(`${role}/authenticate`, data, { headers: headers })
+    return this.http.post(`${role}/authenticate`, data)
       .map(res => res.json());
   }
 
@@ -44,11 +42,8 @@ export class AuthenticationService {
 
   //For users profile
   getProfile(role) {
-    let headers = new Headers();
     this.loadToken();
-    headers.append('Authorization', this.authToken);
-    headers.append('Content-Type', 'application/json');
-    return this.http.get(`${role}/profile`, { headers: headers })
+    return this.http.get(`${role}/profile`)
       .map(res => res.json());
   }
 
