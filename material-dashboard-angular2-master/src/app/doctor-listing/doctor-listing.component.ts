@@ -93,10 +93,10 @@ export class DoctorListingComponent implements OnInit, OnDestroy {
   //   this.router.navigate(['main/appointment-list']);
   // }
 
-  constructor(private doctorlistingService: DoctorListingService,
-    private router: Router,
-    private doctorsdetailService: DoctorsDetailService,
-    private authenticationService: AuthenticationService) { }
+  constructor(public doctorlistingService: DoctorListingService,
+    public router: Router,
+    public doctorsdetailService: DoctorsDetailService,
+    public authenticationService: AuthenticationService) { }
 
   // Load a list of all doctors whenever this component is visited.
   ngOnInit(): void {

@@ -2,9 +2,7 @@
 
 <head>
     <title>Navigation Panel</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
 </head>
 
 <!-- Nav Link -->
@@ -18,20 +16,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav  ml-auto ">
-                    <li class="nav-item  grey-text" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/']"
+                    <li class="nav-item  grey-text" routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link " routerLink="/"
                         style="font-size: 16px; font-family: Suranna; ">
                             <mat-icon style="margin:0.5;">home</mat-icon>Home
                         </a>
                     </li>
-                    <li class="nav-item grey-text" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/login']"
+                    <li class="nav-item grey-text" routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{exact:true}">
+                        <a class="nav-link" routerLink="/login"
                         style="font-size: 16px; font-family: Suranna; ">
                             <mat-icon style="margin-top: 1px;">how_to_reg</mat-icon>Login
                         </a>
                     </li>
-                    <li class=" nav-item grey-text" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                        <a class="nav-link" [routerLink]="['/register']"
+                    <li class=" nav-item grey-text" routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{exact:true}" >
+                        <a class="nav-link" routerLink="/register"
                         style="font-size: 16px; font-family: Suranna; ">
                             <mat-icon style="margin-top: 1px; ">person_pin</mat-icon>Register
                         </a>
@@ -180,7 +181,7 @@
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../assets/Step/step1.jpg" class="card-img" alt="..."
+                        <img src="../../../assets/addition_img/ani-kolleshi-7jjnJ-QA9fY-unsplash.jpg" class="card-img" alt="..."
                         style="margin-top: 10px; margin-left: 7px;">
                     </div>
                     <div class="col-md-8">
@@ -198,7 +199,7 @@
                                 collection at home,digital reports in 24 hours.
                             </p>
                             <p class="card-text"><small class="text-muted" style="font-family: CormorantGaramond; font-size: 15px;">Last updated 8 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantGaramond; font-size: 15px;"> Book
+                            <button type="button" class="btn btn-light" routerLink="/register" style="font-family: CormorantGaramond; font-size: 15px;"> Book
                                 Test</button>
                         </div>
                     </div>
@@ -207,7 +208,7 @@
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="../../assets/Step/step2.jpg" class="card-img" alt="..."
+                        <img src="../../../assets/addition_img/piron-guillaume-U4FyCp3-KzY-unsplash.jpg" class="card-img" alt="..."
                         style="margin-top: 10px; margin-left: 7px;">
                     </div>
                     <div class="col-md-8">
@@ -220,12 +221,21 @@
                                 medicate. Talk to an expert. Consult a doctor in less than 2
                                 minutes.Because in Tok2Dok you can easily find a doctor in your locality </p>
                             <p class="card-text"><small class="text-muted" style="font-family: CormorantGaramond; font-size: 15px;">Last updated 3 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantGaramond; font-size: 15px;">Doctor
+                            <button type="button" class="btn btn-light" routerLink="/register" style="font-family: CormorantGaramond; font-size: 15px;">Doctor
                                 Listing</button>
                         </div>
                     </div>
                 </div>
             </div>
+           
+        </div>
+       
+
+        <!-- Card Start (Right Hand Side Detail) -->
+        <div class=col-md-6>
+            <h2 class="CormorantGaramond" style="margin-bottom: 13px;">
+                Find Doctors in top specialities</h2>
+  
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -246,95 +256,38 @@
                                 PDF
                                 file according to your filling details
                             <p class="card-text"><small class="text-muted"  style="font-family: CormorantGaramond; font-size: 15px;">Last updated 3 mins ago</small></p>
-                            <button type="button" class="btn btn-light" [routerLink]="['/register']" style="font-family: CormorantGaramond; font-size: 15px;">Appointment
+                            <button type="button" class="btn btn-light" routerLink="/register" style="font-family: CormorantGaramond; font-size: 15px;">Appointment
                                 Booking</button>
 
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Card End (Left Hand Side Details) -->
 
-        <!-- Card Start (Right Hand Side Detail) -->
-        <div class=col-md-6>
-            <h2 class="CormorantGaramond" style="margin-bottom: 13px;">
-                Find Doctors in top specialities</h2>
-  
-            <br> 
-      
+            <div class="card mb-3" style="max-width: 500px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="../../../assets/addition_img/walter-otto-PT70CT6mATQ-unsplash.jpg" class="card-img" alt="..."
+                        style="margin-top: 10px; margin-left: 7px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Find Doctors in top specialities</h5><hr>
+                            <p class="card-text">
+                                Consult renowned doctors in every field 
+                                at Apollo hospital. Best in world class 
+                                technology for every treatment. Book an 
+                                appointment now. 
+                            <p class="card-text"><small class="text-muted"  style="font-family: CormorantGaramond; font-size: 15px;">Last updated 3 mins ago</small></p>
+                            <button type="button" class="btn btn-light" routerLink="/register" style="font-family: CormorantGaramond; font-size: 15px;">Search For Doctors</button>
 
-            <mat-accordion >
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        <mat-panel-title class="panel_style">
-                            <mat-icon style="margin-right: 0.2em;">add_business</mat-icon>
-                            Orthodontics
-                        </mat-panel-title>
-
-                    </mat-expansion-panel-header>
-                    <p class="expansion_block">
-                        Dr.Akhil Agarwal completed his B.D.S. and M.D.S. from the world renowned
-                        King George’s Medical College (KGMC),Lucknow in the year 2002 and 2006 respectively.
-                        He has been awarded Best Clinical Excellence award in Lingual Residency program, 2016.
-                        He was awarded "Best Scientific Paper Award" at a Lingual conference, AIIMS, 2017.
-                        He is the first certified Invisalign provider in Lucknow region.</p>
-                </mat-expansion-panel>
-            </mat-accordion>
-
-            <br><br>
-            <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-
-                        <mat-panel-title class="panel_style">
-                            <mat-icon style="margin-right: 0.2em;">import_contacts</mat-icon>
-                            Paediatric Haemato-Oncology
-
-                        </mat-panel-title>
-
-                    </mat-expansion-panel-header>
-                    <p class="expansion_block">
-                        Dr Vimal Kumar underwent his undergraduate training from the prestigious Madras Medical College,
-                        Chennai, and postgraduate training from SMS Medical College, Jaipur where he was awarded
-                        GOLD MEDAL as the best outgoing student of the year. He underwent fellowship training in
-                        Paediatric Haematology/Oncology from Apollo Speciality Hospital, Chennai and further special
-                        training in Bone Marrow Transplantation at St. Mary's Hospital (Imperial College NHS), London,
-                        UK under the Royal College of Paediatrics and Child Health, UK</p>
-                </mat-expansion-panel>
-            </mat-accordion>
-
-            <br><br>
-            <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-
-                        <mat-panel-title class="panel_style">
-                            <mat-icon style="margin-right: 0.2em;">medical_services</mat-icon>
-                            Transplanation-liver
-
-                        </mat-panel-title>
-
-                    </mat-expansion-panel-header>
-                    <p class="expansion_block">
-                   
-                        Dr.Noushif is a Liver transplant and Hepato-Pancreato-Biliary Surgeon
-                        at Aster Integrated Liver care. He completed his graduation (MBBS)
-                        from Calicut Medical College and surgical residency (MS General Surgery)
-                        from Trivandrum Medical College at Kerala University. He further went on to
-                        pursue Magister Chirurgiae (MCh Surgical Gastroenterology) from the renowned King
-                        Georges Medical University at Lucknow, where he received advanced training in Surgical
-                        Gastroenterology and HPB surgery. He further did his focused training in Liver Transplant
-                        and Hepato-Pancreato-Biliary surgery at the Centre for Liver and Biliary Sciences,
-                        Indraprastha Apollo Hospital, New Delhi. With special Interest in HPB surgeries and Liver
-                        transplant. <br><br></p>
-                </mat-expansion-panel>
-            </mat-accordion>
-
-
-
-        </div>
+        </div> 
 
 
     </div>
@@ -353,17 +306,20 @@
                 <hr>
                 <div class="row">
                     <div class="col l3 s6">
-                        <ul>
-                            <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/home']" class="panel_style_body">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #252424;;">home
+                         <ul> 
+
+                            <li routerLinkActive="active" 
+                            [routerLinkActiveOptions]="{exact:true}">
+                                <a routerLink="/home" class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #333333;">home
                                     </mat-icon>Home
                                 </a>
                             </li>
                             <br>
-                            <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/about']"  class="panel_style_body">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #252424;;">person
+                            <li routerlinkActive="active" 
+                            >
+                                <a routerLink="/about"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #333333;">person
                                     </mat-icon>About Us
                                 </a>
                             </li>
@@ -371,17 +327,19 @@
                     </div>
                     <div class="col l3 offset-l3 s6">
                         <ul>
-                            <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/whyus']"  class="panel_style_body">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #252424;;">person_add
+                            <li routerlinkActive="active" 
+                            >
+                                <a routerLink="/whyus"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #333333;">person_add
                                     </mat-icon>
                                     Why Us
                                 </a>
                             </li>
                             <br>
-                            <li [routerlink]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                <a [routerLink]="['/contact']"  class="panel_style_body">
-                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #252424;;">
+                            <li routerlinkActive="active" 
+                            >
+                                <a routerLink="/contact"  class="panel_style_body">
+                                    <mat-icon style="margin-right: 0.2em; margin-bottom: 5px; color: #333333;">
                                         contact_phone</mat-icon>
                                     Contact
                                 </a>
@@ -396,18 +354,18 @@
                 <hr>
                 <ul>
                     <li><a class="grey-text text-lighten-3"  class="panel_style_body">
-                            <mat-icon style="margin-left: 3px; margin-bottom: 5px; ">add_business</mat-icon>
+                            
                             Diagnostic
                         </a></li>
                     <li><a class="grey-text text-lighten-3"  class="panel_style_body">
-                            <mat-icon style="margin-right: 0.2em; margin-bottom: 5px;">medical_services</mat-icon>
+                            
                             Medical Insurance
                         </a></li>
                     <li><a class="grey-text text-lighten-3"  class="panel_style_body">
-                            <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">home</mat-icon>Home Care
+                            Home Care
                         </a></li>
                     <li><a class="grey-text text-lighten-3"  class="panel_style_body">
-                            <mat-icon style="margin-right: 0.3em; margin-bottom: 5px;">science</mat-icon>Test
+                            Test
                             Booking
                         </a></li>
                 </ul>

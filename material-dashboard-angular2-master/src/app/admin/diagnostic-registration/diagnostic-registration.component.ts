@@ -15,8 +15,8 @@ export class DiagnosticRegistrationComponent implements OnInit {
 
   displayedColumns = ['name', 'number', 'email', 'username', 'action'];
 
-  constructor(private diagnosticService: DiagnosticService,
-    private router: Router) { }
+  constructor(public diagnosticService: DiagnosticService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.fetchDiagnosticDetail();

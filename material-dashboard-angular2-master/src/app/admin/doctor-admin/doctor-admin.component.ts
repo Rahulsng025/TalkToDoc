@@ -32,10 +32,10 @@ export class DoctorAdminComponent implements OnInit {
   ];
 
   constructor(
-    private doctorlistingService: DoctorListingService,
-    private router: Router,
-    private dialog: MatDialog,
-    private service: doctorspagelayoutService
+    public doctorlistingService: DoctorListingService,
+    public router: Router,
+    public dialog: MatDialog,
+    public service: doctorspagelayoutService
   ) { }
 
   ngOnInit(): void {

@@ -26,8 +26,8 @@ export class DiagnosticAdminComponent implements OnInit {
 
 
 
-  constructor(private doctorlistingService: DoctorListingService,
-    private router: Router,
+  constructor(public doctorlistingService: DoctorListingService,
+    public router: Router,
     public dialog: MatDialog
   ) { }
 

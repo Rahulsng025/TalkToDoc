@@ -16,8 +16,8 @@ export class ContactComponent implements OnInit {
   ismessageSend: boolean;
 
   constructor(private router: Router, 
-    private contactService: ContactService,
-    private flashMessagesService: FlashMessagesService,) { }
+    public contactService: ContactService,
+    public flashMessagesService: FlashMessagesService,) { }
 
   ngOnInit(): void {
   }

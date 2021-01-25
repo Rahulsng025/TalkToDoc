@@ -14,8 +14,8 @@ export class AddDoctorsComponent implements OnInit {
   public errorMsg: String;
   isdoctorregistered: boolean;
 
-  constructor(private adddoctorsService: AddDoctorsService,
-    private router: Router) { }
+  constructor(public adddoctorsService: AddDoctorsService,
+    public router: Router) { }
 
   ngOnInit(): void { }
 

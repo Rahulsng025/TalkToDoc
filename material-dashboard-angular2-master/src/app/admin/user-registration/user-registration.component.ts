@@ -15,8 +15,8 @@ export class UserRegistrationComponent implements OnInit {
   allUserRegistrationDetails: UserRegistrationModel[];
   displayedColumns = ['name', 'number', 'gender', 'email', 'username', 'action'];
 
-  constructor(private userService: UserService,
-    private router: Router) { }
+  constructor(public userService: UserService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.fetchUserDetail();

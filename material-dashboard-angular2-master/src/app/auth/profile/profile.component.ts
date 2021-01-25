@@ -15,8 +15,8 @@ import { SocialUser } from "angularx-social-login";
 export class ProfileComponent implements OnInit {
 
   //Social Login
-  private user: SocialUser;
-  private loggedIn: boolean;
+  public user: SocialUser;
+  public loggedIn: boolean;
 
 
 

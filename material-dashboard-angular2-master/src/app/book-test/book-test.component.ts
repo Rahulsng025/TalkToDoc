@@ -46,8 +46,8 @@ export class BookTestComponent implements OnInit {
   ]
   constructor(config: NgbCarouselConfig,
     private router: Router,
-    private booktestqueryService: BookTestQueryService,
-    private booktestcontactService: BookTestContactService) {
+    public booktestqueryService: BookTestQueryService,
+    public booktestcontactService: BookTestContactService) {
     config.interval = 4000;
     config.wrap = false;
     config.keyboard = false;

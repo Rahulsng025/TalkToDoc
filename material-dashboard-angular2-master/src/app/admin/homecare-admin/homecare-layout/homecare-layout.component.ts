@@ -13,9 +13,9 @@ export class HomecareLayoutComponent implements OnInit {
   allHomeCareDetails: HomeCareModel[];
 
 
-  constructor(private homecareService: HomeCareService,
-    private router: Router,
-    private dialogRef: MatDialogRef<HomecareLayoutComponent>
+  constructor(public homecareService: HomeCareService,
+    public router: Router,
+    public dialogRef: MatDialogRef<HomecareLayoutComponent>
 
 
   ) { }

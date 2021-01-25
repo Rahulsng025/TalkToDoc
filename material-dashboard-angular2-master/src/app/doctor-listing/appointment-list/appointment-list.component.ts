@@ -27,10 +27,10 @@ export class AppointmentListComponent implements OnInit {
 
   isAppointmentBooked: boolean;
 
-  constructor(private appointmentListingService: AppointmentListingService,
-    private appointmentDetailService: AppointmentDetailService,
-    private router: Router,
-    private FlashMessage: FlashMessagesService) { }
+  constructor(public appointmentListingService: AppointmentListingService,
+    public appointmentDetailService: AppointmentDetailService,
+    public router: Router,
+    public FlashMessage: FlashMessagesService) { }
 
   ngOnInit(): void { }
 

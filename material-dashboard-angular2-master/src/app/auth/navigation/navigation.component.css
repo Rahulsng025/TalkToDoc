@@ -105,7 +105,7 @@
 /* Introduction of "Welcome to Tok2Dok End" */
 
 .navbar .navbar-nav .nav-item .nav-link,.navbar .navbar-nav .nav-item .nav-link:visited {
-    color:black;
+    color: #333333;
     margin-right: 20px;
 }
 
@@ -142,7 +142,7 @@
 
 .copy-right_text {
   padding-bottom: 30px;
-  background: #000000;
+  background: #333333;
 }
 
 
@@ -169,12 +169,12 @@
   color: #5DB2FF;
 }
 .navbar .navbar-nav .nav-item .nav-link:link,.navbar .navbar-nav .nav-item .nav-link:visited{
-  color: rgba(0,0,0,1);
+  color: #333333;
   margin-right: 20px;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:active{
   margin-right: 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #333333;
 }
 /* Font Family */
 
@@ -232,7 +232,7 @@
 
 .card-body .card-text {
   font-family: Suranna;
-  color: #252424;
+  color: #333333;
   font-size: 19px;
   text-align: justify;
   margin-bottom: 15px;
@@ -245,7 +245,7 @@
 }
 .panel_style_body {
   font-family: Suranna;
-  color: #252424;
+  color: #333333;
   font-size: 20px;
   text-align: justify;
   
@@ -255,6 +255,6 @@
 .expansion_block{
   font-family: Suranna;
   text-align: justify;
-  color: #252424;
+  color: #333333;
   font-size: 18px;
 }

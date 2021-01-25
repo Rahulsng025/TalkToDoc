@@ -16,8 +16,8 @@ export class PaitentDetailsComponent implements OnInit {
   newbooktestDetails: BookTestModel[];
   isappointmentBooked: boolean;
 
-  constructor(private router: Router,
-    private booktestService: BookTestService) { }
+  constructor(public router: Router,
+    public booktestService: BookTestService) { }
 
   ngOnInit(): void {
 

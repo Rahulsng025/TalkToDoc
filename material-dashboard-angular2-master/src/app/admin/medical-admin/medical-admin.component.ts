@@ -19,9 +19,9 @@ export class MedicalAdminComponent implements OnInit {
   displayedColumns = ['title', 'country_name', 'description', 'action'];
   searchKey: string;
 
-  constructor(private medicalinsuranceService: MedicalInsuranceService,
-    private router: Router,
-    private dialog: MatDialog
+  constructor(public medicalinsuranceService: MedicalInsuranceService,
+    public router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {

@@ -24,8 +24,8 @@ export class HomecareAdminComponent implements OnInit {
 
 
   constructor(
-    private homecareService: HomeCareService,
-    private router: Router,
+    public homecareService: HomeCareService,
+    public router: Router,
     public dialog: MatDialog
 
   ) { }

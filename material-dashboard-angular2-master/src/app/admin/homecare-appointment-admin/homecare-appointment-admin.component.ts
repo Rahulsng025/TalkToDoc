@@ -19,7 +19,7 @@ export class HomecareAppointmentAdminComponent implements OnInit {
 
   displayedColumns = ["name", "gender", "email", "howsoon", "number", "frequency", "forwhom", "age", "action"];
 
-  constructor(private homecareappointmentService: HomeCareAppointmentService) { }
+  constructor(public homecareappointmentService: HomeCareAppointmentService) { }
 
   ngOnInit(): void {
     this.fetchHomecareList();

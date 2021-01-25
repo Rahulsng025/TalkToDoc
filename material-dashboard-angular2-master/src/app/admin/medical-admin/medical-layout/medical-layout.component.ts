@@ -12,9 +12,9 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class MedicalLayoutComponent implements OnInit {
   allMedicalInsuranceDetails: MedicalInsuranceModel[];
 
-  constructor(private medicalinsuranceService: MedicalInsuranceService,
-    private router: Router,
-    private dialogRef: MatDialogRef<MedicalLayoutComponent>
+  constructor(public medicalinsuranceService: MedicalInsuranceService,
+    public router: Router,
+    public dialogRef: MatDialogRef<MedicalLayoutComponent>
   ) { }
 
   ngOnInit(): void {

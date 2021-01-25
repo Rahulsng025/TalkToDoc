@@ -13,7 +13,7 @@ export class DoctorsComponent implements OnInit {
   doctor: DoctorDetailsModel;
 
 
-  constructor(private doctorsdetailService: DoctorsDetailService, private router: Router) { }
+  constructor(public doctorsdetailService: DoctorsDetailService, public router: Router) { }
 
   ngOnInit(): void {
     this.doctor = this.doctorsdetailService.getDoctorDetails();

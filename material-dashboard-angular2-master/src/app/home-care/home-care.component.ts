@@ -20,10 +20,10 @@ export class HomeCareComponent implements OnInit {
 
 
   constructor(
-    private homecareService: HomeCareService,
-    private router: Router,
-    private homecareappointmentService: HomeCareAppointmentService,
-    private FlashMessage: FlashMessagesService
+    public homecareService: HomeCareService,
+    public router: Router,
+    public homecareappointmentService: HomeCareAppointmentService,
+    public FlashMessage: FlashMessagesService
   ) { }
 
   ngOnInit(): void {

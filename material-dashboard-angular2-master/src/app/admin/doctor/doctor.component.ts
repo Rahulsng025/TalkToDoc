@@ -33,8 +33,8 @@ export class DoctorComponent implements OnInit {
 
   ];
 
-  constructor(private adddoctorsService: AddDoctorsService,
-    private router: Router) { }
+  constructor(public adddoctorsService: AddDoctorsService,
+    public router: Router) { }
 
   ngOnInit(): void {
 

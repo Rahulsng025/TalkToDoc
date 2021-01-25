@@ -14,9 +14,9 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class DiagnosticLayoutComponent implements OnInit {
   diagnostic_center: DiagnosticCenterModel[];
 
-  constructor(private doctorlistingService: DoctorListingService,
-    private router: Router,
-    private dialogRef: MatDialogRef<DiagnosticLayoutComponent>
+  constructor(public doctorlistingService: DoctorListingService,
+    public router: Router,
+    public dialogRef: MatDialogRef<DiagnosticLayoutComponent>
   ) { }
 
   ngOnInit(): void {

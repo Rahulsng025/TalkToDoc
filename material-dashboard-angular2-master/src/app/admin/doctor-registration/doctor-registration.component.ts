@@ -16,8 +16,8 @@ export class DoctorRegistrationComponent implements OnInit {
   displayedColumns = ['name', 'number', 'gender', 'email', 'username', 'action'];
 
 
-  constructor(private doctorService: DoctorService,
-    private router: Router) { }
+  constructor(public doctorService: DoctorService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.fetchDoctorDetail();

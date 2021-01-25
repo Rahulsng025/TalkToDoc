@@ -33,7 +33,7 @@ export class AppointmentAdminComponent implements OnInit {
   ];
 
 
-  constructor(private bookAppointmentService: AppointmentListingService, private router: Router) { }
+  constructor(public bookAppointmentService: AppointmentListingService, public router: Router) { }
 
   ngOnInit(): void {
 

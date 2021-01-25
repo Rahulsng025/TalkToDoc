@@ -16,8 +16,8 @@ export class DoctorsPagelayoutComponent implements OnInit {
   doctorspagelayoutService: any;
 
   constructor(
-    private service: doctorspagelayoutService,
-    private router: Router,
+    public service: doctorspagelayoutService,
+    public router: Router,
     public dialogRef: MatDialogRef<DoctorsPagelayoutComponent>,
     doctorlistingService: DoctorListingService
   ) {}

@@ -54,32 +54,7 @@ export const ROUTES: RouteInfo[] = [
     title: "User Profile",
     icon: "person",
     class: "",
-  },
-  // {
-  //   path: "/main/table-list",
-  //   title: "Table List",
-  //   icon: "content_paste",
-  //   class: "",
-  // },
-  // {
-  //   path: "/main/typography",
-  //   title: "Typography",
-  //   icon: "library_books",
-  //   class: "",
-  // },
-  {
-    path: "/main/icons",
-    title: "Icons",
-    icon: "bubble_chart",
-    class: "",
-  },
-
-  // {
-  //   path: "/main/notifications",
-  //   title: "Notifications",
-  //   icon: "notifications",
-  //   class: "",
-  // },
+  }, 
 ];
 
 @Component({

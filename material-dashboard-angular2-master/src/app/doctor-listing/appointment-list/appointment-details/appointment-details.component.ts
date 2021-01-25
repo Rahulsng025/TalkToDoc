@@ -34,7 +34,7 @@ export class AppointmentDetailsComponent implements OnInit {
   }
 
 
-  constructor(private appointmentDetailService: AppointmentDetailService) { }
+  constructor(public appointmentDetailService: AppointmentDetailService) { }
 
   ngOnInit(): void {
 
