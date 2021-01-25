@@ -17,7 +17,7 @@ export class ValidateService {
   }
   validateEmail(email: string) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const re2 = /^[A-Za-z][A-Za-z0-9]{4, 20}@[a-z]{2, 6}.[a-z]{2, 3}$/;
-    return re2.test(email);
+    // const re2 = /^[A-Za-z][A-Za-z0-9]{4, 20}@[a-z]{2, 6}.[a-z]{2, 3}$/;
+    return re.test(email);
   }
 }
