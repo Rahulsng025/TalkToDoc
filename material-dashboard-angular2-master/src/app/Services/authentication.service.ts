@@ -21,8 +21,8 @@ export class AuthenticationService {
   //For user registration
 
   registerUser(data: { name: String; number: String; gender: String; email: String; username: String; password: String; }, role: string) {
-    console.log('******' + role);
-    return this.http.post(`${this.env.server}:${this.env.port}/${role}/register`, data)
+    console.log('******' + role); 
+    return this.http.post(`${role}/register`, data)
       .map(res => res.json());
   }
 
@@ -35,7 +35,7 @@ export class AuthenticationService {
     console.log('Auth User called');
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post(`${this.env.server}:${this.env.port}/${role}/authenticate`, data, { headers: headers })
+    return this.http.post(`${role}/authenticate`, data, { headers: headers })
       .map(res => res.json());
   }
 
@@ -48,7 +48,7 @@ export class AuthenticationService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get(`${this.env.server}:${this.env.port}/${role}/profile`, { headers: headers })
+    return this.http.get(`${role}/profile`, { headers: headers })
       .map(res => res.json());
   }
 
