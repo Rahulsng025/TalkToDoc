@@ -5,21 +5,21 @@ const mongoose = require('mongoose');
 const contact = require('../models/contact');
 
 //Handling incoming get request of doctor_listing.
-router.get('/', (req, res, next) => {
-    res.end() 
-    // contact.find()
-    //     .exec()
-    //     .then(docs => {
-    //         console.log(docs);
-    //         res.status(200).json(docs);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //         res.status(500).json({
-    //             error: err
-    //         });
-    //     });
-});
+// router.get('/', (req, res, next) => {
+    
+//     contact.find()
+//         .exec()
+//         .then(docs => {
+//             console.log(docs);
+//             res.status(200).json(docs);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json({
+//                 error: err
+//             });
+//         });
+// });
 
 //Diagnostic_center ID
 router.get('/:contactId', (req, res, next) => {
